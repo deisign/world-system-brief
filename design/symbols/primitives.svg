@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<defs>
+<marker id="wsb-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9" fill="none" stroke="context-stroke" stroke-width="1.5"/></marker>
+<symbol id="wsb-node-actor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="2.25" fill="currentColor"/></symbol>
+<symbol id="wsb-node-facility" viewBox="0 0 24 24"><rect x="4.5" y="4.5" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="wsb-bottleneck" viewBox="0 0 24 24"><path d="M5 5 L19 19 M19 5 L5 19" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+<symbol id="wsb-rent" viewBox="0 0 24 24"><path d="M12 3.5 L20.5 12 L12 20.5 L3.5 12 Z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="wsb-policy" viewBox="0 0 24 24"><path d="M17.5 6.5 C15.5 4.5 8 4.5 8 8.5 C8 12.5 17 10.5 17 15 C17 19 9.5 19.5 6.5 17.5 M12 3 V21" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="wsb-horizon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7 V12 L16 14" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="wsb-delta" viewBox="0 0 24 24"><path d="M12 4 L20 20 H4 Z" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="wsb-domain-energy" viewBox="0 0 24 24"><path d="M13.5 2.5 L6 13 H11 L9.5 21.5 L18 10.5 H13 Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="wsb-domain-materials" viewBox="0 0 24 24"><path d="M12 3 L20 8 L17 19 H7 L4 8 Z M4 8 L12 12 L20 8 M12 12 V21" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+<symbol id="wsb-domain-industry" viewBox="0 0 24 24"><path d="M3 20 V10 L8 13 V9 L13 12 V6 H17 V20 Z M6 17 H8 M11 17 H13 M16 17 H18" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+<symbol id="wsb-domain-technology" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 2 V6 M15 2 V6 M9 18 V22 M15 18 V22 M2 9 H6 M2 15 H6 M18 9 H22 M18 15 H22" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+<symbol id="wsb-domain-capital" viewBox="0 0 24 24"><path d="M16.5 7 C15 5.5 8 5 8 9 C8 13 17 11 17 15 C17 19 9.5 19 7 17 M12 3 V21" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="wsb-domain-labour" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 10 V20 M7 14 H17 M12 20 L8 23 M12 20 L16 23" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+<symbol id="wsb-domain-data" viewBox="0 0 24 24"><path d="M3 8 C6 4 9 12 12 8 C15 4 18 12 21 8 M3 16 C6 12 9 20 12 16 C15 12 18 20 21 16" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+<symbol id="wsb-domain-trade" viewBox="0 0 24 24"><path d="M4 8 H20 M16 4 L20 8 L16 12 M20 16 H4 M8 12 L4 16 L8 20" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+</defs></svg>
