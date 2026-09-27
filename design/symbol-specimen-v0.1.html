@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WSB Symbol Standard v0.1 — Specimen Sheet</title>
+<style>
+:root{--paper:#f2eee4;--ink:#11110f;--muted:#777267;--rule:#aaa396;--red:#a62a24;--blue:#315d73;--green:#526b4f}
+*{box-sizing:border-box} html,body{margin:0;background:#d9d5cc;color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+.sheet{width:1400px;min-height:1980px;margin:30px auto;background:var(--paper);padding:48px 58px 54px}
+.micro{font:700 12px/1.35 "Courier New",monospace;letter-spacing:.12em;text-transform:uppercase}
+header{display:grid;grid-template-columns:230px 1fr 230px;align-items:end;border-bottom:4px solid var(--ink);padding-bottom:18px}
+header h1{font-family:"Arial Narrow",Arial,sans-serif;font-stretch:condensed;font-size:78px;line-height:.82;letter-spacing:-.055em;text-align:center;margin:0;font-weight:900}
+header .right{text-align:right}
+.sub{display:flex;justify-content:space-between;border-bottom:1px solid var(--ink);padding:9px 0 8px;margin-bottom:22px}
+.sub strong{letter-spacing:.22em}.sub span{font:700 12px "Courier New",monospace}
+.hero{display:grid;grid-template-columns:1.45fr .55fr;gap:24px;border-bottom:3px solid var(--ink);padding:4px 0 22px}
+.hero .diagram{font:700 29px/1.55 "Courier New",monospace;white-space:pre;margin:0}
+.hero h2,.section h2{font:900 18px/1 Arial,sans-serif;letter-spacing:.14em;margin:0 0 13px}
+.delta{color:var(--red)} .bottle{color:var(--red)} .adapt{color:var(--blue)} .up{color:var(--green)}
+.quote{border-left:7px solid var(--red);padding-left:18px;font:900 31px/1.12 "Arial Narrow",Arial,sans-serif;text-transform:uppercase;align-self:end}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.section{padding:22px 0;border-bottom:1px solid var(--ink)}
+.tokens{display:grid;grid-template-columns:repeat(3,1fr);gap:7px 12px}
+.token{border-top:1px solid var(--rule);padding:8px 0;display:grid;grid-template-columns:44px 1fr;align-items:center}
+.glyph{font:700 29px "Courier New",monospace}.token b{font-size:12px;letter-spacing:.08em}.token small{display:block;color:var(--muted);margin-top:2px}
+.lines pre,.construct pre{font:700 18px/1.65 "Courier New",monospace;margin:0;white-space:pre}
+.note{font:12px/1.4 Arial,sans-serif;color:var(--muted);margin-top:8px}
+.domains{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.domain{border:1px solid var(--ink);padding:10px;font:700 12px "Courier New",monospace}.domain i{font-style:normal;font-size:23px;margin-right:7px}
+.states{width:100%;border-collapse:collapse;font-size:12px}.states th,.states td{border-top:1px solid var(--rule);padding:7px;text-align:left}.states th{font:700 11px "Courier New",monospace}
+.constructs{display:grid;grid-template-columns:1fr 1fr;gap:20px 26px}
+.construct{border-top:3px solid var(--ink);padding-top:10px}.construct h3{font:900 13px Arial;margin:0 0 8px;letter-spacing:.1em}
+.poster{grid-column:1/-1;border-bottom:3px solid var(--ink)}
+.poster-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px}
+.distance{display:grid;grid-template-columns:80px 1fr;border-top:1px solid var(--rule);padding:8px 0}.distance b{font:700 11px "Courier New",monospace;letter-spacing:.1em}
+footer{display:flex;justify-content:space-between;padding-top:15px;font:700 11px "Courier New",monospace;letter-spacing:.08em}
+@media(max-width:900px){.sheet{width:100%;margin:0;padding:24px}.grid,.hero,.constructs,.poster-grid{grid-template-columns:1fr}header{grid-template-columns:1fr}header .micro{display:none}header h1{font-size:48px}.tokens{grid-template-columns:1fr 1fr}}
+@media print{html,body{background:white}.sheet{margin:0;width:100%;min-height:0}}
+</style>
+</head>
+<body><main class="sheet">
+<header>
+<div class="micro">WORLD SYSTEM BRIEF<br>VISUAL LANGUAGE<br>SPECIMEN 001</div>
+<h1>SYMBOL<br>STANDARD</h1>
+<div class="micro right">FACTS · STRUCTURE<br>CONNECTIONS · CONSEQUENCES<br>NOT NOISE</div>
+</header>
+<div class="sub"><strong>WSB SYMBOL STANDARD v0.1</strong><span>LAB / 27 SEP 2026 · SEMANTICS BEFORE DECORATION</span></div>
+
+<section class="hero">
+<pre class="diagram">GULF OIL ◈  ━━━━━<span class="bottle">×</span> HORMUZ ━━━━━▷ MARKET
+                    │
+                    <span class="adapt">↪</span>
+             EAST–WEST PIPELINE
+                    ━━━━━▷ YANBU
+
+HORMUZ          <span class="delta">→ PERSISTENT</span>
+BYPASS CAPACITY <span class="up">↗</span></pre>
+<div class="quote">THE ARROW IS THE SENTENCE.<br>THE BOTTLENECK IS THE PUNCTUATION.<br><span class="delta">Δ IS EARNED.</span></div>
+</section>
+
+<div class="grid">
+<section class="section">
+<h2>01 / ATOMIC VOCABULARY</h2>
+<div class="tokens">
+<div class="token"><span class="glyph delta">Δ</span><div><b>STATE CHANGE</b><small>modeled state changed</small></div></div>
+<div class="token"><span class="glyph">⇢</span><div><b>FLOW</b><small>directional movement</small></div></div>
+<div class="token"><span class="glyph">⇄</span><div><b>INTERDEPENDENCE</b><small>material two-way dependency</small></div></div>
+<div class="token"><span class="glyph bottle">×</span><div><b>BOTTLENECK</b><small>binding constraint</small></div></div>
+<div class="token"><span class="glyph">↑</span><div><b>STATE UP</b><small>state variable increased</small></div></div>
+<div class="token"><span class="glyph">↓</span><div><b>STATE DOWN</b><small>state variable decreased</small></div></div>
+<div class="token"><span class="glyph">→</span><div><b>NO MATERIAL Δ</b><small>assessed unchanged</small></div></div>
+<div class="token"><span class="glyph">↗</span><div><b>STRENGTHENING</b><small>directional process</small></div></div>
+<div class="token"><span class="glyph">↘</span><div><b>WEAKENING</b><small>directional process</small></div></div>
+<div class="token"><span class="glyph adapt">↪</span><div><b>ADAPTATION</b><small>bypass / substitution</small></div></div>
+<div class="token"><span class="glyph">⧖</span><div><b>HORIZON</b><small>time to substitute</small></div></div>
+<div class="token"><span class="glyph">◇</span><div><b>RENT</b><small>position-derived surplus</small></div></div>
+<div class="token"><span class="glyph">§</span><div><b>POLICY</b><small>state intervention</small></div></div>
+<div class="token"><span class="glyph">∴</span><div><b>CONSEQUENCE</b><small>modeled downstream effect</small></div></div>
+</div>
+</section>
+
+<section class="section lines">
+<h2>02 / FLOW-LINE GRAMMAR</h2>
+<pre>━━━━━━▷   ESTABLISHED PRIMARY FLOW
+──────▷   ESTABLISHED SECONDARY FLOW
+┄┄┄┄┄▷   COMMITTED / FUTURE FLOW
+━━━━<span class="bottle">×</span>     CONSTRAINED / INTERRUPTED
+━━━<span class="adapt">↪</span>━━▷   ADAPTATION / BYPASS
+◉━━━━▷    SOURCE → FLOW
+━━━━▷◉    FLOW → MARKET
+◉━━⇄━━◉   MATERIAL INTERDEPENDENCE</pre>
+<p class="note">Line weight encodes materiality only when issue data supports the comparison. Dashed geometry can never masquerade as present operational capacity.</p>
+</section>
+
+<section class="section">
+<h2>03 / DOMAINS</h2>
+<div class="domains">
+<div class="domain"><i>⚡</i>ENERGY</div><div class="domain"><i>◈</i>MATERIALS</div><div class="domain"><i>⚙</i>INDUSTRY</div>
+<div class="domain"><i>▦</i>TECHNOLOGY</div><div class="domain"><i>$</i>CAPITAL</div><div class="domain"><i>♟</i>LABOUR</div>
+<div class="domain"><i>⌁</i>DATA</div><div class="domain"><i>↔</i>TRADE</div><div class="domain"><i>§</i>REGULATION</div>
+</div>
+<p class="note">Unicode is the fallback contract. Canonical poster rendering uses a custom monochrome SVG family — never emoji styling.</p>
+</section>
+
+<section class="section">
+<h2>04 / EPISTEMIC + LIFECYCLE STATE</h2>
+<table class="states">
+<tr><th>STATE</th><th>RENDERING</th></tr>
+<tr><td>OPERATIONAL</td><td>solid node / edge</td></tr>
+<tr><td>CHANGE NOT EFFECTIVE</td><td>solid annotation + future edge</td></tr>
+<tr><td>COMMITTED / FID</td><td>┄┄┄▷ + explicit FID</td></tr>
+<tr><td>DEVELOPING</td><td>dashed + label</td></tr>
+<tr><td>UNCERTAIN</td><td>dotted/light + label</td></tr>
+<tr><td>PROJECTION</td><td>dotted future + horizon</td></tr>
+<tr><td>PERSISTENT</td><td>solid state + → PERSISTENT</td></tr>
+<tr><td>REVERTED</td><td>restored edge + REVERTED</td></tr>
+</table>
+</section>
+
+<section class="section poster">
+<h2>05 / COMPOSITE CONSTRUCTIONS</h2>
+<div class="constructs">
+<div class="construct"><h3>BOTTLENECK MIGRATION</h3><pre>BEFORE  A ━━━<span class="bottle">×</span>━━━▷ B
+               X₁
+AFTER   A ━<span class="adapt">↪</span>━▷ C ━━━<span class="bottle">×</span>━━▷ B
+                       X₂
+        X₁ ↓      X₂ ↑</pre></div>
+<div class="construct"><h3>SCOPED LEVERAGE</h3><pre>SOURCE ━━━━━▷ DEPENDENT
+   ↑
+LEVERAGE
+low substitutability
+⧖ 5–10Y</pre></div>
+<div class="construct"><h3>WEAPONIZED INTERDEPENDENCE</h3><pre>A ━━━━━§<span class="bottle">×</span>§━━━━▷ B
+       EXPORT
+       CONTROL</pre></div>
+<div class="construct"><h3>NO MATERIAL CHANGE</h3><pre>A ━━━━━━━━━━━▷ B
+       <span class="delta">→</span>
+NO MATERIAL Δ</pre></div>
+</div>
+</section>
+
+<section class="section">
+<h2>06 / REAL-ISSUE TEST · INDIA</h2>
+<div class="construct"><pre>COAL ◈ ━━━▷ CAPTIVE POWER ⚡
+                 ├━━▷ INDUSTRY ⚙
+                 │
+                 <span class="adapt">↪</span>━━▷ GRID ⚡
+                        <span class="delta">Δ</span>
+
+COAL INVENTORY / LOGISTICS <span class="bottle">×</span></pre></div>
+<p class="note">Function change creates a new operational edge; the constraint migrates upstream toward fuel inventory and logistics.</p>
+</section>
+
+<section class="section">
+<h2>07 / REAL-ISSUE TEST · ABSHERON II</h2>
+<div class="construct"><pre>CASPIAN GAS ◈
+   └┄┄┄▷ ABSHERON II ┄┄┄▷ EU
+          FID · ⧖ 3–4Y
+                         <span class="bottle">×</span>
+                  PIPELINE CAPACITY</pre></div>
+<p class="note">Future capacity remains dashed. FID is commitment, not physical flow.</p>
+</section>
+
+<section class="section poster">
+<h2>08 / POSTER DISTANCE TEST</h2>
+<div class="poster-grid">
+<div>
+<div class="distance"><b>FAR</b><span>Masthead · dominant mechanism · <b class="delta">Δ</b> · <b class="bottle">×</b> · direction · day state.</span></div>
+<div class="distance"><b>MIDDLE</b><span>System geometry · named nodes · secondary Δ · bypass · bottleneck migration.</span></div>
+<div class="distance"><b>NEAR</b><span>Values · horizons · confidence · lifecycle · Ledger labels · evidence references.</span></div>
+</div>
+<div class="quote">ONE SYSTEM MECHANISM<br>BECOMES THE<br><span class="delta">COMPOSITION.</span></div>
+</div>
+</section>
+</div>
+<footer><span>WORLD SYSTEM BRIEF / DESIGN SYSTEM</span><span>v0.1 · LABORATORY ISSUES 0001–0004</span><span>SEMANTICS → GEOMETRY → POSTER</span></footer>
+</main></body></html>
