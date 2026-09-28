@@ -1,6 +1,72 @@
 {
-  "issue_id":"WSB-0001",
-  "status":"working",
-  "note":"Evidence registry for Issue 0001. Publication-grade records preserve source URL, publication time, claim, observation and assessment separately.",
-  "records":[]
+  "issue_id": "WSB-0001",
+  "as_of": "2026-09-28",
+  "records": [
+    {
+      "id": "WSB-SRC-0001-01",
+      "source": "Reuters / Kpler preliminary September data",
+      "url": "https://www.reuters.com/business/energy/",
+      "publication_date": "2026-09-28",
+      "claim": "Key Middle East crude exports rebounded to 12.8 mbd in September; Hormuz exports were set to reach about 7.4 mbd; Saudi exports about 5.4 mbd; Ras Tanura about 3.6 mbd.",
+      "observation": "Physical export flow through Gulf routes recovered materially from August while remaining about 6 mbd below February regional exports.",
+      "assessment": "Supports upward revision of Gulf crude export flow; does not support RESOLVED status for Hormuz.",
+      "supports": ["gulf-crude-export-flow", "hormuz"],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0001-02",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/energy/saudi-arabia-ramps-up-gulf-oil-exports-after-pipeline-attack-shipping-data-shows-2026-09-21/",
+      "publication_date": "2026-09-21",
+      "claim": "After damage to the East-West Pipeline, Saudi Arabia increased eastern Gulf loadings and arranged large volumes for ship-to-ship transfer around Sohar.",
+      "observation": "The Yanbu bypass was impaired and Saudi export routing shifted back toward Gulf terminals and Hormuz.",
+      "assessment": "Establishes the routing mechanism underlying Issue 0001 rather than a new September 28 event.",
+      "supports": ["east-west-pipeline", "hormuz", "gulf-of-oman-sts"],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0001-03",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/energy/saudi-arabia-restarts-east-west-oil-pipeline-resume-exports-yanbu-sources-say-2026-09-22/",
+      "publication_date": "2026-09-22",
+      "claim": "East-West Pipeline operations resumed at a reduced rate; full restoration could take six to eight weeks after damage to three pumping stations.",
+      "observation": "The principal Hormuz bypass is recovering but is not yet restored to full operating capability.",
+      "assessment": "Supports RECOVERING / PARTIAL rather than operational-normal state.",
+      "supports": ["east-west-pipeline"],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0001-04",
+      "source": "Kpler",
+      "url": "https://www.kpler.com/blog/saudi-export-rerouting-amid-gulf-of-oman-sts-bottlenecks-amplify-vlcc-intensity-of-meg-flows",
+      "publication_date": "2026-09-21",
+      "claim": "Gulf of Oman STS activity is approaching practical limits; further scaling may shift activity toward West Coast India or Malaysia and sharply increase VLCC requirements.",
+      "observation": "The adaptation route itself is developing a capacity constraint and longer-distance alternatives reduce vessel productivity.",
+      "assessment": "Supports ADAPTATION SATURATING and bottleneck migration. India/Malaysia remain possible next-stage adaptations, not confirmed new crude flows.",
+      "supports": ["gulf-of-oman-sts"],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0001-05",
+      "source": "Reuters citing The Information",
+      "url": "https://finance.yahoo.com/technology/articles/china-weighs-allowing-bytedance-alibaba-152402813.html",
+      "publication_date": "2026-09-27",
+      "claim": "China may allow some domestic companies including ByteDance and Alibaba to buy Nvidia RTX PRO 5500 chips; Reuters could not independently verify the report.",
+      "observation": "There is a signal of possible regulatory relaxation but no verified purchase flow.",
+      "assessment": "DEVELOPING / EVIDENCE INSUFFICIENT. No upward flow change is recorded.",
+      "supports": ["nvidia-china"],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0001-06",
+      "source": "Reuters",
+      "url": "https://www.tbsnews.net/worldbiz/middle-east/oil-heads-higher-us-iran-peace-talks-stalemate-1555721",
+      "publication_date": "2026-09-28",
+      "claim": "Brent rose to about $105.64 early September 28 amid continued US-Iran tensions.",
+      "observation": "Market pricing reflected geopolitical stress.",
+      "assessment": "Context/evidence only. Price movement does not independently establish a structural delta.",
+      "supports": [],
+      "confidence": "high"
+    }
+  ]
 }
