@@ -39,7 +39,7 @@
     "confirmed_delta": "ПІДТВЕРДЖЕНИЙ Δ",
     "persistent": "СТАЛИЙ",
     "recovering": "ВІДНОВЛЮЄТЬСЯ",
-    "saturating": "НАСИЧУЄТЬСЯ",
+    "saturating": "НА МЕЖІ",
     "developing": "РОЗВИВАЄТЬСЯ"
   },
   "noise": {
