@@ -1,11 +1,50 @@
 {
-  "locale":"en",
-  "labels":{
-    "gulf-crude-export-flow":"Gulf crude export flow","hormuz":"Hormuz","east-west-pipeline":"East-West Pipeline","gulf-of-oman-sts":"Gulf of Oman STS","nvidia-china":"Nvidia → China",
-    "saudi-production":"Saudi production","gulf-terminals":"Gulf terminals","asian-refinery":"Asian refinery","gulf-oil-export-adaptation":"Gulf oil export adaptation"
+  "locale": "en",
+  "labels": {
+    "gulf-crude-export-flow": "Gulf crude export flow",
+    "hormuz": "Hormuz",
+    "east-west-pipeline": "East-West Pipeline",
+    "gulf-of-oman-sts": "Gulf of Oman STS",
+    "nvidia-china": "Nvidia → China",
+    "saudi-production": "Saudi production",
+    "gulf-terminals": "Gulf terminals",
+    "asian-refinery": "Asian refinery",
+    "gulf-oil-export-adaptation": "Gulf oil export adaptation",
+    "well": "Well",
+    "pipeline": "Pipeline",
+    "export-terminal": "Export terminal",
+    "strait": "Strait",
+    "vlcc": "VLCC",
+    "sts": "STS",
+    "middle-east-oil-exports-rebound": "Middle East oil exports rebound",
+    "nvidia-purchases": "China may allow Nvidia purchases",
+    "market-price-movement": "Market price movement"
   },
-  "states":{
-    "severely_constrained":"severely constrained","recovering_impaired":"recovering; still impaired","major_security_constraint":"major physical/security constraint","persistent_constraint":"persistent constraint","interrupted":"interrupted","recovering_partial":"recovering / partial","emergency_adaptation":"emergency adaptation","adaptation_saturating":"large-scale adaptation; costly; approaching capacity","constrained":"constrained","possible_policy_relaxation":"possible policy relaxation"
+  "states": {
+    "severely_constrained": "severely constrained",
+    "recovering_impaired": "recovering; still impaired",
+    "major_security_constraint": "major physical/security constraint",
+    "persistent_constraint": "persistent constraint",
+    "interrupted": "interrupted",
+    "recovering_partial": "recovering / partial",
+    "emergency_adaptation": "emergency adaptation",
+    "adaptation_saturating": "large-scale adaptation; costly; approaching capacity",
+    "constrained": "constrained",
+    "possible_policy_relaxation": "possible policy relaxation"
   },
-  "assessments":{"flow_recovery_adaptation_saturating":"Bottleneck migration: flow recovery relies on an adaptation route that is itself approaching a capacity constraint."}
+  "assessments": {
+    "flow_recovery_adaptation_saturating": "Bottleneck migration: flow recovery relies on an adaptation route that is itself approaching a capacity constraint."
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "recovering": "RECOVERING",
+    "saturating": "SATURATING",
+    "developing": "DEVELOPING"
+  },
+  "noise": {
+    "structural_consequence": "STRUCTURAL CONSEQUENCE DETECTED",
+    "developing_insufficient": "DEVELOPING / EVIDENCE INSUFFICIENT",
+    "no_independent_delta": "NO INDEPENDENT Δ"
+  }
 }
