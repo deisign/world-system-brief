@@ -1,0 +1,47 @@
+{
+  "issue_id": "WSB-0001",
+  "records": [
+    {
+      "id": "WSB-SRC-0001-01",
+      "source": "Reuters / Kpler preliminary September data",
+      "publication_date": "2026-09-28",
+      "confidence": "high",
+      "url": "https://www.reuters.com/business/energy/"
+    },
+    {
+      "id": "WSB-SRC-0001-02",
+      "source": "Reuters",
+      "publication_date": "2026-09-21",
+      "confidence": "high",
+      "url": "https://www.reuters.com/business/energy/saudi-arabia-ramps-up-gulf-oil-exports-after-pipeline-attack-shipping-data-shows-2026-09-21/"
+    },
+    {
+      "id": "WSB-SRC-0001-03",
+      "source": "Reuters",
+      "publication_date": "2026-09-22",
+      "confidence": "high",
+      "url": "https://www.reuters.com/business/energy/saudi-arabia-restarts-east-west-oil-pipeline-resume-exports-yanbu-sources-say-2026-09-22/"
+    },
+    {
+      "id": "WSB-SRC-0001-04",
+      "source": "Kpler",
+      "publication_date": "2026-09-21",
+      "confidence": "high",
+      "url": "https://www.kpler.com/blog/saudi-export-rerouting-amid-gulf-of-oman-sts-bottlenecks-amplify-vlcc-intensity-of-meg-flows"
+    },
+    {
+      "id": "WSB-SRC-0001-05",
+      "source": "Reuters citing The Information",
+      "publication_date": "2026-09-27",
+      "confidence": "medium",
+      "url": "https://finance.yahoo.com/technology/articles/china-weighs-allowing-bytedance-alibaba-152402813.html"
+    },
+    {
+      "id": "WSB-SRC-0001-06",
+      "source": "Reuters",
+      "publication_date": "2026-09-28",
+      "confidence": "high",
+      "url": "https://www.tbsnews.net/worldbiz/middle-east/oil-heads-higher-us-iran-peace-talks-stalemate-1555721"
+    }
+  ]
+}
