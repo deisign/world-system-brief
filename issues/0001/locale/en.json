@@ -1,0 +1,11 @@
+{
+  "locale":"en",
+  "labels":{
+    "gulf-crude-export-flow":"Gulf crude export flow","hormuz":"Hormuz","east-west-pipeline":"East-West Pipeline","gulf-of-oman-sts":"Gulf of Oman STS","nvidia-china":"Nvidia → China",
+    "saudi-production":"Saudi production","gulf-terminals":"Gulf terminals","asian-refinery":"Asian refinery","gulf-oil-export-adaptation":"Gulf oil export adaptation"
+  },
+  "states":{
+    "severely_constrained":"severely constrained","recovering_impaired":"recovering; still impaired","major_security_constraint":"major physical/security constraint","persistent_constraint":"persistent constraint","interrupted":"interrupted","recovering_partial":"recovering / partial","emergency_adaptation":"emergency adaptation","adaptation_saturating":"large-scale adaptation; costly; approaching capacity","constrained":"constrained","possible_policy_relaxation":"possible policy relaxation"
+  },
+  "assessments":{"flow_recovery_adaptation_saturating":"Bottleneck migration: flow recovery relies on an adaptation route that is itself approaching a capacity constraint."}
+}
