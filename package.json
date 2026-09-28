@@ -1,0 +1,1 @@
+{"name":"world-system-brief","private":true,"type":"module","scripts":{"build":"node publisher/build.js"},"engines":{"node":">=20"}}
