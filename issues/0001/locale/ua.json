@@ -1,11 +1,50 @@
 {
-  "locale":"ua",
-  "labels":{
-    "gulf-crude-export-flow":"Експортний потік нафти з Перської затоки","hormuz":"Ормуз","east-west-pipeline":"East–West Pipeline","gulf-of-oman-sts":"STS в Оманській затоці","nvidia-china":"Nvidia → Китай",
-    "saudi-production":"Видобуток Саудівської Аравії","gulf-terminals":"Термінали Перської затоки","asian-refinery":"Азійський НПЗ","gulf-oil-export-adaptation":"Адаптація експорту нафти з Перської затоки"
+  "locale": "ua",
+  "labels": {
+    "gulf-crude-export-flow": "Експортний потік нафти з Перської затоки",
+    "hormuz": "Ормуз",
+    "east-west-pipeline": "East–West Pipeline",
+    "gulf-of-oman-sts": "STS в Оманській затоці",
+    "nvidia-china": "Nvidia → Китай",
+    "saudi-production": "Видобуток Саудівської Аравії",
+    "gulf-terminals": "Термінали Перської затоки",
+    "asian-refinery": "Азійський НПЗ",
+    "gulf-oil-export-adaptation": "Адаптація експорту нафти з Перської затоки",
+    "well": "Свердловина",
+    "pipeline": "Трубопровід",
+    "export-terminal": "Експортний термінал",
+    "strait": "Протока",
+    "vlcc": "VLCC",
+    "sts": "STS",
+    "middle-east-oil-exports-rebound": "Експорт нафти з Близького Сходу відновлюється",
+    "nvidia-purchases": "Китай може дозволити закупівлі Nvidia",
+    "market-price-movement": "Рух ринкової ціни"
   },
-  "states":{
-    "severely_constrained":"різко обмежений","recovering_impaired":"відновлюється; обмеження зберігаються","major_security_constraint":"значне фізичне / безпекове обмеження","persistent_constraint":"стале обмеження","interrupted":"перерваний","recovering_partial":"відновлюється / частково","emergency_adaptation":"аварійний маршрут адаптації","adaptation_saturating":"масштабна й дорога адаптація; наближається до межі пропускної здатності","constrained":"обмежений","possible_policy_relaxation":"можливе пом’якшення політики"
+  "states": {
+    "severely_constrained": "різко обмежений",
+    "recovering_impaired": "відновлюється; обмеження зберігаються",
+    "major_security_constraint": "значне фізичне / безпекове обмеження",
+    "persistent_constraint": "стале обмеження",
+    "interrupted": "перерваний",
+    "recovering_partial": "відновлюється / частково",
+    "emergency_adaptation": "аварійний маршрут адаптації",
+    "adaptation_saturating": "масштабна й дорога адаптація; наближається до межі пропускної здатності",
+    "constrained": "обмежений",
+    "possible_policy_relaxation": "можливе пом’якшення політики"
   },
-  "assessments":{"flow_recovery_adaptation_saturating":"Міграція вузького місця: відновлення потоку спирається на маршрут адаптації, який сам наближається до обмеження пропускної здатності."}
+  "assessments": {
+    "flow_recovery_adaptation_saturating": "Міграція вузького місця: відновлення потоку спирається на маршрут адаптації, який сам наближається до обмеження пропускної здатності."
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНИЙ Δ",
+    "persistent": "СТАЛИЙ",
+    "recovering": "ВІДНОВЛЮЄТЬСЯ",
+    "saturating": "НАСИЧУЄТЬСЯ",
+    "developing": "РОЗВИВАЄТЬСЯ"
+  },
+  "noise": {
+    "structural_consequence": "ВИЯВЛЕНО СТРУКТУРНИЙ НАСЛІДОК",
+    "developing_insufficient": "РОЗВИВАЄТЬСЯ / ДОКАЗІВ НЕДОСТАТНЬО",
+    "no_independent_delta": "НЕЗАЛЕЖНОГО Δ НЕМАЄ"
+  }
 }
