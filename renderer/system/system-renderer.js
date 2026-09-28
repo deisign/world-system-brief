@@ -27,7 +27,10 @@ const mark=o=>o.change==="up"?"↑":o.change==="strengthening"?"↗":o.change===
 const label=id=>id.replaceAll("-"," ").replace(/\b\w/g,m=>m.toUpperCase());
 
 export function renderSystem(state, presentation, locale="en"){
-  const t=STRINGS[locale]||STRINGS.en;\n  const p=presentation||{labels:{},states:{},assessments:{}};\n  const L=id=>p.labels[id]||label(id);\n  const S=id=>p.states[id]||id;
+  const t=STRINGS[locale]||STRINGS.en;
+  const p=presentation||{labels:{},states:{},assessments:{}};
+  const L=id=>p.labels[id]||label(id);
+  const S=id=>p.states[id]||id;
   const seq=state.dominant_mechanism.sequence;
   const nodes=seq.map((x,i)=>`<div class="node">${esc(L(x))}</div>${i<seq.length-1?'<div class="edge">→</div>':''}`).join("");
   const rows=state.objects.map(o=>`<tr><td>${esc(L(o.id))}</td><td>${esc(S(o.entering_state))}</td><td>${esc(S(o.current_state))}</td><td class="mark">${mark(o)}${o.constraint?" ×":""}</td><td>${esc(o.status.toUpperCase())}</td></tr>`).join("");
