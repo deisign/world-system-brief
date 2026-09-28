@@ -1,20 +1,122 @@
 {
   "issue_id": "WSB-0001",
   "date": "2026-09-28",
-  "day_type": {"system_activity":"quiet_active","news_pressure":"medium"},
-  "summary": {"confirmed_delta":1,"developing":1,"persistent":3},
+  "day_type": {
+    "system_activity": "quiet_active",
+    "news_pressure": "medium"
+  },
+  "summary": {
+    "confirmed_delta": 1,
+    "developing": 1,
+    "persistent": 3
+  },
   "objects": [
-    {"id":"gulf-crude-export-flow","entering_state":"severely_constrained","current_state":"recovering_impaired","change":"up","status":"confirmed_delta"},
-    {"id":"hormuz","entering_state":"major_security_constraint","current_state":"persistent_constraint","change":"unchanged","constraint":"material","status":"persistent"},
-    {"id":"east-west-pipeline","entering_state":"interrupted","current_state":"recovering_partial","change":"strengthening","status":"recovering"},
-    {"id":"gulf-of-oman-sts","entering_state":"emergency_adaptation","current_state":"adaptation_saturating","change":"strengthening","constraint":"emerging","status":"saturating"},
-    {"id":"nvidia-china","entering_state":"constrained","current_state":"possible_policy_relaxation","change":"unconfirmed","status":"developing"}
+    {
+      "id": "gulf-crude-export-flow",
+      "entering_state": "severely_constrained",
+      "current_state": "recovering_impaired",
+      "change": "up",
+      "status": "confirmed_delta"
+    },
+    {
+      "id": "hormuz",
+      "entering_state": "major_security_constraint",
+      "current_state": "persistent_constraint",
+      "change": "unchanged",
+      "constraint": "material",
+      "status": "persistent"
+    },
+    {
+      "id": "east-west-pipeline",
+      "entering_state": "interrupted",
+      "current_state": "recovering_partial",
+      "change": "strengthening",
+      "status": "recovering"
+    },
+    {
+      "id": "gulf-of-oman-sts",
+      "entering_state": "emergency_adaptation",
+      "current_state": "adaptation_saturating",
+      "change": "strengthening",
+      "constraint": "emerging",
+      "status": "saturating"
+    },
+    {
+      "id": "nvidia-china",
+      "entering_state": "constrained",
+      "current_state": "possible_policy_relaxation",
+      "change": "unconfirmed",
+      "status": "developing"
+    }
   ],
   "dominant_mechanism": {
-    "id":"gulf-oil-export-adaptation",
-    "type":"bottleneck_migration",
-    "sequence":["saudi-production","east-west-pipeline","gulf-terminals","hormuz","gulf-of-oman-sts","asian-refinery"],
-    "assessment":"flow_recovery_adaptation_saturating"
+    "id": "gulf-oil-export-adaptation",
+    "type": "bottleneck_migration",
+    "sequence": [
+      "saudi-production",
+      "east-west-pipeline",
+      "gulf-terminals",
+      "hormuz",
+      "gulf-of-oman-sts",
+      "asian-refinery"
+    ],
+    "assessment": "flow_recovery_adaptation_saturating",
+    "edges": [
+      {
+        "from": "saudi-production",
+        "to": "east-west-pipeline",
+        "status": "recovering",
+        "constraint": "partial"
+      },
+      {
+        "from": "east-west-pipeline",
+        "to": "gulf-terminals",
+        "status": "operational"
+      },
+      {
+        "from": "gulf-terminals",
+        "to": "hormuz",
+        "status": "operational",
+        "constraint": "material"
+      },
+      {
+        "from": "hormuz",
+        "to": "gulf-of-oman-sts",
+        "status": "adaptation",
+        "constraint": "emerging"
+      },
+      {
+        "from": "gulf-of-oman-sts",
+        "to": "asian-refinery",
+        "status": "operational"
+      }
+    ]
   },
-  "notes":["Analytical state uses language-neutral codes. Localized prose and labels live outside this file.","Issue 0002 must compare against this state rather than retell it."]
+  "notes": [
+    "Analytical state uses language-neutral codes. Localized prose and labels live outside this file.",
+    "Issue 0002 must compare against this state rather than retell it."
+  ],
+  "chain": [
+    "well",
+    "pipeline",
+    "export-terminal",
+    "strait",
+    "vlcc",
+    "sts",
+    "asian-refinery"
+  ],
+  "noise": [
+    {
+      "id": "middle-east-oil-exports-rebound",
+      "result": "structural_consequence"
+    },
+    {
+      "id": "nvidia-purchases",
+      "result": "developing_insufficient"
+    },
+    {
+      "id": "market-price-movement",
+      "result": "no_independent_delta"
+    }
+  ]
 }
