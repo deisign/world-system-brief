@@ -49,5 +49,24 @@
     "no_independent_delta": "NO INDEPENDENT Δ",
     "existing_process_new_evidence": "NEW EVIDENCE / EXISTING PROCESS",
     "developing_insufficient": "DEVELOPING / EVIDENCE INSUFFICIENT"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP · DOMINANT MECHANISM",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "THE SPARE ROUTE BECOMES AN ASSET.",
+    "deck": "Phase 2 changes no physical LNG flow today. It commits capital to future Pacific export capacity and increases the set of routes available to Canadian gas.",
+    "mechanism": "SUBSTITUTABILITY COMMITMENT",
+    "chainNote": "The route is not open. The capacity is now committed.",
+    "evidenceNote": "Evidence registry · source → claim → observation → assessment",
+    "footer": "CURRENT FLOW → · FUTURE CAPACITY ↑"
   }
 }
