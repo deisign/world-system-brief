@@ -1,0 +1,53 @@
+{
+  "locale": "en",
+  "labels": {
+    "lng-canada-phase-2": "LNG Canada Phase 2",
+    "eu-methane-import-rules": "EU methane import rules",
+    "cosco-zippel": "COSCO → Zippel",
+    "east-west-pipeline": "East-West Pipeline",
+    "hormuz": "Hormuz",
+    "gulf-of-oman-sts": "Gulf of Oman STS",
+    "nvidia-china": "Nvidia → China",
+    "pacific-lng-optionality": "Pacific LNG optionality",
+    "western-canada-gas": "Western Canadian gas",
+    "lng-canada": "LNG Canada",
+    "pacific-route": "Pacific route",
+    "asian-lng-market": "Asian LNG market",
+    "liquefaction": "Liquefaction",
+    "pacific-shipping": "Pacific shipping",
+    "east-west-recovery": "East-West recovery",
+    "oil-price-movement": "Oil-price movement",
+    "ai-small-gas-turbines": "Small gas turbines for AI data centres",
+    "nvidia-purchases": "China may allow Nvidia purchases"
+  },
+  "states": {
+    "pre_fid_option": "pre-FID option",
+    "committed_fid": "committed / FID taken",
+    "scheduled_2027": "scheduled for 2027",
+    "possible_delay_2028": "possible delay to 2028",
+    "acquisition_pending": "acquisition pending",
+    "possible_prohibition": "possible prohibition",
+    "recovering_partial": "recovering / partial",
+    "persistent_constraint": "persistent constraint",
+    "adaptation_saturating": "large-scale adaptation; capacity-limited",
+    "possible_policy_relaxation": "possible policy relaxation"
+  },
+  "assessments": {
+    "future_capacity_committed_without_current_flow_change": "Future Pacific LNG capacity moved from option to commitment. Current physical flow is unchanged."
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "developing": "DEVELOPING",
+    "evidence_update": "EVIDENCE UPDATE",
+    "persistent": "PERSISTENT",
+    "developing_persistent": "DEVELOPING / PERSISTENT",
+    "committed": "COMMITTED",
+    "operational": "OPERATIONAL"
+  },
+  "noise": {
+    "evidence_update_no_new_delta": "EVIDENCE UPDATE / NO NEW Δ",
+    "no_independent_delta": "NO INDEPENDENT Δ",
+    "existing_process_new_evidence": "NEW EVIDENCE / EXISTING PROCESS",
+    "developing_insufficient": "DEVELOPING / EVIDENCE INSUFFICIENT"
+  }
+}
