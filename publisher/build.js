@@ -30,7 +30,7 @@ for(const id of issueDirs){
  }
  archive.push({id:state.issue_id,date:state.date});
 }
-const lastState=JSON.parse(fs.readFileSync(path.join(root,"issues",latest,"state.json"),"utf8");
+const lastState=JSON.parse(fs.readFileSync(path.join(root,"issues",latest,"state.json"),"utf8"));
 for(const lang of ["en","ua"]) write(path.join(out,lang,"index.html"),`<!doctype html><meta http-equiv="refresh" content="0;url=/${lang}/brief/${lastState.date}/">`);
 write(path.join(out,"index.html"),`<!doctype html><meta charset="utf-8"><title>World System Brief</title><style>body{margin:0;background:#F1ECE0;color:#292A27;font-family:Arial}.x{min-height:100vh;display:grid;place-content:center;text-align:center}.b{font-size:clamp(50px,9vw,120px);font-weight:900;letter-spacing:-.07em}.s{font:700 12px monospace;letter-spacing:.25em;margin:15px}.a a{color:inherit;margin:20px;font:700 18px monospace}</style><div class="x"><div class="b">WORLD SYSTEM BRIEF</div><div class="s">FACTS · STRUCTURE · CONNECTIONS · CONSEQUENCES · NOT NOISE</div><div class="a"><a href="/en/brief/${lastState.date}/">READ EN →</a><a href="/ua/brief/${lastState.date}/">ЧИТАТИ UA →</a></div></div>`);
 write(path.join(out,"archive","index.html"),shell("<article><h1>ARCHIVE</h1>"+archive.reverse().map(x=>`<p><strong>${x.id}</strong> · <a href="/en/brief/${x.date}/">${x.date}</a></p>`).join("")+"</article>",{date:lastState.date,issue:"ARCHIVE"}));
