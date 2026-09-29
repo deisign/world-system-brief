@@ -1,0 +1,72 @@
+{
+  "issue_id": "WSB-0002",
+  "as_of": "2026-09-29",
+  "records": [
+    {
+      "id": "WSB-SRC-0002-01",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/energy/shell-led-lng-canada-greenlights-phase-2-expansion-doubling-export-capacity-2026-09-29/",
+      "publication_date": "2026-09-29",
+      "claim": "The LNG Canada partners took a final investment decision on Phase 2, which would double Kitimat liquefaction capacity from 14 to 28 mtpa.",
+      "observation": "A future Pacific LNG export option moved from pre-FID to committed capacity.",
+      "assessment": "CONFIRMED DELTA. The state change is in committed future infrastructure, not current physical LNG flow.",
+      "supports": ["lng-canada-phase-2", "pacific-lng-optionality"],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0002-02",
+      "source": "Shell",
+      "url": "https://www.shell.com/investors/results-and-reporting/portfolio-and-major-projects.html",
+      "publication_date": "2026-07-27",
+      "claim": "Shell listed LNG Canada Expansion as a key pre-FID option with 14 mtpa of expansion capacity.",
+      "observation": "Before the September 29 decision, Phase 2 remained classified as a pre-FID option.",
+      "assessment": "Establishes the entering state for the Phase 2 transition.",
+      "supports": ["lng-canada-phase-2"],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0002-03",
+      "source": "Shell",
+      "url": "https://www.shell.com/news-and-insights/newsroom/news-and-media-releases/2025/first-cargo-leaves-lng-canada.html",
+      "publication_date": "2025-06-30",
+      "claim": "LNG Canada Phase 1 has 14 mtpa capacity and the proposed Phase 2 would add two trains, taking total capacity to 28 mtpa.",
+      "observation": "The expansion adds a second 14 mtpa block to an existing Pacific-coast LNG system.",
+      "assessment": "Supports the capacity geometry and Pacific-route mechanism.",
+      "supports": ["lng-canada-phase-2"],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0002-04",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/business/energy/what-are-europes-methane-emissions-rules-why-are-they-being-delayed-2026-09-29/",
+      "publication_date": "2026-09-29",
+      "claim": "The European Commission is considering delaying foreign oil and gas methane reporting requirements from January 2027 to January 2028 amid supply-security concerns; amendments still require institutional approval.",
+      "observation": "Tight supplier substitutability is creating pressure to relax the timing of a regulatory constraint.",
+      "assessment": "DEVELOPING / EVIDENCE INSUFFICIENT. No legal state change is recorded yet.",
+      "supports": ["eu-methane-import-rules"],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0002-05",
+      "source": "Reuters citing Handelsblatt",
+      "url": "https://www.reuters.com/world/china/germany-intends-block-sale-logistics-firm-chinas-cosco-newspaper-reports-2026-09-29/",
+      "publication_date": "2026-09-29",
+      "claim": "Germany intends to block Cosco's planned acquisition of an 80% stake in logistics firm Zippel, but no final official decision has been announced.",
+      "observation": "A possible state intervention could constrain Chinese ownership in German inland container logistics.",
+      "assessment": "DEVELOPING. Reported intent is not yet a completed prohibition.",
+      "supports": ["cosco-zippel"],
+      "confidence": "medium_high"
+    },
+    {
+      "id": "WSB-SRC-0002-06",
+      "source": "Reuters / Kpler",
+      "url": "https://www.reuters.com/business/energy/saudi-resumes-yanbu-oil-loading-after-pipeline-restart-2026-09-29/",
+      "publication_date": "2026-09-29",
+      "claim": "Yanbu crude loading resumed around 2 mbd and Kpler estimated East-West throughput around 2.65 mbd, with further recovery expected but below pre-attack capacity.",
+      "observation": "The recovery recorded in WSB-0001 has stronger physical evidence.",
+      "assessment": "EVIDENCE UPDATE / STRENGTHENING. Do not create a second delta for the same recovery state.",
+      "supports": ["east-west-pipeline"],
+      "confidence": "high"
+    }
+  ]
+}
