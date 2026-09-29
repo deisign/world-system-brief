@@ -1,0 +1,53 @@
+{
+  "locale": "ua",
+  "labels": {
+    "lng-canada-phase-2": "LNG Canada Phase 2",
+    "eu-methane-import-rules": "Метанові правила ЄС для імпорту",
+    "cosco-zippel": "COSCO → Zippel",
+    "east-west-pipeline": "East-West Pipeline",
+    "hormuz": "Ормуз",
+    "gulf-of-oman-sts": "STS в Оманській затоці",
+    "nvidia-china": "Nvidia → Китай",
+    "pacific-lng-optionality": "Тихоокеанський маршрут LNG",
+    "western-canada-gas": "Газ Західної Канади",
+    "lng-canada": "LNG Canada",
+    "pacific-route": "Тихоокеанський маршрут",
+    "asian-lng-market": "Азійський ринок LNG",
+    "liquefaction": "Зрідження",
+    "pacific-shipping": "Тихоокеанське судноплавство",
+    "east-west-recovery": "Відновлення East-West",
+    "oil-price-movement": "Рух ціни на нафту",
+    "ai-small-gas-turbines": "Малі газові турбіни для AI-датацентрів",
+    "nvidia-purchases": "Можливі закупівлі Nvidia в Китаї"
+  },
+  "states": {
+    "pre_fid_option": "до FID; будівництво не затверджене",
+    "committed_fid": "FID ухвалено; потужність затверджена",
+    "scheduled_2027": "заплановано на 2027 рік",
+    "possible_delay_2028": "можливе відтермінування до 2028 року",
+    "acquisition_pending": "угода очікує рішення",
+    "possible_prohibition": "можлива заборона",
+    "recovering_partial": "відновлюється / частково",
+    "persistent_constraint": "стале обмеження",
+    "adaptation_saturating": "масштабний обхід; обмежена потужність",
+    "possible_policy_relaxation": "можливе послаблення обмежень"
+  },
+  "assessments": {
+    "future_capacity_committed_without_current_flow_change": "Майбутня тихоокеанська потужність LNG перейшла з варіанта в затверджений проєкт. Поточний фізичний потік не змінився."
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНИЙ Δ",
+    "developing": "РОЗВИВАЄТЬСЯ",
+    "evidence_update": "ОНОВЛЕННЯ ДОКАЗІВ",
+    "persistent": "СТАЛИЙ",
+    "developing_persistent": "РОЗВИВАЄТЬСЯ / СТАЛИЙ",
+    "committed": "ЗАТВЕРДЖЕНО",
+    "operational": "ПРАЦЮЄ"
+  },
+  "noise": {
+    "evidence_update_no_new_delta": "ОНОВЛЕННЯ ДОКАЗІВ / НОВОГО Δ НЕМАЄ",
+    "no_independent_delta": "НЕЗАЛЕЖНОГО Δ НЕМАЄ",
+    "existing_process_new_evidence": "НОВІ ДОКАЗИ / ВЖЕ НАЯВНИЙ ПРОЦЕС",
+    "developing_insufficient": "РОЗВИВАЄТЬСЯ / ДОКАЗІВ НЕДОСТАТНЬО"
+  }
+}
