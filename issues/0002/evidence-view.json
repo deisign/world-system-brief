@@ -1,0 +1,11 @@
+{
+  "issue_id": "WSB-0002",
+  "records": [
+    {"id":"WSB-SRC-0002-01","source":"Reuters","publication_date":"2026-09-29","confidence":"high","url":"https://www.reuters.com/business/energy/shell-led-lng-canada-greenlights-phase-2-expansion-doubling-export-capacity-2026-09-29/"},
+    {"id":"WSB-SRC-0002-02","source":"Shell","publication_date":"2026-07-27","confidence":"high","url":"https://www.shell.com/investors/results-and-reporting/portfolio-and-major-projects.html"},
+    {"id":"WSB-SRC-0002-03","source":"Shell","publication_date":"2025-06-30","confidence":"high","url":"https://www.shell.com/news-and-insights/newsroom/news-and-media-releases/2025/first-cargo-leaves-lng-canada.html"},
+    {"id":"WSB-SRC-0002-04","source":"Reuters","publication_date":"2026-09-29","confidence":"high","url":"https://www.reuters.com/business/energy/what-are-europes-methane-emissions-rules-why-are-they-being-delayed-2026-09-29/"},
+    {"id":"WSB-SRC-0002-05","source":"Reuters citing Handelsblatt","publication_date":"2026-09-29","confidence":"medium_high","url":"https://www.reuters.com/world/china/germany-intends-block-sale-logistics-firm-chinas-cosco-newspaper-reports-2026-09-29/"},
+    {"id":"WSB-SRC-0002-06","source":"Reuters / Kpler","publication_date":"2026-09-29","confidence":"high","url":"https://www.reuters.com/business/energy/saudi-resumes-yanbu-oil-loading-after-pipeline-restart-2026-09-29/"}
+  ]
+}
