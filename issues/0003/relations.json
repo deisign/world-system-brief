@@ -1,0 +1,12 @@
+{
+  "issue_id": "WSB-0003",
+  "as_of": "2026-09-30",
+  "relations": [
+    {"id":"REL-260930-01","issue_id":"WSB-0003","from":"us-strategic-petroleum-reserve","predicate":"supplies","to":"us-refiners","observed_at":"2026-09-29","state":"loan_offer_up_to_40m_barrels","change":"up","source_ids":["WSB-SRC-0003-01"],"claim_ids":["CLM-260930-01","CLM-260930-02"],"confidence":"high"},
+    {"id":"REL-260930-02","issue_id":"WSB-0003","from":"cheniere","predicate":"supplies","to":"petrobras","observed_at":"2026-09-29","state":"22y_spa_0_8mtpa_fob","change":"up","source_ids":["WSB-SRC-0003-02"],"claim_ids":["CLM-260930-03"],"confidence":"high"},
+    {"id":"REL-260930-03","issue_id":"WSB-0003","from":"eib-bnp-guarantees","predicate":"finances","to":"eu-grid-manufacturers","observed_at":"2026-09-29","state":"700m_eur_guarantee_portfolio","change":"up","source_ids":["WSB-SRC-0003-03"],"claim_ids":["CLM-260930-04","CLM-260930-05"],"confidence":"high"},
+    {"id":"REL-260930-04","issue_id":"WSB-0003","from":"eu-grid-manufacturers","predicate":"enables","to":"eu-grid-capacity","observed_at":"2026-09-30","state":"prospective_capacity_expansion","change":"up","source_ids":["WSB-SRC-0003-03"],"claim_ids":["CLM-260930-04","CLM-260930-05"],"confidence":"high"},
+    {"id":"REL-260930-05","issue_id":"WSB-0003","from":"china-beef-quota-regime","predicate":"constrains","to":"brazil-beef-china","observed_at":"2026-09-30","valid_from":"2026-10-01","state":"quota_exhausted_55pct_additional_tariff","change":"up","source_ids":["WSB-SRC-0003-04"],"claim_ids":["CLM-260930-06","CLM-260930-07"],"confidence":"high"},
+    {"id":"REL-260930-06","issue_id":"WSB-0003","from":"east-west-pipeline","predicate":"bypasses","to":"hormuz","observed_at":"2026-09-30","state":"recovering_partial","change":"strengthening","source_ids":["WSB-SRC-0003-05"],"claim_ids":["CLM-260930-08","CLM-260930-09"],"confidence":"high"}
+  ]
+}
