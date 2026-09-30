@@ -1,0 +1,40 @@
+{
+  "issue_id": "WSB-0003",
+  "date": "2026-09-30",
+  "day_type": {"system_activity": "active", "news_pressure": "medium_high"},
+  "summary": {"confirmed_delta": 4, "developing": 2, "persistent": 3},
+  "objects": [
+    {"id":"us-spr-refiner-loans","entering_state":"final_iea_batch_largely_untaken","current_state":"new_40m_barrel_loan_offer","change":"up","status":"confirmed_delta","capacity_million_barrels":40},
+    {"id":"cheniere-petrobras-lng","entering_state":"no_22y_spa","current_state":"spa_22y_0_8mtpa_fob","change":"up","status":"confirmed_delta","volume_mtpa":0.8,"term_years":22},
+    {"id":"eu-grid-guarantees","entering_state":"grid_financing_constraint","current_state":"700m_guarantee_portfolio","change":"up","status":"confirmed_delta","guarantee_eur_million":700,"enabled_investment_eur_billion":2.8},
+    {"id":"brazil-beef-china","entering_state":"within_annual_quota","current_state":"quota_exhausted_55pct_extra_tariff","change":"up","status":"confirmed_delta","effective_date":"2026-10-01","quota_million_tonnes":1.1},
+    {"id":"eu-methane-import-rules","entering_state":"possible_delay_2028","current_state":"possible_delay_2028","change":"unconfirmed","status":"developing"},
+    {"id":"cosco-zippel","entering_state":"possible_prohibition","current_state":"possible_prohibition","change":"unconfirmed","status":"developing"},
+    {"id":"hormuz","entering_state":"persistent_constraint","current_state":"persistent_constraint_easing","change":"strengthening","constraint":"material","status":"persistent"},
+    {"id":"east-west-pipeline","entering_state":"recovering_partial","current_state":"recovering_partial","change":"strengthening","status":"persistent"},
+    {"id":"lng-canada-upstream","entering_state":"phase2_committed","current_state":"upstream_capacity_response_visible","change":"strengthening","status":"persistent"}
+  ],
+  "dominant_mechanism": {
+    "id":"capital-unblocks-grid-capacity",
+    "type":"bottleneck_adaptation_by_capital",
+    "sequence":["capital","grid-equipment","grid-connection","power-demand"],
+    "assessment":"guarantees_convert_financial_capacity_into_grid_supply_capacity",
+    "edges":[
+      {"from":"capital","to":"grid-equipment","status":"committed","change":"up"},
+      {"from":"grid-equipment","to":"grid-connection","status":"committed","change":"up"},
+      {"from":"grid-connection","to":"power-demand","status":"operational"}
+    ]
+  },
+  "notes": [
+    "Issue 0003 compares against WSB-0002 state; persistence and stronger evidence are not promoted to fresh deltas.",
+    "The four confirmed deltas use four different adaptation instruments: stock, contract, capital and market access.",
+    "Trump/Iran/oil-price movement remains a price response without an independent system-state transition."
+  ],
+  "chain":["capital","grid-equipment","grid-connection","power","end-users"],
+  "noise":[
+    {"id":"trump-iran-oil-price","result":"no_independent_delta"},
+    {"id":"east-west-recovery","result":"evidence_update_no_new_delta"},
+    {"id":"hormuz-easing","result":"evidence_update_no_new_delta"},
+    {"id":"lng-canada-upstream","result":"existing_process_new_evidence"}
+  ]
+}
