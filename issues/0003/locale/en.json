@@ -1,0 +1,75 @@
+{
+  "locale": "en",
+  "labels": {
+    "us-spr-refiner-loans": "US SPR → refiners",
+    "cheniere-petrobras-lng": "Cheniere → Petrobras LNG",
+    "eu-grid-guarantees": "European grid guarantees",
+    "brazil-beef-china": "Brazil beef → China",
+    "eu-methane-import-rules": "EU methane import rules",
+    "cosco-zippel": "COSCO → Zippel",
+    "hormuz": "Hormuz",
+    "east-west-pipeline": "East-West Pipeline",
+    "lng-canada-upstream": "LNG Canada upstream",
+    "capital-unblocks-grid-capacity": "Capital unblocks grid capacity",
+    "capital": "Capital",
+    "grid-equipment": "Grid equipment",
+    "grid-connection": "Grid connection",
+    "power-demand": "Power demand",
+    "power": "Power",
+    "end-users": "End users",
+    "trump-iran-oil-price": "Trump / Iran / oil price",
+    "east-west-recovery": "East-West recovery",
+    "hormuz-easing": "Hormuz easing"
+  },
+  "states": {
+    "final_iea_batch_largely_untaken": "final IEA batch largely untaken",
+    "new_40m_barrel_loan_offer": "new loan offer up to 40m barrels",
+    "no_22y_spa": "no 22-year SPA",
+    "spa_22y_0_8mtpa_fob": "22-year SPA · 0.8 mtpa · FOB",
+    "grid_financing_constraint": "grid-manufacturing finance constraint",
+    "700m_guarantee_portfolio": "€700m guarantee portfolio",
+    "within_annual_quota": "within annual quota",
+    "quota_exhausted_55pct_extra_tariff": "quota exhausted · +55% tariff",
+    "possible_delay_2028": "possible delay to 2028",
+    "possible_prohibition": "possible prohibition",
+    "persistent_constraint": "persistent constraint",
+    "persistent_constraint_easing": "persistent constraint · easing",
+    "recovering_partial": "recovering / partial",
+    "phase2_committed": "Phase 2 committed",
+    "upstream_capacity_response_visible": "upstream capacity response visible"
+  },
+  "assessments": {
+    "guarantees_convert_financial_capacity_into_grid_supply_capacity": "Guarantees move financial capacity toward a physical grid bottleneck. The investment is enabled, not yet built."
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "developing": "DEVELOPING",
+    "persistent": "PERSISTENT",
+    "committed": "COMMITTED",
+    "operational": "OPERATIONAL"
+  },
+  "noise": {
+    "no_independent_delta": "NO INDEPENDENT Δ",
+    "evidence_update_no_new_delta": "EVIDENCE UPDATE / NO NEW Δ",
+    "existing_process_new_evidence": "NEW EVIDENCE / EXISTING PROCESS"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP · DOMINANT MECHANISM",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "THE SYSTEM BUYS ROOM FOUR WAYS.",
+    "deck": "Stock, contract, capital and market access changed today. The common move is not more flow now, but more room to absorb pressure, finance capacity or redirect future supply.",
+    "mechanism": "CAPITAL INTO A PHYSICAL BOTTLENECK",
+    "chainNote": "The guarantee does not build the grid today. It moves financing capacity toward the equipment constraint.",
+    "evidenceNote": "Evidence registry · source → claim → observation → assessment",
+    "footer": "STOCK · CONTRACT · CAPITAL · MARKET ACCESS"
+  }
+}
