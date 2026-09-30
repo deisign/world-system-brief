@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://world-system-brief/schema/claim.schema.json",
+  "title": "World System Brief Claim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "issue_id", "kind", "statement", "observed_at", "entity_ids", "source_ids", "confidence"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^CLM-[0-9]{6}-[0-9]{2}$"},
+    "issue_id": {"type": "string", "pattern": "^WSB-[0-9]{4}$"},
+    "kind": {"enum": ["observed", "inferred", "hypothesis"]},
+    "statement": {"type": "string", "minLength": 1},
+    "observed_at": {"type": "string", "format": "date"},
+    "valid_from": {"type": ["string", "null"], "format": "date"},
+    "valid_to": {"type": ["string", "null"], "format": "date"},
+    "entity_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "relation_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^REL-[0-9]{6}-[0-9]{2}$"}},
+    "source_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "derived_from": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^CLM-[0-9]{6}-[0-9]{2}$"}},
+    "confidence": {"enum": ["high", "medium", "low"]},
+    "status": {"enum": ["confirmed_delta", "developing", "persistent", "no_independent_delta"]},
+    "metric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "value", "unit"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "value": {"type": "number"},
+        "unit": {"type": "string", "minLength": 1}
+      }
+    },
+    "note": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"kind": {"enum": ["inferred", "hypothesis"]}}, "required": ["kind"]},
+      "then": {"required": ["derived_from"]}
+    }
+  ]
+}
