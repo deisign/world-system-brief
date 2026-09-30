@@ -1,0 +1,10 @@
+{
+  "issue_id":"WSB-0003",
+  "records":[
+    {"id":"WSB-SRC-0003-01","source":"Reuters","publication_date":"2026-09-29","confidence":"high","url":"https://www.reuters.com/business/energy/us-release-40-million-barrels-crude-strategic-petroleum-reserve-energy-2026-09-29/"},
+    {"id":"WSB-SRC-0003-02","source":"Reuters","publication_date":"2026-09-29","confidence":"high","url":"https://www.reuters.com/business/energy/cheniere-signs-22-year-lng-supply-deal-with-petrobras-2026-09-29/"},
+    {"id":"WSB-SRC-0003-03","source":"Reuters","publication_date":"2026-09-29","confidence":"high","url":"https://www.reuters.com/business/energy/eib-bnp-paribas-sign-700-million-grid-guarantee-deal-2026-09-29/"},
+    {"id":"WSB-SRC-0003-04","source":"Reuters","publication_date":"2026-09-30","confidence":"high","url":"https://www.reuters.com/world/china/china-adds-55-tariff-brazil-beef-imports-2026-09-30/"},
+    {"id":"WSB-SRC-0003-05","source":"Reuters","publication_date":"2026-09-30","confidence":"high","url":"https://www.reuters.com/business/energy/oil-climbs-after-trump-denies-he-is-willing-ease-sanctions-iran-2026-09-30/"}
+  ]
+}
