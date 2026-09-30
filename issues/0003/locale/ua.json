@@ -1,0 +1,75 @@
+{
+  "locale": "ua",
+  "labels": {
+    "us-spr-refiner-loans": "SPR США → НПЗ",
+    "cheniere-petrobras-lng": "Cheniere → Petrobras LNG",
+    "eu-grid-guarantees": "Гарантії для електромереж Європи",
+    "brazil-beef-china": "Яловичина Бразилії → Китай",
+    "eu-methane-import-rules": "Метанові правила ЄС для імпорту",
+    "cosco-zippel": "COSCO → Zippel",
+    "hormuz": "Ормуз",
+    "east-west-pipeline": "East-West Pipeline",
+    "lng-canada-upstream": "LNG Canada · upstream",
+    "capital-unblocks-grid-capacity": "Капітал розширює пропускну здатність мереж",
+    "capital": "Капітал",
+    "grid-equipment": "Мережеве обладнання",
+    "grid-connection": "Підключення до мережі",
+    "power-demand": "Попит на електроенергію",
+    "power": "Електроенергія",
+    "end-users": "Споживачі",
+    "trump-iran-oil-price": "Trump / Iran / ціна на нафту",
+    "east-west-recovery": "Відновлення East-West",
+    "hormuz-easing": "Послаблення в Ормузі"
+  },
+  "states": {
+    "final_iea_batch_largely_untaken": "фінальна партія IEA переважно не вибрана",
+    "new_40m_barrel_loan_offer": "нова позика до 40 млн барелів",
+    "no_22y_spa": "немає 22-річного SPA",
+    "spa_22y_0_8mtpa_fob": "SPA на 22 роки · 0,8 mtpa · FOB",
+    "grid_financing_constraint": "фінансове обмеження виробництва для мереж",
+    "700m_guarantee_portfolio": "портфель гарантій €700 млн",
+    "within_annual_quota": "у межах річної квоти",
+    "quota_exhausted_55pct_extra_tariff": "квоту вичерпано · +55% тариф",
+    "possible_delay_2028": "можливе відтермінування до 2028 року",
+    "possible_prohibition": "можлива заборона",
+    "persistent_constraint": "стале обмеження",
+    "persistent_constraint_easing": "стале обмеження · послаблюється",
+    "recovering_partial": "відновлюється / частково",
+    "phase2_committed": "Phase 2 затверджено",
+    "upstream_capacity_response_visible": "видима реакція потужності upstream"
+  },
+  "assessments": {
+    "guarantees_convert_financial_capacity_into_grid_supply_capacity": "Гарантії пересувають фінансову спроможність до фізичного вузького місця електромереж. Інвестиції стають можливими, але обладнання ще не побудоване."
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНИЙ Δ",
+    "developing": "РОЗВИВАЄТЬСЯ",
+    "persistent": "СТАЛИЙ",
+    "committed": "ЗАТВЕРДЖЕНО",
+    "operational": "ПРАЦЮЄ"
+  },
+  "noise": {
+    "no_independent_delta": "НЕЗАЛЕЖНОГО Δ НЕМАЄ",
+    "evidence_update_no_new_delta": "ОНОВЛЕННЯ ДОКАЗІВ / НОВОГО Δ НЕМАЄ",
+    "existing_process_new_evidence": "НОВІ ДОКАЗИ / ВЖЕ НАЯВНИЙ ПРОЦЕС"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP · DOMINANT MECHANISM",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ПОПЕРЕДНІЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "СИСТЕМА КУПУЄ СОБІ ПРОСТІР ЧОТИРМА СПОСОБАМИ.",
+    "deck": "Сьогодні змінилися запас, контракт, капітал і доступ до ринку. Спільний рух — не більший потік просто зараз, а більший простір для поглинання тиску, фінансування потужності або перенаправлення майбутнього постачання.",
+    "mechanism": "КАПІТАЛ У ФІЗИЧНЕ ВУЗЬКЕ МІСЦЕ",
+    "chainNote": "Гарантія не будує мережу сьогодні. Вона пересуває фінансову спроможність до дефіциту обладнання.",
+    "evidenceNote": "Реєстр доказів · source → claim → observation → assessment",
+    "footer": "ЗАПАС · КОНТРАКТ · КАПІТАЛ · ДОСТУП ДО РИНКУ"
+  }
+}
