@@ -49,5 +49,24 @@
     "no_independent_delta": "НЕЗАЛЕЖНОГО Δ НЕМАЄ",
     "existing_process_new_evidence": "НОВІ ДОКАЗИ / ВЖЕ НАЯВНИЙ ПРОЦЕС",
     "developing_insufficient": "РОЗВИВАЄТЬСЯ / ДОКАЗІВ НЕДОСТАТНЬО"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP · DOMINANT MECHANISM",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ПОПЕРЕДНІЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "ЗАПАСНИЙ МАРШРУТ СТАЄ АКТИВОМ.",
+    "deck": "Phase 2 сьогодні не змінює фізичний потік LNG. Вона переводить майбутню тихоокеанську експортну потужність у затверджений проєкт і розширює набір маршрутів для канадського газу.",
+    "mechanism": "ЗОБОВ'ЯЗАННЯ ЩОДО ЗАМІННОСТІ",
+    "chainNote": "Маршрут ще не відкритий. Потужність уже затверджена.",
+    "evidenceNote": "Реєстр доказів · source → claim → observation → assessment",
+    "footer": "ПОТОЧНИЙ ПОТІК → · МАЙБУТНЯ ПОТУЖНІСТЬ ↑"
   }
 }
