@@ -1,0 +1,47 @@
+{
+  "locale":"en",
+  "labels":{
+    "china-fuel-export-suspension":"China fuel export suspension",
+    "germany-mispel-storage":"Germany MiSpeL storage",
+    "taiwan-energy-buffer":"Taiwan energy buffer",
+    "steel-milwaukee-framework":"Milwaukee steel framework",
+    "estonia-grain-transit":"Estonia grain transit",
+    "hormuz":"Hormuz",
+    "fujairah-fuel-oil":"Fujairah fuel oil",
+    "administrative-access-to-capacity":"Administrative access to capacity",
+    "scarcity-shock":"Scarcity / shock",
+    "administrative-rule":"Administrative rule",
+    "capacity-access":"Access to capacity",
+    "redistributed-flow":"Redistributed flow",
+    "hormuz-recovery":"Hormuz recovery",
+    "fujairah-recovery":"Fujairah recovery"
+  },
+  "states":{
+    "fuel_exports_available":"fuel exports available",
+    "october_exports_suspended_ex_hk_macau":"October exports suspended except Hong Kong / Macau",
+    "mixed_storage_market_access_restricted":"mixed-storage market access restricted",
+    "mispel_market_integration_adopted":"MiSpeL market integration adopted",
+    "utilities_absorb_energy_price_shock":"utilities absorb energy-price shock",
+    "supplementary_budget_and_cpc_recapitalisation_approved_by_cabinet":"supplementary budget + CPC recapitalisation approved by cabinet",
+    "fragmented_response_to_excess_capacity":"fragmented response to excess capacity",
+    "joint_action_framework_consensus":"joint-action framework agreed",
+    "reported_policy_change":"reported policy change",
+    "persistent_constraint_easing":"persistent constraint · easing",
+    "war_disrupted_supply":"war-disrupted supply",
+    "partial_supply_recovery_below_prewar":"partial supply recovery · below pre-war"
+  },
+  "assessments":{
+    "states_and_regulators_reallocate_access_to_scarce_capacity":"States and regulators are changing who can reach existing capacity, who absorbs the shock and which flows remain available."
+  },
+  "statuses":{"confirmed_delta":"CONFIRMED Δ","developing":"DEVELOPING","persistent":"PERSISTENT","committed":"COMMITTED","operational":"OPERATIONAL"},
+  "noise":{"evidence_update_no_new_delta":"EVIDENCE UPDATE / NO NEW Δ","existing_process_new_evidence":"NEW EVIDENCE / EXISTING PROCESS"},
+  "copy":{
+    "systemDelta":"SYSTEM DELTA","map":"SYSTEM MAP · DOMINANT MECHANISM","chain":"CHAIN OF THE DAY","noise":"NOISE CHECK","ledger":"SYSTEM LEDGER","evidence":"EVIDENCE","entering":"ENTERING STATE","current":"CURRENT STATE","status":"STATUS","issue":"ISSUE","activity":"SYSTEM ACTIVITY",
+    "headline":"WHO GETS THE CAPACITY?",
+    "deck":"Fuel, storage, public balance sheets and steel changed through rules of access and allocation. Today's common move is not simply more capacity, but control over who can use it and who absorbs the shock.",
+    "mechanism":"ADMINISTRATIVE ACCESS TO CAPACITY",
+    "chainNote":"Under pressure, systems respond not only by building capacity but by changing the rules that allocate access to what already exists.",
+    "evidenceNote":"Evidence registry · source → claim → observation → assessment",
+    "footer":"SCARCITY · RULES · CAPACITY · FLOW"
+  }
+}
