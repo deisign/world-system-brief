@@ -1,0 +1,10 @@
+{
+  "issue_id":"WSB-0004","as_of":"2026-10-01","relations":[
+    {"id":"REL-261001-01","issue_id":"WSB-0004","from":"ENT-000020","predicate":"constrains","to":"ENT-000021","observed_at":"2026-10-01","state":"october_exports_suspended_ex_hk_macau","change":"up","source_ids":["WSB-SRC-0004-01"],"claim_ids":["CLM-261001-01","CLM-261001-02"],"confidence":"medium"},
+    {"id":"REL-261001-02","issue_id":"WSB-0004","from":"ENT-000022","predicate":"enables","to":"ENT-000024","observed_at":"2026-10-01","state":"mispel_market_integration_adopted","change":"up","source_ids":["WSB-SRC-0004-02"],"claim_ids":["CLM-261001-03","CLM-261001-04"],"confidence":"high"},
+    {"id":"REL-261001-03","issue_id":"WSB-0004","from":"ENT-000025","predicate":"finances","to":"ENT-000026","observed_at":"2026-10-01","state":"supplementary_budget_price_buffer","change":"up","source_ids":["WSB-SRC-0004-03"],"claim_ids":["CLM-261001-05","CLM-261001-06"],"confidence":"high"},
+    {"id":"REL-261001-04","issue_id":"WSB-0004","from":"ENT-000025","predicate":"finances","to":"ENT-000027","observed_at":"2026-10-01","state":"cpc_recapitalisation_for_resilience_and_infrastructure","change":"up","source_ids":["WSB-SRC-0004-03"],"claim_ids":["CLM-261001-05","CLM-261001-06"],"confidence":"high"},
+    {"id":"REL-261001-05","issue_id":"WSB-0004","from":"ENT-000029","predicate":"responds_to","to":"ENT-000030","observed_at":"2026-09-30","state":"milwaukee_framework_joint_action","change":"up","source_ids":["WSB-SRC-0004-04"],"claim_ids":["CLM-261001-07","CLM-261001-08"],"confidence":"high"},
+    {"id":"REL-261001-06","issue_id":"WSB-0004","from":"ENT-000031","predicate":"responds_to","to":"ENT-000001","observed_at":"2026-10-01","state":"partial_supply_recovery_below_prewar","change":"strengthening","source_ids":["WSB-SRC-0004-05"],"claim_ids":["CLM-261001-09","CLM-261001-10"],"confidence":"high"}
+  ]
+}
