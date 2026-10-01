@@ -1,0 +1,47 @@
+{
+  "locale":"ua",
+  "labels":{
+    "china-fuel-export-suspension":"Призупинення експорту пального з Китаю",
+    "germany-mispel-storage":"Німеччина · MiSpeL / накопичення",
+    "taiwan-energy-buffer":"Енергетичний буфер Тайваню",
+    "steel-milwaukee-framework":"Milwaukee Framework / сталь",
+    "estonia-grain-transit":"Транзит зерна через Естонію",
+    "hormuz":"Ормуз",
+    "fujairah-fuel-oil":"Фуджейра · мазут",
+    "administrative-access-to-capacity":"Адміністративний доступ до потужності",
+    "scarcity-shock":"Дефіцит / шок",
+    "administrative-rule":"Адміністративне правило",
+    "capacity-access":"Доступ до потужності",
+    "redistributed-flow":"Перерозподілений потік",
+    "hormuz-recovery":"Відновлення навколо Ормузу",
+    "fujairah-recovery":"Відновлення Фуджейри"
+  },
+  "states":{
+    "fuel_exports_available":"експорт пального доступний",
+    "october_exports_suspended_ex_hk_macau":"жовтневий експорт призупинено, крім Гонконгу / Макао",
+    "mixed_storage_market_access_restricted":"ринковий доступ змішаного накопичення обмежений",
+    "mispel_market_integration_adopted":"ринкову інтеграцію MiSpeL ухвалено",
+    "utilities_absorb_energy_price_shock":"енергокомпанії поглинають ціновий шок",
+    "supplementary_budget_and_cpc_recapitalisation_approved_by_cabinet":"додатковий бюджет + докапіталізацію CPC схвалено урядом",
+    "fragmented_response_to_excess_capacity":"розрізнена відповідь на надлишкові потужності",
+    "joint_action_framework_consensus":"узгоджено рамку спільних дій",
+    "reported_policy_change":"повідомлена зміна політики",
+    "persistent_constraint_easing":"стале обмеження · послаблюється",
+    "war_disrupted_supply":"постачання порушене війною",
+    "partial_supply_recovery_below_prewar":"часткове відновлення постачання · нижче довоєнного рівня"
+  },
+  "assessments":{
+    "states_and_regulators_reallocate_access_to_scarce_capacity":"Держави й регулятори змінюють, хто отримує доступ до наявної потужності, хто поглинає шок і які потоки залишаються доступними."
+  },
+  "statuses":{"confirmed_delta":"ПІДТВЕРДЖЕНИЙ Δ","developing":"РОЗВИВАЄТЬСЯ","persistent":"СТАЛИЙ","committed":"ЗАТВЕРДЖЕНО","operational":"ПРАЦЮЄ"},
+  "noise":{"evidence_update_no_new_delta":"ОНОВЛЕННЯ ДОКАЗІВ / НОВОГО Δ НЕМАЄ","existing_process_new_evidence":"НОВІ ДОКАЗИ / ВЖЕ НАЯВНИЙ ПРОЦЕС"},
+  "copy":{
+    "systemDelta":"SYSTEM DELTA","map":"SYSTEM MAP · DOMINANT MECHANISM","chain":"CHAIN OF THE DAY","noise":"NOISE CHECK","ledger":"SYSTEM LEDGER","evidence":"EVIDENCE","entering":"ПОПЕРЕДНІЙ СТАН","current":"ПОТОЧНИЙ СТАН","status":"СТАТУС","issue":"ВИПУСК","activity":"SYSTEM ACTIVITY",
+    "headline":"КОМУ ДІСТАНЕТЬСЯ ПОТУЖНІСТЬ?",
+    "deck":"Пальне, накопичення, державні баланси й сталь сьогодні змінилися через правила доступу та розподілу. Спільний рух — не просто більше потужності, а контроль над тим, хто може нею користуватися і хто поглинає шок.",
+    "mechanism":"АДМІНІСТРАТИВНИЙ ДОСТУП ДО ПОТУЖНОСТІ",
+    "chainNote":"Під тиском система реагує не лише будівництвом потужностей, а й зміною правил доступу до того, що вже існує.",
+    "evidenceNote":"Реєстр доказів · source → claim → observation → assessment",
+    "footer":"ДЕФІЦИТ · ПРАВИЛА · ПОТУЖНІСТЬ · ПОТІК"
+  }
+}
