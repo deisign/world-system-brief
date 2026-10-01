@@ -1,0 +1,19 @@
+{
+  "issue_id":"WSB-0004",
+  "date":"2026-10-01",
+  "day_type":{"system_activity":"active","news_pressure":"high"},
+  "summary":{"confirmed_delta":4,"developing":1,"persistent":2},
+  "objects":[
+    {"id":"china-fuel-export-suspension","entering_state":"fuel_exports_available","current_state":"october_exports_suspended_ex_hk_macau","change":"down","status":"confirmed_delta"},
+    {"id":"germany-mispel-storage","entering_state":"mixed_storage_market_access_restricted","current_state":"mispel_market_integration_adopted","change":"up","status":"confirmed_delta","transition_end":"2027-09-30"},
+    {"id":"taiwan-energy-buffer","entering_state":"utilities_absorb_energy_price_shock","current_state":"supplementary_budget_and_cpc_recapitalisation_approved_by_cabinet","change":"up","status":"confirmed_delta","price_buffer_twd_billion":180.935,"cpc_recapitalisation_twd_billion":233.834},
+    {"id":"steel-milwaukee-framework","entering_state":"fragmented_response_to_excess_capacity","current_state":"joint_action_framework_consensus","change":"up","status":"confirmed_delta"},
+    {"id":"estonia-grain-transit","entering_state":"reported_policy_change","current_state":"reported_policy_change","change":"unconfirmed","status":"developing"},
+    {"id":"hormuz","entering_state":"persistent_constraint_easing","current_state":"persistent_constraint_easing","change":"stable","status":"persistent"},
+    {"id":"fujairah-fuel-oil","entering_state":"war_disrupted_supply","current_state":"partial_supply_recovery_below_prewar","change":"strengthening","status":"persistent"}
+  ],
+  "dominant_mechanism":{"id":"administrative-access-to-capacity","type":"scarcity_management_by_rules_and_balance_sheets","sequence":["scarcity-shock","administrative-rule","capacity-access","redistributed-flow"],"assessment":"states_and_regulators_reallocate_access_to_scarce_capacity","edges":[{"from":"scarcity-shock","to":"administrative-rule","status":"operational","change":"up"},{"from":"administrative-rule","to":"capacity-access","status":"committed","change":"up"},{"from":"capacity-access","to":"redistributed-flow","status":"developing"}]},
+  "notes":["Issue 0004 compares against WSB-0003; persistence is not promoted to a fresh delta.","China fuel-export suspension is source-reported rather than confirmed by a published Chinese directive; confidence is therefore lower than the three primary-source deltas.","Taiwan's cabinet approval changes the fiscal commitment, while legislative approval is still required for the supplementary budget.","The Milwaukee Framework changes the coordination mechanism, not steel tonnage on 1 October."],
+  "chain":["scarcity-shock","administrative-rule","capacity-access","redistributed-flow"],
+  "noise":[{"id":"hormuz-recovery","result":"evidence_update_no_new_delta"},{"id":"fujairah-recovery","result":"existing_process_new_evidence"}]
+}
