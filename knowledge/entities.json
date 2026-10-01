@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0",
-  "entities": [
+  "schema_version":"1.0",
+  "entities":[
     {"id":"ENT-000001","slug":"hormuz","type":"chokepoint","labels":{"en":"Strait of Hormuz","ua":"Ормузька протока"}},
     {"id":"ENT-000002","slug":"east-west-pipeline","type":"infrastructure","labels":{"en":"East-West Pipeline","ua":"Нафтопровід East-West"}},
     {"id":"ENT-000003","slug":"us-spr-refiner-loans","type":"policy_instrument","labels":{"en":"US SPR refiner loans","ua":"Позики НСР США для НПЗ"}},
@@ -19,6 +19,18 @@
     {"id":"ENT-000016","slug":"eu-methane-import-rules","type":"regulation","labels":{"en":"EU methane import rules","ua":"Правила ЄС щодо метану в імпорті"}},
     {"id":"ENT-000017","slug":"cosco-zippel","type":"regulatory_case","labels":{"en":"COSCO–Zippel case","ua":"Справа COSCO–Zippel"}},
     {"id":"ENT-000018","slug":"lng-canada-upstream","type":"energy_supply","labels":{"en":"LNG Canada upstream capacity","ua":"Видобувні потужності LNG Canada"}},
-    {"id":"ENT-000019","slug":"trump-iran-oil-price","type":"market_signal","labels":{"en":"Iran sanctions oil-price response","ua":"Цінова реакція на санкції проти Ірану"}}
+    {"id":"ENT-000019","slug":"trump-iran-oil-price","type":"market_signal","labels":{"en":"Iran sanctions oil-price response","ua":"Цінова реакція на санкції проти Ірану"}},
+    {"id":"ENT-000020","slug":"china-fuel-export-suspension","type":"trade_flow_rule","labels":{"en":"China fuel-export suspension","ua":"Призупинення експорту пального з Китаю"}},
+    {"id":"ENT-000021","slug":"external-asia-fuel-market","type":"market","labels":{"en":"External Asian fuel market","ua":"Зовнішній азійський ринок пального"}},
+    {"id":"ENT-000022","slug":"germany-mispel-storage","type":"regulation","labels":{"en":"Germany MiSpeL storage integration","ua":"Німецька інтеграція накопичувачів MiSpeL"}},
+    {"id":"ENT-000023","slug":"bidirectional-charging","type":"infrastructure","labels":{"en":"Bidirectional charging","ua":"Двонапрямне заряджання"}},
+    {"id":"ENT-000024","slug":"german-electricity-flexibility","type":"market_capacity","labels":{"en":"German electricity-system flexibility","ua":"Гнучкість електросистеми Німеччини"}},
+    {"id":"ENT-000025","slug":"taiwan-public-balance-sheet","type":"state_capacity","labels":{"en":"Taiwan public balance sheet","ua":"Державний баланс Тайваню"}},
+    {"id":"ENT-000026","slug":"taipower","type":"company","labels":{"en":"Taipower","ua":"Taipower"}},
+    {"id":"ENT-000027","slug":"cpc-taiwan","type":"company","labels":{"en":"CPC Taiwan","ua":"CPC Taiwan"}},
+    {"id":"ENT-000028","slug":"taiwan-energy-buffer","type":"policy_instrument","labels":{"en":"Taiwan energy-price buffer","ua":"Енергетичний ціновий буфер Тайваню"}},
+    {"id":"ENT-000029","slug":"steel-milwaukee-framework","type":"institutional_framework","labels":{"en":"Milwaukee Framework","ua":"Milwaukee Framework"}},
+    {"id":"ENT-000030","slug":"global-steel-excess-capacity","type":"system_constraint","labels":{"en":"Global steel excess capacity","ua":"Глобальні надлишкові сталеливарні потужності"}},
+    {"id":"ENT-000031","slug":"fujairah-fuel-oil","type":"energy_hub","labels":{"en":"Fujairah fuel-oil system","ua":"Система мазутних поставок Фуджейри"}}
   ]
 }
