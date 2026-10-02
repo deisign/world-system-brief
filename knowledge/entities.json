@@ -31,6 +31,13 @@
     {"id":"ENT-000028","slug":"taiwan-energy-buffer","type":"policy_instrument","labels":{"en":"Taiwan energy-price buffer","ua":"Енергетичний ціновий буфер Тайваню"}},
     {"id":"ENT-000029","slug":"steel-milwaukee-framework","type":"institutional_framework","labels":{"en":"Milwaukee Framework","ua":"Milwaukee Framework"}},
     {"id":"ENT-000030","slug":"global-steel-excess-capacity","type":"system_constraint","labels":{"en":"Global steel excess capacity","ua":"Глобальні надлишкові сталеливарні потужності"}},
-    {"id":"ENT-000031","slug":"fujairah-fuel-oil","type":"energy_hub","labels":{"en":"Fujairah fuel-oil system","ua":"Система мазутних поставок Фуджейри"}}
+    {"id":"ENT-000031","slug":"fujairah-fuel-oil","type":"energy_hub","labels":{"en":"Fujairah fuel-oil system","ua":"Система мазутних поставок Фуджейри"}},
+    {"id":"ENT-000032","slug":"marinus-link-stage1","type":"infrastructure","labels":{"en":"Marinus Link Stage 1","ua":"Marinus Link · етап 1"}},
+    {"id":"ENT-000033","slug":"tasmania-victoria-power-transfer","type":"infrastructure_capacity","labels":{"en":"Tasmania–Victoria power transfer","ua":"Передача електроенергії Тасманія–Вікторія"}},
+    {"id":"ENT-000034","slug":"europe-diesel-reserve-release","type":"policy_option","labels":{"en":"European diesel reserve release","ua":"Вивільнення європейських резервів дизеля"}},
+    {"id":"ENT-000035","slug":"refined-products-bottleneck","type":"system_constraint","labels":{"en":"Refined-products bottleneck","ua":"Вузьке місце нафтопродуктів"}},
+    {"id":"ENT-000036","slug":"kedah-lng-terminal","type":"infrastructure_option","labels":{"en":"Kedah LNG terminal","ua":"LNG-термінал Kedah"}},
+    {"id":"ENT-000037","slug":"northern-malaysia-gas-supply","type":"energy_supply","labels":{"en":"Northern Malaysia gas supply","ua":"Газопостачання півночі Малайзії"}},
+    {"id":"ENT-000038","slug":"hormuz-lng-flow","type":"energy_flow","labels":{"en":"Hormuz LNG flow","ua":"Потік LNG через Ормуз"}}
   ]
 }
