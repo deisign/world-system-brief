@@ -2,7 +2,7 @@
   "issue_id":"WSB-0005","as_of":"2026-10-02","relations":[
     {"id":"REL-261002-01","issue_id":"WSB-0005","from":"ENT-000032","predicate":"enables","to":"ENT-000033","observed_at":"2026-10-02","state":"construction_ramp_up_for_750mw_stage1","change":"strengthening","source_ids":["WSB-SRC-0005-01"],"claim_ids":["CLM-261002-01","CLM-261002-02"],"confidence":"high"},
     {"id":"REL-261002-02","issue_id":"WSB-0005","from":"ENT-000038","predicate":"flows_through","to":"ENT-000001","observed_at":"2026-10-02","state":"monthly_flow_recovering_with_abnormal_navigation","change":"strengthening","source_ids":["WSB-SRC-0005-02"],"claim_ids":["CLM-261002-03","CLM-261002-04"],"confidence":"high"},
-    {"id":"REL-261002-03","issue_id":"WSB-0005","from":"ENT-000035","predicate":"responds_to","to":"ENT-000034","observed_at":"2026-10-02","state":"stock_release_pressure_under_discussion","change":"up","source_ids":["WSB-SRC-0005-03"],"claim_ids":["CLM-261002-05","CLM-261002-06"],"confidence":"medium"},
+    {"id":"REL-261002-03","issue_id":"WSB-0005","from":"ENT-000034","predicate":"responds_to","to":"ENT-000035","observed_at":"2026-10-02","state":"g7_100m_barrel_release_committed_frontloaded_diesel","change":"up","source_ids":["WSB-SRC-0005-03"],"claim_ids":["CLM-261002-05","CLM-261002-06"],"confidence":"high"},
     {"id":"REL-261002-04","issue_id":"WSB-0005","from":"ENT-000036","predicate":"supplies","to":"ENT-000037","observed_at":"2026-10-02","state":"pre_fid_import_option_up_to_6mtpa","change":"unconfirmed","source_ids":["WSB-SRC-0005-04"],"claim_ids":["CLM-261002-07","CLM-261002-08"],"confidence":"high"}
   ]
 }
