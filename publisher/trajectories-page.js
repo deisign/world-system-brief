@@ -1,0 +1,7 @@
+export function trajectoriesPage({lang, trajectories, persistentRelations, labels={}, states={}}){
+ const ua=lang==="ua", esc=s=>String(s??"").replace(/[&<>\"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'\"':"&quot;"}[c]));
+ const name=id=>labels[id]||id, state=id=>states[id]||id;
+ const cards=trajectories.map(t=>`<section class="trajectory"><h2><a href="/${lang}/entity/${encodeURIComponent(t.id)}/">${esc(name(t.id))}</a></h2><div class="meta">${t.first} → ${t.last} · ${t.appearances} ${ua?"випусків":"issues"}</div><div class="path">${t.states.map(s=>`<span><b>${esc(state(s.state))}</b><small>${esc(s.date)}</small></span>`).join("<i>→</i>")}</div></section>`).join("");
+ const rels=persistentRelations.map(r=>`<div class="relation"><a href="/${lang}/entity/${encodeURIComponent(r.from)}/">${esc(name(r.from))}</a> <b>${esc(r.type)}</b> <a href="/${lang}/entity/${encodeURIComponent(r.to)}/">${esc(name(r.to))}</a><small>${r.count}× · ${r.dates.join(" · ")}</small></div>`).join("") || `<p>${ua?"Повторюваних зв’язків поки недостатньо.":"Not enough repeated relations yet."}</p>`;
+ return `<article><h1>${ua?"ТРАЄКТОРІЇ":"TRAJECTORIES"}</h1><p>${ua?"Сутності, що пережили один випуск. Тут показано не новини, а зміну їхнього системного стану в часі.":"Entities that survived beyond a single issue. This view tracks changes in system state over time rather than news items."}</p>${cards||`<p>${ua?"Траєкторії ще не сформувалися.":"No trajectories have formed yet."}</p>`}<h1 class="relations-title">${ua?"СТІЙКІ ЗВ’ЯЗКИ":"PERSISTENT RELATIONS"}</h1>${rels}</article>`;
+}
