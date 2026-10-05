@@ -1,18 +1,15 @@
 {
-  "issue_id":"WSB-0005",
-  "date":"2026-10-02",
-  "day_type":{"system_activity":"low","news_pressure":"medium_high"},
-  "summary":{"confirmed_delta":1,"developing":2,"persistent":3},
+  "issue_id":"WSB-0005","date":"2026-10-02","day_type":{"system_activity":"medium","news_pressure":"high"},"summary":{"confirmed_delta":2,"developing":1,"persistent":3},
   "objects":[
     {"id":"marinus-link-stage1","entering_state":"financed_approved_mobilising","current_state":"construction_ramp_up","change":"up","status":"confirmed_delta","capacity_mw":750,"target_service_year":2030},
-    {"id":"europe-diesel-reserve-release","entering_state":"strategic_stocks_held","current_state":"release_under_discussion","change":"unconfirmed","status":"developing"},
+    {"id":"europe-diesel-reserve-release","entering_state":"strategic_stocks_held_release_discussed","current_state":"g7_100m_barrel_coordinated_release_committed","change":"up","status":"confirmed_delta","release_million_barrels":100},
     {"id":"kedah-lng-terminal","entering_state":"import_option_under_development","current_state":"fid_target_h2_2027","change":"unconfirmed","status":"developing","capacity_mtpa":6},
     {"id":"hormuz","entering_state":"persistent_constraint_easing","current_state":"persistent_constraint_adapting","change":"strengthening","status":"persistent"},
     {"id":"hormuz-lng-flow","entering_state":"suppressed_postwar_flow","current_state":"highest_monthly_shipments_since_war_start","change":"up","status":"persistent"},
-    {"id":"refined-products-bottleneck","entering_state":"product_supply_tight","current_state":"product_supply_tight_stock_release_pressure","change":"strengthening","status":"persistent"}
+    {"id":"refined-products-bottleneck","entering_state":"product_supply_tight","current_state":"product_supply_tight_stock_release_activated","change":"strengthening","status":"persistent"}
   ],
-  "dominant_mechanism":{"id":"bottleneck-migration","type":"constraint_moves_downstream_as_primary_flow_recovers","sequence":["chokepoint-disruption","adaptation","crude-lng-recovery","refining-products-lag","stock-release-pressure"],"assessment":"the_original_chokepoint_eases_faster_than_downstream_product_supply","edges":[{"from":"chokepoint-disruption","to":"adaptation","status":"operational","change":"up"},{"from":"adaptation","to":"crude-lng-recovery","status":"operational","change":"up"},{"from":"crude-lng-recovery","to":"refining-products-lag","status":"persistent","change":"strengthening"},{"from":"refining-products-lag","to":"stock-release-pressure","status":"developing","change":"up"}]},
-  "notes":["Issue 0005 deliberately records one confirmed delta rather than manufacturing novelty from persistence.","Marinus Link is recorded as a stage transition into construction ramp-up, not as 750 MW of operating capacity today.","European diesel-stock release remains a proposal under discussion, not an executed release.","Kedah LNG remains pre-FID; its 6 mtpa capacity is an option rather than committed operating capacity.","Higher LNG transit through Hormuz is evidence of adaptation while dark transits and security risk show that route normalisation is incomplete."],
-  "chain":["chokepoint-disruption","adaptation","crude-lng-recovery","refining-products-lag","stock-release-pressure"],
-  "noise":[{"id":"hormuz-lng-recovery","result":"evidence_update_no_new_delta"},{"id":"diesel-reserve-talks","result":"proposal_not_release"},{"id":"kedah-lng-plan","result":"pre_fid_option"}]
+  "dominant_mechanism":{"id":"bottleneck-migration","type":"constraint_moves_downstream_as_primary_flow_recovers","sequence":["chokepoint-disruption","adaptation","crude-lng-recovery","refining-products-lag","strategic-stock-release"],"assessment":"the_original_chokepoint_eases_faster_than_downstream_product_supply","edges":[{"from":"chokepoint-disruption","to":"adaptation","status":"operational","change":"up"},{"from":"adaptation","to":"crude-lng-recovery","status":"operational","change":"up"},{"from":"crude-lng-recovery","to":"refining-products-lag","status":"persistent","change":"strengthening"},{"from":"refining-products-lag","to":"strategic-stock-release","status":"committed","change":"up"}]},
+  "notes":["Issue 0005 corrected after the G7 leaders' statement converted the diesel-stock proposal into a confirmed coordinated release.","G7 committed to a 100 million barrel release through the IEA over four months, frontloading a substantial diesel release within 20 days.","Marinus Link is a construction-stage transition, not 750 MW of operating capacity today.","Kedah LNG remains pre-FID.","Higher LNG transit through Hormuz is adaptation, not route normalisation."],
+  "chain":["chokepoint-disruption","adaptation","crude-lng-recovery","refining-products-lag","strategic-stock-release"],
+  "noise":[{"id":"hormuz-lng-recovery","result":"evidence_update_no_new_delta"},{"id":"kedah-lng-plan","result":"pre_fid_option"}]
 }
