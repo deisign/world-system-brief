@@ -1,1 +1,1 @@
-{"name":"world-system-brief","private":true,"type":"module","scripts":{"build":"node publisher/build.js && node publisher/entity-history.js"},"engines":{"node":">=20"}}
+{"name":"world-system-brief","private":true,"type":"module","scripts":{"validate":"node publisher/validate.js","test":"node --test publisher/*.test.js","build":"npm run validate && node publisher/build.js && node publisher/entity-history.js"},"engines":{"node":">=20"}}
