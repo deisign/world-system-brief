@@ -10,7 +10,8 @@ export function buildTemporalRelations(issueBundles, registry={entities:[]}){
 }
 
 export function currentSystemMap(temporal,{since=null}={}){
- const edges=temporal.filter(r=>(!since||r.last>=since)&&![/ended|inactive|rejected|superseded/].includes(r.current_state));
+ const terminalStates=new Set(["ended","inactive","rejected","superseded"]);
+ const edges=temporal.filter(r=>(!since||r.last>=since)&&!terminalStates.has(String(r.current_state||"").toLowerCase()));
  const ids=new Set(edges.flatMap(r=>[r.from,r.to]));
  const nodes=[...ids].map(id=>{const sample=edges.find(r=>r.from===id)?.from_entity||edges.find(r=>r.to===id)?.to_entity;return sample||{slug:id,id,labels:{en:id,ua:id},type:"unknown"}});
  return {nodes,edges};
