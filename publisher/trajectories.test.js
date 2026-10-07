@@ -45,5 +45,17 @@ test("detects a trajectory that migrates across graph nodes",()=>{
   {state:{date:"2026-09-30",issue_id:"3",objects:[{id:"products",current_state:"downstream_products_bottleneck"}]},relations:{relations:[{from:"oil-flow",to:"products",type:"reveals_downstream_constraint"}]}},
   {state:{date:"2026-10-01",issue_id:"4",objects:[{id:"reserve",current_state:"stock_release_buffer"}]},relations:{relations:[{from:"reserve",to:"products",type:"buffers"}]}}
  ];
- const p=detectGraphTrajectoryPatterns(bundles)[0];assert.equal(p.status,"detected");assert.equal(p.matched_steps,5);assert.ok(p.nodes.includes("hormuz"));assert.ok(p.nodes.includes("products"));
+ const aliases={"ENT-1":"hormuz"};
+ bundles[0].relations.relations.push({from:"ENT-1",to:"sts",type:"bypasses"});
+ const p=detectGraphTrajectoryPatterns(bundles,aliases)[0];assert.equal(p.status,"detected");assert.equal(p.matched_steps,5);assert.ok(p.nodes.includes("hormuz"));assert.ok(p.nodes.includes("products"));
+});
+
+test("normalizes registry ids and allows a two-hop temporal bridge",()=>{
+ const bundles=[
+  {state:{date:"2026-09-28",issue_id:"1",objects:[{id:"ENT-H",current_state:"persistent_constraint"}],dominant_mechanism:{edges:[{from:"hormuz",to:"east-west",status:"adaptation"}]}},relations:{relations:[]}},
+  {state:{date:"2026-09-29",issue_id:"2",objects:[],dominant_mechanism:{edges:[{from:"east-west",to:"gulf-flow",type:"supports_flow_recovery"}]}},relations:{relations:[]}},
+  {state:{date:"2026-09-30",issue_id:"3",objects:[{id:"products",current_state:"products_lag_downstream_constraint"}]},relations:{relations:[{from:"gulf-flow",to:"products",type:"reveals_downstream_constraint"}]}},
+  {state:{date:"2026-10-01",issue_id:"4",objects:[]},relations:{relations:[{from:"reserve",to:"products",type:"stock_release_buffers"}]}}
+ ];
+ const p=detectGraphTrajectoryPatterns(bundles,{"ENT-H":"hormuz"})[0];assert.equal(p.matched_steps,5);assert.equal(p.status,"detected");
 });
