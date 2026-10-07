@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { buildTrajectories, relationPersistence, detectTrajectoryPatterns } from "./trajectories.js";
+import { buildTrajectories, relationPersistence, detectTrajectoryPatterns, detectGraphTrajectoryPatterns } from "./trajectories.js";
 
 const event=(date,issue,state)=>({state:{date,issue_id:issue},object:{current_state:state}});
 
@@ -36,4 +36,14 @@ test("marks a complete pattern only when all ordered steps exist",()=>{
  const rel=[{from:"oil",to:"route",type:"reroutes_via",date:"2026-10-03",issue:"3"}];
  const p=detectTrajectoryPatterns(trajectories,rel).find(x=>x.pattern==="constraint-adaptation-rerouting-bottleneck");
  assert.equal(p.status,"detected");assert.equal(p.matched_steps,4);assert.equal(p.confidence,"high");
+});
+
+test("detects a trajectory that migrates across graph nodes",()=>{
+ const bundles=[
+  {state:{date:"2026-09-28",issue_id:"1",objects:[{id:"hormuz",current_state:"persistent_constraint"}],dominant_mechanism:{edges:[{from:"hormuz",to:"sts",status:"adaptation"}]}},relations:{relations:[]}},
+  {state:{date:"2026-09-29",issue_id:"2",objects:[{id:"sts",current_state:"adaptation_recovering"}],dominant_mechanism:{edges:[{from:"sts",to:"oil-flow",type:"reroutes_flow"}]}},relations:{relations:[]}},
+  {state:{date:"2026-09-30",issue_id:"3",objects:[{id:"products",current_state:"downstream_products_bottleneck"}]},relations:{relations:[{from:"oil-flow",to:"products",type:"reveals_downstream_constraint"}]}},
+  {state:{date:"2026-10-01",issue_id:"4",objects:[{id:"reserve",current_state:"stock_release_buffer"}]},relations:{relations:[{from:"reserve",to:"products",type:"buffers"}]}}
+ ];
+ const p=detectGraphTrajectoryPatterns(bundles)[0];assert.equal(p.status,"detected");assert.equal(p.matched_steps,5);assert.ok(p.nodes.includes("hormuz"));assert.ok(p.nodes.includes("products"));
 });
