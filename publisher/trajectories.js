@@ -66,3 +66,30 @@ export function detectTrajectoryPatterns(trajectories, relationEvents=[]){
  }
  return out.sort((a,b)=>b.matched_steps-a.matched_steps||a.entity.localeCompare(b.entity));
 }
+
+
+const GRAPH_PATTERNS=[
+ {id:"constraint-adaptation-rerouting-bottleneck-buffer",label:{en:"Constraint → adaptation → rerouting → secondary bottleneck → buffer",ua:"Обмеження → адаптація → перенаправлення → вторинне вузьке місце → буфер"},steps:[
+  ["constraint","constrain","bottleneck","disrupt","interrupted"],
+  ["adapt","recover","bypass"],
+  ["rerout","route","transit","bypass","flow"],
+  ["downstream","product","bottleneck","constraint"],
+  ["buffer","reserve","stock","release"]
+ ]}
+];
+export function buildGraphObservations(issueBundles=[]){
+ const out=[];
+ for(const b of issueBundles){const s=b.state||{},date=s.date,issue=s.issue_id;
+  for(const o of s.objects||[])out.push({date,issue,node:o.id,text:norm([o.entering_state,o.current_state,o.status,o.change].join(" ")),kind:"object"});
+  for(const e of s.dominant_mechanism?.edges||[])out.push({date,issue,from:e.from,to:e.to,node:e.to,text:norm([e.type,e.status,e.constraint,e.change,e.from,e.to].join(" ")),kind:"mechanism_edge"});
+  for(const r of b.relations?.relations||b.relations?.records||[])out.push({date,issue,from:r.from,to:r.to,node:r.to,text:norm([r.type,r.predicate,r.state,r.change,r.from,r.to].join(" ")),kind:"relation"});
+ }
+ return out.sort((a,b)=>a.date.localeCompare(b.date));
+}
+const connected=(a,b)=>!a||!b||a.node===b.node||a.node===b.from||a.node===b.to||b.node===a.from||b.node===a.to||a.from===b.from||a.from===b.to||a.to===b.from||a.to===b.to;
+export function detectGraphTrajectoryPatterns(issueBundles=[]){
+ const obs=buildGraphObservations(issueBundles),out=[];
+ for(const p of GRAPH_PATTERNS){for(let start=0;start<obs.length;start++){if(!matches(obs[start].text,p.steps[0]))continue;let hits=[obs[start]],pos=1,last=obs[start];for(let i=start+1;i<obs.length&&pos<p.steps.length;i++){const o=obs[i];if(o.date<last.date||!connected(last,o))continue;if(matches(o.text,p.steps[pos])){hits.push(o);last=o;pos++}}if(pos>=3)out.push({pattern:p.id,label:p.label,matched_steps:pos,total_steps:p.steps.length,status:pos===p.steps.length?"detected":"forming",confidence:pos===p.steps.length?"high":pos===p.steps.length-1?"medium":"low",first:hits[0].date,last:hits.at(-1).date,nodes:[...new Set(hits.flatMap(h=>[h.from,h.node,h.to]).filter(Boolean))],hits})}}
+ const best=new Map();for(const x of out){const key=x.pattern+"|"+x.nodes.slice().sort().join("|"),old=best.get(key);if(!old||x.matched_steps>old.matched_steps)best.set(key,x)}
+ return [...best.values()].sort((a,b)=>b.matched_steps-a.matched_steps||a.first.localeCompare(b.first));
+}
