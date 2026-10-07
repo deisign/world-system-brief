@@ -70,26 +70,41 @@ export function detectTrajectoryPatterns(trajectories, relationEvents=[]){
 
 const GRAPH_PATTERNS=[
  {id:"constraint-adaptation-rerouting-bottleneck-buffer",label:{en:"Constraint → adaptation → rerouting → secondary bottleneck → buffer",ua:"Обмеження → адаптація → перенаправлення → вторинне вузьке місце → буфер"},steps:[
-  ["constraint","constrain","bottleneck","disrupt","interrupted"],
-  ["adapt","recover","bypass"],
-  ["rerout","route","transit","bypass","flow"],
-  ["downstream","product","bottleneck","constraint"],
-  ["buffer","reserve","stock","release"]
+  ["constraint"],["adaptation","bypass"],["rerouting","flow_recovery"],["secondary_constraint"],["buffer"]
  ]}
 ];
-export function buildGraphObservations(issueBundles=[]){
- const out=[];
+const CLASSIFIERS={
+ constraint:["constraint","constrain","disrupt","interrupted","blocked","chokepoint"],
+ adaptation:["adapt","recovering","bypass"],
+ bypass:["bypass","rerout","route","transit"],
+ rerouting:["rerout","route","transit","bypass"],
+ flow_recovery:["flow recovery","flow_recover","exports continue recovering","recovering with abnormal","supports recovery","crude recovery","lng recovery"],
+ secondary_constraint:["downstream constraint","products bottleneck","product supply tight","products lag","refining products lag","reveals downstream constraint"],
+ buffer:["buffer","reserve release","stock release","strategic stock","release committed","market buffer"]
+};
+const classify=text=>Object.entries(CLASSIFIERS).filter(([,terms])=>matches(text,terms)).map(([k])=>k);
+export function buildGraphObservations(issueBundles=[], entityAliases={}){
+ const out=[],canon=x=>entityAliases[x]||x;
  for(const b of issueBundles){const s=b.state||{},date=s.date,issue=s.issue_id;
-  for(const o of s.objects||[])out.push({date,issue,node:o.id,text:norm([o.entering_state,o.current_state,o.status,o.change].join(" ")),kind:"object"});
-  for(const e of s.dominant_mechanism?.edges||[])out.push({date,issue,from:e.from,to:e.to,node:e.to,text:norm([e.type,e.status,e.constraint,e.change,e.from,e.to].join(" ")),kind:"mechanism_edge"});
-  for(const r of b.relations?.relations||b.relations?.records||[])out.push({date,issue,from:r.from,to:r.to,node:r.to,text:norm([r.type,r.predicate,r.state,r.change,r.from,r.to].join(" ")),kind:"relation"});
+  for(const o of s.objects||[]){const text=norm([o.entering_state,o.current_state,o.status,o.change,o.constraint].join(" "));out.push({date,issue,node:canon(o.id),text,types:classify(text),kind:"object"})}
+  for(const e of s.dominant_mechanism?.edges||[]){const text=norm([e.type,e.status,e.constraint,e.change,e.from,e.to].join(" "));out.push({date,issue,from:canon(e.from),to:canon(e.to),node:canon(e.to),text,types:classify(text),kind:"mechanism_edge"})}
+  for(const r of b.relations?.relations||b.relations?.records||[]){const text=norm([r.type,r.predicate,r.state,r.change,r.from,r.to].join(" "));out.push({date,issue,from:canon(r.from),to:canon(r.to),node:canon(r.to),text,types:classify(text),kind:"relation"})}
  }
  return out.sort((a,b)=>a.date.localeCompare(b.date));
 }
-const connected=(a,b)=>!a||!b||a.node===b.node||a.node===b.from||a.node===b.to||b.node===a.from||b.node===a.to||a.from===b.from||a.from===b.to||a.to===b.from||a.to===b.to;
-export function detectGraphTrajectoryPatterns(issueBundles=[]){
- const obs=buildGraphObservations(issueBundles),out=[];
- for(const p of GRAPH_PATTERNS){for(let start=0;start<obs.length;start++){if(!matches(obs[start].text,p.steps[0]))continue;let hits=[obs[start]],pos=1,last=obs[start];for(let i=start+1;i<obs.length&&pos<p.steps.length;i++){const o=obs[i];if(o.date<last.date||!connected(last,o))continue;if(matches(o.text,p.steps[pos])){hits.push(o);last=o;pos++}}if(pos>=3)out.push({pattern:p.id,label:p.label,matched_steps:pos,total_steps:p.steps.length,status:pos===p.steps.length?"detected":"forming",confidence:pos===p.steps.length?"high":pos===p.steps.length-1?"medium":"low",first:hits[0].date,last:hits.at(-1).date,nodes:[...new Set(hits.flatMap(h=>[h.from,h.node,h.to]).filter(Boolean))],hits})}}
+const nodes=o=>new Set([o.from,o.node,o.to].filter(Boolean));
+const adjacent=(a,b)=>[...nodes(a)].some(x=>nodes(b).has(x));
+function graphDistance(a,b,observations,maxHops=2){
+ if(adjacent(a,b))return 0;const edges=observations.filter(o=>o.from&&o.to).map(o=>[o.from,o.to]);let frontier=[...nodes(a)],seen=new Set(frontier),targets=nodes(b);
+ for(let d=1;d<=maxHops;d++){const next=[];for(const n of frontier)for(const [x,y] of edges){const z=x===n?y:y===n?x:null;if(z&&!seen.has(z)){if(targets.has(z))return d;seen.add(z);next.push(z)}}frontier=next}return Infinity;
+}
+const hasType=(o,accepted)=>o.types.some(t=>accepted.includes(t));
+export function detectGraphTrajectoryPatterns(issueBundles=[],entityAliases={}){
+ const obs=buildGraphObservations(issueBundles,entityAliases),out=[];
+ for(const p of GRAPH_PATTERNS){for(let start=0;start<obs.length;start++){if(!hasType(obs[start],p.steps[0]))continue;let hits=[obs[start]],pos=1,last=obs[start];
+   for(let i=start+1;i<obs.length&&pos<p.steps.length;i++){const o=obs[i];if(o.date<last.date||!hasType(o,p.steps[pos]))continue;if(graphDistance(last,o,obs.filter(x=>x.date<=o.date),2)>2)continue;hits.push(o);last=o;pos++}
+   if(pos>=3)out.push({pattern:p.id,label:p.label,matched_steps:pos,total_steps:p.steps.length,status:pos===p.steps.length?"detected":"forming",confidence:pos===p.steps.length?"high":pos===p.steps.length-1?"medium":"low",first:hits[0].date,last:hits.at(-1).date,nodes:[...new Set(hits.flatMap(h=>[h.from,h.node,h.to]).filter(Boolean))],hits})
+ }}
  const best=new Map();for(const x of out){const key=x.pattern+"|"+x.nodes.slice().sort().join("|"),old=best.get(key);if(!old||x.matched_steps>old.matched_steps)best.set(key,x)}
  return [...best.values()].sort((a,b)=>b.matched_steps-a.matched_steps||a.first.localeCompare(b.first));
 }
