@@ -1,0 +1,97 @@
+{
+  "issue_id": "WSB-0011",
+  "as_of": "2026-10-08",
+  "records": [
+    {
+      "id": "WSB-SRC-0011-01",
+      "source": "Reuters citing US offshore regulator",
+      "source_type": "newswire",
+      "role": "physical_supply_delta",
+      "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-concerns-persist-amid-shipping-attacks-2026-10-08/",
+      "publication_date": "2026-10-08",
+      "claim": "As of October 7, storm-related shut-ins reached 25.08% of US Gulf of Mexico oil output and 16.37% of gas output.",
+      "observation": "Actual offshore production curtailment replaces the previous issue's prospective hurricane risk.",
+      "assessment": "CONFIRMED Δ relative to WSB-0010; late reporting of October 7 shut-ins.",
+      "supports": [
+        "us-gulf-offshore-output"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0011-02",
+      "source": "Reuters / Shell and Chevron statements",
+      "source_type": "newswire",
+      "role": "company_confirmation",
+      "url": "https://www.reuters.com/business/energy/shell-chevron-cut-gulf-mexico-output-tropical-storm-isaias-approaches-2026-10-08/",
+      "publication_date": "2026-10-08",
+      "claim": "Shell and Chevron announced offshore production shut-ins and evacuations on October 7.",
+      "observation": "Physical shutdowns are company-confirmed; production totals come from the regulator cited separately.",
+      "assessment": "CONFIRMED PHYSICAL CURTAILMENT.",
+      "supports": [
+        "us-gulf-offshore-output"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0011-03",
+      "source": "Reuters Open Interest / Kpler / Energy Aspects",
+      "source_type": "analysis",
+      "role": "trajectory_evidence",
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/battle-mideast-oil-market-share-has-already-begun-2026-10-08/",
+      "publication_date": "2026-10-08",
+      "claim": "Hormuz crude traffic averaged about 12m bpd in recent weeks while alternate routes raised total regional crude exports above pre-war levels in part of the preceding week.",
+      "observation": "Route redundancy supports recovery but navigation and market-share risks persist.",
+      "assessment": "PERSISTENT / NEW QUANTITATIVE EVIDENCE, NOT NEW Δ.",
+      "supports": [
+        "hormuz",
+        "gulf-oil-flow"
+      ],
+      "confidence": "medium_high"
+    },
+    {
+      "id": "WSB-SRC-0011-04",
+      "source": "Reuters",
+      "source_type": "newswire",
+      "role": "policy_implementation",
+      "url": "https://www.reuters.com/business/energy/oil-rises-middle-east-supply-concerns-persist-amid-shipping-attacks-2026-10-08/",
+      "publication_date": "2026-10-08",
+      "claim": "IEA agreed to accelerate release of stocks and prioritise diesel under the previously launched reserve release plan.",
+      "observation": "Implementation has progressed since issue 0010, without a newly agreed G7 commitment.",
+      "assessment": "PERSISTENT / IMPLEMENTING.",
+      "supports": [
+        "g7-emergency-stock-release"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0011-05",
+      "source": "Reuters exclusive",
+      "source_type": "newswire",
+      "role": "developing_option",
+      "url": "https://www.reuters.com/business/energy/us-russia-explore-gas-sale-europe-amid-ukraine-war-say-sources-2026-10-08/",
+      "publication_date": "2026-10-08",
+      "claim": "Sources described US–Russia discussions of US investment in Nord Stream; US and German officials highlighted obstacles, and the White House denied recent Nord Stream talks.",
+      "observation": "Talks do not change pipeline operation, sanctions, or German import policy.",
+      "assessment": "DEVELOPING / NO MATERIAL Δ.",
+      "supports": [
+        "nord-stream-restart-option"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0011-06",
+      "source": "Reuters / Ryanair",
+      "source_type": "newswire",
+      "role": "downstream_cost_signal",
+      "url": "https://www.reuters.com/business/energy/ryanairs-oleary-says-jet-fuel-cost-will-stay-high-into-2028-2026-10-08/",
+      "publication_date": "2026-10-08",
+      "claim": "Ryanair's CEO expects jet fuel costs to stay elevated for 12–18 months, without expecting immediate physical fuel shortages.",
+      "observation": "Downstream cost persistence does not independently establish a new flow transition.",
+      "assessment": "PERSISTENT / COST SIGNAL.",
+      "supports": [
+        "refined-products-bottleneck"
+      ],
+      "confidence": "medium_high"
+    }
+  ]
+}
