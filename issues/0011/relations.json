@@ -1,0 +1,46 @@
+{
+  "issue_id": "WSB-0011",
+  "as_of": "2026-10-08",
+  "relations": [
+    {
+      "id": "REL-261008-01",
+      "from": "us-gulf-offshore-output",
+      "to": "global-oil-balance",
+      "type": "constrains",
+      "state": "active",
+      "claim_ids": [
+        "CLM-261008-01",
+        "CLM-261008-02"
+      ],
+      "source_ids": [
+        "WSB-SRC-0011-01"
+      ]
+    },
+    {
+      "id": "REL-261008-02",
+      "from": "g7-emergency-stock-release",
+      "to": "global-oil-balance",
+      "type": "buffers",
+      "state": "active",
+      "claim_ids": [
+        "CLM-261008-04"
+      ],
+      "source_ids": [
+        "WSB-SRC-0011-04"
+      ]
+    },
+    {
+      "id": "REL-261008-03",
+      "from": "hormuz",
+      "to": "gulf-oil-flow",
+      "type": "constrains",
+      "state": "active",
+      "claim_ids": [
+        "CLM-261008-03"
+      ],
+      "source_ids": [
+        "WSB-SRC-0011-03"
+      ]
+    }
+  ]
+}
