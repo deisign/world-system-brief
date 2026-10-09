@@ -450,6 +450,24 @@
         "en": "Global oil balance",
         "ua": "Глобальний нафтовий баланс"
       }
+    },
+    {
+      "id": "ENT-000051",
+      "slug": "yandex-data-centre-network",
+      "type": "infrastructure",
+      "labels": {
+        "en": "Yandex data-centre network",
+        "ua": "Мережа дата-центрів «Яндекса»"
+      }
+    },
+    {
+      "id": "ENT-000052",
+      "slug": "us-perm-tech-suspensions",
+      "type": "regulation",
+      "labels": {
+        "en": "US PERM tech-company suspensions",
+        "ua": "Призупинення PERM для технологічних компаній США"
+      }
     }
   ]
 }

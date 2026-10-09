@@ -1,0 +1,67 @@
+{
+  "issue_id": "WSB-0012",
+  "as_of": "2026-10-09",
+  "records": [
+    {
+      "id": "WSB-SRC-0012-01",
+      "source": "Reuters / Yandex statement",
+      "source_type": "newswire",
+      "role": "physical_infrastructure_delta",
+      "url": "https://www.reuters.com/world/europe/russias-yandex-says-second-data-centre-hit-by-drone-attack-2026-10-09/",
+      "publication_date": "2026-10-09",
+      "claim": "Yandex reported disabled modules at its Kaluga data centre, second affected site in two days.",
+      "observation": "Physical impairment at second site; company-wide compute and service effects not established.",
+      "assessment": "CONFIRMED PHYSICAL Δ / LIMITED SCOPE.",
+      "supports": [
+        "yandex-data-centre-network"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0012-02",
+      "source": "Reuters syndicated by Cyprus Mail",
+      "source_type": "newswire",
+      "role": "timeline_corroboration",
+      "url": "https://cyprus-mail.com/2026/10/09/russias-yandex-says-second-data-centre-hit-by-drone-attack",
+      "publication_date": "2026-10-09",
+      "claim": "Ryazan site struck October 8; Kaluga damage reported October 9.",
+      "observation": "Two distinct sites; supercomputer status unknown.",
+      "assessment": "TIMELINE VERIFIED / EQUIPMENT STATUS UNKNOWN.",
+      "supports": [
+        "yandex-data-centre-network"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0012-03",
+      "source": "Reuters / US Department of Labor",
+      "source_type": "newswire",
+      "role": "prior_day_policy_change",
+      "url": "https://www.streetinsider.com/Reuters/US%C2%A0suspends%2BMicrosoft%2C%2Bmajor%2BIT%2Bfirms%2Bfrom%2Bkey%2Bgreen%2Bcard%2Bprogram/27165400.html",
+      "publication_date": "2026-10-08",
+      "claim": "US authorities suspended named technology companies from PERM processing.",
+      "observation": "Decision announced October 8, not October 9; allegations not adjudicated findings.",
+      "assessment": "PRIOR-DAY POLICY CHANGE / NOT OCTOBER 9 Δ.",
+      "supports": [
+        "us-perm-tech-suspensions"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0012-04",
+      "source": "WSB issue 0011 evidence registry",
+      "source_type": "internal",
+      "role": "prior_state_baseline",
+      "url": "https://world-system-brief.pages.dev/",
+      "publication_date": "2026-10-08",
+      "claim": "Issue 0011 recorded Gulf offshore shut-ins and persistent Hormuz constraints.",
+      "observation": "Baseline only; no independent October 9 measurement.",
+      "assessment": "PERSISTENT / NOT NEWLY VERIFIED Δ.",
+      "supports": [
+        "us-gulf-offshore-output",
+        "hormuz"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
