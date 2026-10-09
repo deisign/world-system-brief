@@ -1,0 +1,53 @@
+{
+  "locale": "ua",
+  "labels": {
+    "us-gulf-offshore-output": "Морський видобуток у Мексиканській затоці",
+    "hormuz": "Ормузька протока",
+    "gulf-oil-flow": "Експорт нафти з Перської затоки",
+    "g7-emergency-stock-release": "Аварійне вивільнення запасів G7",
+    "nord-stream-restart-option": "Можливе відновлення Nord Stream",
+    "global-oil-balance": "Світовий нафтовий баланс"
+  },
+  "states": {
+    "hurricane_risk_without_confirmed_shutdown": "загроза урагану без підтверджених зупинок",
+    "confirmed_offshore_production_shutins": "підтверджене зупинення частини морського видобутку",
+    "persistent_navigation_constraint": "тривалі обмеження судноплавства",
+    "exports_continue_recovering": "експорт продовжує відновлюватися",
+    "recovery_with_navigation_risk": "відновлення за збереження ризиків судноплавства",
+    "implementation_details_pending_iea": "деталі реалізації очікують рішення МЕА",
+    "accelerated_implementation_diesel_priority": "прискорення реалізації з пріоритетом дизеля",
+    "sanctioned_inactive_infrastructure": "неактивна інфраструктура під санкціями",
+    "reported_talks_without_operational_change": "повідомлення про переговори без операційних змін"
+  },
+  "assessments": {
+    "gulf_export_recovery_coexists_with_confirmed_us_offshore_shutins": "Відновлення експорту з Близького Сходу збіглося з підтвердженим скороченням морського видобутку в Мексиканській затоці."
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "developing": "РОЗВИВАЄТЬСЯ",
+    "persistent": "ТРИВАЄ"
+  },
+  "noise": {
+    "implementation_not_new_delta": "РЕАЛІЗАЦІЯ / НЕ НОВА Δ",
+    "talks_not_operational_change": "ПЕРЕГОВОРИ / БЕЗ ФІЗИЧНИХ ЗМІН"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА Δ",
+    "map": "СИСТЕМНА МАПА · ГОЛОВНИЙ МЕХАНІЗМ",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "СИСТЕМНИЙ ЛЕДЖЕР",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "СИСТЕМНА АКТИВНІСТЬ",
+    "headline": "ДВІ ЗАТОКИ, ОДИН НАФТОВИЙ РИНОК",
+    "deck": "Експорт із Близького Сходу відновлюється, поки шторм зупиняє частину видобутку в Мексиканській затоці.",
+    "mechanism": "ДВІ ЗАТОКИ, ОДИН РИНОК",
+    "chainNote": "Обхідні маршрути відновлюють постачання в одному басейні, а негода перериває видобуток в іншому.",
+    "evidenceNote": "Реєстр доказів · джерело → твердження → спостереження → оцінка",
+    "footer": "ВІДНОВЛЕННЯ · ПЕРЕРИВАННЯ · БУФЕР"
+  }
+}

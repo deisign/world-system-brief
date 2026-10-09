@@ -1,1 +1,65 @@
-{"issue_id":"WSB-0010","as_of":"2026-10-07","records":[{"id":"WSB-SRC-0010-01","source":"Reuters","source_type":"newswire","role":"flow_update","url":"https://www.reuters.com/business/energy/oil-prices-rise-storms-air-strikes-threaten-supply-2026-10-07/","publication_date":"2026-10-07","claim":"Oil markets weighed recovering Middle Eastern supply against new disruption risks; Saudi Arabia reported East-West Pipeline flows of 5.8 million barrels per day.","observation":"The Saudi bypass is carrying substantial volumes and reinforces the existing route-adaptation trajectory.","assessment":"PERSISTENT / STRENGTHENING, NOT A NEW DELTA.","supports":["gulf-oil-flow","east-west-pipeline"],"confidence":"high"},{"id":"WSB-SRC-0010-02","source":"Reuters","source_type":"newswire","role":"policy_implementation","url":"https://www.reuters.com/business/energy/iea-meet-wednesday-over-proposed-release-reserves-say-two-eu-diplomats-2026-10-07/","publication_date":"2026-10-07","claim":"The IEA governing board was due to discuss implementation of the G7 agreement to release 100 million barrels of diesel and crude stocks; detailed volumes and participation remained unresolved.","observation":"This is implementation work on the October 2 policy delta, not a fresh commitment.","assessment":"PERSISTENT / IMPLEMENTATION DETAILS PENDING.","supports":["g7-emergency-stock-release"],"confidence":"high"},{"id":"WSB-SRC-0010-03","source":"Reuters","source_type":"newswire","role":"risk_signal","url":"https://www.reuters.com/business/energy/oil-prices-rise-storms-air-strikes-threaten-supply-2026-10-07/","publication_date":"2026-10-07","claim":"A Gulf of Mexico storm was forecast to become a hurricane and threaten offshore areas producing about 15% of US crude and 5% of US natural gas.","observation":"The risk is material but remained prospective; no confirmed physical flow loss was established in the evidence reviewed.","assessment":"DEVELOPING / FORECAST RISK, NOT PHYSICAL DELTA.","supports":["forties-pipeline-strike-risk"],"confidence":"medium_high"},{"id":"WSB-SRC-0010-04","source":"Reuters","source_type":"newswire","role":"capacity_context","url":"https://www.reuters.com/business/energy/europes-lng-demand-growing-fleet-size-pressure-shipping-rates-winter-2026-10-07/","publication_date":"2026-10-07","claim":"Atlantic LNG freight rates fell sharply from March peaks as 55 new LNG vessels were delivered in the first seven months of 2026 and shorter Atlantic-basin voyages increased vessel availability.","observation":"Transport capacity has expanded faster than current shipping demand, reducing freight scarcity despite strong European LNG demand.","assessment":"STRUCTURAL CONTEXT / CAPACITY EXPANSION; insufficient evidence for a same-day state transition.","supports":[],"confidence":"high"}]}
+{
+  "issue_id": "WSB-0010",
+  "as_of": "2026-10-07",
+  "records": [
+    {
+      "id": "WSB-SRC-0010-01",
+      "source": "Reuters",
+      "source_type": "newswire",
+      "role": "flow_update",
+      "url": "https://www.reuters.com/business/energy/oil-prices-rise-storms-air-strikes-threaten-supply-2026-10-07/",
+      "publication_date": "2026-10-07",
+      "claim": "Oil markets weighed recovering Middle Eastern supply against new disruption risks; Saudi Arabia reported East-West Pipeline flows of 5.8 million barrels per day.",
+      "observation": "The Saudi bypass is carrying substantial volumes and reinforces the existing route-adaptation trajectory.",
+      "assessment": "PERSISTENT / STRENGTHENING, NOT A NEW DELTA.",
+      "supports": [
+        "gulf-oil-flow",
+        "east-west-pipeline"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0010-02",
+      "source": "Reuters",
+      "source_type": "newswire",
+      "role": "policy_implementation",
+      "url": "https://www.reuters.com/business/energy/iea-meet-wednesday-over-proposed-release-reserves-say-two-eu-diplomats-2026-10-07/",
+      "publication_date": "2026-10-07",
+      "claim": "The IEA governing board was due to discuss implementation of the G7 agreement to release 100 million barrels of diesel and crude stocks; detailed volumes and participation remained unresolved.",
+      "observation": "This is implementation work on the October 2 policy delta, not a fresh commitment.",
+      "assessment": "PERSISTENT / IMPLEMENTATION DETAILS PENDING.",
+      "supports": [
+        "g7-emergency-stock-release"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0010-03",
+      "source": "Reuters",
+      "source_type": "newswire",
+      "role": "risk_signal",
+      "url": "https://www.reuters.com/business/energy/oil-prices-rise-storms-air-strikes-threaten-supply-2026-10-07/",
+      "publication_date": "2026-10-07",
+      "claim": "A Gulf of Mexico storm was forecast to become a hurricane and threaten offshore areas producing about 15% of US crude and 5% of US natural gas.",
+      "observation": "The risk is material but remained prospective; no confirmed physical flow loss was established in the evidence reviewed.",
+      "assessment": "DEVELOPING / FORECAST RISK, NOT PHYSICAL DELTA.",
+      "supports": [
+        "us-gulf-offshore-output"
+      ],
+      "confidence": "medium_high"
+    },
+    {
+      "id": "WSB-SRC-0010-04",
+      "source": "Reuters",
+      "source_type": "newswire",
+      "role": "capacity_context",
+      "url": "https://www.reuters.com/business/energy/europes-lng-demand-growing-fleet-size-pressure-shipping-rates-winter-2026-10-07/",
+      "publication_date": "2026-10-07",
+      "claim": "Atlantic LNG freight rates fell sharply from March peaks as 55 new LNG vessels were delivered in the first seven months of 2026 and shorter Atlantic-basin voyages increased vessel availability.",
+      "observation": "Transport capacity has expanded faster than current shipping demand, reducing freight scarcity despite strong European LNG demand.",
+      "assessment": "STRUCTURAL CONTEXT / CAPACITY EXPANSION; insufficient evidence for a same-day state transition.",
+      "supports": [],
+      "confidence": "high"
+    }
+  ]
+}

@@ -1,1 +1,55 @@
-{"locale":"ua","labels":{"gulf-oil-flow":"Нафтовий потік із Перської затоки","east-west-pipeline":"Нафтопровід East-West","g7-emergency-stock-release":"Аварійне вивільнення запасів G7","forties-pipeline-strike-risk":"Паралельний ризик постачання","redundancy-before-normality":"Резервування замість нормальності","gulf-export-recovery":"Відновлення експорту із Затоки","east-west-bypass":"Обхід через East-West","stock-buffer":"Буфер запасів","residual-risk":"Залишковий ризик"},"states":{"81_percent_of_prewar_flow":"81% довоєнного потоку","exports_continue_recovering":"експорт продовжує відновлюватися","recovering_partial":"відновлення / часткове","flow_reported_at_5_8_million_bpd":"потік заявлено на рівні 5,8 млн бар./добу","market_buffer_active":"ринковий буфер активний","implementation_details_pending_iea":"деталі реалізації очікують рішення МЕА","strike_risk":"ризик перебоїв постачання","gulf_of_mexico_hurricane_adds_parallel_supply_risk":"ураган у Мексиканській затоці додає паралельний ризик постачання"},"assessments":{"more_barrels_are_moving_and_bypass_capacity_is_working_but_the_system_is_still_relying_on_redundancy_and_emergency_buffers":"Нафти рухається більше, обхідна потужність працює, але система досі спирається на резервні маршрути й аварійні запаси."},"statuses":{"confirmed_delta":"ПІДТВЕРДЖЕНА Δ","developing":"РОЗВИВАЄТЬСЯ","persistent":"ТРИВАЄ"},"noise":{"implementation_not_new_delta":"РЕАЛІЗАЦІЯ / НЕ НОВА Δ","forecast_risk_not_physical_change":"ПРОГНОЗНИЙ РИЗИК / БЕЗ ФІЗИЧНОЇ ЗМІНИ"},"copy":{"systemDelta":"СИСТЕМНА Δ","map":"СИСТЕМНА МАПА · ГОЛОВНИЙ МЕХАНІЗМ","chain":"ЛАНЦЮГ ДНЯ","noise":"ПЕРЕВІРКА ШУМУ","ledger":"СИСТЕМНИЙ ЛЕДЖЕР","evidence":"ДЖЕРЕЛА","entering":"ПОЧАТКОВИЙ СТАН","current":"ПОТОЧНИЙ СТАН","status":"СТАТУС","issue":"ВИПУСК","activity":"СИСТЕМНА АКТИВНІСТЬ","headline":"РЕЗЕРВУВАННЯ ЗАМІСТЬ НОРМАЛЬНОСТІ","deck":"Нафти рухається більше, бо система додала маршрути й буфери. Це стійкість, а не повернення до старого стану.","mechanism":"РЕЗЕРВУВАННЯ ЗАМІСТЬ НОРМАЛЬНОСТІ","chainNote":"Обхідні потужності та стратегічні запаси гасять тиск, поки головне вузьке місце лишається ризиковим.","evidenceNote":"Реєстр доказів · джерело → твердження → спостереження → оцінка","footer":"ПОТІК · ОБХІД · БУФЕР · РИЗИК"}}
+{
+  "locale": "ua",
+  "labels": {
+    "gulf-oil-flow": "Нафтовий потік із Перської затоки",
+    "east-west-pipeline": "Нафтопровід East-West",
+    "g7-emergency-stock-release": "Аварійне вивільнення запасів G7",
+    "redundancy-before-normality": "Резервування замість нормальності",
+    "gulf-export-recovery": "Відновлення експорту із Затоки",
+    "east-west-bypass": "Обхід через East-West",
+    "stock-buffer": "Буфер запасів",
+    "residual-risk": "Залишковий ризик",
+    "us-gulf-offshore-output": "Ризик для морського видобутку в Мексиканській затоці"
+  },
+  "states": {
+    "81_percent_of_prewar_flow": "81% довоєнного потоку",
+    "exports_continue_recovering": "експорт продовжує відновлюватися",
+    "recovering_partial": "відновлення / часткове",
+    "flow_reported_at_5_8_million_bpd": "потік заявлено на рівні 5,8 млн бар./добу",
+    "market_buffer_active": "ринковий буфер активний",
+    "implementation_details_pending_iea": "деталі реалізації очікують рішення МЕА",
+    "strike_risk": "ризик перебоїв постачання",
+    "gulf_of_mexico_hurricane_adds_parallel_supply_risk": "ураган у Мексиканській затоці додає паралельний ризик постачання"
+  },
+  "assessments": {
+    "more_barrels_are_moving_and_bypass_capacity_is_working_but_the_system_is_still_relying_on_redundancy_and_emergency_buffers": "Нафти рухається більше, обхідна потужність працює, але система досі спирається на резервні маршрути й аварійні запаси."
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "developing": "РОЗВИВАЄТЬСЯ",
+    "persistent": "ТРИВАЄ"
+  },
+  "noise": {
+    "implementation_not_new_delta": "РЕАЛІЗАЦІЯ / НЕ НОВА Δ",
+    "forecast_risk_not_physical_change": "ПРОГНОЗНИЙ РИЗИК / БЕЗ ФІЗИЧНОЇ ЗМІНИ"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА Δ",
+    "map": "СИСТЕМНА МАПА · ГОЛОВНИЙ МЕХАНІЗМ",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "СИСТЕМНИЙ ЛЕДЖЕР",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "СИСТЕМНА АКТИВНІСТЬ",
+    "headline": "РЕЗЕРВУВАННЯ ЗАМІСТЬ НОРМАЛЬНОСТІ",
+    "deck": "Нафти рухається більше, бо система додала маршрути й буфери. Це стійкість, а не повернення до старого стану.",
+    "mechanism": "РЕЗЕРВУВАННЯ ЗАМІСТЬ НОРМАЛЬНОСТІ",
+    "chainNote": "Обхідні потужності та стратегічні запаси гасять тиск, поки головне вузьке місце лишається ризиковим.",
+    "evidenceNote": "Реєстр доказів · джерело → твердження → спостереження → оцінка",
+    "footer": "ПОТІК · ОБХІД · БУФЕР · РИЗИК"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "issue_id": "WSB-0011",
+  "date": "2026-10-08",
+  "day_type": {
+    "system_activity": "active",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 1,
+    "developing": 1,
+    "persistent": 3
+  },
+  "objects": [
+    {
+      "id": "us-gulf-offshore-output",
+      "entering_state": "hurricane_risk_without_confirmed_shutdown",
+      "current_state": "confirmed_offshore_production_shutins",
+      "change": "down",
+      "status": "confirmed_delta"
+    },
+    {
+      "id": "hormuz",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "gulf-oil-flow",
+      "entering_state": "exports_continue_recovering",
+      "current_state": "recovery_with_navigation_risk",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "g7-emergency-stock-release",
+      "entering_state": "implementation_details_pending_iea",
+      "current_state": "accelerated_implementation_diesel_priority",
+      "change": "strengthening",
+      "status": "persistent"
+    },
+    {
+      "id": "nord-stream-restart-option",
+      "entering_state": "sanctioned_inactive_infrastructure",
+      "current_state": "reported_talks_without_operational_change",
+      "change": "unconfirmed",
+      "status": "developing"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "two-gulfs-one-market",
+    "type": "parallel_supply_disruption_amid_route_recovery",
+    "sequence": [
+      "hormuz",
+      "gulf-oil-flow",
+      "us-gulf-offshore-output",
+      "global-oil-balance",
+      "g7-emergency-stock-release"
+    ],
+    "assessment": "gulf_export_recovery_coexists_with_confirmed_us_offshore_shutins",
+    "edges": [
+      {
+        "from": "hormuz",
+        "to": "gulf-oil-flow",
+        "type": "constrains"
+      },
+      {
+        "from": "us-gulf-offshore-output",
+        "to": "global-oil-balance",
+        "type": "constrains"
+      },
+      {
+        "from": "g7-emergency-stock-release",
+        "to": "global-oil-balance",
+        "type": "buffers"
+      }
+    ]
+  },
+  "notes": [
+    "Confirmed offshore production shut-ins were reported for October 7; October 8 evidence quantifies the physical disruption.",
+    "This is a late-evidence correction to the developing risk in issue 0010, not proof that the shutdown began on October 8.",
+    "Middle Eastern export recovery and US Gulf production losses are simultaneous but distinct processes.",
+    "IEA stock-release implementation is not a new G7 policy commitment.",
+    "Reported Nord Stream discussions do not establish an operational restart."
+  ],
+  "chain": [
+    "hormuz",
+    "gulf-oil-flow",
+    "us-gulf-offshore-output",
+    "global-oil-balance",
+    "g7-emergency-stock-release"
+  ],
+  "noise": [
+    {
+      "id": "g7-emergency-stock-release",
+      "result": "implementation_not_new_delta"
+    },
+    {
+      "id": "nord-stream-restart-option",
+      "result": "talks_not_operational_change"
+    }
+  ]
+}
