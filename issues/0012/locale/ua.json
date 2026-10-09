@@ -1,0 +1,49 @@
+{
+  "locale": "ua",
+  "labels": {
+    "yandex-data-centre-network": "Мережа дата-центрів «Яндекса»",
+    "us-perm-tech-suspensions": "Обмеження PERM для технологічних компаній США",
+    "us-gulf-offshore-output": "Морський видобуток у Мексиканській затоці",
+    "hormuz": "Ормузька протока"
+  },
+  "states": {
+    "ryazan_data_centre_struck_on_october_8": "Удар по дата-центру на Рязанщині 8 жовтня",
+    "kaluga_modules_disabled_second_site": "Виведені з ладу модулі другого об’єкта на Калужчині",
+    "employer_perm_access_before_october_8": "Оброблення заяв PERM до 8 жовтня",
+    "named_firms_suspended_from_perm": "Оброблення PERM для визначених компаній призупинене",
+    "confirmed_offshore_production_shutins": "Підтверджене зупинення частини морського видобутку",
+    "storm_shutins_continue": "Зупинення видобутку через негоду триває",
+    "persistent_navigation_constraint": "Тривалі обмеження судноплавства"
+  },
+  "assessments": {
+    "second_data_centre_hit_extends_physical_disruption_without_proven_systemwide_failure": "Ураження другого об’єкта розширює фізичний масштаб пошкоджень, але загальну відмову обчислювальної системи не доведено."
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "developing": "РОЗВИВАЄТЬСЯ",
+    "persistent": "ТРИВАЄ"
+  },
+  "noise": {
+    "october_8_policy_not_october_9_delta": "РІШЕННЯ 8 ЖОВТНЯ / НЕ НОВА Δ",
+    "deepening_previous_delta_not_new_transition": "ПРОДОВЖЕННЯ / НЕ НОВА Δ"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА Δ",
+    "map": "СИСТЕМНА МАПА · ГОЛОВНИЙ МЕХАНІЗМ",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "СИСТЕМНИЙ ЛЕДЖЕР",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "СИСТЕМНА АКТИВНІСТЬ",
+    "headline": "ОБЧИСЛЮВАЛЬНА ІНФРАСТРУКТУРА ПІД УДАРОМ",
+    "deck": "Пошкоджено другий дата-центр «Яндекса»: фізична вразливість цифрової інфраструктури стає видимою.",
+    "mechanism": "ОБЧИСЛЮВАЛЬНА ІНФРАСТРУКТУРА ПІД УДАРОМ",
+    "chainNote": "Фізичні удари можуть обмежувати цифрові потужності; масштаб наслідків для сервісів ще не встановлено.",
+    "evidenceNote": "Реєстр доказів · джерело → твердження → спостереження → оцінка",
+    "footer": "ФІЗИЧНІ ПОШКОДЖЕННЯ · ЦИФРОВА ЗАЛЕЖНІСТЬ · НЕВІДОМІ НАСЛІДКИ"
+  }
+}
