@@ -1,0 +1,71 @@
+{
+  "issue_id": "WSB-0012",
+  "as_of": "2026-10-09",
+  "claims": [
+    {
+      "id": "CLM-261009-01",
+      "issue_id": "WSB-0012",
+      "kind": "observed",
+      "statement": "Yandex reported Kaluga-region data-centre modules disabled after a strike on October 9, following a strike on a separate Ryazan-region facility October 8.",
+      "observed_at": "2026-10-09",
+      "entity_ids": [
+        "ENT-000051"
+      ],
+      "source_ids": [
+        "WSB-SRC-0012-01",
+        "WSB-SRC-0012-02"
+      ],
+      "confidence": "high",
+      "status": "confirmed_delta"
+    },
+    {
+      "id": "CLM-261009-02",
+      "issue_id": "WSB-0012",
+      "kind": "inferred",
+      "statement": "Physical impairment of a second Yandex data-centre site expands the affected infrastructure footprint but does not prove a company-wide computing outage.",
+      "observed_at": "2026-10-09",
+      "entity_ids": [
+        "ENT-000051"
+      ],
+      "source_ids": [
+        "WSB-SRC-0012-01"
+      ],
+      "derived_from": [
+        "CLM-261009-01"
+      ],
+      "confidence": "medium_high",
+      "status": "confirmed_delta"
+    },
+    {
+      "id": "CLM-261009-03",
+      "issue_id": "WSB-0012",
+      "kind": "observed",
+      "statement": "US authorities announced PERM suspensions affecting named IT firms on October 8, not October 9.",
+      "observed_at": "2026-10-08",
+      "entity_ids": [
+        "ENT-000052"
+      ],
+      "source_ids": [
+        "WSB-SRC-0012-03"
+      ],
+      "confidence": "high",
+      "status": "developing"
+    },
+    {
+      "id": "CLM-261009-04",
+      "issue_id": "WSB-0012",
+      "kind": "inferred",
+      "statement": "Gulf production shut-ins and Hormuz constraints continue from the prior issue without a separately evidenced October 9 transition in this edition.",
+      "observed_at": "2026-10-09",
+      "entity_ids": [
+        "ENT-000048",
+        "ENT-000001"
+      ],
+      "source_ids": [
+        "WSB-SRC-0012-04"
+      ],
+      "confidence": "medium",
+      "status": "persistent"
+    }
+  ]
+}
