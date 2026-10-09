@@ -36,3 +36,19 @@
 - Never assume a local checkout exists. Discover the path before `cd` or clone into an explicitly chosen path.
 - Never issue commands that close Tilix/the user's shell. Avoid `exit`, `exec` shell replacement, or terminal-closing behavior.
 - A failed or garbled pasted heredoc requires checking resulting files and command output rather than assuming success.
+
+## Lessons from WSB-0012 (2026-10-09), recorded 2026-10-09
+
+### 6. GitHub API writes are not atomic
+- GitHub Contents API `create_file` / `update_file` creates **one commit per file**. Even on an editorial branch, Cloudflare Pages may build an intermediate commit; WSB-0012 preview build at `09883f4` failed because `issues/0012/locale/en.json` had not yet been written. The later completed branch and main are distinct states.
+- For a complete issue, use **one Git tree + one commit + one ref update** (Git Data API), or create the issue in a disposable staging branch and squash into a single commit on the deploy-triggering branch. Do not mistake multiple sequential Contents API writes for atomic publication.
+- Cloudflare preview branch builds may fail while the staging branch is incomplete. Avoid triggering preview builds from intermediate commits where possible; use one-commit staging and CI gates.
+- Never merge a PR until a build has passed against the **exact head SHA** to be merged. A successful validator alone is insufficient; run the full `npm run build` including 20 tests and all generators.
+- GitHub `mergeable: true` indicates a conflict-free merge, **not** successful build or editorial verification. Do not use it as a quality gate.
+- For main, confirm the production deployment refers to the merged commit and that the new issue is publicly visible. A failing preview log for an earlier SHA does not prove the final production deploy failed.
+
+### 7. Release protection to implement
+- Add GitHub Actions workflow to run `npm ci` (if lockfile exists, otherwise `npm install`) and `npm run build` on pull requests and pushes to main.
+- Enable repository ruleset / branch protection requiring the build check before merging to main. This **requires repository administration permissions** and cannot be assumed configured merely because a workflow file exists.
+- Require a single coherent commit for the issue on any branch configured for Cloudflare preview builds, or configure Cloudflare previews to avoid incomplete staging branches.
+- Do not merge or publish when build status is unknown or failing. If verification cannot be run, report the block explicitly rather than overriding it.
