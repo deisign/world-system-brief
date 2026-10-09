@@ -1,0 +1,71 @@
+{
+  "issue_id": "WSB-0012",
+  "date": "2026-10-09",
+  "day_type": {
+    "system_activity": "active",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 1,
+    "developing": 1,
+    "persistent": 2
+  },
+  "objects": [
+    {
+      "id": "yandex-data-centre-network",
+      "entering_state": "ryazan_data_centre_struck_on_october_8",
+      "current_state": "kaluga_modules_disabled_second_site",
+      "change": "down",
+      "status": "confirmed_delta"
+    },
+    {
+      "id": "us-perm-tech-suspensions",
+      "entering_state": "employer_perm_access_before_october_8",
+      "current_state": "named_firms_suspended_from_perm",
+      "change": "down",
+      "status": "developing"
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "entering_state": "confirmed_offshore_production_shutins",
+      "current_state": "storm_shutins_continue",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "hormuz",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint",
+      "change": "stable",
+      "status": "persistent"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "compute-infrastructure-under-fire",
+    "type": "physical_digital_infrastructure_disruption",
+    "sequence": [
+      "yandex-data-centre-network"
+    ],
+    "assessment": "second_data_centre_hit_extends_physical_disruption_without_proven_systemwide_failure",
+    "edges": []
+  },
+  "notes": [
+    "Kaluga data-centre damage was reported October 9; modules disabled; company-wide compute effects unquantified.",
+    "Ryazan site was struck October 8; supercomputer condition unknown.",
+    "PERM decision announced October 8; do not redate it as October 9.",
+    "No causal link between infrastructure strikes, PERM policy and energy pressures."
+  ],
+  "chain": [
+    "yandex-data-centre-network"
+  ],
+  "noise": [
+    {
+      "id": "us-perm-tech-suspensions",
+      "result": "october_8_policy_not_october_9_delta"
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "result": "deepening_previous_delta_not_new_transition"
+    }
+  ]
+}
