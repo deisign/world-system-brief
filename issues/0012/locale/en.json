@@ -1,0 +1,49 @@
+{
+  "locale": "en",
+  "labels": {
+    "yandex-data-centre-network": "Yandex data-centre network",
+    "us-perm-tech-suspensions": "US PERM restrictions",
+    "us-gulf-offshore-output": "US Gulf offshore production",
+    "hormuz": "Strait of Hormuz"
+  },
+  "states": {
+    "ryazan_data_centre_struck_on_october_8": "Ryazan data centre struck on 8 October",
+    "kaluga_modules_disabled_second_site": "Kaluga modules disabled at second site",
+    "employer_perm_access_before_october_8": "PERM processing available before 8 October",
+    "named_firms_suspended_from_perm": "Named firms suspended from PERM",
+    "confirmed_offshore_production_shutins": "Confirmed offshore production shut-ins",
+    "storm_shutins_continue": "Storm-related shut-ins continue",
+    "persistent_navigation_constraint": "Persistent navigation constraint"
+  },
+  "assessments": {
+    "second_data_centre_hit_extends_physical_disruption_without_proven_systemwide_failure": "Damage at a second facility broadens physical disruption; system-wide outage not established."
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "developing": "DEVELOPING",
+    "persistent": "PERSISTENT"
+  },
+  "noise": {
+    "october_8_policy_not_october_9_delta": "OCTOBER 8 POLICY / NOT NEW TODAY",
+    "deepening_previous_delta_not_new_transition": "CONTINUATION / NOT NEW Δ"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP · DOMINANT MECHANISM",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "THE COMPUTE LAYER IS A PHYSICAL TARGET",
+    "deck": "A second Yandex data centre is damaged as the boundaries of physical and digital infrastructure converge.",
+    "mechanism": "COMPUTE INFRASTRUCTURE UNDER FIRE",
+    "chainNote": "Physical attacks can disable digital capacity; the extent of service impact remains unverified.",
+    "evidenceNote": "Evidence registry · source → claim → observation → assessment",
+    "footer": "PHYSICAL DAMAGE · DIGITAL DEPENDENCY · UNKNOWN CASCADE"
+  }
+}
