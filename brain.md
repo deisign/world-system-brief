@@ -1298,3 +1298,55 @@ Take actual examples from existing briefs and test whether the schema can repres
 - unchanged state with new evidence.
 
 Once this works, build the first data-driven Daily HTML renderer.
+
+
+---
+
+## 2026-10-14 · Autonomous publishing contract and incident register
+
+### Objective
+
+Produce and publish one evidence-grounded bilingual issue every Europe/Kyiv calendar day without requiring a chat command. Render READ, SYSTEM and POSTER from the same state; preserve evidence and system-state history. After the current pipeline is verified, backfill missing days retrospectively with honest provenance.
+
+### Verified repository baseline
+
+- `npm run build` runs validation, tests, static build, claims build, entity history and system-map publishing.
+- `publisher/build.js` reads numbered `issues/` folders. A build script is **not** evidence of an autonomous research/editorial agent or scheduled production.
+- Issue 0002 stores localized SYSTEM copy in `locale/en.json` and `locale/ua.json`.
+- `main` rejects direct pushes: GitHub requires a pull request and a passing `Full build` check (observed 2026-10-14).
+
+### Target lifecycle
+
+`SCHEDULE → DISCOVER → VERIFY SOURCE/CLAIM/TIMESTAMPS → COMPARE LEDGER → ASSESS Δ → STATE → WRITE EN/UA → RENDER READ/SYSTEM/POSTER → VALIDATE/TEST → PR → FULL BUILD → MERGE → CLOUDFLARE → CHECK LIVE URLS → AUDIT`
+
+**Unverified dependencies:** enabled scheduler, autonomous research runtime and credentials, complete readiness checks, automated PR merging, Cloudflare deployment checks, post-deploy smoke tests, issue-number/date gap controls, alerting and retries. Do not claim any are operational until tested.
+
+**Proposed** schedule: 07:00 Europe/Kyiv (DST-aware). The schedule is not installed by this document.
+
+### Publication safety
+
+1. No confirmed Δ may be invented to fill an issue; zero-Δ issues are valid.
+2. A source update is not a second Δ. Preserve original event IDs and evidence history.
+3. Separate event date, source publication date, retrieval date, assessment date and actual publication timestamp.
+4. Never render committed/future infrastructure as operational.
+5. Both locales and all three modes must be complete before public release.
+6. Block publication on failed evidence/validation/build/deployment checks. Do not silently publish partial editions.
+7. Verify live routes after deployment; a successful GitHub commit alone is not a publication receipt.
+8. Make runs idempotent and recoverable; log each failed stage with diagnostic evidence.
+9. For retrospective issues, retain historical event cutoffs and clearly mark backfill creation/publication timestamps. Never imply an issue was published on its nominal date.
+
+### Problem register
+
+| ID | Priority | Problem / risk | Required fix | State |
+| --- | --- | --- | --- | --- |
+| AUTO-001 | critical | Unattended editorial research scheduler not established | inspect workflow and research runtime; install and test | OPEN |
+| AUTO-002 | critical | Commit could be confused with live publication | verify Cloudflare deployment and public routes | OPEN |
+| AUTO-003 | high | Issue prose hard-coded in shared renderer | localize copy; audit every renderer | PARTIALLY MITIGATED |
+| AUTO-004 | critical | Unverified claims, event dates or false Δ | evidence gate and prior-state comparison | OPEN |
+| AUTO-005 | high | Partial bilingual or partial-mode issue | atomic readiness gate | OPEN |
+| AUTO-006 | high | Archive gaps and retrospective provenance | manifest, cutoff-aware backfill, idempotency | OPEN |
+| AUTO-007 | high | Silent failures and repeated publication | stage logs, alerts, bounded retries | OPEN |
+| AUTO-008 | high | Templated EN/UA editorial prose | editorial QA and anti-LLM voice check | OPEN |
+| AUTO-009 | critical | Protected `main` requires PR and `Full build`; direct write rejected | branch → PR → required check → merge | CONFIRMED; WORKFLOW PENDING |
+
+**Incident discipline:** record date, affected commit/run, reproducible failure, root cause, remedy and verification. Keep problem history append-only; do not declare a problem fixed without evidence.
