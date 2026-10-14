@@ -3,6 +3,7 @@
 // never an authoritative issue or a published edition.
 import fs from "node:fs";
 import path from "node:path";
+import { reviewCandidates } from "./research-review.js";
 
 const root = process.cwd();
 const date = process.env.WSB_ISSUE_DATE;
@@ -65,17 +66,11 @@ for (const s of bundle.sources) {
   if (s.publication_date>date) throw Error("Future-dated source: "+s.id);
   idSet.add(s.id);
 }
-const classes=new Set(["confirmed_delta","developing","persistent","evidence_update","noise"]);
-for(const c of bundle.candidates){
-  if(!c.id||!classes.has(c.classification)||!Array.isArray(c.source_ids))throw Error("Invalid candidate");
-  if(c.source_ids.some(id=>!idSet.has(id)))throw Error("Candidate cites unregistered source");
-  if(c.classification==="confirmed_delta"&&(c.event_date!==date||!c.source_ids.length||c.confidence==="low"))
-    throw Error("Unsubstantiated confirmed delta");
-}
+const review=reviewCandidates(bundle,date);
 const out=path.join(root,"research","pending",date+".json");
 fs.mkdirSync(path.dirname(out),{recursive:true});
 fs.writeFileSync(out,JSON.stringify({
   schema_version:1,provenance:"unverified_model_research_draft",generated_at:new Date().toISOString(),
-  research_model:model, ...bundle
+  research_model:model, review_summary:{downgraded_confirmed_deltas:review.downgraded,all_claims_require_independent_verification:true}, ...bundle
 },null,2)+"\n");
-console.log(`Created ${out} (${bundle.candidates.length} candidates, ${bundle.sources.length} source claims). Requires independent source verification; not publication-ready.`);
+console.log(`Created ${out} (${bundle.candidates.length} candidates, ${bundle.sources.length} source claims). Downgraded ${review.downgraded} unsupported Δ(s). Requires independent source verification; not publication-ready.`);
