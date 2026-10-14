@@ -1377,3 +1377,13 @@ Produce and publish one evidence-grounded bilingual issue every Europe/Kyiv cale
 - **AUTO-017 / high / OPEN:** claim branches are created *before* intake. On failure, daily retries skip; implement explicit retry and stale-branch recovery with race-safe idempotency.
 - **AUTO-018 / medium / OPEN:** expected scheduled run is only an approximation; two UTC slots + Kyoto/Kyiv timezone gate address DST but the GitHub scheduler can skip or defer runs. Add a missing-date watchdog. (Canonical timezone is Europe/Kyiv.)
 - **SECURITY:** do not paste API keys into `brain.md`, Actions logs or PRs. Research output is untrusted content and must not be treated as instructions to automation. Draft research PR should not auto-merge.
+
+
+### 2026-10-14 · AUTO-019 — Lost research bundle on unsupported Δ
+
+- **Observed:** Daily run 38551885516 reached the OpenAI research response but failed in `publisher/research-intake.js:73` with `Unsubstantiated confirmed delta` after 2m32s of research. The previous code discarded the entire research bundle after any candidate's `event_date`, source reference count or confidence failed a hard gate. The failing candidate and precise condition were not logged, so its identity **cannot be reconstructed from this traceback**.
+- **Root cause:** classification validation was implemented as a whole-bundle exception rather than a reviewable per-candidate verdict. Source metadata remains insufficiently independently verified (AUTO-013).
+- **Mitigation:** `publisher/research-review.js` downgrades unsupported `confirmed_delta` proposals to `developing`, retains the model's original classification, attaches explicit review reasons, and appends an editorial flag. Unknown source IDs or invalid structural input still fail closed. A source/candidate bundle is saved but is **never automatically published**.
+- **Recovery:** `workflow_dispatch` now takes `retry_existing=true` to retry a failed daily-claim branch. Manual retry is deliberate and limited to an existing date claim. Research API cost is incurred again; the previously discarded response is not recoverable by this code.
+- **Tests:** regression cases cover misdated Δ, missing evidence, insufficient confidence, unknown source references and preservation of plausible candidate classification.
+- **Status:** implementation committed on fix branch; await required Full build, merge and real rerun before declaring operationally verified. No issue was published by the failed run.
