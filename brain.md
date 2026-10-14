@@ -1350,3 +1350,16 @@ Produce and publish one evidence-grounded bilingual issue every Europe/Kyiv cale
 | AUTO-009 | critical | Protected `main` requires PR and `Full build`; direct write rejected | branch → PR → required check → merge | CONFIRMED; WORKFLOW PENDING |
 
 **Incident discipline:** record date, affected commit/run, reproducible failure, root cause, remedy and verification. Keep problem history append-only; do not declare a problem fixed without evidence.
+
+
+### 2026-10-14 implementation log: daily preparation scheduler
+
+- Added `.github/workflows/daily-issue.yml` in branch `automation/daily-issue-workflow-20261014`.
+- Uses two UTC cron hours and a `Europe/Kyiv` local-hour gate for DST. Scheduled GitHub Actions may run late; if execution misses local 07:00, the gate currently skips it. **AUTO-010:** replace strict local-hour equality with a DST-safe, once-per-local-date claim/lock to prevent missed days.
+- Workflow supports `workflow_dispatch`, concurrency control and an idempotent GitHub Issue when the research executor is absent.
+- Repository variable `WSB_RESEARCH_COMMAND` is a **readiness signal only**; its contents are not executed. No research agent, issue PR, auto-merge or production verification is wired yet. **AUTO-011:** implement a pinned, audited research executable and minimal-permission credentials; never execute arbitrary variable content as shell.
+- **AUTO-012:** `Full build` was incorrectly diagnosed as missing by querying commit statuses and PR-filtered workflow runs; the actual GitHub Checks API showed both `Full build` and Cloudflare preview success. Always query `/commits/{sha}/check-runs` for required checks.
+- PR #2 merged as `3cc2480272a38bf004e41140f31d885fff820a71` after both checks succeeded.
+- Current scheduler is a **fail-closed scaffold**. It must not be represented as an autonomous daily publisher.
+
+- **AUTO-010 mitigation (2026-10-14):** scheduled runs after 07:00 Kyiv are eligible even if GitHub runs them late; a dated branch `automation/daily/YYYY-MM-DD` is created as a persistent one-attempt claim. UTC slots 04:00 and 05:00 survive DST. Repeated runs on that date skip. The branch is a preparation claim, **not** proof of a published issue. If an attempt fails, recover via an explicitly controlled retry workflow or remove the claim after investigation; retry is not implemented yet. This uses repository `contents: write` and must be security-reviewed. Branch retention/cleanup remains open.

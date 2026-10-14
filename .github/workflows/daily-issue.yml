@@ -1,0 +1,96 @@
+name: Daily WSB issue preparation
+
+on:
+  schedule:
+    # 07:00 Kyiv: UTC+3 during DST, UTC+2 otherwise.
+    # Both UTC triggers run; local-date eligibility and a persistent branch claim deduplicate.
+    - cron: '0 4,5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: daily-wsb-preparation
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Daily preparation gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve Kyiv date and eligibility
+        id: kyiv
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          hour="$(TZ=Europe/Kyiv date +%H)"
+          date="$(TZ=Europe/Kyiv date +%F)"
+          echo "date=$date" >> "$GITHUB_OUTPUT"
+          if [ "$EVENT_NAME" = "schedule" ] && [ "$((10#$hour))" -lt 7 ]; then
+            echo "eligible=false" >> "$GITHUB_OUTPUT"
+            echo "Skip: Kyiv local time is $hour, before 07."
+          else
+            echo "eligible=true" >> "$GITHUB_OUTPUT"
+          fi
+
+
+      - name: Claim one preparation attempt per Kyiv date
+        if: steps.kyiv.outputs.eligible == 'true'
+        id: claim
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          branch="automation/daily/${ISSUE_DATE}"
+          if gh api "repos/$REPO/git/ref/heads/$branch" --jq '.ref' > /dev/null 2>&1; then
+            echo "claimed=false" >> "$GITHUB_OUTPUT"
+            echo "Skip: $branch already exists."
+            exit 0
+          fi
+          if gh api --method POST "repos/$REPO/git/refs" -f "ref=refs/heads/$branch" -f "sha=$HEAD_SHA" > /dev/null; then
+            echo "claimed=true" >> "$GITHUB_OUTPUT"
+            echo "Claimed $branch for the daily issue."
+          else
+            echo "::error::Could not persist the daily preparation claim; refusing duplicate execution."
+            exit 1
+          fi
+
+      - name: Checkout repository
+        if: steps.claim.outputs.claimed == 'true'
+        uses: actions/checkout@v4
+
+      - name: Check research executor configuration
+        if: steps.claim.outputs.claimed == 'true'
+        id: executor
+        env:
+          WSB_RESEARCH_COMMAND: ${{ vars.WSB_RESEARCH_COMMAND }}
+        run: |
+          if [ -z "$WSB_RESEARCH_COMMAND" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::WSB_RESEARCH_COMMAND is unset; no autonomous issue will be generated."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Record missing executor as an actionable GitHub issue
+        if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
+        run: |
+          title="WSB automation blocked: research executor not configured"
+          existing="$(gh issue list --repo "$REPO" --state open --search "$title in:title" --json title --jq '.[] | select(.title == "WSB automation blocked: research executor not configured") | .title' | head -n1)"
+          if [ -z "$existing" ]; then
+            gh issue create --repo "$REPO" --title "$title" --body "Daily preparation ran on $ISSUE_DATE (Europe/Kyiv). No autonomous research executor has been configured. Set repository variable WSB_RESEARCH_COMMAND only after implementing and testing a trustworthy evidence-to-issue pipeline. Publication remains blocked; do not invent an issue."
+          fi
+
+      - name: Stop before publication until executor contract is implemented
+        if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
+        run: |
+          echo "::error::Research executor integration has not yet been implemented or security-reviewed. WSB_RESEARCH_COMMAND is only a readiness signal."
+          exit 1
