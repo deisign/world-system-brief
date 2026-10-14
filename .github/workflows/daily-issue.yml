@@ -1,0 +1,72 @@
+name: Daily WSB issue preparation
+
+on:
+  schedule:
+    # 07:00 Kyiv: UTC+3 during DST, UTC+2 otherwise.
+    # Both UTC triggers run; the timezone gate below admits only local 07:00.
+    - cron: '0 4,5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: daily-wsb-preparation
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Daily preparation gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enforce Kyiv local hour for scheduled runs
+        id: kyiv
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          hour="$(TZ=Europe/Kyiv date +%H)"
+          date="$(TZ=Europe/Kyiv date +%F)"
+          echo "date=$date" >> "$GITHUB_OUTPUT"
+          if [ "$EVENT_NAME" = "schedule" ] && [ "$hour" != "07" ]; then
+            echo "eligible=false" >> "$GITHUB_OUTPUT"
+            echo "Skip: Kyiv local time is $hour, not 07."
+          else
+            echo "eligible=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout repository
+        if: steps.kyiv.outputs.eligible == 'true'
+        uses: actions/checkout@v4
+
+      - name: Check research executor configuration
+        if: steps.kyiv.outputs.eligible == 'true'
+        id: executor
+        env:
+          WSB_RESEARCH_COMMAND: ${{ vars.WSB_RESEARCH_COMMAND }}
+        run: |
+          if [ -z "$WSB_RESEARCH_COMMAND" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::WSB_RESEARCH_COMMAND is unset; no autonomous issue will be generated."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Record missing executor as an actionable GitHub issue
+        if: steps.kyiv.outputs.eligible == 'true' && steps.executor.outputs.configured != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
+        run: |
+          title="WSB automation blocked: research executor not configured"
+          existing="$(gh issue list --repo "$REPO" --state open --search "$title in:title" --json title --jq '.[] | select(.title == "WSB automation blocked: research executor not configured") | .title' | head -n1)"
+          if [ -z "$existing" ]; then
+            gh issue create --repo "$REPO" --title "$title" --body "Daily preparation ran on $ISSUE_DATE (Europe/Kyiv). No autonomous research executor has been configured. Set repository variable WSB_RESEARCH_COMMAND only after implementing and testing a trustworthy evidence-to-issue pipeline. Publication remains blocked; do not invent an issue."
+          fi
+
+      - name: Stop before publication until executor contract is implemented
+        if: steps.kyiv.outputs.eligible == 'true' && steps.executor.outputs.configured == 'true'
+        run: |
+          echo "::error::Research executor integration has not yet been implemented or security-reviewed. WSB_RESEARCH_COMMAND is only a readiness signal."
+          exit 1
