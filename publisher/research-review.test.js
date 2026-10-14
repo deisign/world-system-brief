@@ -22,7 +22,12 @@ test("potentially supported confirmed Δ still requires independent verification
  const data=bundle({id:"plausible",classification:"confirmed_delta",event_date:"2026-10-14",source_ids:["SRC-1"],confidence:"high"});
  assert.equal(reviewCandidates(data,"2026-10-14").downgraded,0);
 });
-test("unknown source reference fails closed",()=>{
- const data=bundle({id:"bad",classification:"developing",source_ids:["missing"]});
- assert.throws(()=>reviewCandidates(data,"2026-10-14"),/unregistered source/);
+test("unknown source is preserved as unresolved and cannot confirm delta",()=>{
+ const data=bundle({id:"bad",classification:"confirmed_delta",event_date:"2026-10-14",source_ids:["SRC-1","missing"],confidence:"high"});
+ const out=reviewCandidates(data,"2026-10-14");
+ assert.equal(out.downgraded,1);
+ assert.equal(out.bundle.candidates[0].classification,"developing");
+ assert.deepEqual(out.bundle.candidates[0].source_ids,["SRC-1"]);
+ assert.deepEqual(out.bundle.candidates[0].unresolved_source_ids,["missing"]);
+ assert.ok(out.bundle.editorial_flags.some(x=>x.includes("missing")));
 });
