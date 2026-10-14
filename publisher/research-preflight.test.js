@@ -1,0 +1,8 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {preflight} from './research-preflight.js';
+const states=[{issue_id:'WSB-0012',date:'2026-10-09',objects:[{id:'a',current_state:'previous'}]}];
+const packet={issue_date:'2026-10-10',baseline_issue_id:'WSB-0012',sources:[{id:'S1',url:'https://news.example.com/story',publication_date:'2026-10-10'},{id:'S2',url:'https://news.example.com/later',publication_date:'2026-10-12'}],candidates:[{id:'a',classification:'confirmed_delta',event_date:'2026-10-10',current_state:'previous',source_ids:['S1','S2','MISSING']}]};
+test('flags later sources, unknown citations and unchanged state without publication',()=>{const r=preflight(structuredClone(packet),states);assert.equal(r.publication_authorized,false);assert.equal(r.baseline_mismatch,false);assert.equal(r.candidates[0].eligible_source_ids.length,1);assert.deepEqual(r.candidates[0].unresolved_source_ids,['S2','MISSING']);assert.ok(r.candidates[0].flags.includes('unchanged_from_preceding_canonical_state'));});
+test('detects stale model baseline against actual previous canonical issue',()=>{const r=preflight({...packet,baseline_issue_id:'WSB-0011'},states);assert.equal(r.baseline_mismatch,true);assert.equal(r.baseline_issue_id,'WSB-0012');});
+test('rejects malformed packet',()=>{assert.throws(()=>preflight({issue_date:'2026-10-10'},states),/Invalid research packet/);});
