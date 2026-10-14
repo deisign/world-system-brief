@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "provenance": "unverified_model_research_draft",
+  "generated_at": "2026-10-14T11:07:30.509Z",
+  "research_model": "gpt-5-mini",
+  "review_summary": {
+    "downgraded_confirmed_deltas": 1,
+    "all_claims_require_independent_verification": true
+  },
+  "issue_date": "2026-10-14",
+  "baseline_issue_id": "WSB-0012",
+  "as_of_note": "Issue date (Europe/Kyiv): 2026-10-14. This brief updates WSB-0012 (2026-10-09). Dates in candidates reflect event/announcement dates (publication, effective or observed) and are stated explicitly. I used primary/official materials and wire reporting; where agencies had not posted a formal written notice I note that as an uncertainty.",
+  "candidates": [
+    {
+      "id": "yandex-data-centre-network",
+      "headline": "Yandex data‑centre strikes widen — Sasovo (Ryazan, Oct 8) and Kaluga (Oct 9) confirmed; reporting indicates Vladimir hit (Oct 11) and two sites fully offline, degrading Yandex Cloud and disabling supercomputer modules",
+      "classification": "developing",
+      "entering_state": "ryazan_data_centre_struck_on_october_8",
+      "current_state": "multiple_yandex_data_centres_disabled_including_sasovo_kaluga_and_vladimir; company cloud in emergency mode",
+      "why_structural": "The strikes reduce local compute capacity (including reported supercomputers used for model training), degrade cloud availability for large domestic platforms (ride‑hailing, delivery, retail logistics, banking) and raise substitutability/friction: customers told to seek alternate disaster‑recovery capacity. Disabling geographically separated modules inside one operator’s national footprint reduces resilience and increases systemic reliance on non‑Russian or multi‑region backups; this shifts leverage to alternative cloud providers and offline/manual workarounds, and may accelerate capacity‑reallocation in AI training pipelines.",
+      "event_date": "2026-10-11",
+      "confidence": "medium",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002",
+        "SRC-003",
+        "SRC-004"
+      ],
+      "uncertainties": [
+        "Yandex’s official statements confirm damage (Oct 9) but do not quantify company‑wide compute capacity lost; independent reporting attributes a Vladimir strike on Oct 11 but operator confirmation and detailed damage assessments remain incomplete.",
+        "Status of specific supercomputers (number permanently lost vs temporarily disabled) is unverified; medium‑term training backlog impacts implied but not yet measurable.",
+        "Customer data integrity and potential permanent loss of on‑site backups is unresolved; company status page warns no reliable restoration timeline.",
+        "Attribution to Ukrainian forces is reported by multiple outlets and claimed in public statements; attribution does not by itself prove intent to damage commercial/AI capacity vs broader military objectives."
+      ],
+      "proposed_classification": "confirmed_delta",
+      "review_required": true,
+      "review_reasons": [
+        "event_date_not_issue_date"
+      ]
+    },
+    {
+      "id": "us-perm-tech-suspensions",
+      "headline": "U.S. officials announced suspension of PERM filings for Microsoft, Adobe and six IT outsourcing firms (announcement Oct 8); reporting confirms the public announcement but no DOL written notice had been posted as of Oct 14",
+      "classification": "developing",
+      "entering_state": "employer_perm_access_before_october_8",
+      "current_state": "named_firms_suspended_from_perm (announcement as of 2026-10-08); administrative details and duration unposted",
+      "why_structural": "If sustained, suspending an employer’s access to PERM processing severs a primary institutional path converting temporary skilled labor (H‑1B) into permanent residence for affected employees; that alters employer talent pipelines, retention incentives, wage/leverage dynamics and substitutability (firms may rely more on domestic hiring, offshore contractors, or alternative immigration channels). The action raises friction and rent shifts in talent markets, especially for roles dependent on long lead‑times to certify labour shortages.",
+      "event_date": "2026-10-08",
+      "confidence": "medium",
+      "source_ids": [
+        "SRC-005",
+        "SRC-006",
+        "SRC-013"
+      ],
+      "uncertainties": [
+        "Department of Labor had not (as of Oct 14) published a formal DOL press release, Federal Register notice or employer‑specific written suspension order specifying scope, legal basis or duration — public accounts derive from an Oct 8 White House/press‑conference announcement.",
+        "The published announcement does not identify subsidiary legal entities, which matters for which specific employer‑of‑record PERM cases are affected.",
+        "The announcement does not, by itself, cancel H‑1B status or existing PERM certifications; downstream effects on pending I‑140s and adjustment of status timelines depend on agency practice and any subsequent orders.",
+        "Political framing (job counts cited during the Oct 8 briefing) is contested by company statements; economic impact on hiring and substitution will unfold and depends on suspension duration and enforcement scope."
+      ]
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "headline": "Hurricane/Tropical Storm Isaias (early Oct) forced wide Gulf of Mexico platform evacuations and large temporary shut‑ins; operator reports showed a large share of regional oil/gas output offline at the peak",
+      "classification": "persistent",
+      "entering_state": "confirmed_offshore_production_shutins",
+      "current_state": "storm_shutins_continue (operator reports show substantial temporary output curtailments during Oct 7–10; restart/inspection timelines variable)",
+      "why_structural": "Offshore platform evacuations and safety shut‑ins remove physical crude and gas flows from the market temporarily, tightening near‑term supply and raising prices and refinery input stress. The disruption is a capacity‑availability shock (not a policy action) with high substitutability in weeks if inspections are routine, but risk of inspection delays or damage raises short‑term rents and insurance costs. The event also interacts with other supply‑side shocks (Middle East shipping attacks) to amplify price sensitivity.",
+      "event_date": "2026-10-07",
+      "confidence": "high",
+      "source_ids": [
+        "SRC-009",
+        "SRC-006",
+        "SRC-010"
+      ],
+      "uncertainties": [
+        "Published shut‑in percentages come from operator/ regulator tallies and vary by source and timestamp; these are interim, operator‑reported figures and do not prove permanent damage.",
+        "Recovery speed depends on post‑storm inspections and any physical damage to wells, pipelines or platforms; many shut‑ins historically resume within days but some can take longer if infrastructure is damaged.",
+        "Price and supply impact depends on concurrent events (e.g., shipping attacks) and strategic inventories; causality between the hurricane and sustained price moves needs time‑series analysis."
+      ]
+    },
+    {
+      "id": "hormuz-navigation-constraint",
+      "headline": "Attacks on merchant shipping around the Strait of Hormuz and adjacent waters remain elevated (early to mid‑Oct); UKMTO/industry feeds and wire reporting show repeated projectile/drone strikes and delayed UKMTO notices, sustaining a constrained transit environment",
+      "classification": "persistent",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint_with_escalating_tempo_and_expanded_geography (Strait of Hormuz, Gulf of Oman and nearby waters; Oct 3–13 cluster)",
+      "why_structural": "The Strait of Hormuz is a chokepoint carrying a material share of global crude and LNG flows; repeated attacks force rerouting, raise war‑risk insurance and transshipment costs, reduce daily transits and increase time/tonne for shipments. That changes effective capacity and raises rents for secure carriers and for pipeline/overland alternatives, altering short‑term trade flows and energy market exposure.",
+      "event_date": "2026-10-11",
+      "confidence": "medium",
+      "source_ids": [
+        "SRC-011",
+        "SRC-012",
+        "SRC-013"
+      ],
+      "uncertainties": [
+        "Attribution of individual strikes is contested in open reporting; some claims (IRGC, Houthi or other actors) are reported but not independently verified.",
+        "UKMTO reports are sometimes published with delays and are third‑party notices; matching named vessels to UKMTO notices remains incomplete.",
+        "Insurance, routing and commercial reaction (extent of rerouting vs selective transits) vary by shipowner and cargo; IMF PortWatch/slot counts show transit reductions but these are time‑stamped and subject to later revision."
+      ]
+    },
+    {
+      "id": "cross-sector-causality-claims",
+      "headline": "High‑volume public commentary that links Yandex strikes, PERM suspensions and Gulf energy shocks into a single causal chain is not supported by documented causal evidence — treat as noise",
+      "classification": "noise",
+      "entering_state": "various_separate_events",
+      "current_state": "no_proven_causal_link_between_these_events",
+      "why_structural": "The three domains (Russian domestic compute infrastructure strikes; U.S. administrative immigration enforcement; Gulf weather/shipping shocks) operate via distinct mechanisms (physical attack on compute infrastructure; administrative legal authority over labor‑certification processing; meteorological/operational offshore safety closures). At present there is no primary source demonstrating a causal link tying these mechanisms together; conflating them risks producing an artificial systemic narrative.",
+      "event_date": "2026-10-08",
+      "confidence": "medium",
+      "source_ids": [
+        "SRC-001",
+        "SRC-005",
+        "SRC-009"
+      ],
+      "uncertainties": [
+        "Political actors and social media may amplify cross‑sector narratives; evidence for linkages must be documentary (e.g., agency orders, intergovernmental memos, or company admissions) which are absent as of 2026-10-14.",
+        "Some contemporaneous timing coincidences create high noise; resist treating temporal concurrence as causation."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "What is happening to our data centers, the iron heart of Yandex",
+      "url": "https://yandex.com/company/news/2026-10-09",
+      "publisher": "Yandex (official)",
+      "publication_date": "2026-10-09",
+      "claim": "Yandex: Sasovo data center seriously damaged (night of Oct 7–8); Kaluga attacked Oct 9; part of Kaluga infrastructure out of service; emergency teams working on site.",
+      "observation": "Operator statement confirming damage and degraded operations; no employee injuries reported; status page described emergency mode and inability to provide a reliable restoration timeline.",
+      "limitations": "Company statement is primary but deliberately limited in operational detail (no quantified compute capacity lost, no technical forensic report)."
+    },
+    {
+      "id": "SRC-002",
+      "title": "Several modules of Yandex’s data center in Russia completely knocked out by Ukrainian drone strike",
+      "url": "https://meduza.io/en/news/2026/10/09/several-modules-of-yandex-s-data-center-in-russia-completely-knocked-out-by-ukrainian-drone-strike",
+      "publisher": "Meduza",
+      "publication_date": "2026-10-09",
+      "claim": "Reporting based on Yandex statement and other sources: Kaluga modules disabled Oct 9; Sasovo hit Oct 8 with fire; services disrupted.",
+      "observation": "Independent Russian reporting corroborates Yandex's own account and lists downstream service disruptions (media platforms, digital banking, rail websites).",
+      "limitations": "Relies on Yandex and local sources; operational technical details and longer‑term impacts are unquantified."
+    },
+    {
+      "id": "SRC-003",
+      "title": "Ukraine’s drones knock out AI data center belonging to 'Russia’s Google'",
+      "url": "https://arstechnica.com/gadgets/2026/10/ukraines-drones-knock-out-ai-data-center-belonging-to-russias-google/",
+      "publisher": "Ars Technica",
+      "publication_date": "2026-10-09",
+      "claim": "Reporting that Ukrainian drones struck Yandex Sasovo (Oct 8) and Kaluga (Oct 9); Sasovo houses supercomputers used for AI training; customer services experienced disruptions.",
+      "observation": "Adds technical context (supercomputer training capacity) and links to satellite imagery and security‑industry reporting.",
+      "limitations": "Reporter synthesis cites Reuters and company sources; does not provide independent forensic confirmation of supercomputer damage beyond operator/third‑party reporting."
+    },
+    {
+      "id": "SRC-004",
+      "title": "Yandex says drone strikes damaged three data centers, two of them shut down",
+      "url": "https://atlabyte.com/en/news/yandex-says-drone-strikes-damaged-three-data-centers-two-of-them-shut-down",
+      "publisher": "Atlabyte",
+      "publication_date": "2026-10-12",
+      "claim": "Aggregated reporting: Sasovo Oct 8 (fully offline), Kaluga Oct 9 (degraded), Vladimir Oct 11 (fully offline); Yandex Cloud in emergency mode; customers report inaccessible files and 502/504 errors.",
+      "observation": "Provides a chronology and customer‑facing status observations suggesting broader service disruption beyond the two earlier strikes.",
+      "limitations": "Aggregated trade press; some vessel/date claims rely on secondary citing of operator or local media; Atlabyte is not the primary operator."
+    },
+    {
+      "id": "SRC-005",
+      "title": "DOL PERM Suspension: Microsoft, Adobe, Infosys (analysis)",
+      "url": "https://www.i-9intelligence.com/articles/dol-perm-suspension-microsoft-adobe-it-firms",
+      "publisher": "i-9intelligence",
+      "publication_date": "2026-10-08",
+      "claim": "Summarises Oct 8 announcement: Secretary of Labor announced suspension of eight employers from PERM; DOL had not posted a formal press release as of that afternoon.",
+      "observation": "Explains practical implications of a PERM suspension and cites the likely regulatory mechanism (20 CFR §656.31(b)).",
+      "limitations": "Analyst piece synthesising a press‑conference announcement; notes absence of a posted DOL document and therefore cannot provide documentary administrative text or full scope."
+    },
+    {
+      "id": "SRC-006",
+      "title": "Is H‑1B suspended? The October 8 PERM action",
+      "url": "https://waitdelta.com/blog/perm-suspension-2026",
+      "publisher": "WaitDelta (immigration analysis)",
+      "publication_date": "2026-10-08",
+      "claim": "Explains Oct 8 announcement (Vance/Sonderling); notes multiple outlets covered the press conference and that DOL had not published a written notice as of Oct 9; lists companies named.",
+      "observation": "Emphasises practical consequences, legal context and prior suspensions (Cloudera, Cognizant) for comparison.",
+      "limitations": "Not a primary agency source; depends on contemporaneous press reporting and the press‑conference record rather than an agency order posted to dol.gov."
+    },
+    {
+      "id": "SRC-009",
+      "title": "Hurricane Isaias halts nearly two‑thirds of US Gulf oil output",
+      "url": "https://www.upstreamonline.com/production/hurricane-isaias-halts-nearly-two-thirds-of-us-gulf-oil-output/2-1-2056112",
+      "publisher": "Upstream",
+      "publication_date": "2026-10-08",
+      "claim": "Reporting operator/regulator tallies (early Oct) that large shares of US Gulf oil and gas production were shut in as Isaias approached (operator evacuations and platform shut‑ins).",
+      "observation": "Gives industry reporting on operator safety evacuations and percentages of output offline at the storm's peak; notes typical post‑storm inspections required before restart.",
+      "limitations": "Some reporting behind a subscriber wall; figures are operator/regulator tallies at specific timestamps and vary by source/time."
+    },
+    {
+      "id": "SRC-010",
+      "title": "Daily intelligence and operator tallies on Gulf shut‑ins (MMA/BSEE compilations)",
+      "url": "https://proudlyserved.com/threat-watch/",
+      "publisher": "Proudly Served (aggregated intelligence brief)",
+      "publication_date": "2026-10-11",
+      "claim": "Aggregated view citing MMA/BSEE operator reports: high percentages of Gulf output reported shut in around Oct 10–11; platform evacuation counts provided.",
+      "observation": "Summarises official operator reporting snapshots and highlights the difference between oil and gas shut‑in shares and the number of manned platforms evacuated.",
+      "limitations": "Aggregator — uses operator/regulator data that are time‑stamped; does not itself host the regulator’s raw data file as a formal DOL/BOEM/BSEE release link in the piece."
+    },
+    {
+      "id": "SRC-011",
+      "title": "Iran shifting tactics to step up attacks on shipping before US vote",
+      "url": "https://www.reuters.com/world/middle-east/iran-shifting-tactics-step-up-attacks-shipping-before-us-vote-2026-10-14/",
+      "publisher": "Reuters",
+      "publication_date": "2026-10-14",
+      "claim": "Wire reporting (Oct 14) quoting officials and maritime security analysis that Iran/IRGC‑linked operations have increased attacks on shipping around the Strait of Hormuz and are expanding geographic scope.",
+      "observation": "Documents recent cluster of vessel strikes and includes attribution/official comment; frames the trend as heightened tempo ahead of U.S. elections.",
+      "limitations": "Attribution to Iranian state or proxies is reported with caveats; Reuters cites officials and maritime security sources and notes some claims remain unverified."
+    },
+    {
+      "id": "SRC-012",
+      "title": "Strait of Hormuz Live Tracker & Monitor (dashboard)",
+      "url": "https://straits.live/",
+      "publisher": "straits.live (open monitoring dashboard)",
+      "publication_date": "2026-10-14",
+      "claim": "Aggregated live monitoring of transit counts, UKMTO notices, AIS positions and trade‑press reports; reports effectively closed status and low transit counts since Feb–Oct 2026 and logs Oct incidents.",
+      "observation": "Useful for transit counts and aggregating UKMTO/insurance signals that commercial transits remain depressed and that attack tempo remains elevated.",
+      "limitations": "Independent aggregator that synthesises multiple feeds (UKMTO, AIS, trade press); methodology is public but some event matching can lag and is reliant on third‑party notices."
+    },
+    {
+      "id": "SRC-013",
+      "title": "Houthi/IRGC/merchant shipping incident compilations and UKMTO notices (trade reporting)",
+      "url": "https://www.rivieramm.com/news-content-hub/strait-of-hormuz-tanker-attacks-surge-two-missing-after-attack-off-oman-us-disables-vessel-90245",
+      "publisher": "Riviera Maritime Media",
+      "publication_date": "2026-10-13",
+      "claim": "Trade reporting on multiple merchant vessel strikes in and near the Strait of Hormuz during Oct 11–13, citing UKMTO and maritime security sources; reports crew casualties and vessel evacuations in some incidents.",
+      "observation": "Provides vessel‑level reporting and links to UKMTO notices where available; documents the spread of incidents into Gulf of Oman and nearby waters.",
+      "limitations": "Relies on UKMTO and maritime security firms; some vessel identities and damage assessments are unconfirmed pending operator statements."
+    },
+    {
+      "id": "SRC-014",
+      "title": "Coverage/analysis of Oct 8 White House/DOL announcement on PERM (news synthesis)",
+      "url": "https://www.axios.com/2026/10/08/h1b-vs-perm-vance-tech-worker-ban",
+      "publisher": "Axios",
+      "publication_date": "2026-10-08",
+      "claim": "Explains Oct 8 public announcement: Vance/Sonderling said DOL will not accept new or process pending PERM applications involving named companies.",
+      "observation": "Clear, short explainer noting that H‑1B program itself is not suspended and highlighting practical implications.",
+      "limitations": "Synthesis of press‑conference reporting rather than an agency document; reliance on press conference audio/transcripts and contemporaneous reporting."
+    }
+  ],
+  "editorial_flags": [
+    "Confirmed deltas must be restricted to documented state changes with dated primary/official evidence. New confirmed delta here is the extension of Yandex data‑centre hits (Vladimir) documented in post‑baseline reporting (Oct 11).",
+    "Differentiate announcement/publication dates from effective or regulatory dates: the PERM suspension was announced publicly on 2026-10-08 but, as of 2026-10-14, DOL had not posted a formal written suspension order — treat that as a developing administrative action until primary agency documentation appears.",
+    "Company statements (Yandex) are primary evidence of damage but do not quantify systemic capacity loss; cross‑check operator status pages and downstream customer reports before inferring full system failure.",
+    "UKMTO/industry maritime notices often publish with delays; match notice date, incident time and vessel identity carefully before counting separate events.",
+    "Do not infer cross‑sector causality from temporal concurrence. Where political claims tie separate events together, flag them as high‑noise unless documentary causal evidence appears.",
+    "Candidate yandex-data-centre-network downgraded for review: event_date_not_issue_date"
+  ]
+}
