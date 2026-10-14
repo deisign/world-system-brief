@@ -149,12 +149,20 @@ jobs:
             sleep $((attempt * 15))
           done
 
+      - name: Produce free editorial preflight report
+        if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
+        env:
+          WSB_ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
+        run: node publisher/research-preflight.js "$WSB_ISSUE_DATE"
+
       - name: Upload research packet for human verification
         if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: wsb-research-${{ steps.kyiv.outputs.date }}
-          path: research/pending/${{ steps.kyiv.outputs.date }}.json
+          path: |
+            research/pending/${{ steps.kyiv.outputs.date }}.json
+            research/reviews/${{ steps.kyiv.outputs.date }}.json
           if-no-files-found: error
           retention-days: 30
 
@@ -169,7 +177,7 @@ jobs:
           git fetch origin "$branch"
           git checkout -B "$branch" "origin/$branch"
           mkdir -p research/pending
-          git add "research/pending/$ISSUE_DATE.json"
+          git add "research/pending/$ISSUE_DATE.json" "research/reviews/$ISSUE_DATE.json"
           git -c user.name="wsb-automation" -c user.email="actions@users.noreply.github.com" commit -m "Add unverified WSB research for $ISSUE_DATE"
           git push origin HEAD:"$branch"
           gh pr create --repo "$REPO" --head "$branch" --base main --draft \
