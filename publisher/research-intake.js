@@ -60,12 +60,22 @@ if (bundle.issue_date!==date || bundle.baseline_issue_id!==previous.state.issue_
 if (!Array.isArray(bundle.candidates)||!Array.isArray(bundle.sources)) throw Error("Malformed research bundle");
 if (bundle.sources.length===0) throw Error("No sourced research; fail closed");
 const idSet=new Set();
+const rejectedSources=[];
+const acceptedSources=[];
 for (const s of bundle.sources) {
   if (!s.id||idSet.has(s.id)||!/^https:\/\//.test(s.url||"")||!/^\d{4}-\d{2}-\d{2}$/.test(s.publication_date||""))
     throw Error("Invalid/duplicate source metadata; fail closed");
-  if (s.publication_date>date) throw Error("Future-dated source: "+s.id);
   idSet.add(s.id);
+  if (s.publication_date>date) {
+    rejectedSources.push({...s,rejection_reason:"future_dated_source"});
+    continue;
+  }
+  acceptedSources.push(s);
 }
+bundle.sources=acceptedSources;
+bundle.rejected_sources=rejectedSources;
+bundle.editorial_flags=Array.isArray(bundle.editorial_flags)?bundle.editorial_flags:[];
+for(const s of rejectedSources) bundle.editorial_flags.push(`Source ${s.id} excluded: publication date ${s.publication_date} exceeds issue date ${date}`);
 const review=reviewCandidates(bundle,date);
 const out=path.join(root,"research","pending",date+".json");
 fs.mkdirSync(path.dirname(out),{recursive:true});
