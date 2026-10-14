@@ -4,7 +4,7 @@ import {approveDraft} from "./editorial-approval.js";
 const draft={manifest:{date:"2026-10-15",publication_authorized:false},
  state:{date:"2026-10-15",objects:[{id:"port",current_state:"open",status:"persistent"}]},
  evidence:{records:[{id:"SRC1",url:"https://example.org"}]},
- claims:{claims:[{id:"DRAFT-CLM-port",statement:"Reported interruption",observed_at:"2026-10-15",source_ids:["SRC1"]}]}};
+ claims:{claims:[{id:"DRAFT-CLM-port",statement:"Reported interruption",observed_at:"2026-10-14",source_ids:["SRC1"]}]}};
 const approval={issue_date:"2026-10-15",issue_id:"WSB-0018",editorial_approval:true,
  source_verification_complete:true,translation_verified:true,candidates:[{id:"DRAFT-CLM-port",decision:"accept",reviewer_note:"Verified"}]};
 test("accepts evidence update without inventing state change",()=>{const r=approveDraft(draft,approval);assert.equal(r.state.objects[0].current_state,"open");assert.equal(r.claims.claims[0].status,"evidence_update");});
