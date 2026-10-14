@@ -1363,3 +1363,17 @@ Produce and publish one evidence-grounded bilingual issue every Europe/Kyiv cale
 - Current scheduler is a **fail-closed scaffold**. It must not be represented as an autonomous daily publisher.
 
 - **AUTO-010 mitigation (2026-10-14):** scheduled runs after 07:00 Kyiv are eligible even if GitHub runs them late; a dated branch `automation/daily/YYYY-MM-DD` is created as a persistent one-attempt claim. UTC slots 04:00 and 05:00 survive DST. Repeated runs on that date skip. The branch is a preparation claim, **not** proof of a published issue. If an attempt fails, recover via an explicitly controlled retry workflow or remove the claim after investigation; retry is not implemented yet. This uses repository `contents: write` and must be security-reviewed. Branch retention/cleanup remains open.
+
+
+### 2026-10-14 · Research intake implementation (not yet a publisher)
+
+- Added `publisher/research-intake.js`. It calls OpenAI Responses with web search using repository secret `OPENAI_API_KEY` and optional variable `WSB_OPENAI_MODEL` (default `gpt-5-mini`), compares previous issue state and writes `research/pending/YYYY-MM-DD.json`.
+- Added daily workflow research call, artifact upload and an **unmerged draft PR** for each successful intake. The research packet is labeled `unverified_model_research_draft`: no issue is created in `issues/` and no release is published by this code.
+- Added runner syntax check to required `Full build` CI.
+- **AUTO-013 / critical / OPEN:** model-provided URLs and publication dates are syntactically checked but **not independently fetched, provenance-checked or corroborated**. Source verification and contradiction analysis are required before promoting claims to `evidence.json`.
+- **AUTO-014 / critical / OPEN:** convert reviewed research packet into issue state, evidence, claims, relations, bilingual READ and locale copy with semantic constraints and an atomic readiness gate; add post-deployment route checks. Not implemented.
+- **AUTO-015 / high / OPEN:** repository may forbid GitHub Actions `GITHUB_TOKEN` from creating pull requests even with `pull-requests: write`; check Actions setting, use scoped GitHub App token if needed.
+- **AUTO-016 / high / OPEN:** model API availability, web_search support, token budget, operational cost and safe max research volume have not been exercised end to end. Confirm before daily enablement.
+- **AUTO-017 / high / OPEN:** claim branches are created *before* intake. On failure, daily retries skip; implement explicit retry and stale-branch recovery with race-safe idempotency.
+- **AUTO-018 / medium / OPEN:** expected scheduled run is only an approximation; two UTC slots + Kyoto/Kyiv timezone gate address DST but the GitHub scheduler can skip or defer runs. Add a missing-date watchdog. (Canonical timezone is Europe/Kyiv.)
+- **SECURITY:** do not paste API keys into `brain.md`, Actions logs or PRs. Research output is untrusted content and must not be treated as instructions to automation. Draft research PR should not auto-merge.
