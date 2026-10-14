@@ -1,0 +1,46 @@
+{
+  "locale": "en",
+  "labels": {
+    "yandex-data-centre-network": "Yandex data-centre network",
+    "us-perm-tech-suspensions": "US PERM restrictions",
+    "us-gulf-offshore-output": "US Gulf offshore production",
+    "hormuz": "Strait of Hormuz"
+  },
+  "states": {
+    "kaluga_modules_disabled_second_site": "Modules disabled at Kaluga site",
+    "vladimir_site_operations_suspended": "Vladimir site operations suspended",
+    "named_firms_suspended_from_perm": "PERM access restricted for named employers",
+    "storm_shutins_continue": "Storm-related production shut-ins continue",
+    "persistent_navigation_constraint": "Navigation remains constrained"
+  },
+  "assessments": {
+    "continuing_physical_dependency_and_uncertain_downstream_effects": "Physical dependencies persist; broader cascade uncertain."
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE"
+  },
+  "noise": {
+    "no_proven_cross_sector_causal_link": "NO EVIDENCE OF COMMON CAUSE"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "CONSTRAINTS PERSIST; EVIDENCE IS NOT A NEW EVENT",
+    "deck": "Constraints persist; evidence is not a new event",
+    "mechanism": "PHYSICAL COMPUTE DEPENDENCIES",
+    "chainNote": "Site outages constrain cloud capacity; total magnitude is uncertain.",
+    "evidenceNote": "Retrospective source audit",
+    "footer": "EVIDENCE · STATES · NO FALSE DELTAS"
+  }
+}

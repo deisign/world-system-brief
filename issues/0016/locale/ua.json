@@ -1,0 +1,46 @@
+{
+  "locale": "ua",
+  "labels": {
+    "yandex-data-centre-network": "Мережа дата-центрів «Яндекса»",
+    "us-perm-tech-suspensions": "Обмеження PERM у США",
+    "us-gulf-offshore-output": "Морський видобуток у Мексиканській затоці",
+    "hormuz": "Ормузька протока"
+  },
+  "states": {
+    "kaluga_modules_disabled_second_site": "Виведено з ладу модулі у Калузі",
+    "vladimir_site_operations_suspended": "Роботу дата-центру у Владимирі призупинено",
+    "named_firms_suspended_from_perm": "Доступ визначених роботодавців до PERM обмежено",
+    "storm_shutins_continue": "Зупинка видобутку через негоду триває",
+    "persistent_navigation_constraint": "Обмеження судноплавства тривають"
+  },
+  "assessments": {
+    "continuing_physical_dependency_and_uncertain_downstream_effects": "Фізичні залежності зберігаються; ширші наслідки невідомі."
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "persistent": "ТРИВАЄ",
+    "evidence_update": "УТОЧНЕННЯ ДОКАЗІВ"
+  },
+  "noise": {
+    "no_proven_cross_sector_causal_link": "СПІЛЬНУ ПРИЧИНУ НЕ ДОВЕДЕНО"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА Δ",
+    "map": "СИСТЕМНА МАПА",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "СИСТЕМНИЙ ЛЕДЖЕР",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "СИСТЕМНА АКТИВНІСТЬ",
+    "headline": "НОВОЇ СИСТЕМНОЇ Δ У ПЕРЕВІРЕНОМУ ПАКЕТІ НЕМАЄ",
+    "deck": "Нової системної Δ у перевіреному пакеті немає",
+    "mechanism": "ФІЗИЧНІ ЗАЛЕЖНОСТІ ОБЧИСЛЕНЬ",
+    "chainNote": "Зупинка об’єктів обмежує хмарні потужності; загальний масштаб невідомий.",
+    "evidenceNote": "Ретроспективна перевірка джерел",
+    "footer": "ДОКАЗИ · СТАНИ · БЕЗ ШТУЧНИХ Δ"
+  }
+}
