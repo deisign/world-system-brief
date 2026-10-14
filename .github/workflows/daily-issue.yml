@@ -133,7 +133,21 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           WSB_OPENAI_MODEL: ${{ vars.WSB_OPENAI_MODEL }}
           WSB_ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
-        run: node publisher/research-intake.js
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            echo "::group::Research attempt $attempt/3"
+            if node publisher/research-intake.js; then
+              echo "::endgroup::"
+              exit 0
+            fi
+            echo "::endgroup::"
+            if [ "$attempt" -eq 3 ]; then
+              echo "::error::Research failed after 3 attempts; no unverified material published."
+              exit 1
+            fi
+            sleep $((attempt * 15))
+          done
 
       - name: Upload research packet for human verification
         if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
