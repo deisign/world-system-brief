@@ -145,21 +145,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           WSB_OPENAI_MODEL: ${{ vars.WSB_OPENAI_MODEL }}
           WSB_ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
-        run: |
-          set -euo pipefail
-          for attempt in 1; do
-            echo "::group::Research attempt $attempt/1"
-            if node publisher/research-intake.js; then
-              echo "::endgroup::"
-              exit 0
-            fi
-            echo "::endgroup::"
-            if [ "$attempt" -eq 1 ]; then
-              echo "::error::Research failed after 1 attempt; no unverified material published."
-              exit 1
-            fi
-            sleep $((attempt * 15))
-          done
+        run: node publisher/research-intake.js
 
       - name: Produce free editorial preflight report
         if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
