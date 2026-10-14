@@ -3,12 +3,12 @@ name: Daily WSB issue preparation
 on:
   schedule:
     # 07:00 Kyiv: UTC+3 during DST, UTC+2 otherwise.
-    # Both UTC triggers run; the timezone gate below admits only local 07:00.
+    # Both UTC triggers run; local-date eligibility and a persistent branch claim deduplicate.
     - cron: '0 4,5 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 concurrency:
@@ -20,7 +20,7 @@ jobs:
     name: Daily preparation gate
     runs-on: ubuntu-latest
     steps:
-      - name: Enforce Kyiv local hour for scheduled runs
+      - name: Resolve Kyiv date and eligibility
         id: kyiv
         env:
           EVENT_NAME: ${{ github.event_name }}
@@ -28,19 +28,43 @@ jobs:
           hour="$(TZ=Europe/Kyiv date +%H)"
           date="$(TZ=Europe/Kyiv date +%F)"
           echo "date=$date" >> "$GITHUB_OUTPUT"
-          if [ "$EVENT_NAME" = "schedule" ] && [ "$hour" != "07" ]; then
+          if [ "$EVENT_NAME" = "schedule" ] && [ "$((10#$hour))" -lt 7 ]; then
             echo "eligible=false" >> "$GITHUB_OUTPUT"
-            echo "Skip: Kyiv local time is $hour, not 07."
+            echo "Skip: Kyiv local time is $hour, before 07."
           else
             echo "eligible=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Checkout repository
+
+      - name: Claim one preparation attempt per Kyiv date
         if: steps.kyiv.outputs.eligible == 'true'
+        id: claim
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          branch="automation/daily/${ISSUE_DATE}"
+          if gh api "repos/$REPO/git/ref/heads/$branch" --jq '.ref' > /dev/null 2>&1; then
+            echo "claimed=false" >> "$GITHUB_OUTPUT"
+            echo "Skip: $branch already exists."
+            exit 0
+          fi
+          if gh api --method POST "repos/$REPO/git/refs" -f "ref=refs/heads/$branch" -f "sha=$HEAD_SHA" > /dev/null; then
+            echo "claimed=true" >> "$GITHUB_OUTPUT"
+            echo "Claimed $branch for the daily issue."
+          else
+            echo "::error::Could not persist the daily preparation claim; refusing duplicate execution."
+            exit 1
+          fi
+
+      - name: Checkout repository
+        if: steps.claim.outputs.claimed == 'true'
         uses: actions/checkout@v4
 
       - name: Check research executor configuration
-        if: steps.kyiv.outputs.eligible == 'true'
+        if: steps.claim.outputs.claimed == 'true'
         id: executor
         env:
           WSB_RESEARCH_COMMAND: ${{ vars.WSB_RESEARCH_COMMAND }}
@@ -53,7 +77,7 @@ jobs:
           fi
 
       - name: Record missing executor as an actionable GitHub issue
-        if: steps.kyiv.outputs.eligible == 'true' && steps.executor.outputs.configured != 'true'
+        if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           REPO: ${{ github.repository }}
@@ -66,7 +90,7 @@ jobs:
           fi
 
       - name: Stop before publication until executor contract is implemented
-        if: steps.kyiv.outputs.eligible == 'true' && steps.executor.outputs.configured == 'true'
+        if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
         run: |
           echo "::error::Research executor integration has not yet been implemented or security-reviewed. WSB_RESEARCH_COMMAND is only a readiness signal."
           exit 1
