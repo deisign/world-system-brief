@@ -159,6 +159,12 @@ jobs:
           WSB_ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
         run: node publisher/research-packet.js "$WSB_ISSUE_DATE"
 
+      - name: Generate nonpublishable issue-file scaffold
+        if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
+        env:
+          WSB_ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
+        run: node publisher/issue-scaffold.js "$WSB_ISSUE_DATE"
+
       - name: Upload research packet for human verification
         if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
         uses: actions/upload-artifact@v4
