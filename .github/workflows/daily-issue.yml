@@ -24,7 +24,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: daily-wsb-preparation
+  group: daily-wsb-preparation-${{ github.event_name == 'workflow_dispatch' && inputs.issue_date || github.event_name == 'workflow_dispatch' && 'manual-today' || 'scheduled' }}
   cancel-in-progress: false
 
 jobs:
