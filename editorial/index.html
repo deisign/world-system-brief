@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WSB · Editorial Desk</title>
+<style>
+:root{--paper:#f1ece0;--ink:#292a27;--line:#a7a094;--red:#9a302d}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+main{max-width:1050px;margin:auto;padding:35px 22px 90px}header{border-top:7px solid;border-bottom:2px solid;padding:12px 0 18px}h1{font-size:clamp(38px,7vw,76px);letter-spacing:-.065em;margin:0;line-height:1}h2{font-size:24px;margin-top:34px}h3{margin:0}
+.kicker{font:700 12px monospace;letter-spacing:.12em;color:var(--red)}.muted,small{color:#655e58}
+.panel{border:1px solid var(--line);padding:20px;margin:20px 0}.candidate{border-top:2px solid;padding:18px 0}
+label{display:block;font-weight:650;margin:13px 0 5px}input[type=text],textarea,select{width:100%;padding:10px;background:#fffdf8;border:1px solid #817d75;font:inherit}textarea{min-height:75px}
+button{font:700 14px system-ui;padding:11px 19px;border:1px solid #34332e;background:#34332e;color:white;cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}
+a{color:#65352c}ul{padding-left:24px}.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:700px){.row{grid-template-columns:1fr}}
+.status{padding:12px;border-left:4px solid var(--red)}fieldset{border:0;padding:0;margin:12px 0}legend{font-weight:700}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#e5dfd2;padding:12px}
+</style></head><body><main>
+<header><div class="kicker">WORLD SYSTEM BRIEF / EDITORIAL DESK</div><h1>Review desk</h1><p>Локальный редакторский интерфейс. Не подключается к сети и не публикует выпуск.</p></header>
+<section class="panel"><h2>1. Загрузить черновик</h2><p class="muted">Выбери три файла из <code>research/drafts/YYYY-MM-DD/canonical/</code>. Они читаются только в браузере.</p>
+<div class="row"><div><label for="manifest">MANIFEST.json</label><input id="manifest" type="file" accept=".json"></div>
+<div><label for="claims">claims.json</label><input id="claims" type="file" accept=".json"></div></div>
+<label for="evidence">evidence.json</label><input id="evidence" type="file" accept=".json">
+<p><button id="load" type="button">Открыть кандидатов</button></p><p id="message" class="status" role="status">Ожидание файлов.</p></section>
+<section id="workspace" hidden><h2>2. Редакционные решения</h2><p>Решение и комментарий обязательны для каждого кандидата. Источники открываются отдельной вкладкой для самостоятельной проверки.</p><div id="candidates"></div>
+<section class="panel"><h2>3. Подтверждение выпуска</h2>
+<div class="row"><div><label for="issue">Номер выпуска (WSB-0018)</label><input id="issue" type="text" placeholder="WSB-0018"></div>
+<div><label for="reviewer">Имя редактора / подпись</label><input id="reviewer" type="text" placeholder="Редактор"></div></div>
+<label><input id="sourcesOk" type="checkbox"> Я независимо проверил(а) содержание и даты всех используемых источников</label>
+<label><input id="translationOk" type="checkbox"> Я проверил(а) полный английский и украинский тексты</label>
+<label for="en">Итоговый READ — English</label><textarea id="en" rows="8" placeholder="Полный финальный текст английского выпуска"></textarea>
+<label for="ua">Итоговый READ — Українською</label><textarea id="ua" rows="8" placeholder="Повний фінальний текст українського випуску"></textarea>
+<label><input id="approve" type="checkbox"> Утверждаю выпуск после редакторской проверки</label>
+<p><button id="export" type="button">Скачать файл решений JSON</button></p>
+<p class="muted">Файл следует сохранить как <code>research/approvals/YYYY-MM-DD.json</code>. Затем локально запустить <code>node publisher/editorial-approval.js YYYY-MM-DD</code> и создать PR с результатом. Это не публикация одним нажатием.</p>
+</section></section></main>
+<script>
+"use strict";
+const $=id=>document.getElementById(id);
+let packet=null;
+const setMessage=s=>$("message").textContent=s;
+const readJson=async id=>{const f=$(id).files[0];if(!f)throw Error("Выбери "+id);return JSON.parse(await f.text())};
+const element=(tag,klass,text)=>{const e=document.createElement(tag);if(klass)e.className=klass;if(text!==undefined)e.textContent=text;return e};
+const field=(parent,text,type="text")=>{const l=element("label",null,text),i=document.createElement(type==="textarea"?"textarea":"input");if(type!=="textarea")i.type=type;l.append(i);parent.append(l);return i};
+$("load").onclick=async()=>{
+ try{
+  const [manifest,claims,evidence]=await Promise.all(["manifest","claims","evidence"].map(readJson));
+  if(manifest.publication_authorized!==false||!/^\d{4}-\d{2}-\d{2}$/.test(manifest.date||""))throw Error("Нужен неподтверждённый MANIFEST с корректной датой");
+  if(!Array.isArray(claims.claims)||!Array.isArray(evidence.records))throw Error("Неверная структура");
+  const sourceIds=new Set(evidence.records.map(s=>s.id));
+  packet={manifest,claims:claims.claims,evidence:evidence.records,forms:[]};
+  $("candidates").replaceChildren();
+  for(const claim of packet.claims){
+   const section=element("article","candidate"),h=element("h3",null,claim.statement||claim.id);
+   section.append(h,element("small",null,claim.id+" · "+(claim.observed_at||"неизвестная дата")));
+   const ids=claim.source_ids||[];
+   const ul=element("ul");
+   for(const id of ids){
+    const s=packet.evidence.find(e=>e.id===id),li=document.createElement("li");
+    if(s&&/^https:\/\//.test(s.url)){const a=element("a",null,(s.source||id)+" · "+(s.publication_date||""));a.href=s.url;a.target="_blank";a.rel="noopener noreferrer";li.append(a)}
+    else li.textContent=id+" — источник отсутствует";
+    ul.append(li);
+   }
+   section.append(ul);
+   if(ids.some(id=>!sourceIds.has(id)))section.append(element("p","status","Внимание: незарегистрированные источники"));
+   const choice=field(section,"Решение");choice.removeAttribute("type");const select=document.createElement("select");
+   for(const [value,label] of [["","Не выбрано"],["accept","Принять"],["reject","Отклонить"]]){const o=document.createElement("option");o.value=value;o.textContent=label;select.append(o)}
+   choice.replaceWith(select);
+   const note=field(section,"Обоснование решения","textarea");
+   const delta=field(section,"Подтверждена новая Δ (yes / no)");delta.placeholder="no";
+   const entity=field(section,"ID сущности для подтверждённой Δ");const state=field(section,"Проверенное новое состояние");
+   const statement=field(section,"Проверенная формулировка утверждения");
+   packet.forms.push({claim,select,note,delta,entity,state,statement});
+   $("candidates").append(section);
+  }
+  $("workspace").hidden=false;setMessage("Загружено "+packet.claims.length+" кандидатов за "+manifest.date);
+ }catch(e){$("workspace").hidden=true;packet=null;setMessage("Ошибка: "+e.message)}
+};
+$("export").onclick=()=>{
+ try{
+  if(!packet)throw Error("Сначала загрузи файлы");
+  if(!/^WSB-\d{4}$/.test($("issue").value.trim()))throw Error("Проверь номер выпуска");
+  if(!$("reviewer").value.trim())throw Error("Укажи редактора");
+  if(!$("sourcesOk").checked||!$("translationOk").checked||!$("approve").checked)throw Error("Не хватает редакционных подтверждений");
+  if(!$("en").value.trim()||!$("ua").value.trim())throw Error("Нужны оба финальных текста");
+  const decisions=packet.forms.map(f=>{
+   if(!f.select.value||!f.note.value.trim())throw Error("Все решения и примечания обязательны: "+f.claim.id);
+   const yes=f.delta.value.trim().toLowerCase()==="yes";if(f.delta.value.trim()&&!["yes","no"].includes(f.delta.value.trim().toLowerCase()))throw Error("Новая Δ: yes или no");
+   if(yes&&(!f.entity.value.trim()||!f.state.value.trim()))throw Error("Для Δ нужны сущность и новое состояние");
+   return {id:f.claim.id,decision:f.select.value,reviewer_note:f.note.value.trim(),confirmed_delta:yes,
+     ...(yes?{verified_entity_id:f.entity.value.trim(),verified_new_state:f.state.value.trim()}:{}),
+     ...(f.statement.value.trim()?{verified_statement:f.statement.value.trim()}: {})};
+  });
+  const output={issue_date:packet.manifest.date,issue_id:$("issue").value.trim(),reviewer:$("reviewer").value.trim(),
+   editorial_approval:true,source_verification_complete:true,translation_verified:true,
+   final_read_en:$("en").value,final_read_ua:$("ua").value,candidates:decisions};
+  const blob=new Blob([JSON.stringify(output,null,2)+"\n"],{type:"application/json"}),url=URL.createObjectURL(blob);
+  const a=document.createElement("a");a.href=url;a.download=packet.manifest.date+".json";a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);setMessage("Файл решений готов. Ничего не опубликовано.");
+ }catch(e){setMessage("Ошибка: "+e.message)}
+};
+</script></body></html>
