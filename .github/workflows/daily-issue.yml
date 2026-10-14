@@ -61,8 +61,20 @@ jobs:
           fi
 
 
+      - name: Check research spending authorization
+        id: spend
+        env:
+          ALLOW: ${{ vars.WSB_RESEARCH_ENABLED }}
+        run: |
+          if [ "$ALLOW" = "true" ]; then
+            echo "allowed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "allowed=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Research disabled until WSB_RESEARCH_ENABLED=true. Zero OpenAI requests."
+          fi
+
       - name: Claim one preparation attempt per Kyiv date
-        if: steps.kyiv.outputs.eligible == 'true'
+        if: steps.kyiv.outputs.eligible == 'true' && steps.spend.outputs.allowed == 'true'
         id: claim
         env:
           GH_TOKEN: ${{ github.token }}
@@ -135,15 +147,15 @@ jobs:
           WSB_ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
         run: |
           set -euo pipefail
-          for attempt in 1 2 3; do
-            echo "::group::Research attempt $attempt/3"
+          for attempt in 1; do
+            echo "::group::Research attempt $attempt/1"
             if node publisher/research-intake.js; then
               echo "::endgroup::"
               exit 0
             fi
             echo "::endgroup::"
-            if [ "$attempt" -eq 3 ]; then
-              echo "::error::Research failed after 3 attempts; no unverified material published."
+            if [ "$attempt" -eq 1 ]; then
+              echo "::error::Research failed after 1 attempt; no unverified material published."
               exit 1
             fi
             sleep $((attempt * 15))
