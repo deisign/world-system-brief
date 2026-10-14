@@ -27,5 +27,7 @@ jobs:
           else
             npm install --no-audit --no-fund
           fi
+      - name: Syntax-check unattended research runner
+        run: node --check publisher/research-intake.js
       - name: Validate, test and generate publication
         run: npm run build
