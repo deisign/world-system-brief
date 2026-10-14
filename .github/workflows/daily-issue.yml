@@ -6,6 +6,12 @@ on:
     # Both UTC triggers run; local-date eligibility and a persistent branch claim deduplicate.
     - cron: '0 4,5 * * *'
   workflow_dispatch:
+    inputs:
+      retry_existing:
+        description: 'Retry already-claimed Kyiv date after diagnosing a failed run'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -45,11 +51,18 @@ jobs:
           REPO: ${{ github.repository }}
           ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
           HEAD_SHA: ${{ github.sha }}
+          EVENT_NAME: ${{ github.event_name }}
+          RETRY_EXISTING: ${{ inputs.retry_existing }}
         run: |
           branch="automation/daily/${ISSUE_DATE}"
           if gh api "repos/$REPO/git/ref/heads/$branch" --jq '.ref' > /dev/null 2>&1; then
-            echo "claimed=false" >> "$GITHUB_OUTPUT"
-            echo "Skip: $branch already exists."
+            if [ "$EVENT_NAME" = "workflow_dispatch" ] && [ "$RETRY_EXISTING" = "true" ]; then
+              echo "claimed=true" >> "$GITHUB_OUTPUT"
+              echo "Manual recovery accepted for existing $branch."
+            else
+              echo "claimed=false" >> "$GITHUB_OUTPUT"
+              echo "Skip: $branch already exists. To recover, manually dispatch with retry_existing=true."
+            fi
             exit 0
           fi
           if gh api --method POST "repos/$REPO/git/refs" -f "ref=refs/heads/$branch" -f "sha=$HEAD_SHA" > /dev/null; then
