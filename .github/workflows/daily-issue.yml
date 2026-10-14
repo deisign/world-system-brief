@@ -10,6 +10,7 @@ on:
 permissions:
   contents: write
   issues: write
+  pull-requests: write
 
 concurrency:
   group: daily-wsb-preparation
@@ -63,15 +64,21 @@ jobs:
         if: steps.claim.outputs.claimed == 'true'
         uses: actions/checkout@v4
 
+      - name: Configure Node.js
+        if: steps.claim.outputs.claimed == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Check research executor configuration
         if: steps.claim.outputs.claimed == 'true'
         id: executor
         env:
-          WSB_RESEARCH_COMMAND: ${{ vars.WSB_RESEARCH_COMMAND }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          if [ -z "$WSB_RESEARCH_COMMAND" ]; then
+          if [ -z "$OPENAI_API_KEY" ]; then
             echo "configured=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::WSB_RESEARCH_COMMAND is unset; no autonomous issue will be generated."
+            echo "::warning::OPENAI_API_KEY is unset; no autonomous research can run."
           else
             echo "configured=true" >> "$GITHUB_OUTPUT"
           fi
@@ -86,11 +93,40 @@ jobs:
           title="WSB automation blocked: research executor not configured"
           existing="$(gh issue list --repo "$REPO" --state open --search "$title in:title" --json title --jq '.[] | select(.title == "WSB automation blocked: research executor not configured") | .title' | head -n1)"
           if [ -z "$existing" ]; then
-            gh issue create --repo "$REPO" --title "$title" --body "Daily preparation ran on $ISSUE_DATE (Europe/Kyiv). No autonomous research executor has been configured. Set repository variable WSB_RESEARCH_COMMAND only after implementing and testing a trustworthy evidence-to-issue pipeline. Publication remains blocked; do not invent an issue."
+            gh issue create --repo "$REPO" --title "$title" --body "Daily preparation ran on $ISSUE_DATE (Europe/Kyiv). No autonomous research executor has been configured. Configure OPENAI_API_KEY as a repository secret to enable research intake. Research packets are unverified and must never auto-publish. Publication remains blocked; do not invent an issue."
           fi
 
-      - name: Stop before publication until executor contract is implemented
+      - name: Research candidate changes
         if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          WSB_OPENAI_MODEL: ${{ vars.WSB_OPENAI_MODEL }}
+          WSB_ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
+        run: node publisher/research-intake.js
+
+      - name: Upload research packet for human verification
+        if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: wsb-research-${{ steps.kyiv.outputs.date }}
+          path: research/pending/${{ steps.kyiv.outputs.date }}.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Create a review PR containing the unverified candidate packet
+        if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
         run: |
-          echo "::error::Research executor integration has not yet been implemented or security-reviewed. WSB_RESEARCH_COMMAND is only a readiness signal."
-          exit 1
+          branch="automation/daily/$ISSUE_DATE"
+          git fetch origin "$branch"
+          git checkout -B "$branch" "origin/$branch"
+          mkdir -p research/pending
+          git add "research/pending/$ISSUE_DATE.json"
+          git -c user.name="wsb-automation" -c user.email="actions@users.noreply.github.com" commit -m "Add unverified WSB research for $ISSUE_DATE"
+          git push origin HEAD:"$branch"
+          gh pr create --repo "$REPO" --head "$branch" --base main --draft \
+            --title "Research intake: $ISSUE_DATE (verification required)" \
+            --body "Unverified research candidates only. NO issue publication is authorized. Verify all source URLs, dates, and Δ classifications before producing a release."
