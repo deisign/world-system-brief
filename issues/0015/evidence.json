@@ -1,0 +1,54 @@
+{
+  "issue_id": "WSB-0015",
+  "as_of": "2026-10-12",
+  "records": [
+    {
+      "id": "WSB-SRC-0015-01",
+      "source": "World System Brief 0012",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0012/evidence.json",
+      "publication_date": "2026-10-09",
+      "claim": "The previous WSB issue tracks two Yandex sites, PERM administrative restrictions, Gulf output shut-ins and Hormuz shipping constraints.",
+      "observation": "Historical editorial baseline, not independent new evidence.",
+      "assessment": "BASELINE ONLY",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0015-02",
+      "source": "AFP, 11 October 2026",
+      "source_type": "newswire",
+      "role": "new_operational_transition",
+      "url": "https://www.afp.com/en/drone-hits-russias-yandex-third-reported-attack",
+      "publication_date": "2026-10-11",
+      "claim": "AFP reports Yandex operations suspended at its Vladimir data centre following a strike.",
+      "observation": "A third site was affected after the earlier Ryazan and Kaluga incidents.",
+      "assessment": "NEW PHYSICAL SITE INTERRUPTION; WIDER QUANTIFICATION NOT ESTABLISHED",
+      "supports": [
+        "yandex-data-centre-network"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0015-03",
+      "source": "Georgia Butler, Data Center Dynamics, 12 October 2026",
+      "source_type": "trade_press",
+      "role": "followup_corroboration",
+      "url": "https://www.datacenterdynamics.com/en/news/third-strike-on-yandex-data-center-in-russia/",
+      "publication_date": "2026-10-12",
+      "claim": "DCD describes the third Yandex data centre hit, Vladimir, and reported Yandex Cloud unavailability.",
+      "observation": "Article published on October 12 about the earlier shutdown, with company service statement.",
+      "assessment": "FOLLOW-UP EVIDENCE; NOT A SECOND OCTOBER 12 EVENT",
+      "supports": [
+        "yandex-data-centre-network"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

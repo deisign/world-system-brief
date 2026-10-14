@@ -1,0 +1,24 @@
+{
+  "issue_id": "WSB-0013",
+  "as_of": "2026-10-10",
+  "records": [
+    {
+      "id": "WSB-SRC-0013-01",
+      "source": "World System Brief 0012",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0012/evidence.json",
+      "publication_date": "2026-10-09",
+      "claim": "The previous WSB issue tracks two Yandex sites, PERM administrative restrictions, Gulf output shut-ins and Hormuz shipping constraints.",
+      "observation": "Historical editorial baseline, not independent new evidence.",
+      "assessment": "BASELINE ONLY",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

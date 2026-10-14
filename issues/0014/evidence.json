@@ -1,0 +1,39 @@
+{
+  "issue_id": "WSB-0014",
+  "as_of": "2026-10-11",
+  "records": [
+    {
+      "id": "WSB-SRC-0014-01",
+      "source": "World System Brief 0012",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0012/evidence.json",
+      "publication_date": "2026-10-09",
+      "claim": "The previous WSB issue tracks two Yandex sites, PERM administrative restrictions, Gulf output shut-ins and Hormuz shipping constraints.",
+      "observation": "Historical editorial baseline, not independent new evidence.",
+      "assessment": "BASELINE ONLY",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-SRC-0014-02",
+      "source": "AFP, 11 October 2026",
+      "source_type": "newswire",
+      "role": "new_operational_transition",
+      "url": "https://www.afp.com/en/drone-hits-russias-yandex-third-reported-attack",
+      "publication_date": "2026-10-11",
+      "claim": "AFP reports Yandex operations suspended at its Vladimir data centre following a strike.",
+      "observation": "A third site was affected after the earlier Ryazan and Kaluga incidents.",
+      "assessment": "NEW PHYSICAL SITE INTERRUPTION; WIDER QUANTIFICATION NOT ESTABLISHED",
+      "supports": [
+        "yandex-data-centre-network"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

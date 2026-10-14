@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0014",
+  "as_of": "2026-10-11",
+  "claims": [
+    {
+      "id": "CLM-0014-01",
+      "issue_id": "WSB-0014",
+      "kind": "observed",
+      "statement": "AFP reports suspension of Yandex Vladimir site operations on 11 October.",
+      "observed_at": "2026-10-11",
+      "entity_ids": [
+        "ENT-000051"
+      ],
+      "source_ids": [
+        "WSB-SRC-0014-02"
+      ],
+      "confidence": "medium",
+      "status": "confirmed_delta"
+    }
+  ]
+}

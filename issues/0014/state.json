@@ -1,0 +1,66 @@
+{
+  "issue_id": "WSB-0014",
+  "date": "2026-10-11",
+  "day_type": {
+    "system_activity": "active",
+    "news_pressure": "medium"
+  },
+  "summary": {
+    "confirmed_delta": 1,
+    "developing": 0,
+    "persistent": 3
+  },
+  "objects": [
+    {
+      "id": "yandex-data-centre-network",
+      "entering_state": "kaluga_modules_disabled_second_site",
+      "current_state": "vladimir_site_operations_suspended",
+      "change": "down",
+      "status": "confirmed_delta"
+    },
+    {
+      "id": "us-perm-tech-suspensions",
+      "entering_state": "named_firms_suspended_from_perm",
+      "current_state": "named_firms_suspended_from_perm",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "entering_state": "storm_shutins_continue",
+      "current_state": "storm_shutins_continue",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "hormuz",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint",
+      "change": "stable",
+      "status": "persistent"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "compute-infrastructure-under-fire",
+    "type": "physical_digital_infrastructure_disruption",
+    "sequence": [
+      "yandex-data-centre-network"
+    ],
+    "assessment": "continuing_physical_dependency_and_uncertain_downstream_effects",
+    "edges": []
+  },
+  "notes": [
+    "Retrospective edition assembled from previously saved research; no additional paid model research.",
+    "All sources in this edition are baseline or specifically linked dated reporting; rejected unverified quantitative claims are omitted.",
+    "Carry-forward statuses are not counted as a new delta."
+  ],
+  "chain": [
+    "yandex-data-centre-network"
+  ],
+  "noise": [
+    {
+      "id": "cross-sector-causality-claims",
+      "result": "no_proven_cross_sector_causal_link"
+    }
+  ]
+}

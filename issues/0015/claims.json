@@ -1,0 +1,23 @@
+{
+  "issue_id": "WSB-0015",
+  "as_of": "2026-10-12",
+  "claims": [
+    {
+      "id": "CLM-0015-01",
+      "issue_id": "WSB-0015",
+      "kind": "inferred",
+      "statement": "No additional distinct system transition verified for 2026-10-12; previously dated changes are carried forward.",
+      "observed_at": "2026-10-12",
+      "entity_ids": [
+        "ENT-000051"
+      ],
+      "source_ids": [
+        "WSB-SRC-0015-01",
+        "WSB-SRC-0015-02",
+        "WSB-SRC-0015-03"
+      ],
+      "confidence": "medium",
+      "status": "persistent"
+    }
+  ]
+}
