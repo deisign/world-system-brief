@@ -25,6 +25,9 @@ function entityPage(lang,id,events){const last=events.at(-1),first=events[0],lab
 function entitiesPage(lang,index,lastDate){const title=lang==="ua"?"СУТНОСТІ":"ENTITIES";const rows=[...index.entries()].map(([id,events])=>{const e=events.at(-1),label=e.loc.labels?.[id]||id,state=e.loc.states?.[e.object.current_state]||e.object.current_state;return {id,label,state,n:events.length}}).sort((a,b)=>a.label.localeCompare(b.label)).map(x=>`<div class="entity-row"><a href="/${lang}/entity/${encodeURIComponent(x.id)}/"><strong>${esc(x.label)}</strong></a><span>${esc(x.state)}</span><small>${x.n} ${lang==="ua"?"ВИП.":"ISSUES"}</small></div>`).join("");return shell(`<article><h1>${title}</h1>${rows}</article>`,{lang,date:lastDate,issue:title,entities:true})}
 
 fs.rmSync(out,{recursive:true,force:true});mkdir(out);
+// Static editorial UI only; all writes require an explicitly supplied GitHub token.
+const desk=path.join(root,"editorial","index.html");
+if(fs.existsSync(desk))write(path.join(out,"editorial","index.html"),fs.readFileSync(desk,"utf8"));
 const archive=[],entityIndex={en:new Map(),ua:new Map()},relationEvents=[],issueBundles=[];
 const registry=JSON.parse(fs.readFileSync(path.join(root,"knowledge","entities.json"),"utf8"));
 const entityAliases=Object.fromEntries((registry.entities||[]).flatMap(e=>[[e.id,e.slug],[e.slug,e.slug]]));let latestLoc={};
