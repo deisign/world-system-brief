@@ -1,0 +1,84 @@
+{
+  "issue_id": "WSB-0018",
+  "as_of": "2026-10-15",
+  "records": [
+    {
+      "id": "WSB-SRC-0018-01",
+      "source": "Reuters, 15 October — UK urges tighter shadow-fleet sanctions",
+      "source_type": "newswire",
+      "role": "policy_position",
+      "url": "https://www.reuters.com/world/uk/uk-finance-minister-calls-tighter-russian-shipping-sanctions-2026-10-15/",
+      "publication_date": "2026-10-15",
+      "claim": "UK finance minister urges tougher restrictions on shipping services supporting sanctioned Russian-linked tankers.",
+      "observation": "Advocacy for stricter measures; no enacted new rule established by this report.",
+      "assessment": "POSITION / NOT A POLICY TRANSITION",
+      "supports": [
+        "shadow-fleet-shipping-services"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0018-02",
+      "source": "Reuters, 15 October — oil prices and US sanctions discussion",
+      "source_type": "newswire",
+      "role": "developing_policy",
+      "url": "https://www.reuters.com/business/energy/oil-prices-fall-investors-weigh-supply-outlook-middle-east-tensions-2026-10-15/",
+      "publication_date": "2026-10-15",
+      "claim": "US officials are considering easing restrictions on some shadow-fleet vessels, according to reported discussions.",
+      "observation": "Deliberation, not confirmed implementation; market oil-price response reported.",
+      "assessment": "PROPOSAL / NO VERIFIED POLICY CHANGE",
+      "supports": [
+        "shadow-fleet-shipping-services"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0018-03",
+      "source": "Reuters, 15 October — IMF risk assessment",
+      "source_type": "newswire",
+      "role": "risk_outlook",
+      "url": "https://www.reuters.com/world/asia-pacific/prolonged-war-renewed-disruptions-pose-biggest-risk-middle-east-region-imf-says-2026-10-15/",
+      "publication_date": "2026-10-15",
+      "claim": "IMF sees renewed energy, shipping and infrastructure disruptions as key regional risks and notes limited buffers.",
+      "observation": "Outlook assessment, not newly verified physical shutdown.",
+      "assessment": "EVIDENCE UPDATE / NO NEW DELTA",
+      "supports": [
+        "hormuz"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0018-04",
+      "source": "Reuters, 15 October — EU summit",
+      "source_type": "newswire",
+      "role": "trade_policy_discussion",
+      "url": "https://www.reuters.com/world/china/eu-leaders-tackle-china-exports-energy-prices-budget-summit-2026-10-15/",
+      "publication_date": "2026-10-15",
+      "claim": "EU leaders discuss Chinese imports, high energy prices and budget disputes, following a provisional arrangement on hybrid vehicles.",
+      "observation": "Discussion and provisional measures require distinct implementation dates; no new confirmed shift counted.",
+      "assessment": "DEVELOPING / IMPLEMENTATION UNVERIFIED",
+      "supports": [
+        "hormuz"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0018-05",
+      "source": "WSB-0017 canonical baseline",
+      "source_type": "internal",
+      "role": "previous_state",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0017/state.json",
+      "publication_date": "2026-10-14",
+      "claim": "Existing ledger tracks Yandex sites, US PERM employer suspensions, US Gulf offshore output and Hormuz navigation constraints.",
+      "observation": "Historical starting state; not independent fresh evidence.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

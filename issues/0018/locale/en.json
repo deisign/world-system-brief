@@ -1,0 +1,49 @@
+{
+  "locale": "en",
+  "labels": {
+    "yandex-data-centre-network": "Yandex data-centre network",
+    "us-perm-tech-suspensions": "US PERM restrictions",
+    "us-gulf-offshore-output": "US Gulf offshore production",
+    "hormuz": "Strait of Hormuz",
+    "shadow-fleet-shipping-services": "Shadow-fleet shipping services"
+  },
+  "states": {
+    "kaluga_modules_disabled_second_site": "Modules disabled at Kaluga site",
+    "vladimir_site_operations_suspended": "Vladimir site operations suspended",
+    "named_firms_suspended_from_perm": "PERM access restricted for named employers",
+    "storm_shutins_continue": "Storm-related production shut-ins continue",
+    "persistent_navigation_constraint": "Navigation remains constrained",
+    "existing_restrictions_under_review": "Existing restrictions and possible changes under discussion"
+  },
+  "assessments": {
+    "policy_discussion_not_implemented": "Political signals differ; shipping access rules remain unverified as changed."
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  },
+  "noise": {
+    "proposal_not_implementation": "PROPOSAL IS NOT IMPLEMENTATION"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "THE TANKER BOTTLENECK BECOMES A SANCTIONS LEVER",
+    "deck": "Washington weighs relief; London asks for tighter controls. Neither statement proves a new rule.",
+    "mechanism": "MARITIME ACCESS AND SANCTIONS",
+    "chainNote": "Tanker scarcity and freight cost make access to sanctioned tonnage a bargaining instrument.",
+    "evidenceNote": "Dated reports; claims distinguish proposals from implementation",
+    "footer": "REPORTING IS NOT IMPLEMENTATION"
+  }
+}
