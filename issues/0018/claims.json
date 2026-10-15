@@ -9,7 +9,7 @@
       "statement": "US officials are reportedly considering flexibility for sanctioned tankers; no implemented change is established by the cited reporting.",
       "observed_at": "2026-10-15",
       "entity_ids": [
-        "hormuz"
+        "ENT-000053"
       ],
       "source_ids": [
         "WSB-SRC-0018-02"
@@ -24,7 +24,7 @@
       "statement": "UK calls for tightening restrictions on services to Russia-linked shipping, opposing potential relief elsewhere.",
       "observed_at": "2026-10-15",
       "entity_ids": [
-        "hormuz"
+        "ENT-000053"
       ],
       "source_ids": [
         "WSB-SRC-0018-01"
