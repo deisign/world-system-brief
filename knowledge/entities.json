@@ -468,6 +468,15 @@
         "en": "US PERM tech-company suspensions",
         "ua": "Призупинення PERM для технологічних компаній США"
       }
+    },
+    {
+      "id": "ENT-000053",
+      "slug": "shadow-fleet-shipping-services",
+      "type": "sanctions_and_shipping_access",
+      "labels": {
+        "en": "Shadow-fleet shipping services",
+        "ua": "Морські послуги для тіньового флоту"
+      }
     }
   ]
 }
