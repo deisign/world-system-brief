@@ -4,14 +4,16 @@
     "yandex-data-centre-network": "Yandex data-centre network",
     "us-perm-tech-suspensions": "US PERM restrictions",
     "us-gulf-offshore-output": "US Gulf offshore production",
-    "hormuz": "Strait of Hormuz"
+    "hormuz": "Strait of Hormuz",
+    "shadow-fleet-shipping-services": "Shadow-fleet shipping services"
   },
   "states": {
     "kaluga_modules_disabled_second_site": "Modules disabled at Kaluga site",
     "vladimir_site_operations_suspended": "Vladimir site operations suspended",
     "named_firms_suspended_from_perm": "PERM access restricted for named employers",
     "storm_shutins_continue": "Storm-related production shut-ins continue",
-    "persistent_navigation_constraint": "Navigation remains constrained"
+    "persistent_navigation_constraint": "Navigation remains constrained",
+    "existing_restrictions_under_review": "Existing restrictions and possible changes under discussion"
   },
   "assessments": {
     "policy_discussion_not_implemented": "Political signals differ; shipping access rules remain unverified as changed."
