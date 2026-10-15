@@ -14,7 +14,13 @@ a{color:#65352c}ul{padding-left:24px}.row{display:grid;grid-template-columns:1fr
 pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#e5dfd2;padding:12px}
 </style></head><body><main>
 <header><div class="kicker">WORLD SYSTEM BRIEF / EDITORIAL DESK</div><h1>Review desk</h1><p>Локальный редакторский интерфейс. Не подключается к сети и не публикует выпуск.</p></header>
-<section class="panel"><h2>1. Загрузить черновик</h2><p class="muted">Выбери три файла из <code>research/drafts/YYYY-MM-DD/canonical/</code>. Они читаются только в браузере.</p>
+<section class="panel"><h2>Выбор выпуска из GitHub</h2>
+<p class="muted">Загружает файлы из исследовательских PR репозитория deisign/world-system-brief. Для просмотра токен не нужен.</p>
+<div class="row"><div><label for="prSelect">Доступные исследовательские PR</label><select id="prSelect"><option value="">Сначала обнови список</option></select></div>
+<div><label for="refresh">Источники</label><button id="refresh" type="button">Обновить список</button></div></div>
+<p><button type="button" id="fetchDraft">Открыть выбранный черновик</button></p>
+</section>
+<section class="panel"><h2>1. Загрузить черновик вручную</h2><p class="muted">Выбери три файла из <code>research/drafts/YYYY-MM-DD/canonical/</code>. Они читаются только в браузере.</p>
 <div class="row"><div><label for="manifest">MANIFEST.json</label><input id="manifest" type="file" accept=".json"></div>
 <div><label for="claims">claims.json</label><input id="claims" type="file" accept=".json"></div></div>
 <label for="evidence">evidence.json</label><input id="evidence" type="file" accept=".json">
@@ -29,12 +35,17 @@ pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#e5dfd2;padding:12px}
 <label for="ua">Итоговый READ — Українською</label><textarea id="ua" rows="8" placeholder="Повний фінальний текст українського випуску"></textarea>
 <label><input id="approve" type="checkbox"> Утверждаю выпуск после редакторской проверки</label>
 <p><button id="export" type="button">Скачать файл решений JSON</button></p>
+<div class="panel"><h3>Создать редакционный PR</h3>
+<p class="muted">После формирования решения можно отправить его в отдельную ветку и открыть Draft PR. Публикационный код и сайт эта операция не меняет. Нужен персональный fine-grained GitHub token с правами Contents: Read and write и Pull requests: Read and write только для этого репозитория. Токен используется в оперативной памяти страницы, не записывается в репозиторий и не сохраняется в браузере.</p>
+<label for="token">GitHub token (не сохраняется)</label><input type="password" id="token" autocomplete="off" style="width:100%;padding:10px">
+<p><button type="button" id="createPr">Создать Draft PR с решением</button></p>
+<p id="prResult"></p></div>
 <p class="muted">Файл следует сохранить как <code>research/approvals/YYYY-MM-DD.json</code>. Затем локально запустить <code>node publisher/editorial-approval.js YYYY-MM-DD</code> и создать PR с результатом. Это не публикация одним нажатием.</p>
 </section></section></main>
 <script>
 "use strict";
 const $=id=>document.getElementById(id);
-let packet=null;
+let packet=null, lastApproval=null;
 const setMessage=s=>$("message").textContent=s;
 const readJson=async id=>{const f=$(id).files[0];if(!f)throw Error("Выбери "+id);return JSON.parse(await f.text())};
 const element=(tag,klass,text)=>{const e=document.createElement(tag);if(klass)e.className=klass;if(text!==undefined)e.textContent=text;return e};
@@ -91,9 +102,73 @@ $("export").onclick=()=>{
   const output={issue_date:packet.manifest.date,issue_id:$("issue").value.trim(),reviewer:$("reviewer").value.trim(),
    editorial_approval:true,source_verification_complete:true,translation_verified:true,
    final_read_en:$("en").value,final_read_ua:$("ua").value,candidates:decisions};
+  lastApproval=output;
   const blob=new Blob([JSON.stringify(output,null,2)+"\n"],{type:"application/json"}),url=URL.createObjectURL(blob);
   const a=document.createElement("a");a.href=url;a.download=packet.manifest.date+".json";a.click();
   setTimeout(()=>URL.revokeObjectURL(url),1000);setMessage("Файл решений готов. Ничего не опубликовано.");
  }catch(e){setMessage("Ошибка: "+e.message)}
+};
+
+const REPO="deisign/world-system-brief";
+async function github(url,token,options={}){
+ const headers={"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28",...(token?{"Authorization":"Bearer "+token}:{})};
+ const response=await fetch(url.startsWith("https:")?url:"https://api.github.com/repos/"+REPO+url,{...options,headers:{...headers,...options.headers}});
+ const body=await response.json().catch(()=>({}));
+ if(!response.ok)throw Error("GitHub HTTP "+response.status+": "+(body.message||"unknown error"));
+ return body;
+}
+async function githubJsonFile(branch,filename){
+ const response=await github("/contents/"+filename+"?ref="+encodeURIComponent(branch));
+ const bytes=Uint8Array.from(atob(response.content.replace(/\\s/g,"")),c=>c.charCodeAt(0));
+ return JSON.parse(new TextDecoder().decode(bytes));
+}
+function setFiles(data){
+ const inputs=["manifest","claims","evidence"];
+ for(let i=0;i<inputs.length;i++){
+   const dt=new DataTransfer();
+   dt.items.add(new File([JSON.stringify(data[i])],inputs[i]+".json",{type:"application/json"}));
+   $(inputs[i]).files=dt.files;
+ }
+ $("load").click();
+}
+$("refresh").onclick=async()=>{
+ try{
+   const prs=await github("/pulls?state=open&per_page=100");
+   const rows=prs.filter(p=>p.head.ref.startsWith("automation/daily/")).sort((a,b)=>b.head.ref.localeCompare(a.head.ref));
+   $("prSelect").replaceChildren(new Option("Выбери дату / PR",""),...rows.map(p=>new Option(p.head.ref.slice(-10)+" — PR #"+p.number,p.head.ref)));
+   setMessage("Найдено исследовательских PR: "+rows.length);
+ }catch(e){setMessage("Ошибка списка: "+e.message)}
+};
+$("fetchDraft").onclick=async()=>{
+ try{
+   const branch=$("prSelect").value;if(!branch)throw Error("Выбери исследовательский PR");
+   const date=branch.slice(-10),base="research/drafts/"+date+"/canonical/";
+   const files=await Promise.all(["MANIFEST.json","claims.json","evidence.json"].map(name=>githubJsonFile(branch,base+name)));
+   setFiles(files);
+   setMessage("Черновик за "+date+" загружен из "+branch+". Проверь источники самостоятельно.");
+ }catch(e){setMessage("Ошибка загрузки: "+e.message)}
+};
+$("createPr").onclick=async()=>{
+ const button=$("createPr");button.disabled=true;
+ try{
+   $("export").click();
+   if(!lastApproval||lastApproval.issue_date!==packet?.manifest.date)throw Error("Сначала сформируй корректное редакционное решение");
+   const token=$("token").value.trim();if(!token)throw Error("Для создания PR нужен GitHub token");
+   const base=await github("/git/ref/heads/main",token);
+   const suffix=Date.now().toString(36),branch="editorial/approval-"+lastApproval.issue_date+"-"+suffix;
+   await github("/git/refs",token,{method:"POST",body:JSON.stringify({ref:"refs/heads/"+branch,sha:base.object.sha})});
+   const json=JSON.stringify(lastApproval,null,2)+"\\n";
+   const binary=Array.from(new TextEncoder().encode(json),b=>String.fromCharCode(b)).join("");
+   await github("/contents/research/approvals/"+lastApproval.issue_date+".json",token,{method:"PUT",body:JSON.stringify({
+      message:"Submit editorial decisions for "+lastApproval.issue_date,branch,content:btoa(binary)
+   })});
+   const pr=await github("/pulls",token,{method:"POST",body:JSON.stringify({
+       title:"Editorial decisions: "+lastApproval.issue_date,head:branch,base:"main",draft:true,
+       body:"Editorial approvals for review. No publication in this PR. Verify source sign-offs and generate release in a separate validated PR."
+   })});
+   const a=element("a",null,"Draft PR #"+pr.number+" — открыть");a.href=pr.html_url;a.target="_blank";a.rel="noopener noreferrer";
+   $("prResult").replaceChildren(a);setMessage("Черновой PR создан. Выпуск не опубликован.");
+ }catch(e){setMessage("Создание PR: "+e.message)}
+ finally{button.disabled=false;$("token").value="";}
 };
 </script></body></html>
