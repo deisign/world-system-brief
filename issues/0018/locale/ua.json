@@ -4,14 +4,16 @@
     "yandex-data-centre-network": "Мережа датацентрів Yandex",
     "us-perm-tech-suspensions": "Обмеження PERM у США",
     "us-gulf-offshore-output": "Морський видобуток у Мексиканській затоці",
-    "hormuz": "Ормузька протока"
+    "hormuz": "Ормузька протока",
+    "shadow-fleet-shipping-services": "Послуги перевезення для тіньового флоту"
   },
   "states": {
     "kaluga_modules_disabled_second_site": "Модулі датацентру в Калузі виведено з ладу",
     "vladimir_site_operations_suspended": "Роботу майданчика у Владимирі призупинено",
     "named_firms_suspended_from_perm": "Доступ до PERM для визначених роботодавців обмежено",
     "storm_shutins_continue": "Зупинки видобутку через шторм тривають",
-    "persistent_navigation_constraint": "Судноплавство залишається обмеженим"
+    "persistent_navigation_constraint": "Судноплавство залишається обмеженим",
+    "existing_restrictions_under_review": "Чинні обмеження та можливі зміни обговорюються"
   },
   "assessments": {
     "policy_discussion_not_implemented": "Політичні сигнали різняться; нових чинних правил доступу не підтверджено."
