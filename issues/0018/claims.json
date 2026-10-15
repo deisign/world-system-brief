@@ -1,0 +1,51 @@
+{
+  "issue_id": "WSB-0018",
+  "as_of": "2026-10-15",
+  "claims": [
+    {
+      "id": "CLM-0018-01",
+      "issue_id": "WSB-0018",
+      "kind": "reported",
+      "statement": "US officials are reportedly considering flexibility for sanctioned tankers; no implemented change is established by the cited reporting.",
+      "observed_at": "2026-10-15",
+      "entity_ids": [
+        "hormuz"
+      ],
+      "source_ids": [
+        "WSB-SRC-0018-02"
+      ],
+      "confidence": "medium",
+      "status": "developing"
+    },
+    {
+      "id": "CLM-0018-02",
+      "issue_id": "WSB-0018",
+      "kind": "reported",
+      "statement": "UK calls for tightening restrictions on services to Russia-linked shipping, opposing potential relief elsewhere.",
+      "observed_at": "2026-10-15",
+      "entity_ids": [
+        "hormuz"
+      ],
+      "source_ids": [
+        "WSB-SRC-0018-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    },
+    {
+      "id": "CLM-0018-03",
+      "issue_id": "WSB-0018",
+      "kind": "assessment",
+      "statement": "IMF identifies shipping and energy bottlenecks as persistent risks rather than a new event on the issue date.",
+      "observed_at": "2026-10-15",
+      "entity_ids": [
+        "hormuz"
+      ],
+      "source_ids": [
+        "WSB-SRC-0018-03"
+      ],
+      "confidence": "medium",
+      "status": "persistent"
+    }
+  ]
+}
