@@ -55,6 +55,9 @@ try {
   const cleaned=output.trim().replace(/^\`\`\`(?:json)?\s*/,"").replace(/\s*\`\`\`$/,"");
   bundle=JSON.parse(cleaned);
 } catch {throw Error("Research executor returned non-JSON output; no artifact written");}
+const rawPath=path.join(root,"research/raw",date+".json");
+fs.mkdirSync(path.dirname(rawPath),{recursive:true});
+fs.writeFileSync(rawPath,JSON.stringify({provenance:"raw_unverified_model_output",bundle},null,2)+"\n");
 if (bundle.issue_date!==date || bundle.baseline_issue_id!==previous.state.issue_id)
   throw Error("Incorrect issue date or baseline; refusing result");
 if (!Array.isArray(bundle.candidates)||!Array.isArray(bundle.sources)) throw Error("Malformed research bundle");
