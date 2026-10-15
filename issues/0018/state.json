@@ -7,7 +7,7 @@
   },
   "summary": {
     "confirmed_delta": 0,
-    "developing": 0,
+    "developing": 1,
     "persistent": 4
   },
   "objects": [
@@ -38,13 +38,20 @@
       "current_state": "persistent_navigation_constraint",
       "change": "stable",
       "status": "persistent"
+    },
+    {
+      "id": "shadow-fleet-shipping-services",
+      "entering_state": "existing_restrictions_under_review",
+      "current_state": "existing_restrictions_under_review",
+      "change": "stable",
+      "status": "developing"
     }
   ],
   "dominant_mechanism": {
     "id": "tanker-access-and-freight",
     "type": "maritime_access_and_sanctions_leverage",
     "sequence": [
-      "hormuz"
+      "shadow-fleet-shipping-services"
     ],
     "assessment": "policy_discussion_not_implemented",
     "edges": []
@@ -52,10 +59,11 @@
   "notes": [
     "Early-day editorial issue based on sources available on 15 October; no additional paid OpenAI API research.",
     "Source-specific claims about proposals and outlooks are not counted as changes in implementation.",
-    "No verified new physical transition over 14 October canonical baseline."
+    "No verified new physical transition over 14 October canonical baseline.",
+    "Shadow-fleet sanctions-service access is distinct from the physical Hormuz navigation bottleneck."
   ],
   "chain": [
-    "hormuz"
+    "shadow-fleet-shipping-services"
   ],
   "noise": [
     {
