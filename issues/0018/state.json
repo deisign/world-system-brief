@@ -1,0 +1,66 @@
+{
+  "issue_id": "WSB-0018",
+  "date": "2026-10-15",
+  "day_type": {
+    "system_activity": "low",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 0,
+    "persistent": 4
+  },
+  "objects": [
+    {
+      "id": "yandex-data-centre-network",
+      "entering_state": "vladimir_site_operations_suspended",
+      "current_state": "vladimir_site_operations_suspended",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-perm-tech-suspensions",
+      "entering_state": "named_firms_suspended_from_perm",
+      "current_state": "named_firms_suspended_from_perm",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "entering_state": "storm_shutins_continue",
+      "current_state": "storm_shutins_continue",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "hormuz",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint",
+      "change": "stable",
+      "status": "persistent"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "tanker-access-and-freight",
+    "type": "maritime_access_and_sanctions_leverage",
+    "sequence": [
+      "hormuz"
+    ],
+    "assessment": "policy_discussion_not_implemented",
+    "edges": []
+  },
+  "notes": [
+    "Early-day editorial issue based on sources available on 15 October; no additional paid OpenAI API research.",
+    "Source-specific claims about proposals and outlooks are not counted as changes in implementation.",
+    "No verified new physical transition over 14 October canonical baseline."
+  ],
+  "chain": [
+    "hormuz"
+  ],
+  "noise": [
+    {
+      "id": "proposed_rule_as_existing_rule",
+      "result": "proposal_not_implementation"
+    }
+  ]
+}
