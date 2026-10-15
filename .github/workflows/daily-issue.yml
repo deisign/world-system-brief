@@ -147,6 +147,15 @@ jobs:
           WSB_ISSUE_DATE: ${{ steps.kyiv.outputs.date }}
         run: node publisher/research-intake.js
 
+      - name: Preserve paid response even when validation fails
+        if: failure() && steps.claim.outputs.claimed == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: wsb-raw-research-${{ steps.kyiv.outputs.date }}
+          path: research/raw/${{ steps.kyiv.outputs.date }}.json
+          if-no-files-found: warn
+          retention-days: 30
+
       - name: Produce free editorial preflight report
         if: steps.claim.outputs.claimed == 'true' && steps.executor.outputs.configured == 'true'
         env:
@@ -171,6 +180,7 @@ jobs:
         with:
           name: wsb-research-${{ steps.kyiv.outputs.date }}
           path: |
+            research/raw/${{ steps.kyiv.outputs.date }}.json
             research/pending/${{ steps.kyiv.outputs.date }}.json
             research/reviews/${{ steps.kyiv.outputs.date }}.json
             research/drafts/${{ steps.kyiv.outputs.date }}/
