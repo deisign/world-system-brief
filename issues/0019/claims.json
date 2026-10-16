@@ -1,0 +1,52 @@
+{
+  "issue_id": "WSB-0019",
+  "as_of": "2026-10-16",
+  "claims": [
+    {
+      "id": "CLM-0019-01",
+      "issue_id": "WSB-0019",
+      "kind": "observed",
+      "statement": "Ship-tracking evidence describes limited Iranian LPG and jet-fuel exports that circumvent the blockade; their sailings are not established as new events of 16 October.",
+      "observed_at": "2026-10-16",
+      "entity_ids": [
+        "ENT-000054"
+      ],
+      "source_ids": [
+        "WSB-SRC-0019-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    },
+    {
+      "id": "CLM-0019-02",
+      "issue_id": "WSB-0019",
+      "kind": "reported",
+      "statement": "China proposed adding AI and other technologies to export restrictions; the draft is under consultation while separate temporary registration duties are reported.",
+      "observed_at": "2026-10-16",
+      "entity_ids": [
+        "ENT-000055"
+      ],
+      "source_ids": [
+        "WSB-SRC-0019-02",
+        "WSB-SRC-0019-03"
+      ],
+      "confidence": "medium",
+      "status": "developing"
+    },
+    {
+      "id": "CLM-0019-03",
+      "issue_id": "WSB-0019",
+      "kind": "observed",
+      "statement": "The shadow-fleet sanctions easing discussion remains unresolved; the proposal does not establish restored tanker access.",
+      "observed_at": "2026-10-16",
+      "entity_ids": [
+        "ENT-000053"
+      ],
+      "source_ids": [
+        "WSB-SRC-0019-04"
+      ],
+      "confidence": "medium",
+      "status": "persistent"
+    }
+  ]
+}

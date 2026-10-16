@@ -1,0 +1,81 @@
+{
+  "issue_id": "WSB-0019",
+  "as_of": "2026-10-16",
+  "records": [
+    {
+      "id": "WSB-SRC-0019-01",
+      "source": "Reuters: Iran ships LPG and jet fuel despite US blockade",
+      "source_type": "reporting",
+      "role": "dated_evidence",
+      "url": "https://www.reuters.com/business/energy/iran-ships-some-lpg-jet-fuel-despite-us-blockade-data-shows-2026-10-16/",
+      "publication_date": "2026-10-16",
+      "claim": "Maritime tracking sources report limited historical ship-to-ship exports of Iranian LPG and jet fuel while US blockade remained in place.",
+      "observation": "Source assertions; verify exact event and enforcement dates separately.",
+      "assessment": "EVIDENCE OF BYPASS, NOT A NEW DATED SHIPMENT",
+      "supports": [
+        "iran-lpg-blockade-circumvention"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0019-02",
+      "source": "Reuters: China proposes AI export controls",
+      "source_type": "reporting",
+      "role": "dated_evidence",
+      "url": "https://www.reuters.com/world/asia-pacific/china-proposes-adding-40-ai-biotech-solar-technologies-export-control-list-2026-10-16/",
+      "publication_date": "2026-10-16",
+      "claim": "China released a proposal covering AI and other technologies; consultation remains open until November 15. Some transfer-registration requirements are described as immediate.",
+      "observation": "Source assertions; verify exact event and enforcement dates separately.",
+      "assessment": "NO UNVERIFIED NEW DELTA",
+      "supports": [
+        "china-ai-technology-export-regime"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0019-03",
+      "source": "Wall Street Journal: China AI export control proposal",
+      "source_type": "reporting",
+      "role": "dated_evidence",
+      "url": "https://www.wsj.com/economy/trade/china-proposes-export-controls-on-ai-technologies-75ac2030",
+      "publication_date": "2026-10-16",
+      "claim": "Reports proposed list and temporary registration for relevant overseas transfers; new licensing obligations should not be confused with the final draft approval.",
+      "observation": "Source assertions; verify exact event and enforcement dates separately.",
+      "assessment": "NO UNVERIFIED NEW DELTA",
+      "supports": [
+        "china-ai-technology-export-regime"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0019-04",
+      "source": "Reuters: oil and tanker constraints",
+      "source_type": "reporting",
+      "role": "dated_evidence",
+      "url": "https://www.reuters.com/business/energy/oil-prices-fall-investors-weigh-supply-outlook-middle-east-tensions-2026-10-15/",
+      "publication_date": "2026-10-15",
+      "claim": "US debate about easing shadow-fleet restrictions remains a proposal rather than enacted policy.",
+      "observation": "Source assertions; verify exact event and enforcement dates separately.",
+      "assessment": "NO UNVERIFIED NEW DELTA",
+      "supports": [
+        "shadow-fleet-shipping-services"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-SRC-0019-05",
+      "source": "WSB-0018 baseline",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0018/state.json",
+      "publication_date": "2026-10-15",
+      "claim": "Previous canonical state including Hormuz navigation constraint, shipping services, Yandex, PERM and offshore output.",
+      "observation": "Source assertions; verify exact event and enforcement dates separately.",
+      "assessment": "BASELINE",
+      "supports": [
+        "hormuz"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}
