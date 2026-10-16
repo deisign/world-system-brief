@@ -477,6 +477,24 @@
         "en": "Shadow-fleet shipping services",
         "ua": "Морські послуги для тіньового флоту"
       }
+    },
+    {
+      "id": "ENT-000054",
+      "slug": "iran-lpg-blockade-circumvention",
+      "type": "sanctions_bypass_flow",
+      "labels": {
+        "en": "Iranian LPG and jet-fuel blockade circumvention",
+        "ua": "Обхід блокади іранського LPG та авіапального"
+      }
+    },
+    {
+      "id": "ENT-000055",
+      "slug": "china-ai-technology-export-regime",
+      "type": "technology_export_regulation",
+      "labels": {
+        "en": "Chinese AI technology export-control regime",
+        "ua": "Китайський режим контролю експорту AI-технологій"
+      }
     }
   ]
 }
