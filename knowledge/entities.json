@@ -522,6 +522,15 @@
         "en": "China's export–domestic demand divergence",
         "ua": "Розрив між експортом і внутрішнім попитом Китаю"
       }
+    },
+    {
+      "id": "ENT-000059",
+      "slug": "russian-energy-purchase-penalties",
+      "type": "energy_trade_sanctions",
+      "labels": {
+        "en": "US penalties on purchases of Russian energy",
+        "ua": "Санкції США за купівлю російських енергоносіїв"
+      }
     }
   ]
 }
