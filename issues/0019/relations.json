@@ -17,7 +17,23 @@
       "claim_ids": [
         "CLM-0019-01"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "substitutability": {
+        "en": "Limited alternative ship-to-ship transfers observed; not evidence of scalable full bypass.",
+        "ua": "Зафіксовано обмежені перевалки між суднами; масштабований повний обхід не доведено."
+      },
+      "substitution_horizon": {
+        "en": "Voyages predate reporting; scaling horizon is not established.",
+        "ua": "Рейси відбулися до публікації; строки масштабування не встановлено."
+      },
+      "adaptation_route": {
+        "en": "Ship-to-ship handling of some LPG and jet-fuel cargoes.",
+        "ua": "Перевалка частини партій LPG та авіапального з судна на судно."
+      },
+      "dimension_source_ids": [
+        "WSB-SRC-0019-01"
+      ],
+      "dimension_assessment": "mixed_observed_and_qualified_analysis"
     },
     {
       "id": "REL-261016-02",
@@ -35,7 +51,28 @@
       "claim_ids": [
         "CLM-0019-02"
       ],
-      "confidence": "medium"
+      "confidence": "medium",
+      "substitutability": {
+        "en": "Alternative sources of controlled AI technology have not been assessed in cited reporting.",
+        "ua": "Альтернативні джерела контрольованих AI-технологій у наведених матеріалах не оцінено."
+      },
+      "substitution_horizon": {
+        "en": "Not established; proposals are not yet final controls.",
+        "ua": "Не встановлено; запропоновані обмеження ще не є остаточними."
+      },
+      "leverage_effect": {
+        "en": "If adopted, licensing authority could gain leverage over covered transfers; conditional analysis, not observed effect.",
+        "ua": "У разі ухвалення дозвільний орган може отримати вплив на охоплені передачі; умовний аналіз, а не спостережений ефект."
+      },
+      "adaptation_route": {
+        "en": "No demonstrated workaround in cited sources.",
+        "ua": "У наведених джерелах підтвердженого обходу немає."
+      },
+      "dimension_source_ids": [
+        "WSB-SRC-0019-02",
+        "WSB-SRC-0019-03"
+      ],
+      "dimension_assessment": "mixed_observed_and_qualified_analysis"
     }
   ]
 }
