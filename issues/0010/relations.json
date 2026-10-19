@@ -1,1 +1,49 @@
-{"issue_id":"WSB-0010","as_of":"2026-10-07","relations":[{"id":"REL-261007-01","from":"east-west-pipeline","to":"gulf-oil-flow","type":"supports_recovery","state":"active","claim_ids":["CLM-261007-01","CLM-261007-02"],"source_ids":["WSB-SRC-0010-01"]},{"id":"REL-261007-02","from":"g7-emergency-stock-release","to":"refined-products-bottleneck","type":"buffers","state":"active","claim_ids":["CLM-261007-03"],"source_ids":["WSB-SRC-0010-02"]}]}
+{
+  "issue_id": "WSB-0010",
+  "as_of": "2026-10-07",
+  "relations": [
+    {
+      "id": "REL-261007-01",
+      "from": "east-west-pipeline",
+      "to": "gulf-oil-flow",
+      "type": "supports_recovery",
+      "state": "active",
+      "claim_ids": [
+        "CLM-261007-01",
+        "CLM-261007-02"
+      ],
+      "source_ids": [
+        "WSB-SRC-0010-01"
+      ],
+      "substitutability": {
+        "en": "Partial diversion through existing East–West infrastructure; not full replacement of Gulf routes.",
+        "ua": "Часткове перенаправлення наявним трубопроводом Схід–Захід; не повна заміна маршрутів затоки."
+      },
+      "substitution_horizon": {
+        "en": "Not established for full replacement.",
+        "ua": "Горизонт повної заміни не встановлено."
+      },
+      "adaptation_route": {
+        "en": "Existing Saudi pipeline enables an alternate crude export route.",
+        "ua": "Наявний саудівський трубопровід забезпечує альтернативний експортний маршрут нафти."
+      },
+      "dimension_source_ids": [
+        "WSB-SRC-0010-01"
+      ],
+      "dimension_assessment": "mixed_observed_and_qualified_analysis"
+    },
+    {
+      "id": "REL-261007-02",
+      "from": "g7-emergency-stock-release",
+      "to": "refined-products-bottleneck",
+      "type": "buffers",
+      "state": "active",
+      "claim_ids": [
+        "CLM-261007-03"
+      ],
+      "source_ids": [
+        "WSB-SRC-0010-02"
+      ]
+    }
+  ]
+}
