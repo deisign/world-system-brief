@@ -14,7 +14,23 @@
       ],
       "source_ids": [
         "WSB-SRC-0011-01"
-      ]
+      ],
+      "substitutability": {
+        "en": "Other oil production and emergency inventories can buffer a regional shortfall; sufficiency not established.",
+        "ua": "Інший видобуток і аварійні запаси можуть пом’якшити регіональний дефіцит; достатність не встановлено."
+      },
+      "substitution_horizon": {
+        "en": "Duration of shut-ins and time to fully replace output not established.",
+        "ua": "Тривалість зупинки й час повного заміщення видобутку не встановлено."
+      },
+      "leverage_effect": {
+        "en": "Supply disruption increases near-term importance of inventories and unaffected producers; qualitative inference.",
+        "ua": "Порушення поставок посилює короткострокову роль запасів та неушкоджених виробників; якісний висновок."
+      },
+      "dimension_source_ids": [
+        "WSB-SRC-0011-01"
+      ],
+      "dimension_assessment": "mixed_observed_and_qualified_analysis"
     },
     {
       "id": "REL-261008-02",
@@ -27,7 +43,23 @@
       ],
       "source_ids": [
         "WSB-SRC-0011-04"
-      ]
+      ],
+      "substitutability": {
+        "en": "Emergency stocks provide temporary buffering, not permanent production capacity.",
+        "ua": "Аварійні запаси дають тимчасовий буфер, а не постійну виробничу потужність."
+      },
+      "substitution_horizon": {
+        "en": "Release may bridge a short disruption; duration of sustainable coverage not established.",
+        "ua": "Вивільнення запасів може перекрити коротке порушення; тривалість стійкого покриття не встановлено."
+      },
+      "adaptation_route": {
+        "en": "Accelerated release of previously agreed emergency stocks, with diesel prioritized.",
+        "ua": "Прискорене використання раніше погоджених резервів із пріоритетом дизеля."
+      },
+      "dimension_source_ids": [
+        "WSB-SRC-0011-04"
+      ],
+      "dimension_assessment": "mixed_observed_and_qualified_analysis"
     },
     {
       "id": "REL-261008-03",
