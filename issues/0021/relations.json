@@ -1,5 +1,23 @@
 {
   "issue_id": "WSB-0021",
   "as_of": "2026-10-18",
-  "relations": []
+  "relations": [
+    {
+      "id": "REL-261018-01",
+      "issue_id": "WSB-0021",
+      "from": "hormuz-reopening-negotiation",
+      "predicate": "proposes_conditional_reopening_of",
+      "to": "hormuz",
+      "observed_at": "2026-10-18",
+      "state": "offer_reiterated_route_not_reopened",
+      "change": "evidence_update",
+      "source_ids": [
+        "WSB-0021-SRC-01"
+      ],
+      "claim_ids": [
+        "WSB-0021-CLM-01"
+      ],
+      "confidence": "high"
+    }
+  ]
 }
