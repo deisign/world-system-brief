@@ -39,8 +39,34 @@
         "CLM-261008-03"
       ],
       "source_ids": [
-        "WSB-SRC-0011-03"
-      ]
+        "WSB-SRC-0011-03",
+        "WSB-SRC-0011-07"
+      ],
+      "substitutability": {
+        "en": "Partial: Saudi East–West and UAE Fujairah routes; not a one-for-one replacement for all Hormuz traffic.",
+        "ua": "Часткова: саудівський маршрут Схід–Захід і порт Фуджейра в ОАЕ; не повна заміна всьому трафіку Ормузу."
+      },
+      "substitution_horizon": {
+        "en": "Not established for full replacement; existing bypass routes operated in June 2026.",
+        "ua": "Горизонт повного заміщення не встановлено; альтернативні маршрути працювали вже в червні 2026 року."
+      },
+      "leverage_effect": {
+        "en": "Assessment: control of secure chokepoint access and alternate export infrastructure gains bargaining weight.",
+        "ua": "Оцінка: контроль безпечного проходу та альтернативної експортної інфраструктури підсилює переговорні позиції."
+      },
+      "rent_distribution": {
+        "en": "Not quantified. Freight/insurance premiums and export discounts require separate attribution.",
+        "ua": "Не виміряно. Фрахтові й страхові премії та експортні знижки потребують окремої атрибуції."
+      },
+      "adaptation_route": {
+        "en": "Observed Saudi East–West pipeline to Yanbu; UAE Habshan–Fujairah pipeline; overseas stocks.",
+        "ua": "Зафіксовано саудівський нафтопровід до Янбу, маршрут Хабшан–Фуджейра в ОАЕ та використання закордонних запасів."
+      },
+      "dimension_source_ids": [
+        "WSB-SRC-0011-03",
+        "WSB-SRC-0011-07"
+      ],
+      "dimension_assessment": "analyst_interpretation_distinguished_from_observed_routes"
     }
   ]
 }
