@@ -1,5 +1,23 @@
 {
   "issue_id": "WSB-0022",
   "as_of": "2026-10-19",
-  "relations": []
+  "relations": [
+    {
+      "id": "REL-261019-01",
+      "issue_id": "WSB-0022",
+      "from": "china-export-demand-imbalance",
+      "predicate": "reflects_weakness_in",
+      "to": "china-domestic-consumption",
+      "observed_at": "2026-10-19",
+      "state": "q3_gdp_45_retail_sales_11_september",
+      "change": "evidence_update",
+      "source_ids": [
+        "WSB-0022-SRC-01"
+      ],
+      "claim_ids": [
+        "WSB-0022-CLM-01"
+      ],
+      "confidence": "medium"
+    }
+  ]
 }
