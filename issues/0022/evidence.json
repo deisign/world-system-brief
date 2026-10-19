@@ -1,0 +1,59 @@
+{
+  "issue_id": "WSB-0022",
+  "as_of": "2026-10-19",
+  "records": [
+    {
+      "id": "WSB-0022-SRC-01",
+      "source": "Reuters, 19 Oct 2026 — China's Q3 GDP details",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/world/asia-pacific/view-chinas-economic-growth-accelerates-45-third-quarter-2026-10-19/",
+      "publication_date": "2026-10-19",
+      "claim": "China released third-quarter growth of 4.5% year on year on Monday, October 19, above a 4.4% Reuters consensus and up from 4.3% in the preceding quarter. Industrial output rose 5.5% year on year in September, while retail sales increased only 1.1%; property investment remains weak. This is a new measurement of an ongoing structural divergence: exports and manufacturing bear much of the growth burden while domestic consumption remains soft. The figures do not in themselves establish a new trade restriction.",
+      "observation": "Report is dated; underlying event/effective date tracked separately.",
+      "assessment": "VERIFIED REPORT / NO UNPROVEN DAILY DELTA",
+      "supports": [
+        "china-export-demand-imbalance"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0022-SRC-02",
+      "source": "Reuters — supporting reporting",
+      "source_type": "newswire",
+      "role": "corroboration_or_context",
+      "url": "https://www.reuters.com/world/china/chinas-economic-growth-picks-up-third-quarter-beating-expectations-2026-10-19/",
+      "publication_date": "2026-10-19",
+      "claim": "Further reporting and context concerning the focal policy, bottleneck or macroeconomic observation.",
+      "observation": "Context, not an independent event counted as Δ.",
+      "assessment": "CORROBORATION",
+      "supports": [
+        "china-export-demand-imbalance"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0022-SRC-03",
+      "source": "Prior canonical World System Brief",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0021/state.json",
+      "publication_date": "2026-10-18",
+      "claim": "Starting ledger state, not new primary evidence.",
+      "observation": "State inheritance.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

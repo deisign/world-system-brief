@@ -1,0 +1,22 @@
+{
+  "issue_id": "WSB-0021",
+  "as_of": "2026-10-18",
+  "claims": [
+    {
+      "id": "WSB-0021-CLM-01",
+      "kind": "reported",
+      "statement": "On October 18 Iran reiterated its earlier proposal to reopen the Strait of Hormuz within seven days if Washington accepted conditions including relief from maritime restrictions. That is a bargaining position, not operational restoration of the route. Separate reporting about China's proposed solar-manufacturing export restrictions is follow-up to a draft presented on Friday: publication on Sunday does not establish a new final control.",
+      "observed_at": "2026-10-18",
+      "event_date": "2026-10-18",
+      "entity_ids": [
+        "ENT-000057"
+      ],
+      "source_ids": [
+        "WSB-0021-SRC-01",
+        "WSB-0021-SRC-02"
+      ],
+      "confidence": "medium",
+      "status": "developing"
+    }
+  ]
+}

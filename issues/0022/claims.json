@@ -1,0 +1,22 @@
+{
+  "issue_id": "WSB-0022",
+  "as_of": "2026-10-19",
+  "claims": [
+    {
+      "id": "WSB-0022-CLM-01",
+      "kind": "reported",
+      "statement": "China released third-quarter growth of 4.5% year on year on Monday, October 19, above a 4.4% Reuters consensus and up from 4.3% in the preceding quarter. Industrial output rose 5.5% year on year in September, while retail sales increased only 1.1%; property investment remains weak. This is a new measurement of an ongoing structural divergence: exports and manufacturing bear much of the growth burden while domestic consumption remains soft. The figures do not in themselves establish a new trade restriction.",
+      "observed_at": "2026-10-19",
+      "event_date": "2026-10-19",
+      "entity_ids": [
+        "ENT-000058"
+      ],
+      "source_ids": [
+        "WSB-0022-SRC-01",
+        "WSB-0022-SRC-02"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

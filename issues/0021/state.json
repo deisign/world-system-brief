@@ -1,0 +1,100 @@
+{
+  "issue_id": "WSB-0021",
+  "date": "2026-10-18",
+  "day_type": {
+    "system_activity": "low",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 3,
+    "persistent": 4
+  },
+  "objects": [
+    {
+      "id": "yandex-data-centre-network",
+      "entering_state": "vladimir_site_operations_suspended",
+      "current_state": "vladimir_site_operations_suspended",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-perm-tech-suspensions",
+      "entering_state": "named_firms_suspended_from_perm",
+      "current_state": "named_firms_suspended_from_perm",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "entering_state": "storm_shutins_continue",
+      "current_state": "storm_shutins_continue",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "hormuz",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "shadow-fleet-shipping-services",
+      "entering_state": "existing_restrictions_under_review",
+      "current_state": "existing_restrictions_under_review",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "iran-lpg-blockade-circumvention",
+      "entering_state": "limited_undated_shipments_detected",
+      "current_state": "limited_undated_shipments_detected",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "china-ai-technology-export-regime",
+      "entering_state": "draft_export_control_list_published",
+      "current_state": "draft_export_control_list_published",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "us-russia-graham-act-waiver",
+      "entering_state": "friday_waiver_reported",
+      "current_state": "friday_waiver_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-reopening-negotiation",
+      "entering_state": "conditional_reopening_offer_reiterated",
+      "current_state": "conditional_reopening_offer_reiterated",
+      "change": "evidence_update",
+      "status": "developing"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "hormuz-reopening-negotiation",
+    "type": "diplomacy",
+    "sequence": [
+      "hormuz-reopening-negotiation"
+    ],
+    "edges": [],
+    "assessment": "distinct_evidence_not_an_unverified_transition"
+  },
+  "notes": [
+    "Date-scoped editorial sourcing. Publication date and effective/event dates are distinct.",
+    "18 Oct reiteration is diplomatic proposal, not reopening."
+  ],
+  "chain": [
+    "hormuz-reopening-negotiation"
+  ],
+  "noise": [
+    {
+      "id": "article_vs_effective_date",
+      "result": "no_false_daily_delta"
+    }
+  ]
+}

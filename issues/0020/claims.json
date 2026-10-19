@@ -1,0 +1,22 @@
+{
+  "issue_id": "WSB-0020",
+  "as_of": "2026-10-17",
+  "claims": [
+    {
+      "id": "WSB-0020-CLM-01",
+      "kind": "reported",
+      "statement": "The United States issued an executive order late Friday, October 16, waiving impending Russia-related sanctions and tariffs, including penalties linked to purchases of Russian energy. Reuters reported the decision on Saturday, October 17. The distinction matters: a new report on Saturday is not a second legal transition. The waiver changes the expected sanction environment; whether it creates additional physical oil or tanker supply remains unproven.",
+      "observed_at": "2026-10-17",
+      "event_date": "2026-10-16",
+      "entity_ids": [
+        "ENT-000056"
+      ],
+      "source_ids": [
+        "WSB-0020-SRC-01",
+        "WSB-0020-SRC-02"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}
