@@ -13,7 +13,8 @@
       "observation": "Report is dated; underlying event/effective date tracked separately.",
       "assessment": "VERIFIED REPORT / NO UNPROVEN DAILY DELTA",
       "supports": [
-        "hormuz-reopening-negotiation"
+        "hormuz-reopening-negotiation",
+        "hormuz"
       ],
       "confidence": "medium"
     },
@@ -26,9 +27,9 @@
       "publication_date": "2026-10-18",
       "claim": "Further reporting and context concerning the focal policy, bottleneck or macroeconomic observation.",
       "observation": "Context, not an independent event counted as Δ.",
-      "assessment": "CORROBORATION",
+      "assessment": "CHINA EXPORT POLICY CONTEXT; NOT A HORMUZ SOURCE",
       "supports": [
-        "hormuz-reopening-negotiation"
+        "china-ai-technology-export-regime"
       ],
       "confidence": "medium"
     },

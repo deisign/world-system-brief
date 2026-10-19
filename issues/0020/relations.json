@@ -1,5 +1,24 @@
 {
   "issue_id": "WSB-0020",
   "as_of": "2026-10-17",
-  "relations": []
+  "relations": [
+    {
+      "id": "REL-261017-01",
+      "issue_id": "WSB-0020",
+      "from": "us-russia-graham-act-waiver",
+      "predicate": "waives_planned_penalties_on",
+      "to": "russian-energy-purchase-penalties",
+      "observed_at": "2026-10-17",
+      "event_date": "2026-10-16",
+      "state": "waiver_issued_before_effective_date",
+      "change": "evidence_update",
+      "source_ids": [
+        "WSB-0020-SRC-01"
+      ],
+      "claim_ids": [
+        "WSB-0020-CLM-01"
+      ],
+      "confidence": "high"
+    }
+  ]
 }
