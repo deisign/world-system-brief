@@ -92,6 +92,23 @@
         "refined-products-bottleneck"
       ],
       "confidence": "medium_high"
+    },
+    {
+      "id": "WSB-SRC-0011-07",
+      "source": "International Energy Agency, Strait of Hormuz — alternative routes (2026)",
+      "source_type": "official_analysis",
+      "role": "structural_capacity_baseline",
+      "url": "https://www.iea.org/about/oil-safety-and-emergency-response/strait-of-hormuz",
+      "publication_date": "2026-03-01",
+      "claim": "In 2025 about 20 mb/d of oil transited Hormuz. Saudi Arabia and UAE pipelines have an estimated 3.5–5.5 mb/d of available rerouting capacity; real-world logistics are not fully tested.",
+      "observation": "Structural baseline estimate, not proof that spare nominal capacity is immediately deployable.",
+      "assessment": "BOUNDED PARTIAL SUBSTITUTABILITY; TIME HORIZON NOT SPECIFIED",
+      "supports": [
+        "hormuz",
+        "gulf-oil-flow",
+        "east-west-pipeline"
+      ],
+      "confidence": "high"
     }
   ]
 }
