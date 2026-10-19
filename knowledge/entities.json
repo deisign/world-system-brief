@@ -531,6 +531,33 @@
         "en": "US penalties on purchases of Russian energy",
         "ua": "Санкції США за купівлю російських енергоносіїв"
       }
+    },
+    {
+      "id": "ENT-000060",
+      "slug": "us-iran-maritime-blockade",
+      "type": "maritime_enforcement",
+      "labels": {
+        "en": "US maritime blockade of Iranian shipments",
+        "ua": "Морська блокада іранських поставок з боку США"
+      }
+    },
+    {
+      "id": "ENT-000061",
+      "slug": "china-cross-border-ai-transfers",
+      "type": "technology_flow",
+      "labels": {
+        "en": "Cross-border transfers of Chinese AI technology",
+        "ua": "Транскордонна передача китайських AI-технологій"
+      }
+    },
+    {
+      "id": "ENT-000062",
+      "slug": "china-domestic-consumption",
+      "type": "domestic_demand",
+      "labels": {
+        "en": "China's domestic consumption",
+        "ua": "Внутрішнє споживання в Китаї"
+      }
     }
   ]
 }

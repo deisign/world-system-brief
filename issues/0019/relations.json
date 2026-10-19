@@ -1,5 +1,41 @@
 {
   "issue_id": "WSB-0019",
   "as_of": "2026-10-16",
-  "relations": []
+  "relations": [
+    {
+      "id": "REL-261016-01",
+      "issue_id": "WSB-0019",
+      "from": "iran-lpg-blockade-circumvention",
+      "predicate": "circumvents_in_limited_quantities",
+      "to": "us-iran-maritime-blockade",
+      "observed_at": "2026-10-16",
+      "state": "retrospective_voyages_not_new_on_report_date",
+      "change": "evidence_update",
+      "source_ids": [
+        "WSB-SRC-0019-01"
+      ],
+      "claim_ids": [
+        "CLM-0019-01"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "REL-261016-02",
+      "issue_id": "WSB-0019",
+      "from": "china-ai-technology-export-regime",
+      "predicate": "proposes_controls_on",
+      "to": "china-cross-border-ai-transfers",
+      "observed_at": "2026-10-16",
+      "state": "draft_under_consultation_not_final",
+      "change": "evidence_update",
+      "source_ids": [
+        "WSB-SRC-0019-02",
+        "WSB-SRC-0019-03"
+      ],
+      "claim_ids": [
+        "CLM-0019-02"
+      ],
+      "confidence": "medium"
+    }
+  ]
 }
