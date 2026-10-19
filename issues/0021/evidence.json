@@ -1,0 +1,58 @@
+{
+  "issue_id": "WSB-0021",
+  "as_of": "2026-10-18",
+  "records": [
+    {
+      "id": "WSB-0021-SRC-01",
+      "source": "Reuters, 18 Oct 2026 — Iranian proposal on Hormuz",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/world/middle-east/iran-urges-us-accept-proposal-reopen-strait-hormuz-2026-10-18/",
+      "publication_date": "2026-10-18",
+      "claim": "On October 18 Iran reiterated its earlier proposal to reopen the Strait of Hormuz within seven days if Washington accepted conditions including relief from maritime restrictions. That is a bargaining position, not operational restoration of the route. Separate reporting about China's proposed solar-manufacturing export restrictions is follow-up to a draft presented on Friday: publication on Sunday does not establish a new final control.",
+      "observation": "Report is dated; underlying event/effective date tracked separately.",
+      "assessment": "VERIFIED REPORT / NO UNPROVEN DAILY DELTA",
+      "supports": [
+        "hormuz-reopening-negotiation"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0021-SRC-02",
+      "source": "Reuters — supporting reporting",
+      "source_type": "newswire",
+      "role": "corroboration_or_context",
+      "url": "https://www.reuters.com/business/autos-transportation/china-proposes-export-controls-solar-manufacturing-technologies-2026-10-18/",
+      "publication_date": "2026-10-18",
+      "claim": "Further reporting and context concerning the focal policy, bottleneck or macroeconomic observation.",
+      "observation": "Context, not an independent event counted as Δ.",
+      "assessment": "CORROBORATION",
+      "supports": [
+        "hormuz-reopening-negotiation"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0021-SRC-03",
+      "source": "Prior canonical World System Brief",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0020/state.json",
+      "publication_date": "2026-10-17",
+      "claim": "Starting ledger state, not new primary evidence.",
+      "observation": "State inheritance.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

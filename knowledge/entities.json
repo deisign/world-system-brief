@@ -495,6 +495,33 @@
         "en": "Chinese AI technology export-control regime",
         "ua": "Китайський режим контролю експорту AI-технологій"
       }
+    },
+    {
+      "id": "ENT-000056",
+      "slug": "us-russia-graham-act-waiver",
+      "type": "sanctions_policy",
+      "labels": {
+        "en": "US Russia-related Graham Act waiver",
+        "ua": "Винятки США із санкцій щодо Росії за законом Грема"
+      }
+    },
+    {
+      "id": "ENT-000057",
+      "slug": "hormuz-reopening-negotiation",
+      "type": "diplomacy",
+      "labels": {
+        "en": "Hormuz reopening negotiation",
+        "ua": "Переговори щодо відкриття Ормузу"
+      }
+    },
+    {
+      "id": "ENT-000058",
+      "slug": "china-export-demand-imbalance",
+      "type": "macroeconomic_dependency",
+      "labels": {
+        "en": "China's export–domestic demand divergence",
+        "ua": "Розрив між експортом і внутрішнім попитом Китаю"
+      }
     }
   ]
 }
