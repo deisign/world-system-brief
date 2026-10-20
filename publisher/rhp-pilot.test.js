@@ -6,8 +6,8 @@ const evidence=JSON.parse(readFileSync(new URL("../issues/0011/evidence.json",im
 test("RHP pilot uses existing quantified source and bilingual output",()=>{
  for(const lang of ["en","ua"]){
   const page=rhpPilotPage({lang,evidence});
-  assert.match(page,/25\.08%/);
-  assert.match(page,/16\.37%/);
+  assert.match(page,lang==="ua"?/25,08%/:/25\.08%/);
+  assert.match(page,lang==="ua"?/16,37%/:/16\.37%/);
   assert.match(page,/WSB-SRC-0011-01/);
   assert.match(page,/standalone\.js/);
   assert.match(page,new RegExp('lang="'+lang+'"'));
