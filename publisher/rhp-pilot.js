@@ -16,8 +16,8 @@ export function rhpPilotPage({lang='en',evidence}) {
  const dataset=${data};
  try {
    const {Chart,Plot,Bar,Label,html,render}=await import('https://cdn.jsdelivr.net/npm/@bezda/rhp@2.0.2/dist/standalone.js');
-   const row=d=>html`<div><${Label} edge="start">${'${() => d.label}'}<//><${Bar} to=${'${() => d.value}'} /><${Label} at=${'${() => d.value}'}>${'${() => d.value.toFixed(2) + "%"}'}<//></div>`;
-   render(()=>html`<${Chart} scale=${'${[0,30]}'}><${Plot} label=${'${dataset.labels}'} value=${'${dataset.values}'}>${'${row}'}<//><//>`,document.getElementById('chart'));
+   const row=d=>html\`<div><\${Label} edge="start">\${() => d.label}<//><\${Bar} to=\${() => d.value} /><\${Label} at=\${() => d.value}>\${() => d.value.toFixed(2) + '%'}<//></div>\`;
+   render(()=>html\`<\${Chart} scale=\${[0,30]}><\${Plot} label=\${dataset.labels} value=\${dataset.values}>\${row}<//><//>\`,document.getElementById('chart'));
  } catch(err){document.getElementById('chart-status').textContent=${JSON.stringify(fallback)};console.error('RHP pilot render failed',err)}
  </script></body></html>`;
 }
