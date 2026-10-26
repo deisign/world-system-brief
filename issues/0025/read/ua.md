@@ -1,29 +1,29 @@
 # WORLD SYSTEM BRIEF
-## Issue 0025 · 2026-10-22
-### READ · Daily edition
+## Випуск 0025 · 2026-10-22
+### READ · Щоденне видання
 
 **ПІДТВЕРДЖЕНІ НОВІ СИСТЕМНІ ЗМІНИ: 0**
 
-# ВИРОБНИКИ ЧИПІВ ШУКАЮТЬ ЗАМІННИКИ
+# Виробники чипів шукають заміну критичним компонентам
 
-**Опис джерела (англійською):** TSMC surveyed suppliers about rare-earth-free motors for production automation to reduce possible export-control exposure, Reuters reported on October 22. Discussions were early-stage; no widespread replacement was verified.
+22 жовтня Reuters повідомило: TSMC опитує постачальників щодо двигунів без рідкоземельних компонентів для автоматизації фабрик, прагнучи знизити залежність від потенційних експортних обмежень Китаю. Переговори перебувають на ранньому етапі; масштабного заміщення не підтверджено.
 
 ## SYSTEM LEDGER
 
-**Потік:** Factory motors and rare earths.
+**Потік:** Рідкоземельні компоненти та обладнання для виробництва чипів.
 
-**Вузьке місце:** Critical-input concentration.
+**Вузьке місце:** Залежність промислових двигунів від контрольованих матеріалів.
 
-**Горизонт заміщення:** Не встановлено.
+**Горизонт заміщення:** Не встановлено цим повідомленням.
 
-**Leverage:** Не виміряно.
+**Важелі впливу:** Окрему зміну не виміряно.
 
-**Розподіл ренти:** Не встановлено.
+**Розподіл ренти:** Не встановлено кількісно.
 
-**Адаптація:** Alternative motor designs under review, not deployed at scale.
+**Адаптація:** Вивчення альтернативних конструкцій двигунів без масового впровадження.
 
-## ДЖЕРЕЛА
+## ДЖЕРЕЛА І МЕЖІ ВИСНОВКІВ
 
-Reuters, 22 Oct — TSMC rare-earth-free motor investigation: https://www.reuters.com/world/china/tsmc-seeks-factory-equipment-alternatives-thwart-chinas-rare-earths-grip-sources-2026-10-22/
+2026-10-22 · Reuters: https://www.reuters.com/world/china/tsmc-seeks-factory-equipment-alternatives-thwart-chinas-rare-earths-grip-sources-2026-10-22/
 
-Дата публікації не доводить непідтвердженої дати запровадження чи фізичної потужності.
+Дату публікації відокремлено від дати події або статистичного періоду. Заява, повідомлення чи нове вимірювання не дорівнюють підтвердженому системному переходу.
