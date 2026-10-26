@@ -3,6 +3,7 @@ import { rhpPilotPage } from "./rhp-pilot.js";
 import { addAtlasNavigation } from "./standalone-navigation.js";
 import { editorialSkin } from "./editorial-skin.js";
 import { dependencyMapPage } from "./dependency-map.js";
+import { systemMechanismPage } from "./system-mechanism.js";
 import { homePage } from "./homepage.js";
 import path from "node:path";
 import { renderSystem } from "../renderer/system/system-renderer.js";
@@ -60,6 +61,7 @@ function atlasExtension(lang,state,loc){
 const pilotEvidence=JSON.parse(fs.readFileSync(path.join(root,"issues","0011","evidence.json"),"utf8"));
 for(const lang of ["en","ua"]){for(const variant of ["editorial","compact","micro"]){const target=variant==="editorial"?path.join(out,lang,"visualizations","0011","index.html"):path.join(out,lang,"visualizations","0011",variant,"index.html");write(target,rhpPilotPage({lang,evidence:pilotEvidence,variant}));}}
 for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","0011","embed","index.html"),rhpPilotPage({lang,evidence:pilotEvidence,variant:"editorial",embed:true}));
+for(const lang of ["en","ua"])write(path.join(out,lang,"explainers","hormuz","index.html"),systemMechanismPage({lang}));
 const lastDate=archive.at(-1)?.date||"";
 for(const lang of ["en","ua"]){write(path.join(out,lang,"dependencies","index.html"),addAtlasNavigation(dependencyMapPage({lang,relations:relationEvents,registry}),{lang,date:lastDate,mode:"dependencies"}));write(path.join(out,lang,"archive","index.html"),archivePage(lang,archive,lastDate));write(path.join(out,lang,"entities","index.html"),entitiesPage(lang,entityIndex[lang],lastDate));for(const [id,events] of entityIndex[lang])write(path.join(out,lang,"entity",id,"index.html"),entityPage(lang,id,events));for(const bundle of issueBundles){const state=bundle.state;const loc=JSON.parse(fs.readFileSync(path.join(root,"issues",state.issue_id.slice(-4),"locale",lang+".json"),"utf8"));const rendered=addAtlasNavigation(atlasExtension(lang,state,loc)(renderSystem(state,loc,lang)),{lang,date:state.date,mode:"system"});write(path.join(out,lang,"system",state.date,"index.html"),rendered)}const ts=buildTrajectories(entityIndex[lang],relationEvents),prs=relationPersistence(relationEvents),patterns=detectTrajectoryPatterns(ts,relationEvents),graphPatterns=detectGraphTrajectoryPatterns(issueBundles,entityAliases),body=trajectoriesPage({lang,trajectories:ts,persistentRelations:prs,patterns,graphPatterns,labels:latestLoc[lang]?.labels||{},states:latestLoc[lang]?.states||{}});write(path.join(out,lang,"trajectories","index.html"),shell(body,{lang,date:lastDate,issue:lang==="ua"?"ТРАЄКТОРІЇ":"TRAJECTORIES",trajectories:true}));{const newest=issueBundles.at(-1)?.state;const base=path.join(root,"issues",latest);const read=fs.readFileSync(path.join(base,"read",lang+".md"),"utf8");write(path.join(out,lang,"index.html"),homePage({lang,state:newest,loc:latestLoc[lang],read,archive}))}}
 write(path.join(out,"index.html"),`<!doctype html><meta http-equiv="refresh" content="0;url=/en/brief/${lastDate}/">`);
