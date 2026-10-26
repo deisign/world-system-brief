@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0028",
+  "as_of": "2026-10-25",
+  "claims": [
+    {
+      "id": "WSB-0028-CLM-01",
+      "kind": "reported",
+      "statement": "Sri Lanka said on October 25 that 40 Iranian sailors from 19 ships had been rescued and repatriated after medical emergencies. Officials did not establish a change in sanctions, shipping access or trade volume from the rescue.",
+      "observed_at": "2026-10-25",
+      "event_date": "2026-10-25",
+      "entity_ids": [
+        "ENT-000068"
+      ],
+      "source_ids": [
+        "WSB-0028-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

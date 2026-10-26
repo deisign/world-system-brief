@@ -1,0 +1,51 @@
+{
+  "issue_id": "WSB-0029",
+  "as_of": "2026-10-26",
+  "records": [
+    {
+      "id": "WSB-0029-SRC-01",
+      "source": "Reuters, 26 Oct — Indonesia meets Singapore gas minimums",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/business/energy/indonesia-meeting-gas-deal-terms-with-singapore-despite-supply-cut-minister-says-2026-10-26/",
+      "publication_date": "2026-10-26",
+      "claim": "Indonesia's energy minister said on October 26 that exports of pipeline gas to Singapore had been cut by 31 million standard cubic feet daily, around 8% of pipeline supply and 2% of Singapore's overall gas demand, while contractual minimums continued to be met.",
+      "observation": "Dated reporting; underlying event date distinguished in claim.",
+      "assessment": "EVIDENCE UPDATE / NO UNSUPPORTED SYSTEM DELTA",
+      "supports": [
+        "indonesia-singapore-gas-supply-adjustment"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0029-SRC-02",
+      "source": "Prior canonical World System Brief",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0028/state.json",
+      "publication_date": "2026-10-25",
+      "claim": "Starting state; not new primary evidence.",
+      "observation": "Inheritance only.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance",
+        "gulf-shipping-risk-premium",
+        "saudi-crude-export-recovery",
+        "tsmc-rare-earth-equipment-substitution",
+        "india-hpcl-delivered-crude-contracts",
+        "saudi-energy-attack-claims",
+        "iranian-seafarer-rescue-sri-lanka"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

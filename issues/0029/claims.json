@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0029",
+  "as_of": "2026-10-26",
+  "claims": [
+    {
+      "id": "WSB-0029-CLM-01",
+      "kind": "reported",
+      "statement": "Indonesia's energy minister said on October 26 that exports of pipeline gas to Singapore had been cut by 31 million standard cubic feet daily, around 8% of pipeline supply and 2% of Singapore's overall gas demand, while contractual minimums continued to be met.",
+      "observed_at": "2026-10-26",
+      "event_date": "2026-10-26",
+      "entity_ids": [
+        "ENT-000069"
+      ],
+      "source_ids": [
+        "WSB-0029-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

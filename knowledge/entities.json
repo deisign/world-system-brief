@@ -558,6 +558,69 @@
         "en": "China's domestic consumption",
         "ua": "Внутрішнє споживання в Китаї"
       }
+    },
+    {
+      "id": "ENT-000063",
+      "slug": "gulf-shipping-risk-premium",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Gulf shipping risk premium",
+        "ua": "Премія за ризик судноплавства в Затоці"
+      }
+    },
+    {
+      "id": "ENT-000064",
+      "slug": "saudi-crude-export-recovery",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Saudi crude export recovery",
+        "ua": "Відновлення експорту нафти Саудівської Аравії"
+      }
+    },
+    {
+      "id": "ENT-000065",
+      "slug": "tsmc-rare-earth-equipment-substitution",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Rare-earth-free equipment study at TSMC",
+        "ua": "TSMC вивчає обладнання без рідкоземельних компонентів"
+      }
+    },
+    {
+      "id": "ENT-000066",
+      "slug": "india-hpcl-delivered-crude-contracts",
+      "type": "system_dependency",
+      "labels": {
+        "en": "HPCL delivered-basis crude buying",
+        "ua": "Закупівлі нафти HPCL на умовах доставки"
+      }
+    },
+    {
+      "id": "ENT-000067",
+      "slug": "saudi-energy-attack-claims",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Claims against Saudi energy facilities",
+        "ua": "Заяви про удари по енергетичних об'єктах Саудівської Аравії"
+      }
+    },
+    {
+      "id": "ENT-000068",
+      "slug": "iranian-seafarer-rescue-sri-lanka",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Iranian seafarer rescue off Sri Lanka",
+        "ua": "Порятунок іранських моряків біля Шрі-Ланки"
+      }
+    },
+    {
+      "id": "ENT-000069",
+      "slug": "indonesia-singapore-gas-supply-adjustment",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Indonesia–Singapore gas delivery adjustment",
+        "ua": "Скорочення поставок газу Індонезія — Сінгапур"
+      }
     }
   ]
 }
