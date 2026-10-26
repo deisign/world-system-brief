@@ -1,29 +1,29 @@
 # WORLD SYSTEM BRIEF
-## Issue 0029 · 2026-10-26
-### READ · Daily edition
+## Випуск 0029 · 2026-10-26
+### READ · Щоденне видання
 
 **ПІДТВЕРДЖЕНІ НОВІ СИСТЕМНІ ЗМІНИ: 0**
 
-# СКОРОЧЕННЯ ГАЗОПОСТАВОК ПЕРЕВІРЯЄ РЕЗЕРВИ
+# Скорочення газопостачання перевіряє контрактні буфери
 
-**Опис джерела (англійською):** Indonesia's energy minister said on October 26 that exports of pipeline gas to Singapore had been cut by 31 million standard cubic feet daily, around 8% of pipeline supply and 2% of Singapore's overall gas demand, while contractual minimums continued to be met.
+26 жовтня міністр енергетики Індонезії повідомив про скорочення трубопровідних поставок газу Сінгапуру на 31 млн стандартних кубічних футів на добу — приблизно 8% трубопровідного потоку, але лише 2% загального споживання газу Сінгапуром. За заявою міністра, мінімальні контрактні обсяги виконуються. Наявна диверсифікація пом'якшує втрату; ризики після завершення контрактів у 2028 році лишаються відкритими.
 
 ## SYSTEM LEDGER
 
-**Потік:** Pipeline gas.
+**Потік:** Трубопровідний газ і внутрішнє споживання.
 
-**Вузьке місце:** Domestic demand versus export commitments.
+**Вузьке місце:** Конкуренція між внутрішнім попитом Індонезії та експортними зобов'язаннями.
 
-**Горизонт заміщення:** Не встановлено.
+**Горизонт заміщення:** Не встановлено цим повідомленням.
 
-**Leverage:** Не виміряно.
+**Важелі впливу:** Окрему зміну не виміряно.
 
-**Розподіл ренти:** Не встановлено.
+**Розподіл ренти:** Не встановлено кількісно.
 
-**Адаптація:** Supply diversification; future contract renewals remain uncertain.
+**Адаптація:** Диверсифікація поставок; майбутні контрактні умови невизначені.
 
-## ДЖЕРЕЛА
+## ДЖЕРЕЛА І МЕЖІ ВИСНОВКІВ
 
-Reuters, 26 Oct — Indonesia meets Singapore gas minimums: https://www.reuters.com/business/energy/indonesia-meeting-gas-deal-terms-with-singapore-despite-supply-cut-minister-says-2026-10-26/
+2026-10-26 · Reuters: https://www.reuters.com/business/energy/indonesia-meeting-gas-deal-terms-with-singapore-despite-supply-cut-minister-says-2026-10-26/
 
-Дата публікації не доводить непідтвердженої дати запровадження чи фізичної потужності.
+Дату публікації відокремлено від дати події або статистичного періоду. Заява, повідомлення чи нове вимірювання не дорівнюють підтвердженому системному переходу.
