@@ -1,29 +1,29 @@
 # WORLD SYSTEM BRIEF
-## Issue 0027 · 2026-10-24
-### READ · Daily edition
+## Випуск 0027 · 2026-10-24
+### READ · Щоденне видання
 
 **ПІДТВЕРДЖЕНІ НОВІ СИСТЕМНІ ЗМІНИ: 0**
 
-# ОБХІДНА НАФТОВА ІНФРАСТРУКТУРА ПІД ЗАГРОЗОЮ
+# Обхідна нафтова інфраструктура теж під загрозою
 
-**Опис джерела (англійською):** On October 24 Houthis claimed targeting Saudi oil installations and the East-West pipeline; Saudi-led forces reported missile interceptions. Saudi authorities had not confirmed damage to the named energy sites. Claims of targeting do not prove reduced pipeline throughput.
+24 жовтня хусити заявили про атаки на нафтові об'єкти Саудівської Аравії, зокрема на трубопровід East–West. Сили саудівської коаліції повідомили про перехоплення ракет. Саудівська влада не підтвердила пошкодження названих об'єктів. Заява про атаку — не доказ зупинки трубопроводу чи скорочення його пропускної здатності.
 
 ## SYSTEM LEDGER
 
-**Потік:** Energy security.
+**Потік:** Нафтова інфраструктура та її безпека.
 
-**Вузьке місце:** Threats to bypass infrastructure.
+**Вузьке місце:** Уразливість альтернативних маршрутів.
 
-**Горизонт заміщення:** Не встановлено.
+**Горизонт заміщення:** Не встановлено цим повідомленням.
 
-**Leverage:** Не виміряно.
+**Важелі впливу:** Окрему зміну не виміряно.
 
-**Розподіл ренти:** Не встановлено.
+**Розподіл ренти:** Не встановлено кількісно.
 
-**Адаптація:** Reported defensive interceptions, damage not established.
+**Адаптація:** Повідомлені перехоплення; фізичні пошкодження не встановлено.
 
-## ДЖЕРЕЛА
+## ДЖЕРЕЛА І МЕЖІ ВИСНОВКІВ
 
-Reuters, 24 Oct — Houthi attack claims: https://www.reuters.com/world/middle-east/saudi-civil-defense-says-danger-passed-after-brief-alerts-mecca-jeddah-taif-2026-10-24/
+2026-10-24 · Reuters: https://www.reuters.com/world/middle-east/saudi-civil-defense-says-danger-passed-after-brief-alerts-mecca-jeddah-taif-2026-10-24/
 
-Дата публікації не доводить непідтвердженої дати запровадження чи фізичної потужності.
+Дату публікації відокремлено від дати події або статистичного періоду. Заява, повідомлення чи нове вимірювання не дорівнюють підтвердженому системному переходу.
