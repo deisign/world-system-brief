@@ -1,0 +1,49 @@
+{
+  "issue_id": "WSB-0027",
+  "as_of": "2026-10-24",
+  "records": [
+    {
+      "id": "WSB-0027-SRC-01",
+      "source": "Reuters, 24 Oct — Houthi attack claims",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/world/middle-east/saudi-civil-defense-says-danger-passed-after-brief-alerts-mecca-jeddah-taif-2026-10-24/",
+      "publication_date": "2026-10-24",
+      "claim": "On October 24 Houthis claimed targeting Saudi oil installations and the East-West pipeline; Saudi-led forces reported missile interceptions. Saudi authorities had not confirmed damage to the named energy sites. Claims of targeting do not prove reduced pipeline throughput.",
+      "observation": "Dated reporting; underlying event date distinguished in claim.",
+      "assessment": "EVIDENCE UPDATE / NO UNSUPPORTED SYSTEM DELTA",
+      "supports": [
+        "saudi-energy-attack-claims"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0027-SRC-02",
+      "source": "Prior canonical World System Brief",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0026/state.json",
+      "publication_date": "2026-10-23",
+      "claim": "Starting state; not new primary evidence.",
+      "observation": "Inheritance only.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance",
+        "gulf-shipping-risk-premium",
+        "saudi-crude-export-recovery",
+        "tsmc-rare-earth-equipment-substitution",
+        "india-hpcl-delivered-crude-contracts"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

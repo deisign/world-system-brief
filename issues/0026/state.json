@@ -1,0 +1,136 @@
+{
+  "issue_id": "WSB-0026",
+  "date": "2026-10-23",
+  "day_type": {
+    "system_activity": "low",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 3,
+    "persistent": 4
+  },
+  "objects": [
+    {
+      "id": "yandex-data-centre-network",
+      "entering_state": "vladimir_site_operations_suspended",
+      "current_state": "vladimir_site_operations_suspended",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-perm-tech-suspensions",
+      "entering_state": "named_firms_suspended_from_perm",
+      "current_state": "named_firms_suspended_from_perm",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "entering_state": "storm_shutins_continue",
+      "current_state": "storm_shutins_continue",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "hormuz",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "shadow-fleet-shipping-services",
+      "entering_state": "existing_restrictions_under_review",
+      "current_state": "existing_restrictions_under_review",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "iran-lpg-blockade-circumvention",
+      "entering_state": "limited_undated_shipments_detected",
+      "current_state": "limited_undated_shipments_detected",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "china-ai-technology-export-regime",
+      "entering_state": "draft_export_control_list_published",
+      "current_state": "draft_export_control_list_published",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "us-russia-graham-act-waiver",
+      "entering_state": "friday_waiver_reported",
+      "current_state": "friday_waiver_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-reopening-negotiation",
+      "entering_state": "conditional_reopening_offer_reiterated",
+      "current_state": "conditional_reopening_offer_reiterated",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "china-export-demand-imbalance",
+      "entering_state": "q3_growth_4_5_export_led",
+      "current_state": "q3_growth_4_5_export_led",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "gulf-shipping-risk-premium",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "saudi-crude-export-recovery",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "tsmc-rare-earth-equipment-substitution",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "india-hpcl-delivered-crude-contracts",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "india-hpcl-delivered-crude-contracts",
+    "type": "evidence_update",
+    "sequence": [
+      "india-hpcl-delivered-crude-contracts"
+    ],
+    "edges": [],
+    "assessment": "no_new_confirmed_system_transition"
+  },
+  "notes": [
+    "HPCL reported increasing its purchases of Middle Eastern crude on a delivered-cost basis, reflecting higher and less predictable freight costs. Supplier discounts on stranded cargoes help offset freight; the shift does not verify full market adaptation.",
+    "The observed or measured date and publication date are not necessarily identical.",
+    "No unsupported confirmed Δ is asserted."
+  ],
+  "chain": [
+    "india-hpcl-delivered-crude-contracts"
+  ],
+  "noise": [
+    {
+      "id": "no_new_confirmed_system_transition",
+      "result": "no_false_daily_delta"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0024",
+  "as_of": "2026-10-21",
+  "claims": [
+    {
+      "id": "WSB-0024-CLM-01",
+      "kind": "reported",
+      "statement": "Saudi Arabia's August crude exports rose 7.9% month on month to 4.451 million barrels per day, data reported on October 21 showed. Use of east and west coastal terminals is a partial adaptation. The statistical period is August, not a newly commissioned October export route.",
+      "observed_at": "2026-10-21",
+      "event_date": "2026-08-31",
+      "entity_ids": [
+        "ENT-000064"
+      ],
+      "source_ids": [
+        "WSB-0024-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

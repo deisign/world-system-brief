@@ -1,0 +1,67 @@
+{
+  "locale": "en",
+  "labels": {
+    "yandex-data-centre-network": "Yandex data-centre network",
+    "us-perm-tech-suspensions": "US PERM restrictions",
+    "us-gulf-offshore-output": "US Gulf offshore production",
+    "hormuz": "Strait of Hormuz",
+    "shadow-fleet-shipping-services": "Shadow-fleet shipping services",
+    "iran-lpg-blockade-circumvention": "Iranian fuel blockade circumvention",
+    "china-ai-technology-export-regime": "China AI technology transfer regime",
+    "us-russia-graham-act-waiver": "US Russia-related Graham Act waiver",
+    "hormuz-reopening-negotiation": "Hormuz reopening negotiation",
+    "china-export-demand-imbalance": "China's export–domestic demand divergence",
+    "tsmc-rare-earth-equipment-substitution": "Rare-earth-free equipment study at TSMC"
+  },
+  "states": {
+    "kaluga_modules_disabled_second_site": "Modules disabled at Kaluga site",
+    "vladimir_site_operations_suspended": "Vladimir site operations suspended",
+    "named_firms_suspended_from_perm": "PERM access restricted for named employers",
+    "storm_shutins_continue": "Storm-related production shut-ins continue",
+    "persistent_navigation_constraint": "Navigation remains constrained",
+    "existing_restrictions_under_review": "Existing restrictions and possible changes under discussion",
+    "limited_undated_shipments_detected": "Limited earlier fuel transfers identified",
+    "draft_export_control_list_published": "Draft export-control list published",
+    "friday_waiver_reported": "Sanctions waived before taking effect",
+    "conditional_reopening_offer_reiterated": "The strait is still a bargaining chip",
+    "q3_growth_4_5_export_led": "Exports carry China's uneven growth",
+    "reported_observation_not_confirmed_new_system_delta": "Evidence reported; systemic change not established"
+  },
+  "assessments": {
+    "policy_discussion_not_implemented": "Political signals differ; shipping access rules remain unverified as changed.",
+    "new_information_on_bypass_and_draft_controls": "Export controls create incentives for bypasses, but reported cases are not causally connected.",
+    "distinct_evidence_not_an_unverified_transition": "New evidence does not by itself establish a new system transition.",
+    "no_new_confirmed_system_transition": "New evidence is not proof of a new systemic transition."
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  },
+  "noise": {
+    "proposal_not_implementation": "PROPOSAL IS NOT IMPLEMENTATION",
+    "publication_date_not_event_date": "ARTICLE DATE IS NOT SHIPPING DATE",
+    "proposed_not_final": "DRAFT IS NOT A FINAL RESTRICTION",
+    "no_false_daily_delta": "Publication date is not the effective date."
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "Chipmakers seek substitutes for critical inputs",
+    "deck": "TSMC surveyed suppliers about rare-earth-free motors for production automation to reduce possible export-control exposure, Reuters reported on October 22. Discussions were early-stage; no widespread replacement was verified.",
+    "mechanism": "Chipmakers seek substitutes for critical inputs",
+    "chainNote": "Substitution horizon not established",
+    "evidenceNote": "Dated evidence, distinct event dates.",
+    "footer": "NO FALSE DELTAS · DATED SOURCES"
+  }
+}

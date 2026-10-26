@@ -1,0 +1,46 @@
+{
+  "issue_id": "WSB-0024",
+  "as_of": "2026-10-21",
+  "records": [
+    {
+      "id": "WSB-0024-SRC-01",
+      "source": "Reuters, 21 Oct — JODI crude export figures",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/business/energy/saudi-crude-oil-exports-hit-five-month-high-august-data-shows-2026-10-21/",
+      "publication_date": "2026-10-21",
+      "claim": "Saudi Arabia's August crude exports rose 7.9% month on month to 4.451 million barrels per day, data reported on October 21 showed. Use of east and west coastal terminals is a partial adaptation. The statistical period is August, not a newly commissioned October export route.",
+      "observation": "Dated reporting; underlying event date distinguished in claim.",
+      "assessment": "EVIDENCE UPDATE / NO UNSUPPORTED SYSTEM DELTA",
+      "supports": [
+        "saudi-crude-export-recovery"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0024-SRC-02",
+      "source": "Prior canonical World System Brief",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0023/state.json",
+      "publication_date": "2026-10-20",
+      "claim": "Starting state; not new primary evidence.",
+      "observation": "Inheritance only.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance",
+        "gulf-shipping-risk-premium"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

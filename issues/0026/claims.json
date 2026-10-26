@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0026",
+  "as_of": "2026-10-23",
+  "claims": [
+    {
+      "id": "WSB-0026-CLM-01",
+      "kind": "reported",
+      "statement": "HPCL reported increasing its purchases of Middle Eastern crude on a delivered-cost basis, reflecting higher and less predictable freight costs. Supplier discounts on stranded cargoes help offset freight; the shift does not verify full market adaptation.",
+      "observed_at": "2026-10-23",
+      "event_date": "2026-10-23",
+      "entity_ids": [
+        "ENT-000066"
+      ],
+      "source_ids": [
+        "WSB-0026-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

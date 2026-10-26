@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0023",
+  "as_of": "2026-10-20",
+  "claims": [
+    {
+      "id": "WSB-0023-CLM-01",
+      "kind": "reported",
+      "statement": "Reuters reported on 20 October that oil markets weighed renewed Middle Eastern navigation risks against an earlier Russia-related US energy waiver. The latter was issued on October 16 and should not be counted as a new October 20 decision.",
+      "observed_at": "2026-10-20",
+      "event_date": "2026-10-20",
+      "entity_ids": [
+        "ENT-000063"
+      ],
+      "source_ids": [
+        "WSB-0023-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

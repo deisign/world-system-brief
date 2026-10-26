@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0027",
+  "as_of": "2026-10-24",
+  "claims": [
+    {
+      "id": "WSB-0027-CLM-01",
+      "kind": "reported",
+      "statement": "On October 24 Houthis claimed targeting Saudi oil installations and the East-West pipeline; Saudi-led forces reported missile interceptions. Saudi authorities had not confirmed damage to the named energy sites. Claims of targeting do not prove reduced pipeline throughput.",
+      "observed_at": "2026-10-24",
+      "event_date": "2026-10-24",
+      "entity_ids": [
+        "ENT-000067"
+      ],
+      "source_ids": [
+        "WSB-0027-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "issue_id": "WSB-0028",
+  "as_of": "2026-10-25",
+  "records": [
+    {
+      "id": "WSB-0028-SRC-01",
+      "source": "Reuters, 25 Oct — Sri Lanka seafarer rescue",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/world/asia-pacific/sri-lanka-rescues-40-iranian-sailors-spokesman-says-2026-10-25/",
+      "publication_date": "2026-10-25",
+      "claim": "Sri Lanka said on October 25 that 40 Iranian sailors from 19 ships had been rescued and repatriated after medical emergencies. Officials did not establish a change in sanctions, shipping access or trade volume from the rescue.",
+      "observation": "Dated reporting; underlying event date distinguished in claim.",
+      "assessment": "EVIDENCE UPDATE / NO UNSUPPORTED SYSTEM DELTA",
+      "supports": [
+        "iranian-seafarer-rescue-sri-lanka"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0028-SRC-02",
+      "source": "Prior canonical World System Brief",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0027/state.json",
+      "publication_date": "2026-10-24",
+      "claim": "Starting state; not new primary evidence.",
+      "observation": "Inheritance only.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance",
+        "gulf-shipping-risk-premium",
+        "saudi-crude-export-recovery",
+        "tsmc-rare-earth-equipment-substitution",
+        "india-hpcl-delivered-crude-contracts",
+        "saudi-energy-attack-claims"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

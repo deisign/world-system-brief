@@ -1,0 +1,48 @@
+{
+  "issue_id": "WSB-0026",
+  "as_of": "2026-10-23",
+  "records": [
+    {
+      "id": "WSB-0026-SRC-01",
+      "source": "Reuters, 23 Oct — HPCL delivered oil purchases",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/business/energy/freight-discounts-prompt-indias-hpcl-buy-oil-delivered-basis-2026-10-23/",
+      "publication_date": "2026-10-23",
+      "claim": "HPCL reported increasing its purchases of Middle Eastern crude on a delivered-cost basis, reflecting higher and less predictable freight costs. Supplier discounts on stranded cargoes help offset freight; the shift does not verify full market adaptation.",
+      "observation": "Dated reporting; underlying event date distinguished in claim.",
+      "assessment": "EVIDENCE UPDATE / NO UNSUPPORTED SYSTEM DELTA",
+      "supports": [
+        "india-hpcl-delivered-crude-contracts"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0026-SRC-02",
+      "source": "Prior canonical World System Brief",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0025/state.json",
+      "publication_date": "2026-10-22",
+      "claim": "Starting state; not new primary evidence.",
+      "observation": "Inheritance only.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance",
+        "gulf-shipping-risk-premium",
+        "saudi-crude-export-recovery",
+        "tsmc-rare-earth-equipment-substitution"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

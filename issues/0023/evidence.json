@@ -1,0 +1,45 @@
+{
+  "issue_id": "WSB-0023",
+  "as_of": "2026-10-20",
+  "records": [
+    {
+      "id": "WSB-0023-SRC-01",
+      "source": "Reuters / MarketScreener",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://uk.marketscreener.com/news/oil-eases-as-markets-assess-potential-waiver-on-russian-energy-middle-east-supply-risks-ce785cdbde88f42c",
+      "publication_date": "2026-10-20",
+      "claim": "Reuters reported on 20 October that oil markets weighed renewed Middle Eastern navigation risks against an earlier Russia-related US energy waiver. The latter was issued on October 16 and should not be counted as a new October 20 decision.",
+      "observation": "Dated reporting; underlying event date distinguished in claim.",
+      "assessment": "EVIDENCE UPDATE / NO UNSUPPORTED SYSTEM DELTA",
+      "supports": [
+        "gulf-shipping-risk-premium"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0023-SRC-02",
+      "source": "Prior canonical World System Brief",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0022/state.json",
+      "publication_date": "2026-10-19",
+      "claim": "Starting state; not new primary evidence.",
+      "observation": "Inheritance only.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
