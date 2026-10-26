@@ -1,29 +1,29 @@
 # WORLD SYSTEM BRIEF
-## Issue 0024 · 2026-10-21
-### READ · Daily edition
+## Випуск 0024 · 2026-10-21
+### READ · Щоденне видання
 
 **ПІДТВЕРДЖЕНІ НОВІ СИСТЕМНІ ЗМІНИ: 0**
 
-# САУДІВСЬКИЙ ЕКСПОРТ НАФТИ АДАПТУЄТЬСЯ
+# Саудівський нафтовий експорт адаптується до обмежень
 
-**Опис джерела (англійською):** Saudi Arabia's August crude exports rose 7.9% month on month to 4.451 million barrels per day, data reported on October 21 showed. Use of east and west coastal terminals is a partial adaptation. The statistical period is August, not a newly commissioned October export route.
+21 жовтня Reuters навело дані JODI: у серпні експорт сирої нафти Саудівської Аравії зріс на 7,9% до 4,451 млн барелів на добу. Використання східних і західних терміналів підтримує часткову адаптацію. Однак статистичний період — серпень: ці цифри не означають введення нового маршруту в жовтні.
 
 ## SYSTEM LEDGER
 
-**Потік:** Crude exports.
+**Потік:** Експорт сирої нафти.
 
-**Вузьке місце:** Export-route concentration.
+**Вузьке місце:** Концентрація маршрутів вивезення.
 
-**Горизонт заміщення:** Не встановлено.
+**Горизонт заміщення:** Не встановлено цим повідомленням.
 
-**Leverage:** Не виміряно.
+**Важелі впливу:** Окрему зміну не виміряно.
 
-**Розподіл ренти:** Не встановлено.
+**Розподіл ренти:** Не встановлено кількісно.
 
-**Адаптація:** Measured export recovery with already existing terminals.
+**Адаптація:** Використання наявних терміналів двох узбереж; дані стосуються серпня.
 
-## ДЖЕРЕЛА
+## ДЖЕРЕЛА І МЕЖІ ВИСНОВКІВ
 
-Reuters, 21 Oct — JODI crude export figures: https://www.reuters.com/business/energy/saudi-crude-oil-exports-hit-five-month-high-august-data-shows-2026-10-21/
+2026-10-21 · Reuters: https://www.reuters.com/business/energy/saudi-crude-oil-exports-hit-five-month-high-august-data-shows-2026-10-21/
 
-Дата публікації не доводить непідтвердженої дати запровадження чи фізичної потужності.
+Дату публікації відокремлено від дати події або статистичного періоду. Заява, повідомлення чи нове вимірювання не дорівнюють підтвердженому системному переходу.
