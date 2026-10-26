@@ -1,29 +1,29 @@
 # WORLD SYSTEM BRIEF
-## Issue 0026 · 2026-10-23
-### READ · Daily edition
+## Випуск 0026 · 2026-10-23
+### READ · Щоденне видання
 
 **ПІДТВЕРДЖЕНІ НОВІ СИСТЕМНІ ЗМІНИ: 0**
 
-# РИЗИК ФРАХТУ ПЕРЕХОДИТЬ У КОНТРАКТИ
+# Ризик фрахту переходить у нафтові контракти
 
-**Опис джерела (англійською):** HPCL reported increasing its purchases of Middle Eastern crude on a delivered-cost basis, reflecting higher and less predictable freight costs. Supplier discounts on stranded cargoes help offset freight; the shift does not verify full market adaptation.
+23 жовтня Reuters повідомило, що індійська HPCL частіше купує близькосхідну нафту на умовах доставленої вартості через подорожчання та невизначеність фрахту. Знижки на вантажі, що застрягли через логістичні обмеження, частково компенсують транспортні витрати. Зміна контрактних умов не свідчить про повне відновлення логістики.
 
 ## SYSTEM LEDGER
 
-**Потік:** Crude and freight finance.
+**Потік:** Нафта, фрахт і контрактні витрати.
 
-**Вузьке місце:** Freight risk and availability.
+**Вузьке місце:** Вартість та доступність перевезень.
 
-**Горизонт заміщення:** Не встановлено.
+**Горизонт заміщення:** Не встановлено цим повідомленням.
 
-**Leverage:** Не виміряно.
+**Важелі впливу:** Окрему зміну не виміряно.
 
-**Розподіл ренти:** Не встановлено.
+**Розподіл ренти:** Не встановлено кількісно.
 
-**Адаптація:** Delivered-cost contracts and seller discounts.
+**Адаптація:** Закупівлі на умовах доставки і знижки продавців.
 
-## ДЖЕРЕЛА
+## ДЖЕРЕЛА І МЕЖІ ВИСНОВКІВ
 
-Reuters, 23 Oct — HPCL delivered oil purchases: https://www.reuters.com/business/energy/freight-discounts-prompt-indias-hpcl-buy-oil-delivered-basis-2026-10-23/
+2026-10-23 · Reuters: https://www.reuters.com/business/energy/freight-discounts-prompt-indias-hpcl-buy-oil-delivered-basis-2026-10-23/
 
-Дата публікації не доводить непідтвердженої дати запровадження чи фізичної потужності.
+Дату публікації відокремлено від дати події або статистичного періоду. Заява, повідомлення чи нове вимірювання не дорівнюють підтвердженому системному переходу.
