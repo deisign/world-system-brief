@@ -1,29 +1,29 @@
 # WORLD SYSTEM BRIEF
-## Issue 0028 · 2026-10-25
-### READ · Daily edition
+## Випуск 0028 · 2026-10-25
+### READ · Щоденне видання
 
 **ПІДТВЕРДЖЕНІ НОВІ СИСТЕМНІ ЗМІНИ: 0**
 
-# ОБМЕЖЕННЯ СУДНОПЛАВСТВА СТОСУЮТЬСЯ Й ЕКІПАЖІВ
+# Обмеження судноплавства торкаються екіпажів
 
-**Опис джерела (англійською):** Sri Lanka said on October 25 that 40 Iranian sailors from 19 ships had been rescued and repatriated after medical emergencies. Officials did not establish a change in sanctions, shipping access or trade volume from the rescue.
+25 жовтня Шрі-Ланка повідомила про порятунок та репатріацію 40 іранських моряків із 19 суден після повідомлень про невідкладні медичні випадки. Влада не підтвердила, що ця гуманітарна операція означає зміну правил санкцій, доступу до маршрутів або торгових потоків.
 
 ## SYSTEM LEDGER
 
-**Потік:** Shipping labour and maritime rescue.
+**Потік:** Морська праця та рятувальні операції.
 
-**Вузьке місце:** Crew welfare and access.
+**Вузьке місце:** Безпека і добробут екіпажів.
 
-**Горизонт заміщення:** Не встановлено.
+**Горизонт заміщення:** Не встановлено цим повідомленням.
 
-**Leverage:** Не виміряно.
+**Важелі впливу:** Окрему зміну не виміряно.
 
-**Розподіл ренти:** Не встановлено.
+**Розподіл ренти:** Не встановлено кількісно.
 
-**Адаптація:** Humanitarian evacuation, not trade-route restoration.
+**Адаптація:** Гуманітарна евакуація, а не відновлення торгового маршруту.
 
-## ДЖЕРЕЛА
+## ДЖЕРЕЛА І МЕЖІ ВИСНОВКІВ
 
-Reuters, 25 Oct — Sri Lanka seafarer rescue: https://www.reuters.com/world/asia-pacific/sri-lanka-rescues-40-iranian-sailors-spokesman-says-2026-10-25/
+2026-10-25 · Reuters: https://www.reuters.com/world/asia-pacific/sri-lanka-rescues-40-iranian-sailors-spokesman-says-2026-10-25/
 
-Дата публікації не доводить непідтвердженої дати запровадження чи фізичної потужності.
+Дату публікації відокремлено від дати події або статистичного періоду. Заява, повідомлення чи нове вимірювання не дорівнюють підтвердженому системному переходу.
