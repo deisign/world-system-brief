@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0034",
+  "as_of": "2026-10-31",
+  "claims": [
+    {
+      "id": "WSB-0034-CLM-01",
+      "kind": "reported",
+      "statement": "The October 30 Reuters account of Iranian claims that four tankers had burned in Hormuz remained unverified. The October 31 issue carries this unresolved risk forward but does not treat October 30 reporting as a fresh October 31 incident, nor duplicate the independently reported UKMTO vessel incidents.",
+      "observed_at": "2026-10-31",
+      "event_date": "2026-10-30",
+      "entity_ids": [
+        "ENT-000074"
+      ],
+      "source_ids": [
+        "WSB-0034-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

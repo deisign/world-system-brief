@@ -1,0 +1,60 @@
+{
+  "issue_id": "WSB-0038",
+  "as_of": "2026-11-04",
+  "records": [
+    {
+      "id": "WSB-0038-SRC-01",
+      "source": "Reuters / dated external report — 2026-11-04",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/world/middle-east/irans-irgc-says-four-tankers-ablaze-after-hitting-mines-near-strait-hormuz-2026-11-04/",
+      "publication_date": "2026-11-04",
+      "claim": "On November 4 Iran's Revolutionary Guards stated that four oil tankers had been destroyed by mines on a restricted route south of Hormuz and that two other vessels had been seized. Reuters reported the assertion; independent verification of ship identities, mine strikes, losses and seizures was not established by this source. No physical capacity loss is classified as confirmed.",
+      "observation": "Reported on 2026-11-04; underlying event/effective date: 2026-11-04; attribution and verification bounds explicit.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED CONFIRMED DELTA",
+      "supports": [
+        "irgc-hormuz-mine-seizure-claims"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0038-SRC-02",
+      "source": "Previous WSB canonical state",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0037/state.json",
+      "publication_date": "2026-11-03",
+      "claim": "Inherited state only, not fresh evidence.",
+      "observation": "Baseline continuity.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance",
+        "gulf-shipping-risk-premium",
+        "saudi-crude-export-recovery",
+        "tsmc-rare-earth-equipment-substitution",
+        "india-hpcl-delivered-crude-contracts",
+        "saudi-energy-attack-claims",
+        "iranian-seafarer-rescue-sri-lanka",
+        "indonesia-singapore-gas-supply-adjustment",
+        "hormuz-market-security-premium",
+        "world-bank-commodity-shock-outlook",
+        "hormuz-vessel-fire-claim-separation",
+        "hormuz-limpet-mine-ship-attack",
+        "hormuz-security-claims-weekend-persistence",
+        "opec-december-2026-production-targets",
+        "adnoc-energy-buffer-depletion",
+        "aramco-hormuz-pipeline-expansion-plans"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

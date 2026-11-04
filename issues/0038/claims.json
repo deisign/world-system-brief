@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0038",
+  "as_of": "2026-11-04",
+  "claims": [
+    {
+      "id": "WSB-0038-CLM-01",
+      "kind": "reported",
+      "statement": "On November 4 Iran's Revolutionary Guards stated that four oil tankers had been destroyed by mines on a restricted route south of Hormuz and that two other vessels had been seized. Reuters reported the assertion; independent verification of ship identities, mine strikes, losses and seizures was not established by this source. No physical capacity loss is classified as confirmed.",
+      "observed_at": "2026-11-04",
+      "event_date": "2026-11-04",
+      "entity_ids": [
+        "ENT-000078"
+      ],
+      "source_ids": [
+        "WSB-0038-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

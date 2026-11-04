@@ -1,0 +1,52 @@
+{
+  "issue_id": "WSB-0030",
+  "as_of": "2026-10-27",
+  "records": [
+    {
+      "id": "WSB-0030-SRC-01",
+      "source": "Reuters / dated external report — 2026-10-27",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/business/energy/oil-eases-middle-east-diplomacy-hopes-saudi-attacks-keep-supply-worries-alive-2026-10-27/",
+      "publication_date": "2026-10-27",
+      "claim": "Reuters reported on October 27 that Brent settled at $113.88 per barrel after a $1.93 decline, as diplomatic signals eased immediate expectations of supply loss but threats to Strait of Hormuz shipping persisted. The reported Houthi strike on Ras Tanura was a claim, not independent evidence of refinery damage.",
+      "observation": "Reported on 2026-10-27; underlying event/effective date: 2026-10-27; attribution and verification bounds explicit.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED CONFIRMED DELTA",
+      "supports": [
+        "hormuz-market-security-premium"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0030-SRC-02",
+      "source": "Previous WSB canonical state",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0029/state.json",
+      "publication_date": "2026-10-26",
+      "claim": "Inherited state only, not fresh evidence.",
+      "observation": "Baseline continuity.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance",
+        "gulf-shipping-risk-premium",
+        "saudi-crude-export-recovery",
+        "tsmc-rare-earth-equipment-substitution",
+        "india-hpcl-delivered-crude-contracts",
+        "saudi-energy-attack-claims",
+        "iranian-seafarer-rescue-sri-lanka",
+        "indonesia-singapore-gas-supply-adjustment"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

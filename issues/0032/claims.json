@@ -1,0 +1,22 @@
+{
+  "issue_id": "WSB-0032",
+  "as_of": "2026-10-29",
+  "claims": [
+    {
+      "id": "WSB-0032-CLM-01",
+      "kind": "reported",
+      "statement": "On October 29 UKMTO recorded a third-party observation of one vessel on fire north of Khasab, Oman. Iran's IRGC separately claimed that three tankers struck mines; independent reporting did not confirm vessel identities, causes, or that the accounts described the same incident. Observed fire and Iranian claims remain distinct evidence classes.",
+      "observed_at": "2026-10-29",
+      "event_date": "2026-10-29",
+      "entity_ids": [
+        "ENT-000072"
+      ],
+      "source_ids": [
+        "WSB-0032-SRC-01",
+        "WSB-0032-SRC-03"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}
