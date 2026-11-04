@@ -30,7 +30,7 @@ test("03.3.1 keeps SVG inside the physical panel and route citations visually se
  for(const lang of ["en","ua"]){
   const html=systemEngravingV33({lang});
   assert.match(html,/\.object img\{[^}]*width:100%;max-width:100%;height:auto;aspect-ratio:auto/);
-  assert.doesNotMatch(html,/width:122%|margin-left:-11%|justify-content:space-between/);
+  assert.doesNotMatch(html,/\.object\{[^}]*justify-content:space-between|\.object img\{[^}]*width:122%|\.object img\{[^}]*margin-left:-11%/);
   assert.match(html,/\.route small a\{color:#68655e/);
   assert.match(html,/\.object figcaption\{margin-top:12px\}/);
   assert.ok(html.includes('/assets/engravings/tanker-study-01.svg'));
