@@ -1,0 +1,36 @@
+import { systemMechanismPage, HORMUZ } from "./system-mechanism.js";
+
+const esc = x => String(x ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const ID = "tanker-study-01";
+
+export function systemEngravingSpread({lang="en",model=HORMUZ,engravingId=ID}={}){
+ if(!["en","ua"].includes(lang))throw new Error("Unsupported language");
+ if(!/^[a-z0-9][a-z0-9-]{1,70}$/.test(engravingId))throw new Error("Invalid engraving asset");
+ const mechanism = systemMechanismPage({lang,model});
+ const graph = mechanism.match(/<svg\b[\s\S]*?<\/svg>/)?.[0];
+ if(!graph)throw new Error("Mechanism diagram missing");
+ const ua=lang==="ua";
+ const L=ua?{
+ title:"Ормуз: вузьке місце та обхід",lead:"Експорт нафти залежить не лише від видобутку. Морський маршрут і трубопроводи утворюють різні способи доставки — і різні вразливості.",
+ physical:"01 / ФІЗИЧНИЙ ОБ’ЄКТ",mechanism:"02 / СИСТЕМНИЙ МЕХАНІЗМ",
+ physicalCaption:"Процедурна гравюра умовного танкера на основі геометрії та штрихування Draw Beautiful, Profile 1.2. Це не конкретне судно й не географічна карта.",
+ mechanismCaption:"Схема відокремлює морське вузьке місце Ормузу від альтернативних нафтових маршрутів East–West і Habshan–Fujairah. Стрілки не відображають пропускної здатності.",
+ claim:"ЧАСТКОВИЙ ОБХІД НЕ Є ПОВНИМ ЗАМІЩЕННЯМ",
+ meaning:"Існування трубопроводу змінює залежність від протоки. Але без підтверджених порівнянних потужностей не можна стверджувати, що він повністю компенсує морський потік.",
+ limits:"Межа доказовості: це редакційна схема, а не масштабна інфраструктурна карта; геометрія судна умовна; числових співвідношень маршрутів не наведено.",
+ sources:"ДЖЕРЕЛА ТА ПОХОДЖЕННЯ",iea:"МЕА — адаптація світових поставок нафти",engine:"Draw Beautiful — вихідний код рушія",plate:"ОКРЕМА ГРАВЮРА",back:"КАРТА ЗАЛЕЖНОСТЕЙ",nav:"РЕДАКЦІЙНИЙ АТЛАС",system:"СИСТЕМНА СХЕМА"
+ }:{
+ title:"Hormuz: chokepoint and bypass",lead:"Oil exports depend on more than production. Maritime and pipeline routes move the same commodity through different infrastructure and different vulnerabilities.",
+ physical:"01 / PHYSICAL OBJECT",mechanism:"02 / SYSTEM MECHANISM",
+ physicalCaption:"A schematic tanker engraved from geometry and procedural hatching with Draw Beautiful, Profile 1.2. Not a specific vessel or geographic map.",
+ mechanismCaption:"The diagram separates the Hormuz maritime chokepoint from the East–West and Habshan–Fujairah pipeline alternatives. Arrow widths do not represent capacity.",
+ claim:"PARTIAL BYPASS IS NOT FULL SUBSTITUTION",
+ meaning:"A pipeline changes the structure of dependency on the strait. Without verified comparable capacities, its existence alone does not demonstrate full replacement of maritime flow.",
+ limits:"Evidence boundary: an editorial mechanism, not a scaled infrastructure map; stylized tanker geometry; no quantitative route comparison.",
+ sources:"EVIDENCE AND PROVENANCE",iea:"IEA — adaptation of world oil supply",engine:"Draw Beautiful — original engine",plate:"STANDALONE ENGRAVING",back:"DEPENDENCY MAP",nav:"EDITORIAL ATLAS",system:"SYSTEM DIAGRAM"
+ };
+ const root="/"+lang,asset="/assets/engravings/"+engravingId+".svg";
+ return `<!doctype html><html lang="${lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>WSB · ${esc(L.title)}</title><meta name="description" content="${esc(L.lead)}"><style>
+ :root{--paper:#F3EBDD;--ink:#232523;--red:#A2362A;--blue:#46697A;--rule:#C8BEAC}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink)}a{color:var(--blue);text-underline-offset:4px}a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}main{width:min(1480px,100%);margin:auto;padding:24px clamp(16px,3vw,45px) 75px}.mast{border-top:9px solid var(--ink);border-bottom:2px solid var(--ink);padding:15px 0;display:flex;justify-content:space-between;gap:18px;align-items:baseline;font:900 clamp(25px,4vw,48px)/1 Arial,sans-serif;letter-spacing:-.05em}.mast span{font:700 10px/1.5 monospace;letter-spacing:.09em}.kicker{margin:28px 0 15px;color:var(--red);font:700 12px monospace;letter-spacing:.07em}h1{font:900 clamp(40px,7vw,93px)/.94 Arial,sans-serif;letter-spacing:-.058em;margin:0 0 22px;max-width:1130px}.intro{font:21px/1.48 Georgia,serif;max-width:870px}.toplinks{display:flex;flex-wrap:wrap;gap:22px;font:700 11px monospace;margin:25px 0 33px}.plates{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:0;border-top:5px solid var(--ink);border-bottom:3px solid var(--ink)}.plate{margin:0;padding:23px 18px 24px;min-width:0}.plate+.plate{border-left:2px solid var(--ink)}.plate h2{font:800 13px monospace;margin:0 0 20px;color:var(--red)}.plate img{width:100%;height:auto;display:block;aspect-ratio:1.45;object-fit:contain}.mechanism{width:100%;overflow-x:auto}.mechanism svg{display:block;width:100%;height:auto;min-width:500px}.plate figcaption{font:15px/1.45 Georgia,serif;margin-top:18px;max-width:610px}.thesis{display:grid;grid-template-columns:1fr 1fr;gap:30px;border-bottom:2px solid var(--ink);padding:27px 0 22px}.thesis h2{font:900 clamp(25px,3.3vw,45px)/1.03 Arial,sans-serif;letter-spacing:-.035em;color:var(--red);margin:0}.thesis p{font:19px/1.5 Georgia,serif;margin:0}.sources{margin-top:28px;max-width:1000px}.sources h2{font:700 12px monospace}.sources p{font:14px/1.6 Arial,sans-serif}.fine{border-top:1px solid var(--rule);padding-top:16px;font:12px/1.5 monospace;color:#5b584f}@media(max-width:1050px){.plates{grid-template-columns:1fr}.plate+.plate{border-left:0;border-top:2px solid var(--ink)}.plate img{max-width:830px;margin:auto}.thesis{grid-template-columns:1fr}.mechanism svg{min-width:0}}@media(max-width:580px){main{padding:16px 14px 55px}.mast{align-items:start;flex-direction:column}.plate{padding:18px 9px}.mechanism svg{min-width:500px}.intro{font-size:18px}h1{font-size:43px}.plate figcaption{font-size:14px}}@media print{.toplinks{display:none}.plates{break-inside:avoid}.mechanism svg{min-width:0}}
+ </style></head><body><main><header class="mast">WORLD SYSTEM BRIEF <span>${esc(L.nav)} / SYSTEM ENGRAVING 03</span></header><p class="kicker">SYSTEM LEDGER / PHYSICAL ENGRAVING / MECHANISM</p><h1>${esc(L.title)}</h1><p class="intro">${esc(L.lead)}</p><nav class="toplinks" aria-label="Editorial navigation"><a href="${root}/dependencies/">${esc(L.back)}</a><a href="${root}/explainers/hormuz/">${esc(L.system)}</a><a href="${root}/engravings/${engravingId}/">${esc(L.plate)}</a><a href="/${ua?"en":"ua"}/visualizations/chokepoint-bypass/">${ua?"EN":"UA"}</a></nav><div class="plates"><figure class="plate"><h2>${esc(L.physical)}</h2><img src="${asset}" alt="${esc(L.physicalCaption)}" width="900" height="620"><figcaption>${esc(L.physicalCaption)}</figcaption></figure><figure class="plate"><h2>${esc(L.mechanism)}</h2><div class="mechanism">${graph}</div><figcaption>${esc(L.mechanismCaption)}</figcaption></figure></div><section class="thesis"><h2>${esc(L.claim)}</h2><p>${esc(L.meaning)}</p></section><footer class="sources"><h2>${esc(L.sources)}</h2><p><a href="${esc(model.source)}">${esc(L.iea)}</a> · <a href="https://github.com/bumicodes/draw-beautiful">${esc(L.engine)}</a> · <a href="${root}/engravings/${engravingId}/">${esc(L.plate)}</a></p><p class="fine">${esc(L.limits)}</p></footer></main></body></html>`;
+}
