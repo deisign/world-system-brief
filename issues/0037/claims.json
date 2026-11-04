@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0037",
+  "as_of": "2026-11-03",
+  "claims": [
+    {
+      "id": "WSB-0037-CLM-01",
+      "kind": "reported",
+      "statement": "Reuters reported on November 3 that Aramco CEO Amin Nasser said the company was working to expand a crude pipeline bypassing the Strait of Hormuz. The statement documents work on an expansion, not commissioned capacity or a proven ability to replace all maritime transit.",
+      "observed_at": "2026-11-03",
+      "event_date": "2026-11-03",
+      "entity_ids": [
+        "ENT-000077"
+      ],
+      "source_ids": [
+        "WSB-0037-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

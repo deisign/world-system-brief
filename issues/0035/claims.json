@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0035",
+  "as_of": "2026-11-01",
+  "claims": [
+    {
+      "id": "WSB-0035-CLM-01",
+      "kind": "reported",
+      "statement": "On November 1 seven OPEC+ producers decided to leave their December output targets unchanged. Reuters reported that export disruptions kept several Gulf producers below targets. An unchanged target is a policy continuity decision, not proof of rising physical supply; the 2027 capacity review remains pending.",
+      "observed_at": "2026-11-01",
+      "event_date": "2026-11-01",
+      "entity_ids": [
+        "ENT-000075"
+      ],
+      "source_ids": [
+        "WSB-0035-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

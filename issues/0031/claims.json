@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0031",
+  "as_of": "2026-10-28",
+  "claims": [
+    {
+      "id": "WSB-0031-CLM-01",
+      "kind": "reported",
+      "statement": "In its October 28 Commodity Markets Outlook, the World Bank forecast a 23% increase in global commodity prices in 2026 and projected a 5.2% decline in global oil supply. These are model-based annual forecasts, not verified physical losses incurred on October 28.",
+      "observed_at": "2026-10-28",
+      "event_date": "2026-10-28",
+      "entity_ids": [
+        "ENT-000071"
+      ],
+      "source_ids": [
+        "WSB-0031-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "issue_id": "WSB-0035",
+  "as_of": "2026-11-01",
+  "records": [
+    {
+      "id": "WSB-0035-SRC-01",
+      "source": "Reuters / dated external report — 2026-11-01",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.marketscreener.com/news/opec-keeps-december-oil-output-targets-steady-ahead-of-tougher-call-for-2027-ce785fd8dd88f424",
+      "publication_date": "2026-11-01",
+      "claim": "On November 1 seven OPEC+ producers decided to leave their December output targets unchanged. Reuters reported that export disruptions kept several Gulf producers below targets. An unchanged target is a policy continuity decision, not proof of rising physical supply; the 2027 capacity review remains pending.",
+      "observation": "Reported on 2026-11-01; underlying event/effective date: 2026-11-01; attribution and verification bounds explicit.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED CONFIRMED DELTA",
+      "supports": [
+        "opec-december-2026-production-targets"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0035-SRC-02",
+      "source": "Previous WSB canonical state",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0034/state.json",
+      "publication_date": "2026-10-31",
+      "claim": "Inherited state only, not fresh evidence.",
+      "observation": "Baseline continuity.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance",
+        "gulf-shipping-risk-premium",
+        "saudi-crude-export-recovery",
+        "tsmc-rare-earth-equipment-substitution",
+        "india-hpcl-delivered-crude-contracts",
+        "saudi-energy-attack-claims",
+        "iranian-seafarer-rescue-sri-lanka",
+        "indonesia-singapore-gas-supply-adjustment",
+        "hormuz-market-security-premium",
+        "world-bank-commodity-shock-outlook",
+        "hormuz-vessel-fire-claim-separation",
+        "hormuz-limpet-mine-ship-attack",
+        "hormuz-security-claims-weekend-persistence"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

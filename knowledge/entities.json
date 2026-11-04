@@ -621,6 +621,87 @@
         "en": "Indonesia–Singapore gas delivery adjustment",
         "ua": "Скорочення поставок газу Індонезія — Сінгапур"
       }
+    },
+    {
+      "id": "ENT-000070",
+      "slug": "hormuz-market-security-premium",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Hormuz navigation risk premium",
+        "ua": "Премія за ризик судноплавства в Ормузі"
+      }
+    },
+    {
+      "id": "ENT-000071",
+      "slug": "world-bank-commodity-shock-outlook",
+      "type": "system_dependency",
+      "labels": {
+        "en": "World Bank commodity shock outlook",
+        "ua": "Прогноз Світового банку щодо сировинних шоків"
+      }
+    },
+    {
+      "id": "ENT-000072",
+      "slug": "hormuz-vessel-fire-claim-separation",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Hormuz vessel fire and disputed mine claims",
+        "ua": "Пожежа судна в Ормузі та непідтверджені заяви про міни"
+      }
+    },
+    {
+      "id": "ENT-000073",
+      "slug": "hormuz-limpet-mine-ship-attack",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Limpet mine attack on Hormuz tanker",
+        "ua": "Атака магнітними мінами на танкер в Ормузі"
+      }
+    },
+    {
+      "id": "ENT-000074",
+      "slug": "hormuz-security-claims-weekend-persistence",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Unverified Hormuz mine-attack claims persist",
+        "ua": "Неперевірені повідомлення про міни в Ормузі зберігаються"
+      }
+    },
+    {
+      "id": "ENT-000075",
+      "slug": "opec-december-2026-production-targets",
+      "type": "system_dependency",
+      "labels": {
+        "en": "OPEC+ December production target decision",
+        "ua": "Рішення ОПЕК+ щодо видобутку в грудні"
+      }
+    },
+    {
+      "id": "ENT-000076",
+      "slug": "adnoc-energy-buffer-depletion",
+      "type": "system_dependency",
+      "labels": {
+        "en": "ADNOC assessment of depleted energy buffers",
+        "ua": "Оцінка ADNOC щодо виснаження енергетичних резервів"
+      }
+    },
+    {
+      "id": "ENT-000077",
+      "slug": "aramco-hormuz-pipeline-expansion-plans",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Aramco Hormuz bypass expansion plan",
+        "ua": "Плани Aramco розширити обхідний нафтопровід"
+      }
+    },
+    {
+      "id": "ENT-000078",
+      "slug": "irgc-hormuz-mine-seizure-claims",
+      "type": "system_dependency",
+      "labels": {
+        "en": "IRGC renewed tanker-mine and seizure claims",
+        "ua": "Нові заяви КВІР про міни та захоплення суден"
+      }
     }
   ]
 }

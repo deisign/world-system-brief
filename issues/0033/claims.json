@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0033",
+  "as_of": "2026-10-30",
+  "claims": [
+    {
+      "id": "WSB-0033-CLM-01",
+      "kind": "reported",
+      "statement": "Reuters reported October 30 that maritime sources described two limpet mines attached to a tanker, causing an engine-room fire and temporary loss of propulsion. UKMTO said the crew was safe and the vessel later continued; the incident took place October 29. The attacker was not identified.",
+      "observed_at": "2026-10-30",
+      "event_date": "2026-10-29",
+      "entity_ids": [
+        "ENT-000073"
+      ],
+      "source_ids": [
+        "WSB-0033-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}

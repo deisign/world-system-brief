@@ -1,0 +1,69 @@
+{
+  "issue_id": "WSB-0032",
+  "as_of": "2026-10-29",
+  "records": [
+    {
+      "id": "WSB-0032-SRC-01",
+      "source": "Reuters / dated external report — 2026-10-29",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.channelnewsasia.com/world/iran-strait-hormuz-tankers-fire-6506076",
+      "publication_date": "2026-10-29",
+      "claim": "On October 29 UKMTO recorded a third-party observation of one vessel on fire north of Khasab, Oman. Iran's IRGC separately claimed that three tankers struck mines; independent reporting did not confirm vessel identities, causes, or that the accounts described the same incident. Observed fire and Iranian claims remain distinct evidence classes.",
+      "observation": "Reported on 2026-10-29; underlying event/effective date: 2026-10-29; attribution and verification bounds explicit.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED CONFIRMED DELTA",
+      "supports": [
+        "hormuz-vessel-fire-claim-separation"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0032-SRC-02",
+      "source": "Previous WSB canonical state",
+      "source_type": "internal",
+      "role": "baseline",
+      "url": "https://github.com/deisign/world-system-brief/blob/main/issues/0031/state.json",
+      "publication_date": "2026-10-28",
+      "claim": "Inherited state only, not fresh evidence.",
+      "observation": "Baseline continuity.",
+      "assessment": "BASELINE",
+      "supports": [
+        "yandex-data-centre-network",
+        "us-perm-tech-suspensions",
+        "us-gulf-offshore-output",
+        "hormuz",
+        "shadow-fleet-shipping-services",
+        "iran-lpg-blockade-circumvention",
+        "china-ai-technology-export-regime",
+        "us-russia-graham-act-waiver",
+        "hormuz-reopening-negotiation",
+        "china-export-demand-imbalance",
+        "gulf-shipping-risk-premium",
+        "saudi-crude-export-recovery",
+        "tsmc-rare-earth-equipment-substitution",
+        "india-hpcl-delivered-crude-contracts",
+        "saudi-energy-attack-claims",
+        "iranian-seafarer-rescue-sri-lanka",
+        "indonesia-singapore-gas-supply-adjustment",
+        "hormuz-market-security-premium",
+        "world-bank-commodity-shock-outlook"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0032-SRC-03",
+      "source": "Independent maritime incident reconstruction",
+      "source_type": "specialist_media",
+      "role": "corroboration_with_limitations",
+      "url": "https://theredzone-newsletter.beehiiv.com/p/khasab-fire-hormuz-185-26",
+      "publication_date": "2026-10-29",
+      "claim": "UKMTO recorded a single observed fire; the cause and identity are not yet established.",
+      "observation": "This observation does not corroborate IRGC claims of three mine strikes.",
+      "assessment": "PARTIAL CORROBORATION",
+      "supports": [
+        "hormuz-vessel-fire-claim-separation"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

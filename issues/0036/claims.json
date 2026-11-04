@@ -1,0 +1,21 @@
+{
+  "issue_id": "WSB-0036",
+  "as_of": "2026-11-02",
+  "claims": [
+    {
+      "id": "WSB-0036-CLM-01",
+      "kind": "reported",
+      "statement": "On November 2 ADNOC chief Sultan Al Jaber said nearly one billion barrels had been drawn from global oil inventories since the Hormuz disruption and cited shipping and logistics as more than 30% of barrel cost, compared with about 5% before the war. These are attributed industry-executive estimates, not independently verified new inventory measurements.",
+      "observed_at": "2026-11-02",
+      "event_date": "2026-11-02",
+      "entity_ids": [
+        "ENT-000076"
+      ],
+      "source_ids": [
+        "WSB-0036-SRC-01"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}
