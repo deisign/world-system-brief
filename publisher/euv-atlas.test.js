@@ -17,6 +17,9 @@ test("EUV pilot renders EN/UA chain from evidence, without pretending an engravi
   assert.ok(html.indexOf("ZEISS SMT")<html.indexOf("ASML /"));
   assert.ok(html.includes(lang==="en"?"Critical optical input":"Критичний оптичний компонент"));
   assert.ok(!html.includes('class="rail"'));
+  assert.ok(html.includes('class="chain-edge critical"'));
+  assert.ok(html.includes('.chain-edge.critical .edge-arrow{border-top-color:var(--red)}'));
+  assert.ok(html.includes('.process-step:not(:last-of-type):before{content:""'));
   assert.ok(html.includes('href="/'+(lang==="en"?"ua":"en")+'/visualizations/euv-optics/"'));
   assert.ok(!html.includes('/assets/engravings/'));
   assert.ok(!html.includes('<img'));
