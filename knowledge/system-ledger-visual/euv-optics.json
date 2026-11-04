@@ -1,0 +1,119 @@
+{
+  "schema": "wsb-system-ledger-visual-v1",
+  "id": "euv-optics-bottleneck",
+  "as_of": "2026-11-04",
+  "status": "cross-domain-study",
+  "sources": [
+    {
+      "id": "ASML-20F-2024",
+      "url": "https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm",
+      "published": "2025",
+      "kind": "company_filing"
+    },
+    {
+      "id": "ASML-OPTICS",
+      "url": "https://www.asml.com/en/technology/lithography-principles/lenses-and-mirrors",
+      "published": null,
+      "kind": "company_technology_explainer"
+    },
+    {
+      "id": "ASML-EUV-PARTNERS",
+      "url": "https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab",
+      "published": "2022",
+      "kind": "company_explainer"
+    }
+  ],
+  "physical": {
+    "approved_engraving_id": null,
+    "title": {
+      "en": "EUV lithography optical assembly",
+      "ua": "Оптична система EUV-літографії"
+    },
+    "description": {
+      "en": "EUV scanners focus radiation using precisely positioned multilayer mirrors operating in vacuum; this study has no approved procedural engraving.",
+      "ua": "EUV-сканери спрямовують випромінювання за допомогою точно позиціонованих багатошарових дзеркал у вакуумі; для цього дослідження ще немає затвердженої процедурної гравюри."
+    },
+    "source_ids": [
+      "ASML-OPTICS"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "zeiss",
+      "role": "single_source_component",
+      "source_ids": [
+        "ASML-20F-2024",
+        "ASML-OPTICS"
+      ],
+      "labels": {
+        "en": "ZEISS SMT / precision EUV optics",
+        "ua": "ZEISS SMT / прецизійна EUV-оптика"
+      },
+      "detail": {
+        "en": "Exclusive critical optical subsystem supply to ASML",
+        "ua": "Ексклюзивне постачання критичних оптичних компонентів для ASML"
+      }
+    },
+    {
+      "id": "asml",
+      "role": "system_integration",
+      "source_ids": [
+        "ASML-20F-2024",
+        "ASML-EUV-PARTNERS"
+      ],
+      "labels": {
+        "en": "ASML / EUV scanner integration",
+        "ua": "ASML / інтеграція EUV-сканерів"
+      },
+      "detail": {
+        "en": "Scanner output is limited by capacity of critical optics supplier",
+        "ua": "Випуск сканерів обмежений потужностями постачальника критичної оптики"
+      }
+    },
+    {
+      "id": "fab",
+      "role": "downstream_use",
+      "source_ids": [
+        "ASML-EUV-PARTNERS"
+      ],
+      "labels": {
+        "en": "Chipmakers / advanced lithography",
+        "ua": "Виробники чипів / передова літографія"
+      },
+      "detail": {
+        "en": "EUV tools enable lithography steps at advanced manufacturing nodes",
+        "ua": "EUV-системи забезпечують етапи літографії на передових технологічних нормах"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "zeiss",
+      "to": "asml",
+      "kind": "critical_input",
+      "substitutability": "no_verified_equivalent_in_sources",
+      "source_ids": [
+        "ASML-20F-2024"
+      ]
+    },
+    {
+      "from": "asml",
+      "to": "fab",
+      "kind": "equipment_supply",
+      "substitutability": "specific_process_dependency_not_all_semiconductors",
+      "source_ids": [
+        "ASML-EUV-PARTNERS"
+      ]
+    }
+  ],
+  "assessment": {
+    "en": "The bottleneck is not merely factory location: it is specialized optics capacity upstream of scanner integration. No verified near-term equivalent source or substitution horizon is established by these references.",
+    "ua": "Вузьке місце — не лише географія фабрик, а й потужності виробника спеціалізованої оптики перед інтеграцією сканерів. Наведені джерела не встановлюють рівноцінного постачальника чи горизонту заміщення."
+  },
+  "qualifications": {
+    "capacity": "not_quantified",
+    "substitution_horizon": "not_established",
+    "rent_allocation": "not_quantified",
+    "event_delta": "structural_dependency_not_dated_daily_change"
+  }
+}
