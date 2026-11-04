@@ -22,6 +22,20 @@ Status: **candidate for cross-domain validation**, 2026-11-04. Based on WSB Syst
 - EN and UA labels/constraints are mandatory in structured data. Source-language titles can remain original as proper titles.
 - Preserve genre distinction: READ editorial narrative; SYSTEM analytical relationships; POSTER autonomous visual composition. Shared navigation, tokens and citation contracts do not force uniform layouts.
 
+## Relation grammars
+
+Choose the graph grammar from **edge semantics**, not from the last page's illustration.
+
+| Grammar | Topology | What the arrows mean | Pilot |
+| --- | --- | --- | --- |
+| `FLOW / BYPASS` | Parallel and alternative physical paths | Route options, distinct capacities and constraints. Never imply equivalence with equal strokes. | Hormuz 03.3.1 |
+| `CHAIN / BOTTLENECK` | Directed consecutive edges | Critical input → integration → downstream use; connectors must join distinct nodes. | EUV ZEISS SMT → ASML → advanced chipmaking |
+| `NETWORK / LEVERAGE` | Multiple intersecting edges | Source-bound multiplex dependencies and uneven control; no implied hierarchy from display order. | Future validation required |
+
+A route is not a supply-chain stage, and consecutive stages are not alternatives. In CHAIN every arrow must come from an explicit, sourced `edges[]` record and the display must preserve its `from → to` direction. EN and UA labels and source IDs are mandatory for every edge. Do not convert `single_source` to a claim of absolute technical impossibility to substitute without evidence.
+
+When a reviewed physical engraving is unavailable, the physical panel may use a **source-linked textual process sequence** with clear status metadata, not a counterfeit engraving or an oversized placeholder. The process sequence is explanatory, not a literal machine blueprint.
+
 ## Cross-domain pilot
 
 Semiconductor equipment is the negative-space test: an EUV tool contains a critical optical subsystem supplied by ZEISS SMT, but **no approved Draw Beautiful EUV tool engraving exists**. Therefore the pilot must show an explicitly labelled *physical-object pending* area with factual description, **not a simulated engraving**.
