@@ -1,0 +1,132 @@
+{
+  "id": "hormuz-bypass",
+  "schema": "wsb-system-ledger-visual-v1",
+  "as_of": "2026-11-04",
+  "status": "editorial-evidence-snapshot",
+  "source_registry": [
+    {
+      "id": "IEA-HORMUZ",
+      "url": "https://www.iea.org/about/oil-safety-and-emergency-response/strait-of-hormuz",
+      "publisher": "International Energy Agency",
+      "date": "2026-02",
+      "role": "dated_baseline"
+    },
+    {
+      "id": "REUTERS-ARAMCO-1103",
+      "url": "https://www.reuters.com/business/energy/aramco-posts-345-rise-third-quarter-profit-2026-11-03/",
+      "publisher": "Reuters",
+      "date": "2026-11-03",
+      "role": "reported_operational_context"
+    },
+    {
+      "id": "DRAW-BEAUTIFUL",
+      "url": "https://github.com/bumicodes/draw-beautiful",
+      "publisher": "bumicodes",
+      "date": null,
+      "role": "rendering_engine"
+    }
+  ],
+  "flow": "crude_oil_and_petroleum_products",
+  "routes": [
+    {
+      "id": "hormuz",
+      "kind": "maritime",
+      "source_ids": [
+        "IEA-HORMUZ"
+      ],
+      "labels": {
+        "en": "Strait of Hormuz",
+        "ua": "Ормузька протока"
+      },
+      "constraints": {
+        "en": "Shipping security, access and insurance",
+        "ua": "Безпека судноплавства, доступ і страхування"
+      },
+      "substitutability": "constrained"
+    },
+    {
+      "id": "east-west",
+      "kind": "pipeline",
+      "source_ids": [
+        "IEA-HORMUZ",
+        "REUTERS-ARAMCO-1103"
+      ],
+      "labels": {
+        "en": "East–West / Saudi Arabia",
+        "ua": "East–West / Саудівська Аравія"
+      },
+      "constraints": {
+        "en": "Operational availability, Yanbu terminal and onward Red Sea shipping",
+        "ua": "Готовність трубопроводу, термінал Янбу та подальше судноплавство Червоним морем"
+      },
+      "substitutability": "partial_conditional"
+    },
+    {
+      "id": "habshan-fujairah",
+      "kind": "pipeline",
+      "source_ids": [
+        "IEA-HORMUZ"
+      ],
+      "labels": {
+        "en": "Habshan–Fujairah / UAE",
+        "ua": "Хабшан — Фуджейра / ОАЕ"
+      },
+      "constraints": {
+        "en": "Available capacity after committed flows, Fujairah terminal and onward shipping",
+        "ua": "Вільна потужність після чинних поставок, термінал Фуджейра та подальше судноплавство"
+      },
+      "substitutability": "partial_conditional"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "hormuz-2025",
+      "source_ids": [
+        "IEA-HORMUZ"
+      ],
+      "value": 20,
+      "qualifier": "approximately",
+      "unit": "million_barrels_per_day",
+      "measurement": "historical_flow",
+      "observed_period": "2025",
+      "commodity": "crude_and_products",
+      "labels": {
+        "en": "Hormuz maritime transit",
+        "ua": "Морський транзит через Ормуз"
+      }
+    },
+    {
+      "id": "bypass-feb-2026",
+      "source_ids": [
+        "IEA-HORMUZ"
+      ],
+      "value_min": 3.5,
+      "value_max": 5.5,
+      "qualifier": "estimated_range",
+      "unit": "million_barrels_per_day",
+      "measurement": "available_pipeline_capacity",
+      "observed_period": "2026-02",
+      "commodity": "crude_only",
+      "labels": {
+        "en": "Available crude pipeline bypass",
+        "ua": "Доступна потужність обходу для сирої нафти"
+      }
+    }
+  ],
+  "qualifications": {
+    "comparison": "not_like_for_like",
+    "reason": "Different commodity coverage and reference periods; no direct replacement percentage.",
+    "substitution_horizon": "not_established",
+    "rent_distribution": "not_quantified",
+    "post_restart_capacity": "not_inferred_from_february_baseline"
+  },
+  "analysis": {
+    "en": "Alternative pipelines can redirect some exports, but dependencies migrate to inland infrastructure, receiving terminals and onward shipping. Full replacement is not demonstrated.",
+    "ua": "Альтернативні нафтопроводи можуть перенаправити частину експорту, але залежність переходить до наземної інфраструктури, терміналів і подальшого судноплавства. Повного заміщення не доведено."
+  },
+  "engraving": {
+    "id": "tanker-study-01",
+    "profile": "1.2",
+    "kind": "schematic_not_identified_vessel"
+  }
+}
