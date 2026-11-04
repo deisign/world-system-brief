@@ -1,0 +1,28 @@
+{
+  "engravings": [
+    {
+      "id": "tanker-study-01",
+      "review_status": "reviewed",
+      "engine_revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+      "model_source": "https://github.com/bumicodes/draw-beautiful",
+      "title": {
+        "en": "Tanker study",
+        "ua": "Дослідження танкера"
+      },
+      "caption": {
+        "en": "Schematic tanker engraved from a procedural physical model at a fixed light angle for World System Brief visual-system testing.",
+        "ua": "Схематичний танкер, гравірований із процедурної фізичної моделі за фіксованого освітлення для тестування візуальної системи World System Brief."
+      },
+      "alt": {
+        "en": "Procedural engraving of a tanker in three-quarter view with a bridge block and cargo deck",
+        "ua": "Процедурна гравюра танкера у три чверті з надбудовою та вантажною палубою"
+      },
+      "qa": {
+        "desktop": true,
+        "mobile": true,
+        "reduced_motion": true,
+        "closeup": true
+      }
+    }
+  ]
+}
