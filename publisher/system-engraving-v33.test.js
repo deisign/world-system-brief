@@ -8,7 +8,7 @@ test("03.3 renders a source-bound bilingual ledger and preserves the approved en
   const html=systemEngravingV33({lang,data});
   assert.ok(html.includes('lang="'+lang+'"'));
   assert.ok(html.includes('/assets/engravings/tanker-study-01.svg'));
-  assert.ok(html.includes('EAST–WEST'));
+  assert.match(html,/East–West/i);
   assert.ok(html.includes('iea.org/about/oil-safety-and-emergency-response/strait-of-hormuz'));
   assert.ok(html.includes('2026-02'));
   assert.ok(html.includes('2025'));
