@@ -25,3 +25,14 @@ test("03.3 refuses missing source, translation, invalid routes, inconsistent met
  const unknown=structuredClone(data);unknown.metrics[0].source_ids=["NO-SUCH-SOURCE"];assert.throws(()=>validateSystemVisualLedger(unknown));
  const incompatible=structuredClone(data);incompatible.metrics[1].commodity="crude_and_products";assert.throws(()=>validateSystemVisualLedger(incompatible));
 });
+
+test("03.3.1 keeps SVG inside the physical panel and route citations visually secondary",()=>{
+ for(const lang of ["en","ua"]){
+  const html=systemEngravingV33({lang});
+  assert.match(html,/\.object img\{[^}]*width:100%;max-width:100%;height:auto;aspect-ratio:auto/);
+  assert.doesNotMatch(html,/\.object\{[^}]*justify-content:space-between|\.object img\{[^}]*width:122%|\.object img\{[^}]*margin-left:-11%/);
+  assert.match(html,/\.route small a\{color:#68655e/);
+  assert.match(html,/\.object figcaption\{margin-top:12px\}/);
+  assert.ok(html.includes('/assets/engravings/tanker-study-01.svg'));
+ }
+});
