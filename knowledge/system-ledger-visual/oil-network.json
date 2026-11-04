@@ -1,0 +1,79 @@
+{
+  "id": "oil-resilience-network",
+  "schema": "wsb-network-selection-v1",
+  "as_of": "2026-10-08",
+  "case_type": "NETWORK_LEVERAGE",
+  "issue_range": [
+    "0009",
+    "0010",
+    "0011"
+  ],
+  "nodes": [
+    "hormuz",
+    "east-west-pipeline",
+    "gulf-oil-flow",
+    "refined-products-bottleneck",
+    "g7-emergency-stock-release",
+    "global-oil-balance",
+    "us-gulf-offshore-output"
+  ],
+  "edges": [
+    {
+      "issue": "0011",
+      "id": "REL-261008-03"
+    },
+    {
+      "issue": "0010",
+      "id": "REL-261007-01"
+    },
+    {
+      "issue": "0009",
+      "id": "REL-261006-01"
+    },
+    {
+      "issue": "0009",
+      "id": "REL-261006-02"
+    },
+    {
+      "issue": "0011",
+      "id": "REL-261008-02"
+    },
+    {
+      "issue": "0011",
+      "id": "REL-261008-01"
+    }
+  ],
+  "qualifications": {
+    "claim_level": "archived_reported_relations",
+    "system_effect": "interpreted_not_quantified",
+    "substitutability": "not_established_for_full_replacement",
+    "rent_distribution": "not_quantified",
+    "edges_are_alternatives": false
+  },
+  "analysis": {
+    "en": "The system has more than one stressor and more than one buffer. A Strait of Hormuz constraint and Saudi bypass infrastructure affect Gulf flows, while emergency stocks connect product bottlenecks to the wider oil balance. A separate offshore output constraint also reaches the global balance. This is a network of exposures and buffers, not a ranking of countries or measured control.",
+    "ua": "Система має не одне джерело тиску й не один буфер. Обмеження Ормузької протоки та саудівська обхідна інфраструктура впливають на потоки із Затоки, тоді як аварійні запаси пов’язують проблему нафтопродуктів із загальним нафтовим балансом. Окреме обмеження морського видобутку також впливає на глобальний баланс. Це мережа вразливостей і буферів, а не рейтинг країн чи виміряного контролю."
+  },
+  "labels": {
+    "en": {
+      "title": "Oil / a network of constraints and buffers",
+      "intro": "Three dated WSB issues show how maritime access, pipelines, production and inventories intersect. Each line is an archived, sourced relationship—not a newly verified event.",
+      "process": "01 / PHYSICAL SYSTEM",
+      "graph": "02 / NETWORK OF RELATIONS",
+      "meaning": "03 / LEVERAGE AND ADAPTATION",
+      "evidence": "04 / RELATION REGISTER",
+      "caveat": "Line positions, lengths and colors do not quantify volume, pricing power or geopolitical leverage. Evidence remains attached to each dated relation.",
+      "context": "Oil moves through maritime routes, pipeline infrastructure, refining and inventories. Buffering a disruption does not eliminate the underlying physical constraint."
+    },
+    "ua": {
+      "title": "Нафта / мережа обмежень і буферів",
+      "intro": "Три датовані випуски WSB показують перетин морського доступу, трубопроводів, видобутку та резервів. Кожна лінія — архівне відношення з джерелом, а не нова перевірена подія.",
+      "process": "01 / ФІЗИЧНА СИСТЕМА",
+      "graph": "02 / МЕРЕЖА ВІДНОШЕНЬ",
+      "meaning": "03 / ВПЛИВ ТА АДАПТАЦІЯ",
+      "evidence": "04 / РЕЄСТР ВІДНОШЕНЬ",
+      "caveat": "Розміщення, довжина й кольори ліній не вимірюють обсяги, ціновий вплив або геополітичні важелі. Докази прив’язані до кожного датованого відношення.",
+      "context": "Нафта рухається морськими шляхами й трубопроводами, проходить переробку та формує резерви. Пом’якшення збою не скасовує фізичного обмеження."
+    }
+  }
+}
