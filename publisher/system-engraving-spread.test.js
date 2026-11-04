@@ -13,7 +13,7 @@ test("spread connects the actual reviewed SVG and system diagram without substit
   assert.match(html,/Habshan|ХАБШАН/);
   assert.match(html,/widths do not represent capacity|не відображають пропускної здатності/);
   assert.match(html,new RegExp('lang="'+lang+'"'));
-  assert.match(html,/href="\/en\/visualizations\/chokepoint-bypass\/"|href="\/ua\/visualizations\/chokepoint-bypass\/");
+  assert.ok(html.includes(`href="/${lang==="en"?"ua":"en"}/visualizations/chokepoint-bypass/"`));
  }
 });
 test("spread rejects missing provenance and malformed engraving paths",()=>{
