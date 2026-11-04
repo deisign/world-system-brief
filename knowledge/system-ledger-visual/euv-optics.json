@@ -34,7 +34,32 @@
       "ua": "EUV-сканери спрямовують випромінювання за допомогою точно позиціонованих багатошарових дзеркал у вакуумі; для цього дослідження ще немає затвердженої процедурної гравюри."
     },
     "source_ids": [
-      "ASML-OPTICS"
+      "ASML-OPTICS",
+      "ASML-EUV-PARTNERS"
+    ],
+    "diagram_kind": "textual_process",
+    "stages": [
+      {
+        "id": "source",
+        "labels": {
+          "en": "EUV radiation",
+          "ua": "EUV-випромінювання"
+        }
+      },
+      {
+        "id": "mirrors",
+        "labels": {
+          "en": "Multilayer mirrors in vacuum",
+          "ua": "Багатошарові дзеркала у вакуумі"
+        }
+      },
+      {
+        "id": "pattern",
+        "labels": {
+          "en": "Pattern projected onto wafer",
+          "ua": "Проєкція рисунка на пластину"
+        }
+      }
     ]
   },
   "nodes": [
@@ -94,7 +119,11 @@
       "substitutability": "no_verified_equivalent_in_sources",
       "source_ids": [
         "ASML-20F-2024"
-      ]
+      ],
+      "labels": {
+        "en": "Critical optical input",
+        "ua": "Критичний оптичний компонент"
+      }
     },
     {
       "from": "asml",
@@ -103,7 +132,11 @@
       "substitutability": "specific_process_dependency_not_all_semiconductors",
       "source_ids": [
         "ASML-EUV-PARTNERS"
-      ]
+      ],
+      "labels": {
+        "en": "EUV equipment supplied for fabrication",
+        "ua": "Постачання EUV-обладнання для виробництва"
+      }
     }
   ],
   "assessment": {
