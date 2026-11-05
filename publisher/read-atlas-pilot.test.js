@@ -30,3 +30,15 @@ test("READ refuses unsupported issue and changed claim certainty without review"
  assert.throws(()=>readAtlasPilot({data:missing}));
  assert.throws(()=>readAtlasPilot({lang:"fr",data:d}));
 });
+
+test("READ uses editorial rather than poster-scale typography and does not duplicate full narrative",()=>{
+ const data=loadReadPilot();
+ for(const lang of ["en","ua"]){
+  const html=readAtlasPilot({lang,data});
+  assert.match(html,/h1\{font:850 clamp\(34px,4\.4vw,64px\)\/1\.055/);
+  assert.match(html,/@media\(max-width:600px\)\{h1\{font-size:clamp\(31px,8\.6vw,42px\)/);
+  assert.ok(html.includes(lang==="en"?"Reuters reported the IRGC tanker claims":"Reuters передало заяви КВІР"));
+  const narrative=lang==="en"?"On November 4 Iran":"4 листопада КВІР заявив";
+  assert.equal(html.slice(html.indexOf('<div class="read-intro">'),html.indexOf('<section class="register">')).split(narrative).length-1,1,"Full narrative appears once in the opening register");
+ }
+});
