@@ -33,3 +33,23 @@ test('missing Fontsource files fail closed',()=>{
  try{fs.mkdirSync(path.join(root,'dist'));fs.writeFileSync(path.join(root,'dist','index.html'),'<head></head>');assert.throws(()=>installFonts(path.join(root,'dist'),path.join(root,'node_modules')))}
  finally{fs.rmSync(root,{recursive:true,force:true})}
 });
+
+test('headless root redirect is allowed and remains navigable',()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'wsb-font-redirect-'));
+ try {
+  const dist=path.join(root,'dist');fs.mkdirSync(dist);fs.writeFileSync(path.join(dist,'index.html'),'<meta http-equiv="refresh" content="0;url=/en/">');fs.writeFileSync(path.join(dist,'other.html'),'<html><head></head></html>');
+  const mods=path.join(root,'node_modules');
+  for(const [pkg,weight] of fonts){
+   const d=path.join(mods,'@fontsource',pkg);fs.mkdirSync(path.join(d,'files'),{recursive:true});
+   let css='';
+   for(const s of ['latin','latin-ext','cyrillic','cyrillic-ext']){
+    const n=pkg+'-'+s+'-'+weight+'-normal.woff2';
+    fs.writeFileSync(path.join(d,'files',n),'test');
+    css+='@font-face {src:url(./files/'+n+') format("woff2");unicode-range:U+0000-FFFF;}\n';
+   }
+   fs.writeFileSync(path.join(d,weight+'.css'),css);fs.writeFileSync(path.join(d,'LICENSE'),'OFL');
+  }
+  assert.deepEqual(installFonts(dist,mods),{pages:1,copied:20});
+  assert.equal(fs.readFileSync(path.join(dist,'index.html'),'utf8'),'<meta http-equiv="refresh" content="0;url=/en/">');
+ }finally{fs.rmSync(root,{recursive:true,force:true})}
+});
