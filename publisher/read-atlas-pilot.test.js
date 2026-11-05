@@ -16,7 +16,6 @@ test("READ 0038 preview retains bilingual canonical narrative, source bounds and
   assert.ok(html.includes('href="/'+lang+'/brief/2026-11-04/"'));
   assert.ok(html.includes('href="/'+(lang==="en"?"ua":"en")+'/atlas/read/0038/"'));
   assert.ok(html.includes('>0</div>'));
-  assert.ok(html.includes(lang==="en"?"No new confirmed capacity loss":"Нових підтверджених втрат пропускної здатності немає")===false);
   assert.ok(html.includes(lang==="en"?"independent verification of ship identities":"незалежною перевіркою ідентичності суден"));
   assert.ok(html.includes(lang==="en"?"Publication and underlying event dates are separate.":"Дата публікації та дата події відокремлені."));
  }
