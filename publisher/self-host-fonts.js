@@ -29,7 +29,7 @@ export function installFonts(dist,modules='node_modules'){
  // Type rules apply to editorial genres; POSTER keeps its authored composition.
  css+='html[data-wsb-genre="read"] :is(body,.lead,.read-intro p,.boundary,.source-row p,dd,article p),html[data-wsb-genre="system"] :is(.lead,.node-body p,.route-copy p,.analysis p),html[data-wsb-genre="reference"] :is(body,article p,.entity-v),html[data-wsb-genre="home"] .lead{font-family:var(--wsb-body)!important}\n';
  css+='html[data-wsb-genre="read"] :is(h1,.mast,.delta,.ledger-id,article>h2),html[data-wsb-genre="system"] :is(h1,.mast,.delta,.ledger-id),html[data-wsb-genre="reference"] :is(h1,article>h1,article>h2,.brand,.trajectory h2),html[data-wsb-genre="home"] :is(.wordmark,.hero h1,h2,.stat){font-family:var(--wsb-head)!important;font-weight:800}\n';
- css+='html:not([data-wsb-genre="poster"]) :is(.nav,.sub,.meta,.kicker,.status,.register h2,.read-intro h2,dt,.source-meta,.source-row a,.foot,.atlas-register-heading,.source b,article>h3,.sources h2,.wsb-topnav){font-family:var(--wsb-data)!important}\n';
+ css+='html:not([data-wsb-genre="poster"]):not([data-wsb-genre="trial"]) :is(.nav,.sub,.meta,.kicker,.status,.register h2,.read-intro h2,dt,.source-meta,.source-row a,.foot,.atlas-register-heading,.source b,article>h3,.sources h2,.wsb-topnav){font-family:var(--wsb-data)!important}\n';
  css+='html[data-wsb-genre="system"] h1{font-size:clamp(36px,5.5vw,78px)!important;line-height:1.04!important;overflow-wrap:anywhere}\n';
  css+='html[data-wsb-genre="home"] .wordmark{font-size:clamp(38px,7vw,105px)!important;white-space:normal;overflow-wrap:anywhere}\n';
  fs.writeFileSync(path.join(folder,'wsb.css'),css);
@@ -37,13 +37,14 @@ export function installFonts(dist,modules='node_modules'){
  function genre(file){
   const rel=path.relative(dist,file).split(path.sep);
   const section=rel.length>1?rel[1]:'';
+  if(section==='atlas'&&rel[2]==='read'&&rel.includes('type'))return 'trial';
   if(section==='poster')return 'poster';
   if(section==='system'||section==='visualizations'||section==='dependencies')return 'system';
   if(section==='brief'||section==='atlas'&&rel[2]==='read')return 'read';
   if(rel.length===2&&rel[1]==='index.html')return 'home';
   return 'reference';
  }
- function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else if(e.isFile()&&p.endsWith('.html')){let html=fs.readFileSync(p,'utf8');if(!html.includes('</head>')){if(/<meta\s+http-equiv=["']refresh["']/i.test(html))continue;throw Error('Missing head '+p);}if(!/<html(?:\s|>)/i.test(html))throw Error('Missing html root '+p);const kind=genre(p);html=html.replace(/<html(\s|>)/i,'<html data-wsb-genre="'+kind+'"$1');if(!html.includes('href="/assets/fonts/wsb.css"'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/fonts/wsb.css"></head>');fs.writeFileSync(p,html);pages++;}}}
+ function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else if(e.isFile()&&p.endsWith('.html')){let html=fs.readFileSync(p,'utf8');if(!html.includes('</head>')){if(/<meta\s+http-equiv=["']refresh["']/i.test(html))continue;throw Error('Missing head '+p);}if(!/<html(?:\s|>)/i.test(html))throw Error('Missing html root '+p);const kind=genre(p);if(!/<html\s[^>]*data-wsb-genre=/i.test(html))html=html.replace(/<html(\s|>)/i,'<html data-wsb-genre="'+kind+'"$1');if(!html.includes('href="/assets/fonts/wsb.css"'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/fonts/wsb.css"></head>');fs.writeFileSync(p,html);pages++;}}}
  walk(dist);if(!pages)throw Error('No pages');return {pages,copied};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){const result=installFonts(path.resolve(process.argv[2]||'dist'));console.log('WSB fonts: '+result.copied+' WOFF2 files, '+result.pages+' pages');}
