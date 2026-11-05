@@ -64,3 +64,19 @@ test('public root opens the editorial homepage rather than bypassing it',()=>{
  const home=fs.readFileSync("dist/en/index.html","utf8");
  assert.match(home,/WORLD SYSTEM BRIEF/);
 });
+
+test('registered entities without state events are real, sourced pages, never broken claim links',()=>{
+ execFileSync(process.execPath,["publisher/build.js"],{encoding:"utf8"});
+ execFileSync(process.execPath,["publisher/build-claims.js"],{encoding:"utf8"});
+ for(const lang of ['en','ua']){
+  const file='dist/'+lang+'/entity/cheniere/index.html';
+  assert.ok(fs.existsSync(file),file);
+  const html=fs.readFileSync(file,'utf8');
+  assert.match(html,/CLM-260930-03/);
+  assert.match(html,/href="https:\/\/www\.reuters\.com\//);
+  assert.doesNotMatch(html,/class="entity-event"/);
+  const index=fs.readFileSync('dist/'+lang+'/entities/index.html','utf8');
+  assert.match(index,/id="registry-without-state"/);
+  assert.match(index,/\/entity\/cheniere\//);
+ }
+});
