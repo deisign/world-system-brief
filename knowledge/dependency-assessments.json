@@ -1,0 +1,118 @@
+{
+  "schema": "wsb-dependency-assessments-v1",
+  "records": [
+    {
+      "id": "DPA-0039-UK-CRITICAL-MINERALS",
+      "issue_id": "WSB-0039",
+      "date": "2026-11-05",
+      "entity_slug": "uk-critical-minerals-resilience",
+      "flow_type": "materials",
+      "classification": "knowledge_update",
+      "flow": {
+        "en": "Critical mineral inputs to defence platforms, semiconductor manufacturing, AI infrastructure and electrification.",
+        "ua": "Критичні мінерали для оборонних систем, виробництва напівпровідників, інфраструктури ШІ та електрифікації."
+      },
+      "dependency": {
+        "en": "Industrial capabilities rely on concentrated global processing and supply chains dominated by China.",
+        "ua": "Промислові можливості залежать від концентрованих світових переробних ланцюгів із домінуванням Китаю."
+      },
+      "bottleneck": {
+        "en": "Refining, qualification, financing and access to reliable processing capacity; new ore is not immediately equivalent to a qualified processor.",
+        "ua": "Перероблення, кваліфікація матеріалів, фінансування й доступ до надійних потужностей; нова руда не замінює відразу кваліфіковане підприємство."
+      },
+      "substitutability": {
+        "status": "assessed_horizon",
+        "min_years": 10,
+        "max_years": 15,
+        "scope": {
+          "en": "UK parliamentary committee estimate for the overall critical-minerals de-risking programme; not a per-mineral engineering lead time.",
+          "ua": "Оцінка парламентського комітету для всієї програми зниження мінеральної залежності; не строк запуску кожного окремого виробництва."
+        }
+      },
+      "leverage": {
+        "status": "institutional_assessment",
+        "text": {
+          "en": "Concentrated processing supply creates exposure to licensing and export restrictions; economic coercion is the committee's assessed risk, not a measured new use of power today.",
+          "ua": "Концентрація переробки створює залежність від ліцензій та експортних обмежень; економічний примус є оціненим ризиком, а не доведеним новим застосуванням впливу сьогодні."
+        }
+      },
+      "rent": {
+        "status": "unknown",
+        "text": {
+          "en": "No robust causal distribution of scarcity rents or profits was measured in this edition.",
+          "ua": "Надійного причинного виміру розподілу ренти дефіциту або прибутків у цьому випуску немає."
+        }
+      },
+      "adaptation": {
+        "status": "proposed",
+        "text": {
+          "en": "Allied buyers' clubs, domestic processing and recycling, long-term offtake and finance facilities were recommended, not proven to be operational.",
+          "ua": "Рекомендовано клуби закупівель союзників, внутрішню переробку й рециклінг, довгострокові контракти та фінансування, але їх роботу не підтверджено."
+        }
+      },
+      "claim_ids": [
+        "WSB-0039-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0039-SRC-01",
+        "WSB-0039-SRC-02"
+      ]
+    },
+    {
+      "id": "DPA-0039-MAERSK-FREIGHT",
+      "issue_id": "WSB-0039",
+      "date": "2026-11-05",
+      "entity_slug": "maersk-container-freight-pricing",
+      "flow_type": "goods",
+      "classification": "knowledge_update",
+      "flow": {
+        "en": "Containerised goods, including industrial cargo linked to AI infrastructure and electrification.",
+        "ua": "Контейнеризовані товари, зокрема промислові вантажі для інфраструктури ШІ та електрифікації."
+      },
+      "dependency": {
+        "en": "Shipping customers require vessel services, available routes and port-handling capacity.",
+        "ua": "Замовники перевезень залежать від судноплавних послуг, доступних маршрутів і пропускної спроможності портів."
+      },
+      "bottleneck": {
+        "en": "Port congestion and routing disruption are reported as contributors to freight-rate pressure.",
+        "ua": "Портові затори та зміни маршрутів названо серед причин тиску на фрахтові ставки."
+      },
+      "substitutability": {
+        "status": "unknown",
+        "min_years": null,
+        "max_years": null,
+        "scope": {
+          "en": "This report does not quantify how fast routes, port capacity or competing services can substitute.",
+          "ua": "Джерело не визначає, як швидко можна замінити маршрути, портові потужності чи послуги конкурентів."
+        }
+      },
+      "leverage": {
+        "status": "observed_price_signal",
+        "text": {
+          "en": "Maersk reported a 46% quarterly freight-rate increase with broadly flat annual Ocean volumes. Price signal does not identify exact market-wide leverage.",
+          "ua": "Maersk повідомила про зростання ставок на 46% за квартал за майже незмінних річних обсягів Ocean. Цей сигнал не вимірює точної ринкової сили всього сектору."
+        }
+      },
+      "rent": {
+        "status": "company_earnings_signal",
+        "text": {
+          "en": "Underlying 2026 EBITDA outlook increased to $14–14.5bn; company earnings guidance is not a causally decomposed estimate of scarcity rents.",
+          "ua": "Прогноз базового EBITDA на 2026 рік підвищено до 14–14,5 млрд доларів; прибуток компанії не є причинно розкладеним виміром ренти дефіциту."
+        }
+      },
+      "adaptation": {
+        "status": "observed_route_adjustment",
+        "text": {
+          "en": "Maersk said it was gradually returning services to the Suez Canal; no company-wide rate normalisation date was established.",
+          "ua": "Maersk повідомила про поступове повернення маршрутів через Суецький канал; терміну нормалізації ставок для всього бізнесу не встановлено."
+        }
+      },
+      "claim_ids": [
+        "WSB-0039-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0039-SRC-03"
+      ]
+    }
+  ]
+}
