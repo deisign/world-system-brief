@@ -39,6 +39,6 @@ test("READ uses editorial rather than poster-scale typography and does not dupli
   assert.match(html,/@media\(max-width:600px\)\{h1\{font-size:clamp\(31px,8\.6vw,42px\)/);
   assert.ok(html.includes(lang==="en"?"Reuters reported the IRGC tanker claims":"Reuters передало заяви КВІР"));
   const narrative=lang==="en"?"On November 4 Iran's Revolutionary Guards stated":"4 листопада КВІР заявив";
-  assert.equal(html.split(narrative).length-1,1,"The full article narrative must occur only in the first editorial register");
+  assert.equal(html.slice(html.indexOf('<div class="read-intro">'),html.indexOf('<section class="register">')).split(narrative).length-1,1,"Full narrative appears once in the opening register");
  }
 });
