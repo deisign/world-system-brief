@@ -30,11 +30,17 @@ Choose the graph grammar from **edge semantics**, not from the last page's illus
 | --- | --- | --- | --- |
 | `FLOW / BYPASS` | Parallel and alternative physical paths | Route options, distinct capacities and constraints. Never imply equivalence with equal strokes. | Hormuz 03.3.1 |
 | `CHAIN / BOTTLENECK` | Directed consecutive edges | Critical input → integration → downstream use; connectors must join distinct nodes. | EUV ZEISS SMT → ASML → advanced chipmaking |
-| `NETWORK / LEVERAGE` | Multiple intersecting edges | Source-bound multiplex dependencies and uneven control; no implied hierarchy from display order. | Future validation required |
+| `NETWORK / LEVERAGE` | Intersecting directed edges with shared nodes | Archived, sourced constraints, buffers and downstream consequences; no implied quantitative leverage. | WSB oil network / Issues 0009–0011 (candidate visual QA) |
 
 A route is not a supply-chain stage, and consecutive stages are not alternatives. In CHAIN every arrow must come from an explicit, sourced `edges[]` record and the display must preserve its `from → to` direction. EN and UA labels and source IDs are mandatory for every edge. Do not convert `single_source` to a claim of absolute technical impossibility to substitute without evidence.
 
 When a reviewed physical engraving is unavailable, the physical panel may use a **source-linked textual process sequence** with clear status metadata, not a counterfeit engraving or an oversized placeholder. The process sequence is explanatory, not a literal machine blueprint.
+
+## Third pilot: oil network
+
+The network case reuses **canonical** relations and evidence from issues WSB-0009 (2026-10-06), WSB-0010 (2026-10-07) and WSB-0011 (2026-10-08). It selects six sourced edges connecting seven registered entities: Hormuz constraint and East–West recovery support affect Gulf flows; downstream product bottlenecks are exposed and buffered by emergency stocks; oil balance is also constrained by offshore production disruption. The archived relationship is not newly independently verified by the visual component. Edge colors and direction reflect recorded predicates; node coordinates do not represent geography or measured leverage. Each relationship is accompanied by its issue/date and source IDs. No invented percentages, rent values, or substitutability horizons.
+
+The graph is the *top register*; the corresponding physical context, leverage interpretation, and evidence listing remain distinct editorial registers. On mobile the network SVG may pan independently, while the full list of textual relationships must remain responsive and readable without horizontal scrolling.
 
 ## Cross-domain pilot
 
