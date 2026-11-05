@@ -55,3 +55,12 @@ test('first editorial review renders on the original dated claim page in both la
   assert.match(page,/A developing Gulf of Mexico hurricane threatens US oil and gas production/);
  }
 });
+
+test('public root opens the editorial homepage rather than bypassing it',()=>{
+ execFileSync(process.execPath,["publisher/build.js"],{encoding:"utf8"});
+ const redirect=fs.readFileSync("dist/index.html","utf8");
+ assert.match(redirect,/content="0;url=\/en\/"/);
+ assert.doesNotMatch(redirect,/content="0;url=\/en\/brief\//);
+ const home=fs.readFileSync("dist/en/index.html","utf8");
+ assert.match(home,/WORLD SYSTEM BRIEF/);
+});
