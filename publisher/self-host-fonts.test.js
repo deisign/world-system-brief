@@ -9,6 +9,12 @@ test('exports 20 local WOFF2 files with subset coverage and injects CSS',()=>{
  try{
   const mods=path.join(root,'node_modules'),dist=path.join(root,'dist');fs.mkdirSync(dist);
   fs.writeFileSync(path.join(dist,'index.html'),'<html><head></head><body></body></html>');
+  for(const genre of ['read','system','poster','atlas','reference']){
+   const relative=genre==='read'?'en/brief/2026-11-04':genre==='system'?'ua/system/2026-11-04':genre==='poster'?'en/poster/2026-11-04':genre==='atlas'?'ua/atlas/read/0038/type/plex':'en/entities';
+   const dir=path.join(dist,relative);fs.mkdirSync(dir,{recursive:true});
+   fs.writeFileSync(path.join(dir,'index.html'),'<html lang="en"><head></head><body></body></html>');
+  }
+
   for(const [pkg,weight] of fonts){
    const dir=path.join(mods,'@fontsource',pkg);fs.mkdirSync(path.join(dir,'files'),{recursive:true});
    let css='';
@@ -19,13 +25,21 @@ test('exports 20 local WOFF2 files with subset coverage and injects CSS',()=>{
    }
    fs.writeFileSync(path.join(dir,weight+'.css'),css);fs.writeFileSync(path.join(dir,'LICENSE'),'OFL');
   }
-  assert.deepEqual(installFonts(dist,mods),{pages:1,copied:20});
+  assert.deepEqual(installFonts(dist,mods),{pages:6,copied:20});
   const css=fs.readFileSync(path.join(dist,'assets','fonts','wsb.css'),'utf8');
   assert.match(css,/Manrope/);assert.match(css,/IBM Plex Serif/);assert.match(css,/IBM Plex Mono/);
   assert.match(css,/cyrillic-800-normal\.woff2/);
+  for(const [relative,expected] of [['en/brief/2026-11-04','read'],['ua/system/2026-11-04','system'],['en/poster/2026-11-04','poster'],['ua/atlas/read/0038/type/plex','trial'],['en/entities','reference']]){
+   const html=fs.readFileSync(path.join(dist,relative,'index.html'),'utf8');
+   assert.match(html,new RegExp('data-wsb-genre="'+expected+'"'));
+  }
+  assert.match(css,/html\[data-wsb-genre="system"\] h1/);
+  assert.match(css,/html\[data-wsb-genre="home"\] \.wordmark/);
+  assert.doesNotMatch(css,/html\[data-wsb-genre="poster"\] h1/);
+
   assert.match(fs.readFileSync(path.join(dist,'index.html'),'utf8'),/href="\/assets\/fonts\/wsb.css"/);
   installFonts(dist,mods);
-  assert.equal((fs.readFileSync(path.join(dist,'index.html'),'utf8').match(/wsb\.css/g)||[]).length,1);
+  assert.equal((fs.readFileSync(path.join(dist,'index.html'),'utf8').match(/wsb\.css/g)||[]).length,1);assert.equal((fs.readFileSync(path.join(dist,'index.html'),'utf8').match(/data-wsb-genre=/g)||[]).length,1);
  }finally{fs.rmSync(root,{recursive:true,force:true})}
 });
 test('missing Fontsource files fail closed',()=>{
