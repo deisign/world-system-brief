@@ -11,6 +11,8 @@ test("POSTER preserves print dimensions and adapts below tablet width", () => {
   assert.match(html, /@media\(max-width:1200px\)/);
   assert.match(html, /@media print/);
   assert.match(html, /width:1400px;height:2000px/);
+  assert.match(html, /<h1 class="title">/);
+  assert.match(html, /\.title\{[^}]*margin:0/);
 });
 test("dependency map binds visible nodes to issue filtered relationships", () => {
  const html=dependencyMapPage({lang:"en",registry:{entities:[]},relations:[{issue:"WSB-TEST",from:"a",to:"b",type:"buffers",sources:[{name:"Example",url:"https://example.com"}]}]});
