@@ -37,3 +37,20 @@ WSB publishes **only a reviewed export of the real Draw Beautiful renderer**. No
 6. Keep source `scene.mjs`, engraving profile and upstream MIT attribution alongside the export when committing; avoid embedding executable JavaScript. Interactive experimental scenes remain separate from the static publication asset.
 
 **Distinct responsibilities:** Draw Beautiful produces physical engravings; `System Mechanism` produces analytical route and dependency diagrams. Neither is proof of a real tanker design or exact shipping corridor.
+
+## Editorial semantics required in every approved physical plate
+
+From 2026-11-05 the image manifest must also contain an `editorial` object as defined in [ENGRAVING-EDITORIAL-CONTRACT.md](ENGRAVING-EDITORIAL-CONTRACT.md). This is **separate from** visual QA and source-code provenance.
+
+The approved tanker is a generic physical carrier, **not** an identifiable vessel, a depiction of an actual Hormuz incident or direct proof of a shipping bottleneck. The manifest now declares:
+
+- `subject_class`: `generic_physical_carrier`;
+- bilingual `physical_role`, `mechanism`, `limitations`, `paired_thesis`;
+- `related_entities`: existing registered context entities, **not** objects that the plate claims to depict;
+- `composition_route`: internal bilingual link to the source-backed analytical study, using the literal `{lang}` placeholder.
+
+The publisher refuses to build if these required fields are missing, if the entity context is not registered, or if the composition link is an unsafe or malformed route. The release link-integrity checker then checks whether the rendered target actually exists.
+
+For future subject classes (e.g. a unique documented machine or facility), extend the editorial contract, tests and validator explicitly; do **not** silently relabel a generic engraving as an authenticated reconstruction.
+
+The independent analytical diagram supplies mechanism-level claims and source references; the physical plate supplies only the reviewed model's scoped material form.
