@@ -59,3 +59,9 @@ Primary evidence:
 - ASML 2024 20-F: https://www.sec.gov/Archives/edgar/data/937966/000093796625000009/asml-20241231.htm
 - ASML optics explainer: https://www.asml.com/en/technology/lithography-principles/lenses-and-mirrors
 - ASML EUV manufacturing partners: https://www.asml.com/en/company/stories/2022/making-euv-lab-to-fab
+
+## Shared component extraction — phase 1
+
+The shared publisher module `publisher/atlas-primitives.js` owns the editorial palette, safe literal escaping, canonical numbered section headings and HTTPS-only source link rendering. All three tested grammars (FLOW / BYPASS, CHAIN / BOTTLENECK, NETWORK / LEVERAGE) use these evidence/typographic primitives while retaining their independent, source-specific relationship renderers. This deliberately changes no page layouts or approved SVGs.
+
+Later phases can extract larger page registers and responsive shells only after desktop/mobile visual regression. Do not force a universal relation graph: FLOW, CHAIN and NETWORK have different semantics.

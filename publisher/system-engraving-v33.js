@@ -2,7 +2,7 @@ import {readFileSync} from "node:fs";
 import {fileURLToPath} from "node:url";
 
 const DEFAULT_LEDGER=fileURLToPath(new URL("../knowledge/system-ledger-visual/hormuz-bypass.json",import.meta.url));
-const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+import {atlasEscape as esc,atlasSourceAnchor,atlasSectionTitle,atlasPalette} from "./atlas-primitives.js";
 export function loadSystemVisualLedger(file=DEFAULT_LEDGER){return JSON.parse(readFileSync(file,"utf8"));}
 export function validateSystemVisualLedger(data){
  if(data?.schema!=="wsb-system-ledger-visual-v1"||!Array.isArray(data.routes)||data.routes.map(x=>x.id).join("|")!=="hormuz|east-west|habshan-fujairah")throw Error("Invalid visual ledger routes");
@@ -29,7 +29,7 @@ export function systemEngravingV33({lang="en",data=loadSystemVisualLedger()}={})
  if(!locale[lang])throw Error("Unsupported language");
  validateSystemVisualLedger(data);
  const L=locale[lang],E=esc,root="/"+lang,sources=new Map(data.source_registry.map(s=>[s.id,s]));
- const sourceLinks=ids=>ids.map(id=>`<a href="${E(sources.get(id).url)}" rel="noopener noreferrer">${E(id)}</a>`).join(" · ");
+ const sourceLinks=ids=>ids.map(id=>atlasSourceAnchor({url:sources.get(id).url,label:id})).join(" · ");
  const routeMarkup=data.routes.map((r,i)=>`<div class="route ${r.kind==="maritime"?"red":"blue"}"><div class="route-index">0${i+1}</div><div class="route-copy"><h3>${E(r.labels[lang])}</h3><p>${E(r.constraints[lang])}</p><div class="rail" aria-hidden="true"></div><small>${sourceLinks(r.source_ids)}</small></div></div>`).join("");
  const [a,b]=data.metrics;
  const metric=(m,title,number)=>`<article class="metric"><h3>${E(title)}</h3><strong>${E(number)}</strong><div class="measure-unit">${E(L.units)}</div><p>${E(L.time)}: ${E(m.observed_period)} · ${E(m.commodity==="crude_only"?(lang==="en"?"Crude oil":"Сира нафта"):(lang==="en"?"Crude and products":"Сира нафта й нафтопродукти"))}</p><p class="refs">${sourceLinks(m.source_ids)}</p></article>`;

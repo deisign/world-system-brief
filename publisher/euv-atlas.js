@@ -2,7 +2,7 @@ import {readFileSync} from "node:fs";
 import {fileURLToPath} from "node:url";
 
 const DATA=fileURLToPath(new URL("../knowledge/system-ledger-visual/euv-optics.json",import.meta.url));
-const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+import {atlasEscape as esc,atlasSourceAnchor,atlasSectionTitle,atlasPalette} from "./atlas-primitives.js";
 export const loadEuvStudy=()=>JSON.parse(readFileSync(DATA,"utf8"));
 export function validateEuvStudy(d){
  if(d?.schema!=="wsb-system-ledger-visual-v1"||d.id!=="euv-optics-bottleneck")throw Error("Unexpected study");
@@ -26,7 +26,7 @@ export function euvAtlasPage({lang="en",data=loadEuvStudy()}={}){
  if(!copy[lang])throw Error("Unsupported language");
  validateEuvStudy(data);
  const L=copy[lang],e=esc,sourceMap=new Map(data.sources.map(s=>[s.id,s]));
- const links=ids=>ids.map(id=>`<a href="${e(sourceMap.get(id).url)}" rel="noopener noreferrer">${e(id)}</a>`).join(" · ");
+ const links=ids=>ids.map(id=>atlasSourceAnchor({url:sourceMap.get(id).url,label:id})).join(" · ");
  const nodes=data.nodes.map((n,i)=>{
    const edge=data.edges[i];
    const connector=edge?`<div class="chain-edge${i===0?" critical":""}" role="group" aria-label="${e(edge.labels[lang])}"><div class="edge-spine" aria-hidden="true"><span class="edge-arrow"></span></div><div class="edge-copy"><strong>${e(edge.labels[lang])}</strong><span class="refs">${links(edge.source_ids)}</span></div></div>`:"";
