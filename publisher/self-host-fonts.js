@@ -31,7 +31,7 @@ export function installFonts(dist,modules='node_modules'){
  css+='.nav,.sub,.meta,.kicker,.status,.register h2,.read-intro h2,dt,.source-meta,.source-row a,.foot,.atlas-register-heading,.source b,article>h3,.sources h2{font-family:var(--wsb-data)!important}\n';
  fs.writeFileSync(path.join(folder,'wsb.css'),css);
  let pages=0;
- function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else if(e.isFile()&&p.endsWith('.html')){let html=fs.readFileSync(p,'utf8');if(!html.includes('</head>'))throw Error('Missing head '+p);if(!html.includes('href="/assets/fonts/wsb.css"'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/fonts/wsb.css"></head>');fs.writeFileSync(p,html);pages++;}}}
+ function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())walk(p);else if(e.isFile()&&p.endsWith('.html')){let html=fs.readFileSync(p,'utf8');if(!html.includes('</head>')){if(/<meta\s+http-equiv=["']refresh["']/i.test(html))continue;throw Error('Missing head '+p);}if(!html.includes('href="/assets/fonts/wsb.css"'))html=html.replace('</head>','<link rel="stylesheet" href="/assets/fonts/wsb.css"></head>');fs.writeFileSync(p,html);pages++;}}}
  walk(dist);if(!pages)throw Error('No pages');return {pages,copied};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){const result=installFonts(path.resolve(process.argv[2]||'dist'));console.log('WSB fonts: '+result.copied+' WOFF2 files, '+result.pages+' pages');}
