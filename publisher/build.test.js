@@ -27,3 +27,16 @@ test('publishes EUV source-backed structural profiles and their direct study lin
   assert.ok(!study.includes('/'+lang+'/structure/fab/'));
  }
 });
+
+test('publishes bilingual review workbenches from canonical claims and evidence',()=>{
+ execFileSync(process.execPath,["publisher/build-claims.js"],{encoding:"utf8"});
+ for(const lang of ['en','ua']){
+  const file='dist/'+lang+'/editorial/reviews/index.html';
+  assert.ok(fs.existsSync(file),file);
+  const html=fs.readFileSync(file,'utf8');
+  assert.match(html,/id="review-data"/);
+  assert.match(html,/href="\/(en|ua)\/claims\/"/);
+  assert.match(html,/knowledge\/claim-revisions\.json/);
+  assert.match(html,/id="search"/);
+ }
+});
