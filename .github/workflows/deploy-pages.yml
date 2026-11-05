@@ -27,6 +27,8 @@ jobs:
           if [ -f package-lock.json ]; then npm ci; else npm install --no-audit --no-fund; fi
       - name: Validate and build
         run: npm run build
+      - name: Install licensed local typography assets
+        run: node publisher/self-host-fonts.js dist
       - name: Configure GitHub Pages project paths
         run: node publisher/pages-prefix.js dist /world-system-brief
       - name: Upload site
