@@ -61,8 +61,9 @@ export function auditRelease(root,{base=baseDefault}={}){
   if(!/<meta\s+name\s*=\s*["']viewport["']/i.test(body))push('warning',file,'missing_viewport','');
   if(!/<title(?:\s|>)/i.test(body))push('warning',file,'missing_title','');
   if(!/<h1(?:\s|>)/i.test(body)&&!/^index\.html$/.test(rel))push('warning',file,'missing_h1','');
+  const markup=body.replace(/(<script\b[^>]*>)[\s\S]*?(<\/script\s*>)/gi,'$1$2');
   let t;htmlTags.lastIndex=0;
-  while((t=htmlTags.exec(body))!==null)for(const a of attrs(t[0]))for(const url of a.attr==='srcset'?pathsFromSrcset(a.raw):[a.raw])check(file,url);
+  while((t=htmlTags.exec(markup))!==null)for(const a of attrs(t[0]))for(const url of a.attr==='srcset'?pathsFromSrcset(a.raw):[a.raw])check(file,url);
   const refresh=body.match(/<meta\s+[^>]*http-equiv\s*=\s*["']refresh["'][^>]*>/i)?.[0];
   if(refresh){
    const v=refresh.match(/content\s*=\s*["'][^"']*?url\s*=\s*([^"']+)["']/i)?.[1];
