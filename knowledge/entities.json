@@ -720,6 +720,33 @@
         "en": "ASML",
         "ua": "ASML"
       }
+    },
+    {
+      "id": "ENT-000081",
+      "slug": "uk-critical-minerals-resilience",
+      "type": "system_dependency",
+      "labels": {
+        "en": "UK critical minerals supply-chain resilience",
+        "ua": "Стійкість ланцюгів критичних мінералів Великої Британії"
+      }
+    },
+    {
+      "id": "ENT-000082",
+      "slug": "maersk-container-freight-pricing",
+      "type": "market_signal",
+      "labels": {
+        "en": "Maersk container freight and congestion pricing",
+        "ua": "Контейнерні ставки Maersk та рента від портових заторів"
+      }
+    },
+    {
+      "id": "ENT-000083",
+      "slug": "gulf-qatar-ukmto-tanker-incident",
+      "type": "maritime_security_observation",
+      "labels": {
+        "en": "UKMTO-reported tanker incident north of Qatar",
+        "ua": "Інцидент із танкером на північ від Катару за повідомленням UKMTO"
+      }
     }
   ]
 }
