@@ -25,6 +25,12 @@ export const atlasSharedShellCSS=`
 .atlas-nav{display:flex;align-items:baseline;flex-wrap:wrap;gap:clamp(12px,2vw,24px)}
 .atlas-nav a{display:inline-block;min-height:24px}
 .atlas-register-heading{overflow-wrap:anywhere}
+.atlas-study-links{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(10px,2vw,22px);border-top:1px solid var(--rule,#B8AC9B);border-bottom:1px solid var(--rule,#B8AC9B);padding:13px 0;margin:0 0 28px;font:700 11px/1.5 "IBM Plex Mono",monospace}
+.atlas-study-links a{color:inherit;text-decoration:none}
+.atlas-study-links a:hover,.atlas-study-links a[aria-current="page"]{color:var(--red,#A2362A)}
+.atlas-study-links a[aria-current="page"]{border-bottom:2px solid currentColor}
+.atlas-study-links a:focus-visible{outline:3px solid var(--blue,#46697A);outline-offset:3px}
+
 @media(max-width:600px){
  .atlas-mast{display:block}
  .atlas-mast small{display:block;margin-top:10px}

@@ -1,3 +1,4 @@
+import {atlasStudiesPage} from './atlas-studies.js';
 import fs from "node:fs";
 import { rhpPilotPage } from "./rhp-pilot.js";
 import { addAtlasNavigation } from "./standalone-navigation.js";
@@ -76,6 +77,7 @@ if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,l
 if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","chokepoint-bypass-v31","index.html"),systemEngravingV31({lang}));}
 if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","chokepoint-bypass-v32","index.html"),systemEngravingV32({lang}));}
 if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","chokepoint-bypass-v33","index.html"),systemEngravingV33({lang}));}
+for(const lang of ["en","ua"])write(path.join(out,lang,"atlas","studies","index.html"),atlasStudiesPage({lang}));
 for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","euv-optics","index.html"),euvAtlasPage({lang}));
 for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","oil-network","index.html"),oilNetworkPage({lang}));
 for(const lang of ["en","ua"])write(path.join(out,lang,"atlas","read","0038","index.html"),readAtlasPilot({lang}));
