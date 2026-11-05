@@ -105,3 +105,11 @@ The EUV CHAIN study now has two registered canonical organization entities: `zei
 Each entity has bilingual `/en|ua/structure/<slug>/` profiles with the exact study context, evidence links and an explicit **no issue history** boundary. The EUV CHAIN graph and its Ledger bridge now link the two named organizations to these profiles. No synthetic event, daily change (Δ), assessment, source, relation, or issue is created. Later canonical issue publication must earn a real dated history through the existing evidence workflow; structural context must never substitute for that process.
 
 Further work: add an editorially reviewed identity and source approval process for new organization nodes; do not blindly auto-register inferred entities from diagrams.
+
+## Phase 7 — reproducible knowledge history (5 November 2026)
+
+Structural profiles are now re-rendered on every canonical publisher build from the full ordered issue corpus: `state.json`, `claims.json` and `evidence.json`. An entity enters its knowledge timeline **only** when an explicit `claims[].entity_ids` value resolves to its canonical ID/slug; undirected news mentions and synthetic matches are not inferred. Claim evidence must resolve to source IDs within the very same canonical issue and include valid HTTPS URLs and publication dates. Dated claims are rendered with their exact claim IDs, statuses, source IDs, issue references and source publication dates; no factual restatement or synthesized causal relation is introduced.
+
+Every supported claim is classified as a **knowledge update**, unless a `confirmed_delta` claim also corresponds to an explicitly changed issue state object and a positive issue delta tally; inconsistent assertions fail publication. Immutable study snapshots retain their original date and sourced structural description while later issues accumulate alongside them. Zero matching claims is shown as an honest empty timeline; there are no synthetic ZEISS/ASML event histories. No new recurring scraper or source-monitoring service is introduced by this phase: the rebuild happens automatically when the normal WSB issue build executes, including the daily pipeline if it publishes a canonical new issue.
+
+This is a first additive knowledge layer, not a replacement for full immutable revisions, editorial claim adjudication or a complete source-identity service.
