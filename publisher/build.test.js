@@ -40,3 +40,18 @@ test('publishes bilingual review workbenches from canonical claims and evidence'
   assert.match(html,/id="search"/);
  }
 });
+
+test('first editorial review renders on the original dated claim page in both languages',()=>{
+ execFileSync(process.execPath,["publisher/build-claims.js"],{encoding:"utf8"});
+ for(const lang of ['en','ua']){
+  const file='dist/'+lang+'/claim/CLM-261007-04/index.html';
+  assert.ok(fs.existsSync(file),file);
+  const page=fs.readFileSync(file,'utf8');
+  assert.match(page,/REV-0011-CLM26100704/);
+  assert.match(page,/2026-10-08/);
+  assert.match(page,/WSB-SRC-0011-01/);
+  assert.match(page,/WSB-SRC-0011-02/);
+  assert.match(page,lang==='en'?/QUALIFIED/:/УТОЧНЕНО/);
+  assert.match(page,/A developing Gulf of Mexico hurricane threatens US oil and gas production/);
+ }
+});
