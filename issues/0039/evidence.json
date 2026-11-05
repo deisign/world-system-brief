@@ -1,0 +1,99 @@
+{
+  "issue_id": "WSB-0039",
+  "as_of": "2026-11-05",
+  "records": [
+    {
+      "id": "WSB-0039-SRC-01",
+      "source": "UK Parliament / Critical minerals, Ninth Report 2026–27",
+      "source_type": "official_report",
+      "role": "primary_report",
+      "url": "https://publications.parliament.uk/pa/cm5902/cmselect/cmbeis/132/report.html",
+      "publication_date": "2026-11-05",
+      "claim": "UK parliamentary inquiry identified critical mineral supply chains dominated by China, and described 10–15 years as a mission for diversified supplies, not a completed switch.",
+      "observation": "New report and recommendations; no verified implemented processing capacity.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED NEW SYSTEM Δ",
+      "supports": [
+        "uk-critical-minerals-resilience"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0039-SRC-02",
+      "source": "UK Parliament / critical minerals committee announcement",
+      "source_type": "official_release",
+      "role": "corroborating_primary",
+      "url": "https://committees.parliament.uk/committee/365/business-innovation-science-and-trade-committee/news/218732/britain-cannot-afford-to-drift-mps-demand-action-on-dangerous-dependence-on-chinese-critical-minerals/",
+      "publication_date": "2026-11-05",
+      "claim": "Committee recommended prioritised domestic and allied supply chains, buyers' clubs and finance; recommendations are not yet operating projects.",
+      "observation": "New report and recommendations; no verified implemented processing capacity.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED NEW SYSTEM Δ",
+      "supports": [
+        "uk-critical-minerals-resilience"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0039-SRC-03",
+      "source": "Reuters / Maersk guidance and quarterly freight rates",
+      "source_type": "newswire",
+      "role": "primary_report",
+      "url": "https://www.reuters.com/business/container-shipping-group-maersk-raises-outlook-again-2026-11-05/",
+      "publication_date": "2026-11-05",
+      "claim": "Maersk said rates grew 46% quarter-on-quarter despite broadly flat year-on-year ocean volumes and revised 2026 underlying EBITDA outlook to $14–14.5 billion.",
+      "observation": "Q3 rate results vs full-year forecast, not same-day traffic.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED NEW SYSTEM Δ",
+      "supports": [
+        "maersk-container-freight-pricing"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0039-SRC-04",
+      "source": "Reuters / attributed IRGC Strait of Hormuz statements",
+      "source_type": "newswire",
+      "role": "attributed_statement",
+      "url": "https://www.reuters.com/world/middle-east/irans-irgc-says-two-tankers-tugboat-caught-fire-strait-hormuz-2026-11-05/",
+      "publication_date": "2026-11-05",
+      "claim": "IRGC asserted two tankers and a tugboat had burned around Hormuz. Reuters reported the attribution, not independent vessel-loss verification.",
+      "observation": "Attribution and independent-verification limits remain explicit.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED NEW SYSTEM Δ",
+      "supports": [
+        "irgc-hormuz-mine-seizure-claims",
+        "hormuz"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0039-SRC-05",
+      "source": "Associated Press / Gulf incidents and verification status",
+      "source_type": "newswire",
+      "role": "independent_context",
+      "url": "https://apnews.com/article/mideast-iran-war-hormuz-tankers-a35d13806844d99fda93de0a19de57fa",
+      "publication_date": "2026-11-05",
+      "claim": "AP explicitly stated Iran's November 5 claims about burning vessels were not independently verified, and separately reported UKMTO's tanker advisory north of Qatar.",
+      "observation": "Attribution and independent-verification limits remain explicit.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED NEW SYSTEM Δ",
+      "supports": [
+        "irgc-hormuz-mine-seizure-claims",
+        "gulf-qatar-ukmto-tanker-incident"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0039-SRC-06",
+      "source": "Reuters / UKMTO projectile report north of Qatar",
+      "source_type": "newswire",
+      "role": "agency_attributed_report",
+      "url": "https://www.reuters.com/world/middle-east/tanker-struck-by-two-projectiles-north-qatar-crew-status-unconfirmed-ukmto-says-2026-11-05/",
+      "publication_date": "2026-11-05",
+      "claim": "UKMTO reported two projectiles striking a tanker 50 nautical miles north of Madinat ash Shamal at 23:20 GMT 4 November. Crew status and damage unknown.",
+      "observation": "Event 2026-11-04, report 2026-11-05; physical outcome unknown.",
+      "assessment": "DATED EVIDENCE / NO UNSUPPORTED NEW SYSTEM Δ",
+      "supports": [
+        "gulf-qatar-ukmto-tanker-incident",
+        "hormuz"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}
