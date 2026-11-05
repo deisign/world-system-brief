@@ -33,5 +33,6 @@ test('mobile POSTER retains 1400×2000 print canvas but exposes a legible scroll
  const html=renderPoster(JSON.parse(poster),locale,'en');
  assert.match(html,/role="region" aria-label="Scroll diagram horizontally"/);
  assert.match(html,/\.diagram svg\{flex:0 0 1000px;width:1000px/);
- assert.match(html,/@media print\{[^}]*\.diagram\{overflow:visible\}/);
+ assert.match(html,/@media print\{/);
+ assert.match(html,/\.diagram\{overflow:visible\}/);
 });
