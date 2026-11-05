@@ -13,15 +13,18 @@ export function mapStudyEntities(kind,ids,registry,history){
   return {key,slug:Array.isArray(events)&&events.length?slug:null,events:Array.isArray(events)?events:[]};
  });
 }
-export function renderLedgerBridge({lang,kind,ids,labels,registry,history}){
+export function renderLedgerBridge({lang,kind,ids,labels,registry,history,structuralSlugs=[]}){
  if(!['en','ua'].includes(lang))throw Error('Unsupported language');
  const ua=lang==='ua',rows=mapStudyEntities(kind,ids,registry,history);
  const names=new Map((registry.entities||[]).map(x=>[x.slug,x.labels?.[lang]||x.slug]));
+ const structures=new Set(structuralSlugs);
+ const studyNodes={zeiss:'zeiss-smt',asml:'asml'};
  const items=rows.map(({key,slug,events})=>{
+  const structure=kind==='chain'&&structures.has(studyNodes[key])?studyNodes[key]:null;
   const label=names.get(slug)||labels?.[key]?.[lang]||key;
   const date=slug?events[0].state.date+' — '+events.at(-1).state.date:'';
-  const entry=slug?'<a href="/'+lang+'/entity/'+encodeURIComponent(slug)+'/">'+E(label)+'</a>':E(label);
-  const state=slug?(ua?'БІОГРАФІЯ':'BIOGRAPHY')+' · '+events.length+' '+(ua?'вип.':'issues')+' · '+E(date):(ua?'НЕМАЄ ЗАПИСУ В SYSTEM LEDGER':'NO SYSTEM LEDGER RECORD');
+  const entry=slug?'<a href="/'+lang+'/entity/'+encodeURIComponent(slug)+'/">'+E(label)+'</a>':structure?'<a href="/'+lang+'/structure/'+encodeURIComponent(structure)+'/">'+E(label)+'</a>':E(label);
+  const state=slug?(ua?'БІОГРАФІЯ':'BIOGRAPHY')+' · '+events.length+' '+(ua?'вип.':'issues')+' · '+E(date):structure?(ua?'СТРУКТУРНИЙ ПРОФІЛЬ · БЕЗ ІСТОРІЇ ВИПУСКІВ':'STRUCTURAL PROFILE · NO ISSUE HISTORY'):(ua?'НЕМАЄ ЗАПИСУ В SYSTEM LEDGER':'NO SYSTEM LEDGER RECORD');
   return '<li><span>'+entry+'</span><small>'+state+'</small></li>';
  }).join('');
  return '<section class="atlas-ledger-bridge"><h2>'+(ua?'СУТНОСТІ ТА ІСТОРІЯ':'ENTITIES AND HISTORY')+'</h2><p>'+(ua?'Посилання ведуть лише до сутностей із підтвердженою історією випусків. Відсутність посилання не означає відсутності реальної залежності.':'Links lead only to entities with recorded issue histories. No link does not mean that a real-world dependency is absent.')+'</p><ul>'+items+'</ul><a href="/'+lang+'/entities/">'+(ua?'ВСІ СУТНОСТІ':'ALL ENTITIES')+'</a></section>';

@@ -10,3 +10,20 @@ test("publisher builds archive, entities and trajectories",()=>{
  const html=fs.readFileSync("dist/en/trajectories/index.html","utf8");
  assert.match(html,/TRAJECTORIES/);
 });
+
+test('publishes EUV source-backed structural profiles and their direct study links',()=>{
+ execFileSync(process.execPath,["publisher/build.js"],{encoding:"utf8"});
+ for(const lang of ['en','ua']){
+  for(const slug of ['zeiss-smt','asml']){
+   const f='dist/'+lang+'/structure/'+slug+'/index.html';
+   assert.ok(fs.existsSync(f),f);
+   const page=fs.readFileSync(f,'utf8');
+   assert.ok(page.includes('/'+lang+'/visualizations/euv-optics/'));
+   assert.ok(page.includes('https://'));
+  }
+  const study=fs.readFileSync('dist/'+lang+'/visualizations/euv-optics/index.html','utf8');
+  assert.ok(study.includes('/'+lang+'/structure/zeiss-smt/'));
+  assert.ok(study.includes('/'+lang+'/structure/asml/'));
+  assert.ok(!study.includes('/'+lang+'/structure/fab/'));
+ }
+});

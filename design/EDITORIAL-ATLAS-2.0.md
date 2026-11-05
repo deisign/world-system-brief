@@ -97,3 +97,11 @@ FLOW / BYPASS now links the Hormuz and East–West route labels directly to thei
 NETWORK retains source-backed edges and allows SVG node links only when an actual published history exists. Each study has a generated bilingual entity-history register showing confirmed matching records, number of issues and first/last observed issue dates. Links point to the existing /entity/:slug/ pages, which retain their own source records. Absence of a link means the entity is not covered by the published ledger, not that the corresponding relationship is untrue. No issue source, claim or relation is added by this presentation layer.
 
 Validation must use the assembled canonical issue-history index, not only the registry of possible entity slugs. Any unknown study node fails publication rather than silently routing to a guessed slug.
+
+## Phase 6 — sourced structural profiles, without fabricated event histories
+
+The EUV CHAIN study now has two registered canonical organization entities: `zeiss-smt` (`ENT-000079`) and `asml` (`ENT-000080`). The generic `fab` stage is **not** registered as an organization: it is a value-chain function, not a uniquely identifiable entity. `knowledge/structural-profiles.json` maps the two registered organizations to already sourced and bilingual EUV study nodes. Validation resolves all references against `knowledge/system-ledger-visual/euv-optics.json`, checks source URLs and required translations, and rejects any false assertion of a dated issue-history record.
+
+Each entity has bilingual `/en|ua/structure/<slug>/` profiles with the exact study context, evidence links and an explicit **no issue history** boundary. The EUV CHAIN graph and its Ledger bridge now link the two named organizations to these profiles. No synthetic event, daily change (Δ), assessment, source, relation, or issue is created. Later canonical issue publication must earn a real dated history through the existing evidence workflow; structural context must never substitute for that process.
+
+Further work: add an editorially reviewed identity and source approval process for new organization nodes; do not blindly auto-register inferred entities from diagrams.

@@ -702,6 +702,24 @@
         "en": "IRGC renewed tanker-mine and seizure claims",
         "ua": "Нові заяви КВІР про міни та захоплення суден"
       }
+    },
+    {
+      "id": "ENT-000079",
+      "slug": "zeiss-smt",
+      "type": "organization",
+      "labels": {
+        "en": "ZEISS Semiconductor Manufacturing Technology",
+        "ua": "ZEISS Semiconductor Manufacturing Technology"
+      }
+    },
+    {
+      "id": "ENT-000080",
+      "slug": "asml",
+      "type": "organization",
+      "labels": {
+        "en": "ASML",
+        "ua": "ASML"
+      }
     }
   ]
 }

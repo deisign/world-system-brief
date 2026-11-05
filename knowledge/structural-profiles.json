@@ -1,0 +1,27 @@
+{
+  "schema": "wsb-structural-profiles-v1",
+  "profiles": [
+    {
+      "slug": "zeiss-smt",
+      "study": "euv-optics-bottleneck",
+      "node_id": "zeiss",
+      "status": "structural_snapshot",
+      "issue_history": "none",
+      "source_ids": [
+        "ASML-20F-2024",
+        "ASML-OPTICS"
+      ]
+    },
+    {
+      "slug": "asml",
+      "study": "euv-optics-bottleneck",
+      "node_id": "asml",
+      "status": "structural_snapshot",
+      "issue_history": "none",
+      "source_ids": [
+        "ASML-20F-2024",
+        "ASML-EUV-PARTNERS"
+      ]
+    }
+  ]
+}
