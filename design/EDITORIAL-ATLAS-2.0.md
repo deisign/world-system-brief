@@ -65,3 +65,9 @@ Primary evidence:
 The shared publisher module `publisher/atlas-primitives.js` owns the editorial palette, safe literal escaping, canonical numbered section headings and HTTPS-only source link rendering. All three tested grammars (FLOW / BYPASS, CHAIN / BOTTLENECK, NETWORK / LEVERAGE) use these evidence/typographic primitives while retaining their independent, source-specific relationship renderers. This deliberately changes no page layouts or approved SVGs.
 
 Later phases can extract larger page registers and responsive shells only after desktop/mobile visual regression. Do not force a universal relation graph: FLOW, CHAIN and NETWORK have different semantics.
+
+## Shared component extraction — phase 2
+
+`publisher/atlas-layout.js` centralizes the editorial masthead, bilingual local navigation and four numbered register headings. Its small responsive CSS rules supplement grammar-specific composition. The three tested pages now consume the same structural shell and keep distinct routing / chain / network renderers. Header and navigational URLs are validated as local paths; source links remain the responsibility of `atlas-primitives.js`.
+
+The phase does **not** port issue READ, SYSTEM, POSTER, the archive, or entity templates. It is a controlled extraction with bilingual output tests, not a site-wide release of Atlas 2.0.
