@@ -12,7 +12,7 @@ test("EUV pilot renders EN/UA chain from evidence, without pretending an engravi
   assert.ok(html.includes('asml-20241231.htm'));
   assert.ok(html.includes(lang==="en"?"PROCEDURAL ENGRAVING / NOT YET APPROVED":"ПРОЦЕДУРНУ ГРАВЮРУ ЩЕ НЕ ЗАТВЕРДЖЕНО"));
   assert.ok(html.includes(lang==="en"?"Multilayer mirrors in vacuum":"Багатошарові дзеркала у вакуумі"));
-  assert.equal((html.match(/class="chain-edge"/g)||[]).length,2);
+  assert.equal((html.match(/class="chain-edge(?: critical)?"/g)||[]).length,2);
   assert.equal((html.match(/class="process-step"/g)||[]).length,3);
   assert.ok(html.indexOf("ZEISS SMT")<html.indexOf("ASML /"));
   assert.ok(html.includes(lang==="en"?"Critical optical input":"Критичний оптичний компонент"));
