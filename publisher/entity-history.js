@@ -92,7 +92,9 @@ for(const lang of ["en","ua"]){
    return `<div class="entity-event"><div class="date">${esc(e.state.date)} · <a href="/${lang}/brief/${e.state.date}/">${esc(e.state.issue_id)}</a>${refs}</div><p><strong>${tag}</strong><br>${stateLine}<br>${esc(status)}</p></div>`;
   }).join("");
   let html=fs.readFileSync(file,"utf8");
-  html=html.replace(/(<section class="entity-history"><h2>[^<]*<\/h2>)[\s\S]*?(<\/section><section class="sources">)/,`$1${history}$2`);
+  const biography=/(<h2>(?:СИСТЕМНА БІОГРАФІЯ|SYSTEM BIOGRAPHY)<\/h2>)[\s\S]*?(<section class="sources">)/;
+  if(!biography.test(html))throw Error("Missing canonical entity biography region "+lang+"/"+id);
+  html=html.replace(biography,`$1${history}$2`);
   const entity=bySlug.get(id);
   const graph=graphBlock(entity,lang,trackedSlugs);
   if(graph){
