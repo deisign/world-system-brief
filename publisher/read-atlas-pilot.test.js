@@ -9,6 +9,9 @@ test("READ 0038 preview retains bilingual canonical narrative, source bounds and
   assert.ok(html.includes('lang="'+lang+'"'));
   assert.equal((html.match(/class="atlas-register-heading"/g)||[]).length,4);
   assert.equal((html.match(/<h1>/g)||[]).length,1);
+  assert.match(html,/h1\\{font:850 clamp\\(34px,4\\.3vw,60px\\)\\/1\\.06/);
+  assert.doesNotMatch(html,/clamp\\(40px,6\\.8vw,95px\\)/);
+
   assert.ok(html.includes('class="mast atlas-mast"'));
   assert.ok(html.includes('WSB-0038-SRC-01'));
   assert.ok(html.includes('WSB-0038-SRC-02'));
