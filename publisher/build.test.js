@@ -80,3 +80,16 @@ test('registered entities without state events are real, sourced pages, never br
   assert.match(index,/\/entity\/cheniere\//);
  }
 });
+
+test('published dated entity biographies have working source citations per historical event',()=>{
+ execFileSync(process.execPath,["publisher/build.js"],{encoding:"utf8"});
+ execFileSync(process.execPath,["publisher/build-claims.js"],{encoding:"utf8"});
+ execFileSync(process.execPath,["publisher/entity-history.js"],{encoding:"utf8"});
+ for(const lang of ['en','ua']){
+  const html=fs.readFileSync('dist/'+lang+'/entity/hormuz/index.html','utf8');
+  const citations=[...html.matchAll(/class="cite" href="#(src-[^"]+)"/g)].map(x=>x[1]);
+  assert.ok(citations.length>0,'missing historical citations '+lang);
+  for(const id of citations)assert.ok(html.includes('id="'+id+'"'),'missing evidence anchor '+id);
+  assert.ok(html.includes('href="/'+lang+'/brief/2026-10-08/"'));
+ }
+});
