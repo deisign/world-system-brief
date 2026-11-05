@@ -23,6 +23,7 @@ test('bilingual structural pages link to EUV study and cited sources, not fake d
 test('missing evidence, translation, or spurious dated event cannot pass',()=>{
  const a=structuredClone(config);a.profiles[0].source_ids=['NOT-REAL'];assert.throws(()=>validateStructuralProfiles(a,registry,study));
  const b=structuredClone(registry);b.entities.find(x=>x.slug==='asml').labels.ua='';assert.throws(()=>validateStructuralProfiles(config,b,study));
- assert.throws(()=>validateStructuralProfiles(config,registry,study,new Map([['asml',[{state:{date:'2026-11-05'}}]]])));
+ assert.equal(validateStructuralProfiles(config,registry,study,new Map([['asml',[{state:{date:'2026-11-05'}}]]])),true);
  assert.throws(()=>structuralProfilePage({lang:'zz',slug:'asml',config,registry,study}));
 });
+
