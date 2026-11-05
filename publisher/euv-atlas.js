@@ -29,7 +29,7 @@ export function euvAtlasPage({lang="en",data=loadEuvStudy()}={}){
  const links=ids=>ids.map(id=>`<a href="${e(sourceMap.get(id).url)}" rel="noopener noreferrer">${e(id)}</a>`).join(" · ");
  const nodes=data.nodes.map((n,i)=>{
    const edge=data.edges[i];
-   const connector=edge?`<div class="chain-edge ${i===0?"critical":""}" role="group" aria-label="${e(edge.labels[lang])}"><div class="edge-spine" aria-hidden="true"><span class="edge-arrow"></span></div><div class="edge-copy"><strong>${e(edge.labels[lang])}</strong><span class="refs">${links(edge.source_ids)}</span></div></div>`:"";
+   const connector=edge?`<div class="chain-edge${i===0?" critical":""}" role="group" aria-label="${e(edge.labels[lang])}"><div class="edge-spine" aria-hidden="true"><span class="edge-arrow"></span></div><div class="edge-copy"><strong>${e(edge.labels[lang])}</strong><span class="refs">${links(edge.source_ids)}</span></div></div>`:"";
    return `<article class="chain-node"><div class="serial">0${i+1}</div><div class="node-body"><h3>${e(n.labels[lang])}</h3><p>${e(n.detail[lang])}</p><div class="refs">${links(n.source_ids)}</div></div></article>`+connector;
  }).join("");
  const physicalStages=data.physical.stages.map((step,i)=>`<div class="process-step"><span class="process-number">0${i+1}</span><strong>${e(step.labels[lang])}</strong></div>`).join("");
