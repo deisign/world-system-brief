@@ -27,3 +27,12 @@ test('bridge preserves original evidence HTML and rejects unknown IDs',()=>{
  assert.match(out,/SOURCE/);assert.match(out,/atlas-ledger-bridge/);
  assert.throws(()=>mapStudyEntities('flow',['unknown'],registry,history));
 });
+
+test('source-backed EUV nodes link to structural profiles but never pretend to have dated histories',()=>{
+ const html=renderLedgerBridge({lang:'en',kind:'chain',ids:['zeiss','asml','fab'],registry,history,structuralSlugs:['zeiss-smt','asml']});
+ assert.match(html,/href="\/en\/structure\/zeiss-smt\/"/);
+ assert.match(html,/href="\/en\/structure\/asml\/"/);
+ assert.match(html,/STRUCTURAL PROFILE · NO ISSUE HISTORY/);
+ assert.doesNotMatch(html,/\/en\/entity\/asml\//);
+ assert.doesNotMatch(html,/\/en\/structure\/fab\//);
+});
