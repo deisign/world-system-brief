@@ -22,3 +22,17 @@ test("dependency map binds visible nodes to issue filtered relationships", () =>
  assert.match(html,/data-to=/);
  assert.match(html,/querySelectorAll\("\[data-map-node\]"\)/);
 });
+
+test('READ typography constrains long Cyrillic headlines on narrow phones',async()=>{
+ const {editorialSkin}=await import('./editorial-skin.js');
+ assert.match(editorialSkin,/article>h1\{[^}]*overflow-wrap:anywhere/);
+ assert.match(editorialSkin,/@media\(max-width:680px\)/);
+ assert.match(editorialSkin,/article>h1\{font-size:clamp\(34px,8\.8vw,54px\)/);
+});
+test('mobile POSTER retains 1400×2000 print canvas but exposes a legible scrollable graph',()=>{
+ const html=renderPoster(JSON.parse(poster),locale,'en');
+ assert.match(html,/role="region" aria-label="Scroll diagram horizontally"/);
+ assert.match(html,/\.diagram svg\{flex:0 0 1000px;width:1000px/);
+ assert.match(html,/@media print\{/);
+ assert.match(html,/\.diagram\{overflow:visible\}/);
+});

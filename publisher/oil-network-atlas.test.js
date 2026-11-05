@@ -43,3 +43,13 @@ test("NETWORK rejects ungrounded edges, invalid translated nodes and inflated le
  const falseRent=make();falseRent.config.qualifications.rent_distribution="quantified";assert.throws(()=>validateOilNetwork(falseRent));
  assert.throws(()=>oilNetworkPage({lang:"fr"}));
 });
+
+test('NETWORK mobile graph provides localized pan instructions and keyboard reachability',()=>{
+ for(const lang of ['en','ua']){
+  const html=oilNetworkPage({lang,data:loadOilNetwork()});
+  assert.match(html,/class="graph-frame" tabindex="0" role="region"/);
+  assert.match(html,/class="graph-pan-hint"/);
+  assert.match(html,lang==='ua'?/ПРОКРУТІТЬ СХЕМУ ГОРИЗОНТАЛЬНО/:/SCROLL THE DIAGRAM HORIZONTALLY/);
+  assert.match(html,/@media\(max-width:800px\)/);
+ }
+});
