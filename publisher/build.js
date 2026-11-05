@@ -1,3 +1,4 @@
+import {addLedgerBridge} from "./atlas-ledger-bridge.js";
 import {atlasStudiesPage} from './atlas-studies.js';
 import fs from "node:fs";
 import { rhpPilotPage } from "./rhp-pilot.js";
@@ -10,7 +11,7 @@ import { systemEngravingV31 } from "./system-engraving-v31.js";
 import { systemEngravingV32 } from "./system-engraving-v32.js";
 import { systemEngravingV33 } from "./system-engraving-v33.js";
 import { euvAtlasPage } from "./euv-atlas.js";
-import { oilNetworkPage } from "./oil-network-atlas.js";
+import { oilNetworkPage,loadOilNetwork } from "./oil-network-atlas.js";
 import { readAtlasPilot } from "./read-atlas-pilot.js";
 import { readFontComparison } from "./read-font-comparison.js";
 import { publishPhysicalEngravings } from "./physical-engraving.js";
@@ -76,10 +77,13 @@ const physicalEngravingCount=publishPhysicalEngravings({root,out,write});
 if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","chokepoint-bypass","index.html"),systemEngravingSpread({lang}));}
 if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","chokepoint-bypass-v31","index.html"),systemEngravingV31({lang}));}
 if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","chokepoint-bypass-v32","index.html"),systemEngravingV32({lang}));}
-if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","chokepoint-bypass-v33","index.html"),systemEngravingV33({lang}));}
+const ledgerForStudy=(lang,kind,ids,labels,html)=>addLedgerBridge(html,{lang,kind,ids,labels,registry,history:entityIndex[lang]});
+const flowLabels={hormuz:{en:"Strait of Hormuz",ua:"Ормузька протока"},"east-west":{en:"East–West / Saudi Arabia",ua:"East–West / Саудівська Аравія"},"habshan-fujairah":{en:"Habshan–Fujairah / UAE",ua:"Хабшан — Фуджейра / ОАЕ"}};
+const chainLabels={zeiss:{en:"ZEISS SMT",ua:"ZEISS SMT"},asml:{en:"ASML",ua:"ASML"},fab:{en:"Chipmakers",ua:"Виробники чипів"}};
+if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","chokepoint-bypass-v33","index.html"),ledgerForStudy(lang,"flow",["hormuz","east-west","habshan-fujairah"],flowLabels,systemEngravingV33({lang,entitySlugs:new Set(entityIndex[lang].keys())})));}
 for(const lang of ["en","ua"])write(path.join(out,lang,"atlas","studies","index.html"),atlasStudiesPage({lang}));
-for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","euv-optics","index.html"),euvAtlasPage({lang}));
-for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","oil-network","index.html"),oilNetworkPage({lang}));
+for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","euv-optics","index.html"),ledgerForStudy(lang,"chain",["zeiss","asml","fab"],chainLabels,euvAtlasPage({lang})));
+for(const lang of ["en","ua"]){const data=loadOilNetwork();write(path.join(out,lang,"visualizations","oil-network","index.html"),ledgerForStudy(lang,"network",data.nodes.map(n=>n.slug),Object.fromEntries(data.nodes.map(n=>[n.slug,n.labels])),oilNetworkPage({lang,data,entitySlugs:new Set(entityIndex[lang].keys())})));}
 for(const lang of ["en","ua"])write(path.join(out,lang,"atlas","read","0038","index.html"),readAtlasPilot({lang}));
 for(const lang of ["en","ua"])for(const variant of ["plex","manrope"])write(path.join(out,lang,"atlas","read","0038","type",variant,"index.html"),readFontComparison({lang,variant}));
 const lastDate=archive.at(-1)?.date||"";
