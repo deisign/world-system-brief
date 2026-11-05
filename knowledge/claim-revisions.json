@@ -1,4 +1,20 @@
 {
   "schema": "wsb-claim-revisions-v1",
-  "revisions": []
+  "revisions": [
+    {
+      "id": "REV-0011-CLM26100704",
+      "target_claim_id": "CLM-261007-04",
+      "issue_id": "WSB-0011",
+      "date": "2026-10-08",
+      "decision": "qualified",
+      "reason": {
+        "en": "The original 7 October claim described the limits of evidence reviewed at the time; it did not establish that offshore output remained uninterrupted. Evidence published in WSB-0011 on 8 October documented precautionary US Gulf production shut-ins already in effect on 7 October: 25.08% of oil output and 16.37% of gas output, including curtailments reported by Shell and Chevron. The earlier risk-only assessment therefore needs temporal qualification. These sources do not establish permanent damage, shut-in duration, or an equivalent loss of delivered supply.",
+        "ua": "Початкове твердження від 7 жовтня описувало межі розглянутих на той момент доказів, а не встановлювало безперервність морського видобутку. Джерела, опубліковані у WSB-0011 8 жовтня, підтвердили, що вже 7 жовтня в Мексиканській затоці США було зупинено 25,08% нафтовидобутку та 16,37% газовидобутку; про скорочення видобутку також повідомили Shell і Chevron. Отже, попередню оцінку лише як ризику слід уточнити з огляду на час надходження свідчень. Ці джерела не доводять постійного пошкодження, тривалості зупинки чи відповідного скорочення фактичних поставок."
+      },
+      "source_ids": [
+        "WSB-SRC-0011-01",
+        "WSB-SRC-0011-02"
+      ]
+    }
+  ]
 }

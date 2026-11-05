@@ -38,3 +38,24 @@ test('append-order and exact target are enforced',()=>{
  assert.throws(()=>validateRevisions(ledger([r2,revision]),corpus),/chronological order/);
  assert.throws(()=>claimRevisionSection({lang:'en',claimId:'OTHER',revisions:[{...revision,sources:[]}]}),/Mismatched/);
 });
+
+test('first real revision is evidence-backed, later-dated and does not overwrite original',async()=>{
+ const {readFileSync}=await import('node:fs');
+ const read=(issue,file)=>JSON.parse(readFileSync('issues/'+issue+'/'+file,'utf8'));
+ const originalIssue={state:read('0010','state.json'),claims:read('0010','claims.json'),evidence:read('0010','evidence.json')};
+ const newerIssue={state:read('0011','state.json'),claims:read('0011','claims.json'),evidence:read('0011','evidence.json')};
+ const before=JSON.stringify(originalIssue.claims);
+ const ledger=JSON.parse(readFileSync('knowledge/claim-revisions.json','utf8'));
+ const result=validateRevisions(ledger,[originalIssue,newerIssue]);
+ const selected=result.get('CLM-261007-04');
+ assert.equal(selected.length,1);
+ assert.equal(selected[0].decision,'qualified');
+ assert.equal(selected[0].date,'2026-10-08');
+ assert.deepEqual(selected[0].source_ids,['WSB-SRC-0011-01','WSB-SRC-0011-02']);
+ assert.match(selected[0].reason.en,/25.08%/);
+ assert.match(selected[0].reason.ua,/25,08%/);
+ assert.equal(JSON.stringify(originalIssue.claims),before);
+ const page=claimRevisionSection({lang:'en',claimId:'CLM-261007-04',revisions:selected});
+ assert.match(page,/QUALIFIED/);
+ assert.match(page,/href="\/en\/brief\/2026-10-08\/"/);
+});
