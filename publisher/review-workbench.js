@@ -20,7 +20,7 @@ export function buildReviewQueue(claims,bundles,revisions,registry){
   if(['developing','evidence_update','no_independent_delta'].includes(c.status))signals.push('nonfinal status');
   if(later.length)signals.push('later entity-related evidence');
   if(previous)signals.push('previous review');
-  return {id:c.id,date:c.date,issue_id:c.issue_id,statement:c.statement,confidence:c.confidence||'unknown',status:c.status||'unknown',signals,original:(c.sources||[]).filter(Boolean).map(s=>({id:s.id,url:s.url})),later,reviewed:previous?.decision||null,score:signals.length+(later.length?2:0)-(previous?2:0)};
+  return {id:c.id,date:c.date,issue_id:c.issue_id,statement:c.statement,confidence:c.confidence||'unknown',status:c.status||'unknown',signals,original:(c.sources||[]).filter(Boolean).map(s=>({id:s.id,url:s.url})),later,reviewed:previous?.decision||null,score:signals.length+(later.length?2:0)-(previous?3:0)};
  }).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||b.date.localeCompare(a.date)||a.id.localeCompare(b.id));
 }
 const strings={
