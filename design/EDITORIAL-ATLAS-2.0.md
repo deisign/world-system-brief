@@ -89,3 +89,11 @@ Production typography is deliberately scoped by the generated HTML page genre ra
 An EN/UA `/atlas/studies/` overview links the three distinct validated dependency grammars, preserving their original renderers and all source citations. Each study adds the same accessible cross-study navigation with its active genre identified: **FLOW / BYPASS** (Hormuz 03.3), **CHAIN / BOTTLENECK** (EUV optics) and **NETWORK / LEVERAGE** (oil relation graph). The hub also links the dependency map, canonical entity-history index and issue archive. These are *exploratory* connections, not claims that the studies refer to identical events, entities or measurements. Each study explicitly communicates its evidentiary boundary. No new system facts, source IDs, metrics, relations or entity records are created by navigation.
 
 Next adoption gate: inspect published pages at desktop and narrow mobile widths, ensure navigation paths work in GitHub Pages deployment and do not alter the original relationship diagrams.
+
+## Phase 5 — audited node-to-ledger bridges (5 November 2026)
+
+FLOW / BYPASS now links the Hormuz and East–West route labels directly to their canonical, previously published entity histories, only when those histories actually exist. Habshan–Fujairah remains explicitly unlinked: there is no validated one-to-one match to a canonical issue-history entry. EUV's ZEISS SMT, ASML and downstream fab nodes are evidence-backed study nodes but do not yet have canonical System Ledger biographies; no fictional entries are generated.
+
+NETWORK retains source-backed edges and allows SVG node links only when an actual published history exists. Each study has a generated bilingual entity-history register showing confirmed matching records, number of issues and first/last observed issue dates. Links point to the existing /entity/:slug/ pages, which retain their own source records. Absence of a link means the entity is not covered by the published ledger, not that the corresponding relationship is untrue. No issue source, claim or relation is added by this presentation layer.
+
+Validation must use the assembled canonical issue-history index, not only the registry of possible entity slugs. Any unknown study node fails publication rather than silently routing to a guessed slug.
