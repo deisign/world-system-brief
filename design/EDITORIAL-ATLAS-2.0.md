@@ -71,3 +71,7 @@ Later phases can extract larger page registers and responsive shells only after 
 `publisher/atlas-layout.js` centralizes the editorial masthead, bilingual local navigation and four numbered register headings. Its small responsive CSS rules supplement grammar-specific composition. The three tested pages now consume the same structural shell and keep distinct routing / chain / network renderers. Header and navigational URLs are validated as local paths; source links remain the responsibility of `atlas-primitives.js`.
 
 The phase does **not** port issue READ, SYSTEM, POSTER, the archive, or entity templates. It is a controlled extraction with bilingual output tests, not a site-wide release of Atlas 2.0.
+
+## READ typography comparison — November 2026
+
+Compare IBM Plex Sans Bold against Manrope ExtraBold on **the same** WSB-0038 EN/UA article. Both trials use IBM Plex Serif for reading text and IBM Plex Mono for evidence metadata, with identical editorial geometry and headline size (64px maximum). Preview-only routes: `/en|ua/atlas/read/0038/type/plex/` and `/en|ua/atlas/read/0038/type/manrope/`. The existing READ pilot and historical briefs remain unchanged. Google Fonts CSS is used **only for the test**; a production decision requires reviewed self-hosted WOFF2 files with verified Ukrainian Cyrillic and Latin subsets, license metadata, and visual review at mobile/desktop widths. The typographic hierarchy differs by genre: READ restrained; SYSTEM analytical; POSTER may be expressive.
