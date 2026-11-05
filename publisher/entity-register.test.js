@@ -6,7 +6,7 @@ const claims=[{id:'CLM-1',date:'2026-10-08',issue_id:'WSB-0011',statement:'A rep
 test('untracked entity has a truthful bilingual registry page with canonical claim and source',()=>{
  for(const lang of ['en','ua']){
   const html=registryEntityPage({lang,entity,claims});
-  assert.match(html,/No dated|датована|датована історія|датована історія її станів|датована історія/);
+  assert.match(html,/dated state biography|датована історія/);
   assert.match(html,/href="\/(en|ua)\/claim\/CLM-1\/"/);
   assert.match(html,/href="https:\/\/example.org\/source"/);
   assert.match(html,/ENT-TEST/);
