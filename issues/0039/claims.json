@@ -1,0 +1,70 @@
+{
+  "issue_id": "WSB-0039",
+  "as_of": "2026-11-05",
+  "claims": [
+    {
+      "id": "WSB-0039-CLM-01",
+      "kind": "observed",
+      "statement": "The 5 November UK parliamentary critical-minerals report identifies dependence on China-dominated processing and a 10–15 year horizon for diversifying supplies; it proposes financing and allied procurement, not confirmed newly operating capacity.",
+      "observed_at": "2026-11-05",
+      "event_date": "2026-11-05",
+      "entity_ids": [
+        "ENT-000081"
+      ],
+      "source_ids": [
+        "WSB-0039-SRC-01",
+        "WSB-0039-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0039-CLM-02",
+      "kind": "reported",
+      "statement": "On 5 November Maersk said Q3 freight rates increased 46% quarter-on-quarter while ocean volumes were broadly flat year-on-year, and revised 2026 underlying EBITDA guidance to $14–14.5 billion. Prices and expected earnings are not direct measures of physical capacity or monopoly rent.",
+      "observed_at": "2026-11-05",
+      "event_date": "2026-11-05",
+      "entity_ids": [
+        "ENT-000082"
+      ],
+      "source_ids": [
+        "WSB-0039-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0039-CLM-03",
+      "kind": "reported",
+      "statement": "On 5 November the IRGC asserted two tankers and a tugboat had caught fire around Hormuz; the claim was not independently verified by AP. Vessel identities, overlap with earlier allegations and verified loss of shipping capacity remain unestablished.",
+      "observed_at": "2026-11-05",
+      "event_date": "2026-11-05",
+      "entity_ids": [
+        "ENT-000078",
+        "ENT-000001"
+      ],
+      "source_ids": [
+        "WSB-0039-SRC-04",
+        "WSB-0039-SRC-05"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0039-CLM-04",
+      "kind": "reported",
+      "statement": "UKMTO said a separate tanker north of Qatar was struck by two projectiles at 23:20 GMT on 4 November, reported on 5 November. Crew status, damage and lasting disruption were unknown; this must not be conflated with IRGC vessel claims.",
+      "observed_at": "2026-11-05",
+      "event_date": "2026-11-04",
+      "entity_ids": [
+        "ENT-000083"
+      ],
+      "source_ids": [
+        "WSB-0039-SRC-06",
+        "WSB-0039-SRC-05"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}
