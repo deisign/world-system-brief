@@ -1,3 +1,4 @@
+import {loadStructuralProfiles,validateStructuralProfiles,structuralProfilePage} from "./structural-profiles.js";
 import {addLedgerBridge} from "./atlas-ledger-bridge.js";
 import {atlasStudiesPage} from './atlas-studies.js';
 import fs from "node:fs";
@@ -10,7 +11,7 @@ import { systemEngravingSpread } from "./system-engraving-spread.js";
 import { systemEngravingV31 } from "./system-engraving-v31.js";
 import { systemEngravingV32 } from "./system-engraving-v32.js";
 import { systemEngravingV33 } from "./system-engraving-v33.js";
-import { euvAtlasPage } from "./euv-atlas.js";
+import { euvAtlasPage,loadEuvStudy } from "./euv-atlas.js";
 import { oilNetworkPage,loadOilNetwork } from "./oil-network-atlas.js";
 import { readAtlasPilot } from "./read-atlas-pilot.js";
 import { readFontComparison } from "./read-font-comparison.js";
@@ -82,7 +83,14 @@ const flowLabels={hormuz:{en:"Strait of Hormuz",ua:"Ормузька прото�
 const chainLabels={zeiss:{en:"ZEISS SMT",ua:"ZEISS SMT"},asml:{en:"ASML",ua:"ASML"},fab:{en:"Chipmakers",ua:"Виробники чипів"}};
 if(physicalEngravingCount>0){for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","chokepoint-bypass-v33","index.html"),ledgerForStudy(lang,"flow",["hormuz","east-west","habshan-fujairah"],flowLabels,systemEngravingV33({lang,entitySlugs:new Set(entityIndex[lang].keys())})));}
 for(const lang of ["en","ua"])write(path.join(out,lang,"atlas","studies","index.html"),atlasStudiesPage({lang}));
-for(const lang of ["en","ua"])write(path.join(out,lang,"visualizations","euv-optics","index.html"),ledgerForStudy(lang,"chain",["zeiss","asml","fab"],chainLabels,euvAtlasPage({lang})));
+const structuralConfig=loadStructuralProfiles();
+const structuralStudy=loadEuvStudy();
+for(const lang of ["en","ua"])validateStructuralProfiles(structuralConfig,registry,structuralStudy,entityIndex[lang]);
+const structuralSlugs=structuralConfig.profiles.map(p=>p.slug);
+for(const lang of ["en","ua"]){
+ for(const profile of structuralConfig.profiles)write(path.join(out,lang,"structure",profile.slug,"index.html"),structuralProfilePage({lang,slug:profile.slug,config:structuralConfig,registry,study:structuralStudy}));
+ write(path.join(out,lang,"visualizations","euv-optics","index.html"),addLedgerBridge(euvAtlasPage({lang,structuralSlugs}),{lang,kind:"chain",ids:["zeiss","asml","fab"],labels:chainLabels,registry,history:entityIndex[lang],structuralSlugs}));
+}
 for(const lang of ["en","ua"]){const data=loadOilNetwork();write(path.join(out,lang,"visualizations","oil-network","index.html"),ledgerForStudy(lang,"network",data.nodes.map(n=>n.slug),Object.fromEntries(data.nodes.map(n=>[n.slug,n.labels])),oilNetworkPage({lang,data,entitySlugs:new Set(entityIndex[lang].keys())})));}
 for(const lang of ["en","ua"])write(path.join(out,lang,"atlas","read","0038","index.html"),readAtlasPilot({lang}));
 for(const lang of ["en","ua"])for(const variant of ["plex","manrope"])write(path.join(out,lang,"atlas","read","0038","type",variant,"index.html"),readFontComparison({lang,variant}));
