@@ -55,3 +55,41 @@ test('first editorial review renders on the original dated claim page in both la
   assert.match(page,/A developing Gulf of Mexico hurricane threatens US oil and gas production/);
  }
 });
+
+test('public root opens the editorial homepage rather than bypassing it',()=>{
+ execFileSync(process.execPath,["publisher/build.js"],{encoding:"utf8"});
+ const redirect=fs.readFileSync("dist/index.html","utf8");
+ assert.match(redirect,/content="0;url=\/en\/"/);
+ assert.doesNotMatch(redirect,/content="0;url=\/en\/brief\//);
+ const home=fs.readFileSync("dist/en/index.html","utf8");
+ assert.match(home,/WORLD SYSTEM BRIEF/);
+});
+
+test('registered entities without state events are real, sourced pages, never broken claim links',()=>{
+ execFileSync(process.execPath,["publisher/build.js"],{encoding:"utf8"});
+ execFileSync(process.execPath,["publisher/build-claims.js"],{encoding:"utf8"});
+ for(const lang of ['en','ua']){
+  const file='dist/'+lang+'/entity/cheniere/index.html';
+  assert.ok(fs.existsSync(file),file);
+  const html=fs.readFileSync(file,'utf8');
+  assert.match(html,/CLM-260930-03/);
+  assert.match(html,/href="https:\/\/www\.reuters\.com\//);
+  assert.doesNotMatch(html,/class="entity-event"/);
+  const index=fs.readFileSync('dist/'+lang+'/entities/index.html','utf8');
+  assert.match(index,/id="registry-without-state"/);
+  assert.match(index,/\/entity\/cheniere\//);
+ }
+});
+
+test('published dated entity biographies have working source citations per historical event',()=>{
+ execFileSync(process.execPath,["publisher/build.js"],{encoding:"utf8"});
+ execFileSync(process.execPath,["publisher/build-claims.js"],{encoding:"utf8"});
+ execFileSync(process.execPath,["publisher/entity-history.js"],{encoding:"utf8"});
+ for(const lang of ['en','ua']){
+  const html=fs.readFileSync('dist/'+lang+'/entity/hormuz/index.html','utf8');
+  const citations=[...html.matchAll(/class="cite" href="#(src-[^"]+)"/g)].map(x=>x[1]);
+  assert.ok(citations.length>0,'missing historical citations '+lang);
+  for(const id of citations)assert.ok(html.includes('id="'+id+'"'),'missing evidence anchor '+id);
+  assert.ok(html.includes('href="/'+lang+'/brief/2026-10-08/"'));
+ }
+});

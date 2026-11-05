@@ -31,6 +31,8 @@ jobs:
         run: node publisher/self-host-fonts.js dist
       - name: Configure GitHub Pages project paths
         run: node publisher/pages-prefix.js dist /world-system-brief
+      - name: Audit final published routes and assets
+        run: node publisher/release-audit.js dist --strict
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
