@@ -19,7 +19,16 @@ test("NETWORK is not drawn as three unrelated routes; source-linked multilingual
    assert.ok(s.includes('<svg'));
    assert.equal((s.match(/data-edge=/g)||[]).length,6);
    assert.equal((s.match(/class="relation"/g)||[]).length,6);
-   assert.equal((s.match(/<rect x=/g)||[]).length,7);
+   assert.equal((s.match(new RegExp(`<a href="/${lang}/entity/`,"g"))||[]).length,7);
+   assert.equal((s.match(/data-network-relation=/g)||[]).length,6);
+   assert.equal((s.match(/class="edge-label"/g)||[]).length,6);
+   assert.ok(s.includes(lang==="en"?"CONSTRAINT":"ОБМЕЖЕННЯ"));
+   assert.ok(s.includes(lang==="en"?"BUFFER / RECOVERY":"БУФЕР / ВІДНОВЛЕННЯ"));
+   assert.ok(s.includes(lang==="en"?"DOWNSTREAM EFFECT":"НАСЛІДОК ДАЛІ В СИСТЕМІ"));
+   assert.ok(s.includes(lang==="en"?"REVEALS":"ВИЯВЛЯЄ"));
+   assert.ok(s.includes(lang==="en"?"BUFFERS":"ПОМ’ЯКШУЄ"));
+   assert.ok(!s.includes("01 / 02 /"));
+   assert.ok(!s.includes("02 / 01 /"));
    assert.ok(s.includes('WSB-0011'));
    assert.ok(s.includes('WSB-SRC-0011-03'));
    assert.ok(s.includes(lang==="en"?"supports recovery":"підтримує відновлення"));
