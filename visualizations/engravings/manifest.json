@@ -22,6 +22,30 @@
         "mobile": true,
         "reduced_motion": true,
         "closeup": true
+      },
+      "editorial": {
+        "subject_class": "generic_physical_carrier",
+        "physical_role": {
+          "en": "Oil tanker: physical carrier of seaborne oil cargo.",
+          "ua": "Нафтовий танкер: фізичний носій морських нафтових вантажів."
+        },
+        "mechanism": {
+          "en": "Oil flows depend on vessel transport and on access to navigable maritime routes.",
+          "ua": "Нафтові потоки залежать від суднових перевезень і доступу до прохідних морських маршрутів."
+        },
+        "limitations": {
+          "en": "Not a specific ship, voyage or incident; does not map Hormuz, measure flow capacity, demonstrate a blockade or prove that a pipeline can replace maritime transport.",
+          "ua": "Не зображує конкретного судна, рейсу чи інциденту; не є картою Ормузу, не вимірює пропускної здатності, не доводить блокади або здатності трубопроводу замінити морський маршрут."
+        },
+        "related_entities": [
+          "hormuz",
+          "gulf-oil-flow"
+        ],
+        "composition_route": "/{lang}/visualizations/chokepoint-bypass/",
+        "paired_thesis": {
+          "en": "Partial bypass is not full substitution.",
+          "ua": "Частковий обхід не є повним заміщенням."
+        }
       }
     }
   ]
