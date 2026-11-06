@@ -49,3 +49,43 @@ test("bilingual plate explicitly separates material form, mechanism and excluded
  }
  assert.throws(()=>physicalEngravingPage({entry,lang:"ru"}),/Unsupported/);
 });
+
+test("real rare-earth engraving and mobile variant pass verified physical SVG validation",()=>{
+ const root=path.resolve(".");
+ const manifest=JSON.parse(fs.readFileSync(path.join(root,"visualizations","engravings","manifest.json"),"utf8"));
+ assert.equal(manifest.engravings.length,2);
+ const rare=manifest.engravings.find(x=>x.id==="rare-earth-separation-study-01");
+ assert.equal(rare?.editorial.subject_class,"generic_processing_cascade");
+ const {svgPath,mobilePath}=verifyPhysicalEngraving(rare,root);
+ assert.ok(fs.existsSync(svgPath));
+ assert.ok(fs.existsSync(mobilePath));
+ assert.notEqual(fs.readFileSync(svgPath,"utf8"),fs.readFileSync(mobilePath,"utf8"));
+ assert.match(rare.editorial.composition_route,/ledger\/dependencies\/uk-critical-minerals-resilience/);
+ for(const lang of ["en","ua"]){
+  const html=physicalEngravingPage({entry:rare,lang});
+  assert.match(html,/<picture>/);
+  assert.match(html,/max-width: 650px/);
+  assert.match(html,/rare-earth-separation-study-01-mobile.svg/);
+  assert.match(html,/ledger\/dependencies\/uk-critical-minerals-resilience/);
+  assert.match(html,/width="960" height="640"/);
+  assert.doesNotMatch(html,/explainers\/hormuz/);
+  assert.doesNotMatch(html,/specific vessel|конкретного судна/);
+ }
+});
+test("reject unsupported physical subject, missing mobile asset, and unsafe mobile SVG",()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),"wsb-bilingual-plate-"));
+ try{
+  const plate=path.join(dir,"visualizations","engravings",entry.id);fs.mkdirSync(plate,{recursive:true});
+  const svg='<svg xmlns="http://www.w3.org/2000/svg"><path d="M0 0L10 10"/></svg>';
+  fs.writeFileSync(path.join(plate,"plate.svg"),svg);
+  let candidate={...entry,id:entry.id,mobile_plate:"plate-mobile.svg",svg_dimensions:{width:960,height:640}};
+  assert.throws(()=>verifyPhysicalEngraving(candidate,dir),/mobile engraving SVG missing/);
+  fs.writeFileSync(path.join(plate,"plate-mobile.svg"),svg);
+  assert.equal(verifyPhysicalEngraving(candidate,dir).mobilePath,path.join(plate,"plate-mobile.svg"));
+  fs.writeFileSync(path.join(plate,"plate-mobile.svg"),'<svg><script>bad()</script><path d="M0 0"/></svg>');
+  assert.throws(()=>verifyPhysicalEngraving(candidate,dir),/Unsafe or externally loaded mobile SVG/);
+  fs.writeFileSync(path.join(plate,"plate-mobile.svg"),svg);
+  candidate={...candidate,editorial:{...candidate.editorial,subject_class:"unsupported"}};
+  assert.throws(()=>verifyPhysicalEngraving(candidate,dir),/editorial subject/);
+ }finally{fs.rmSync(dir,{recursive:true,force:true});}
+});
