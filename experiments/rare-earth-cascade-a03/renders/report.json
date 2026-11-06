@@ -1,0 +1,343 @@
+{
+  "experiment": "cascade-a03",
+  "approval": "unreviewed",
+  "engineRevision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+  "files": [
+    {
+      "file": "a03-1-linear-mass.svg",
+      "camera": {
+        "azimuth": -63,
+        "elevation": 25,
+        "pad": 72
+      },
+      "mode": "mass",
+      "bytes": 824695,
+      "ms": 295,
+      "components": [
+        {
+          "stage": 1,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 2,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 3,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        }
+      ],
+      "render": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "mass",
+        "rendered_surfaces": 92,
+        "physical_surfaces": 201,
+        "camera": {
+          "azimuth": -63,
+          "elevation": 25,
+          "pad": 72
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 6,
+          "rim": 9,
+          "surface": 9,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 11,
+          "aqueous": 21
+        }
+      }
+    },
+    {
+      "file": "a03-1-linear-intaglio.svg",
+      "camera": {
+        "azimuth": -63,
+        "elevation": 25,
+        "pad": 72
+      },
+      "mode": "intaglio",
+      "bytes": 673137,
+      "ms": 181,
+      "components": [
+        {
+          "stage": 1,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 2,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 3,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        }
+      ],
+      "render": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "intaglio",
+        "rendered_surfaces": 92,
+        "physical_surfaces": 201,
+        "camera": {
+          "azimuth": -63,
+          "elevation": 25,
+          "pad": 72
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 6,
+          "rim": 9,
+          "surface": 9,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 11,
+          "aqueous": 21
+        }
+      }
+    },
+    {
+      "file": "a03-2-spatial-mass.svg",
+      "camera": {
+        "azimuth": -43,
+        "elevation": 29,
+        "pad": 72
+      },
+      "mode": "mass",
+      "bytes": 841408,
+      "ms": 185,
+      "components": [
+        {
+          "stage": 1,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 2,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 3,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        }
+      ],
+      "render": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "mass",
+        "rendered_surfaces": 99,
+        "physical_surfaces": 201,
+        "camera": {
+          "azimuth": -43,
+          "elevation": 29,
+          "pad": 72
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 6,
+          "rim": 9,
+          "surface": 9,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 18,
+          "aqueous": 21
+        }
+      }
+    },
+    {
+      "file": "a03-2-spatial-intaglio.svg",
+      "camera": {
+        "azimuth": -43,
+        "elevation": 29,
+        "pad": 72
+      },
+      "mode": "intaglio",
+      "bytes": 685575,
+      "ms": 137,
+      "components": [
+        {
+          "stage": 1,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 2,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 3,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        }
+      ],
+      "render": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "intaglio",
+        "rendered_surfaces": 99,
+        "physical_surfaces": 201,
+        "camera": {
+          "azimuth": -43,
+          "elevation": 29,
+          "pad": 72
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 6,
+          "rim": 9,
+          "surface": 9,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 18,
+          "aqueous": 21
+        }
+      }
+    },
+    {
+      "file": "a03-3-close-mass.svg",
+      "camera": {
+        "azimuth": -55,
+        "elevation": 20,
+        "pad": 35
+      },
+      "mode": "mass",
+      "bytes": 979621,
+      "ms": 156,
+      "components": [
+        {
+          "stage": 1,
+          "mixer": 2,
+          "settler": 3,
+          "motor": 3
+        },
+        {
+          "stage": 2,
+          "mixer": 2,
+          "settler": 3,
+          "motor": 3
+        },
+        {
+          "stage": 3,
+          "mixer": 2,
+          "settler": 3,
+          "motor": 3
+        }
+      ],
+      "render": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "mass",
+        "rendered_surfaces": 100,
+        "physical_surfaces": 201,
+        "camera": {
+          "azimuth": -55,
+          "elevation": 20,
+          "pad": 35
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 9,
+          "rim": 9,
+          "surface": 9,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 16,
+          "aqueous": 21
+        }
+      }
+    },
+    {
+      "file": "a03-3-close-intaglio.svg",
+      "camera": {
+        "azimuth": -55,
+        "elevation": 20,
+        "pad": 35
+      },
+      "mode": "intaglio",
+      "bytes": 783442,
+      "ms": 140,
+      "components": [
+        {
+          "stage": 1,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 2,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        },
+        {
+          "stage": 3,
+          "mixer": 2,
+          "settler": 2,
+          "motor": 3
+        }
+      ],
+      "render": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "intaglio",
+        "rendered_surfaces": 97,
+        "physical_surfaces": 201,
+        "camera": {
+          "azimuth": -55,
+          "elevation": 20,
+          "pad": 35
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 6,
+          "rim": 9,
+          "surface": 9,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 16,
+          "aqueous": 21
+        }
+      }
+    }
+  ]
+}
