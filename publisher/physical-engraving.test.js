@@ -82,7 +82,7 @@ test("reject unsupported physical subject, missing mobile asset, and unsafe mobi
   assert.throws(()=>verifyPhysicalEngraving(candidate,dir),/mobile engraving SVG missing/);
   fs.writeFileSync(path.join(plate,"plate-mobile.svg"),svg);
   assert.equal(verifyPhysicalEngraving(candidate,dir).mobilePath,path.join(plate,"plate-mobile.svg"));
-  fs.writeFileSync(path.join(plate,"plate-mobile.svg"),'<svg><script>bad()</script><path d="M0 0"/></svg>');
+  fs.writeFileSync(path.join(plate,"plate-mobile.svg"),'<svg xmlns="http://www.w3.org/2000/svg"><script>bad()</script><path d="M0 0"/></svg>');
   assert.throws(()=>verifyPhysicalEngraving(candidate,dir),/Unsafe or externally loaded mobile SVG/);
   fs.writeFileSync(path.join(plate,"plate-mobile.svg"),svg);
   candidate={...candidate,editorial:{...candidate.editorial,subject_class:"unsupported"}};
