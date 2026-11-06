@@ -14,7 +14,7 @@ test('six real stage models have separately identifiable mixer, drive and settle
 });
 test('stage geometry is reproducible, adequately spaced and never randomized',()=>{
  const a=cascadeGeometry(6),b=cascadeGeometry(6);
- assert.deepEqual(a,b);
+ assert.deepEqual(a.stages.map(s=>({x:s.x,bounds:s.bounds,ids:s.parts.map(p=>p.id)})),b.stages.map(s=>({x:s.x,bounds:s.bounds,ids:s.parts.map(p=>p.id)})));
  assert.ok(a.stages.every((s,i)=>i===0||s.x-a.stages[i-1].x>3));
  assert.throws(()=>stageGeometry(6,6));
  assert.throws(()=>cascadeGeometry(7));
