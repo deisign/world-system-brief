@@ -89,6 +89,9 @@ class BrowserSmoke(unittest.TestCase):
             "/en/structure/asml/",
             "/ua/ledger/dependencies/", "/en/ledger/dependencies/",
             "/ua/ledger/dependencies/uk-critical-minerals-resilience/",
+            "/ua/engravings/", "/en/engravings/",
+            "/ua/engravings/rare-earth-separation-study-01/",
+            "/en/engravings/rare-earth-separation-study-01/",
         ]
         for width in (390, 768, 1440):
             for route in routes:
@@ -153,6 +156,19 @@ class BrowserSmoke(unittest.TestCase):
                 self.assertTrue(draft["reason"]["en"])
                 self.assertTrue(draft["reason"]["ua"])
                 self.assertTrue(draft["issue_id"])
+
+    def test_engraving_picture_chooses_original_svg_for_desktop_and_sparse_svg_for_phone(self):
+        for lang in ("ua", "en"):
+            route = "/%s/engravings/rare-earth-separation-study-01/" % lang
+            for width, suffix in ((390, "-mobile.svg"), (1440, "rare-earth-separation-study-01.svg")):
+                with self.subTest(lang=lang, width=width), self.page_at(route, width) as page:
+                    image = page.locator("figure picture img")
+                    self.assertEqual(image.count(), 1)
+                    self.assertTrue(image.get_attribute("alt"))
+                    data = image.evaluate("el => ({url:el.currentSrc,ok:el.complete && el.naturalWidth > 0})")
+                    self.assertTrue(data["ok"], str(data))
+                    self.assertTrue(data["url"].endswith(suffix), str(data))
+                    self.assertIn("uk-critical-minerals-resilience", page.locator("section.editorial a").first.get_attribute("href"))
 
     def test_horizontal_diagrams_touch_and_keyboard(self):
         routes = [

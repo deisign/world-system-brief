@@ -43,3 +43,12 @@ test('rewrites nested HTML without touching JS files', () => {
 test('rejects malformed base paths', () => {
   for (const base of ['', '/', 'https://x', '/../', '/foo bar']) assert.throws(() => prefixHtml('x', base));
 });
+
+test('responsive picture srcset paths are prefixed once and external image candidates are retained',()=>{
+ const html='<picture><source media="(max-width: 650px)" srcset="/assets/engravings/cascade-mobile.svg"><source srcset="/images/a.png 1x, /images/b.png 2x"><img src="/assets/engravings/cascade.svg"></picture>';
+ const out=prefixHtml(html);
+ assert.match(out,/srcset="\/world-system-brief\/assets\/engravings\/cascade-mobile\.svg"/);
+ assert.match(out,/srcset="\/world-system-brief\/images\/a\.png 1x, \/world-system-brief\/images\/b\.png 2x"/);
+ assert.match(out,/src="\/world-system-brief\/assets\/engravings\/cascade\.svg"/);
+ assert.equal(prefixHtml(out),out);
+});

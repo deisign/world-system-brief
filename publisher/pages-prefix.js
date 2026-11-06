@@ -6,6 +6,13 @@ export function prefixHtml(html, base = '/world-system-brief') {
   if (!/^\/[A-Za-z0-9_-]+(?:\/[A-Za-z0-9_-]+)*$/.test(base)) throw new Error('Invalid Pages base path');
   const withBase = p => p.startsWith(base + '/') || p === base ? p : base + p;
   return html
+    .replace(/\bsrcset=(['"])(.*?)\1/gi,(_,quote,value)=>{
+      const links=value.split(',').map(token=>{
+        const match=token.match(/^(\s*)(\/[^\s,]*)(\s*[^,]*?)\s*$/);
+        return match?match[1]+withBase(match[2])+match[3]:token;
+      });
+      return 'srcset='+quote+links.join(',')+quote;
+    })
     .replace(/\b(href|src|action|poster)=(['"])\/(?!\/)([^'"]*)\2/gi,
       (_, key, quote, value) => key + '=' + quote + withBase('/' + value) + quote)
     .replace(/\burl\(\s*(['"]?)\/(?!\/)([^)'"\s]*)\1\s*\)/gi,
