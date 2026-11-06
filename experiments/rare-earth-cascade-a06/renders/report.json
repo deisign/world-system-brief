@@ -1,0 +1,91 @@
+{
+  "experiment": "cascade-a-06",
+  "status": "unreviewed-experiment-not-published",
+  "pinned_upstream": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+  "files": [
+    {
+      "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+      "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+      "count": 1,
+      "mode": "intaglio",
+      "rendered_surfaces": 26,
+      "physical_surfaces": 51,
+      "camera": {
+        "azimuth": -63,
+        "elevation": 25,
+        "pad": 78
+      },
+      "linesByKind": {
+        "mixer": 2,
+        "motor": 3,
+        "shaft": 1,
+        "settler": 2,
+        "rim": 3,
+        "surface": 3,
+        "connection": 3,
+        "foundation": 3,
+        "organic": 3,
+        "aqueous": 3
+      },
+      "file": "stage-a-01-intaglio.svg",
+      "bytes": 618530,
+      "duration_ms": 244
+    },
+    {
+      "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+      "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+      "count": 6,
+      "mode": "mass",
+      "rendered_surfaces": 182,
+      "physical_surfaces": 390,
+      "camera": {
+        "azimuth": -63,
+        "elevation": 25,
+        "pad": 78
+      },
+      "linesByKind": {
+        "mixer": 12,
+        "motor": 18,
+        "shaft": 6,
+        "settler": 18,
+        "rim": 18,
+        "surface": 18,
+        "connection": 18,
+        "foundation": 18,
+        "organic": 17,
+        "aqueous": 39
+      },
+      "file": "cascade-a-06-mass.svg",
+      "bytes": 547133,
+      "duration_ms": 162
+    },
+    {
+      "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+      "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+      "count": 6,
+      "mode": "intaglio",
+      "rendered_surfaces": 176,
+      "physical_surfaces": 390,
+      "camera": {
+        "azimuth": -63,
+        "elevation": 25,
+        "pad": 78
+      },
+      "linesByKind": {
+        "mixer": 12,
+        "motor": 18,
+        "shaft": 6,
+        "settler": 12,
+        "rim": 18,
+        "surface": 18,
+        "connection": 18,
+        "foundation": 18,
+        "organic": 17,
+        "aqueous": 39
+      },
+      "file": "cascade-a-06-intaglio.svg",
+      "bytes": 417360,
+      "duration_ms": 171
+    }
+  ]
+}
