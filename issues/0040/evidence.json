@@ -1,0 +1,55 @@
+{
+  "issue_id": "WSB-0040",
+  "as_of": "2026-11-06",
+  "records": [
+    {
+      "id": "WSB-0040-SRC-01",
+      "source": "Reuters / bank balance estimates and Gulf product divergence",
+      "source_type": "newswire",
+      "role": "dated_multi-source_report",
+      "url": "https://www.reuters.com/business/energy/high-oil-prices-curb-demand-fresh-signs-glut-appear-2026-11-06/",
+      "publication_date": "2026-11-06",
+      "claim": "Reuters cites JPMorgan global oil market surplus estimates of 1.1m b/d in September and 1.4m b/d in October; Goldman Sachs assessed flat stocks; Vortexa Gulf October crude and condensate 14m b/d (~86% pre-war) and refined products 3.1m b/d (just over half normal); near-term Brent swaps contango while Jan 2027+ futures backwardated.",
+      "observation": "November 6 publication synthesizes earlier-month flows and bank estimates, not new November 6 operating capacity.",
+      "assessment": "EVIDENCE UPDATE — DIFFERENT PHYSICAL FLOWS AND MARKET TENORS",
+      "supports": [
+        "global-oil-balance",
+        "gulf-oil-flow",
+        "refined-products-bottleneck"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0040-SRC-02",
+      "source": "Reuters / Vortexa and Kpler Gulf oil tanker tracking",
+      "source_type": "newswire",
+      "role": "earlier_source_for_same_tracking_measurement",
+      "url": "https://www.reuters.com/business/energy/gulf-oil-flows-dip-october-post-iran-war-high-data-shows-2026-11-03/",
+      "publication_date": "2026-11-03",
+      "claim": "Vortexa Gulf October crude/condensate exports 14.0m b/d (86% pre-war) and products 3.1m b/d (just over half normal); AIS blackout and later satellite verification mean estimates may be revised up; Kpler uses different coverage, with Iran excluded.",
+      "observation": "Earlier publication of same measurement source, not independent repetition or newly dated physical change.",
+      "assessment": "DATED CONTEXT — PRELIMINARY TRACKING",
+      "supports": [
+        "gulf-oil-flow",
+        "refined-products-bottleneck"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0040-SRC-03",
+      "source": "Reuters / China November diesel exports and inventories",
+      "source_type": "newswire",
+      "role": "previous_day_context",
+      "url": "https://www.reuters.com/business/energy/chinas-november-diesel-exports-ease-amid-thin-domestic-stocks-sources-say-2026-11-05/",
+      "publication_date": "2026-11-05",
+      "claim": "China November diesel exports forecast below 800000 tonnes; commercial diesel inventories estimated 11.1m tonnes at end October, lowest since data series began in 2011. Forecast not a full-month measured export outcome.",
+      "observation": "November 5 earlier-day product-stock constraint contextualizing differentiated recovery.",
+      "assessment": "CONTEXT — FORECAST NOT OBSERVED NOVEMBER EXPORT",
+      "supports": [
+        "china-fuel-export-suspension",
+        "refined-products-bottleneck"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

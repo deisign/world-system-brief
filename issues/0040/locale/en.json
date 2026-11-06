@@ -1,0 +1,83 @@
+{
+  "locale": "en",
+  "labels": {
+    "yandex-data-centre-network": "Yandex data-centre network",
+    "us-perm-tech-suspensions": "US PERM restrictions",
+    "us-gulf-offshore-output": "US Gulf offshore production",
+    "hormuz": "Strait of Hormuz",
+    "shadow-fleet-shipping-services": "Shadow-fleet shipping services",
+    "iran-lpg-blockade-circumvention": "Iranian fuel blockade circumvention",
+    "china-ai-technology-export-regime": "China AI technology transfer regime",
+    "us-russia-graham-act-waiver": "US Russia-related Graham Act waiver",
+    "hormuz-reopening-negotiation": "Hormuz reopening negotiation",
+    "china-export-demand-imbalance": "China's export–domestic demand divergence",
+    "indonesia-singapore-gas-supply-adjustment": "Indonesia–Singapore gas delivery adjustment",
+    "irgc-hormuz-mine-seizure-claims": "IRGC renewed tanker-mine and seizure claims",
+    "uk-critical-minerals-resilience": "UK critical-minerals supply-chain resilience",
+    "maersk-container-freight-pricing": "Maersk freight price / congestion signal",
+    "gulf-qatar-ukmto-tanker-incident": "UKMTO tanker report north of Qatar",
+    "global-oil-balance": "Global oil balance",
+    "gulf-oil-flow": "Gulf crude oil exports",
+    "refined-products-bottleneck": "Refined-product supply bottleneck",
+    "china-fuel-export-suspension": "China refined-fuel exports"
+  },
+  "states": {
+    "kaluga_modules_disabled_second_site": "Modules disabled at Kaluga site",
+    "vladimir_site_operations_suspended": "Vladimir site operations suspended",
+    "named_firms_suspended_from_perm": "PERM access restricted for named employers",
+    "storm_shutins_continue": "Storm-related production shut-ins continue",
+    "persistent_navigation_constraint": "Navigation remains constrained",
+    "existing_restrictions_under_review": "Existing restrictions and possible changes under discussion",
+    "limited_undated_shipments_detected": "Limited earlier fuel transfers identified",
+    "draft_export_control_list_published": "Draft export-control list published",
+    "friday_waiver_reported": "Sanctions waived before taking effect",
+    "conditional_reopening_offer_reiterated": "The strait is still a bargaining chip",
+    "q3_growth_4_5_export_led": "Exports carry China's uneven growth",
+    "reported_observation_not_confirmed_new_system_delta": "Evidence reported; systemic change not established",
+    "report_dated_not_new_confirmed_system_delta": "Dated evidence / systemic transition not established",
+    "september_october_surplus_bank_estimates_reported": "Banks estimate September–October crude oil surplus",
+    "october_crude_recovery_product_exports_lag": "October Gulf crude exports recover faster than products",
+    "gulf_products_lag_crude_export_recovery": "Refined-product flows remain further below normal",
+    "november_diesel_exports_constrained_by_domestic_stocks": "China diesel-export outlook constrained by domestic inventories"
+  },
+  "assessments": {
+    "policy_discussion_not_implemented": "Political signals differ; shipping access rules remain unverified as changed.",
+    "new_information_on_bypass_and_draft_controls": "Export controls create incentives for bypasses, but reported cases are not causally connected.",
+    "distinct_evidence_not_an_unverified_transition": "New evidence does not by itself establish a new system transition.",
+    "no_new_confirmed_system_transition": "New evidence is not proof of a new systemic transition.",
+    "dated_reporting_not_proven_system_transition": "The dated report does not establish a confirmed new systemic state change.",
+    "dated_synthesis_not_proven_new_operating_capacity": "New published estimates and tracking evidence describe distinct recovery speeds; no new same-day operating capacity has been verified."
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  },
+  "noise": {
+    "proposal_not_implementation": "PROPOSAL IS NOT IMPLEMENTATION",
+    "publication_date_not_event_date": "ARTICLE DATE IS NOT SHIPPING DATE",
+    "proposed_not_final": "DRAFT IS NOT A FINAL RESTRICTION",
+    "no_false_daily_delta": "Report date does not create a new operating change.",
+    "differentiate_product_bottleneck_from_balance_estimate": "An oil surplus does not mean all fuels are abundant."
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "CRUDE RECOVERS FASTER THAN FUEL",
+    "deck": "Banks estimate that global oil supply has returned toward surplus, yet Gulf refined-product exports remain near half their pre-war volume. Different recovery speeds expose a downstream bottleneck; reports and market signals are not proof of a newly completed system transition.",
+    "mechanism": "Crude-market balance masks refined-product bottlenecks",
+    "chainNote": "CRUDE RECOVERY → PRODUCT LAG → DISTRIBUTION CONSTRAINT",
+    "evidenceNote": "Forecasts, reports and events have different dates and evidentiary status.",
+    "footer": "CRUDE ≠ PRODUCTS · FORECAST ≠ FLOW · REPORT ≠ NEW Δ"
+  }
+}
