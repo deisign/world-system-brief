@@ -29,7 +29,7 @@
       },
       "file": "stage-a-01-intaglio.svg",
       "bytes": 618530,
-      "duration_ms": 180
+      "duration_ms": 237
     },
     {
       "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
@@ -57,7 +57,7 @@
       },
       "file": "cascade-a-06-mass.svg",
       "bytes": 547133,
-      "duration_ms": 135
+      "duration_ms": 169
     },
     {
       "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
@@ -85,7 +85,7 @@
       },
       "file": "cascade-a-06-intaglio.svg",
       "bytes": 417360,
-      "duration_ms": 118
+      "duration_ms": 150
     }
   ]
 }
