@@ -57,7 +57,7 @@ export function cascadeGeometry(count=6){
 
 export function renderCascade({count=6,mode='intaglio',width=WIDTH,height=HEIGHT,ss=1,cameraSettings=CAMERA}={}){
  if(!['intaglio','mass'].includes(mode))throw Error('Unknown render mode');
- if(!cameraSettings||![-180,180].includes(cameraSettings.azimuth)&&(!Number.isFinite(cameraSettings.azimuth)||Math.abs(cameraSettings.azimuth)>180)||!Number.isFinite(cameraSettings.elevation)||cameraSettings.elevation<1||cameraSettings.elevation>89||!Number.isFinite(cameraSettings.pad)||cameraSettings.pad<0||cameraSettings.pad>=Math.min(width,height)/2)throw Error('Invalid camera settings');
+ if(!cameraSettings||(!Number.isFinite(cameraSettings.azimuth)||Math.abs(cameraSettings.azimuth)>180)||!Number.isFinite(cameraSettings.elevation)||cameraSettings.elevation<1||cameraSettings.elevation>89||!Number.isFinite(cameraSettings.pad)||cameraSettings.pad<0||cameraSettings.pad>=Math.min(width,height)/2)throw Error('Invalid camera settings');
  const geometry=cascadeGeometry(count);
  const cam=I.fitCamera(geometry.bounds,{width,height,pad:cameraSettings.pad,azimuth:cameraSettings.azimuth,elevation:cameraSettings.elevation});
  const solids=geometry.parts.flatMap(part=>part.surfaces);
