@@ -89,6 +89,9 @@ class BrowserSmoke(unittest.TestCase):
             "/en/structure/asml/",
             "/ua/ledger/dependencies/", "/en/ledger/dependencies/",
             "/ua/ledger/dependencies/uk-critical-minerals-resilience/",
+            "/ua/engravings/", "/en/engravings/",
+            "/ua/engravings/rare-earth-separation-study-01/",
+            "/en/engravings/rare-earth-separation-study-01/",
         ]
         for width in (390, 768, 1440):
             for route in routes:
