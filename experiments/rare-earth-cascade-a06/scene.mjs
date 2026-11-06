@@ -69,8 +69,10 @@ export function cascadeGeometry(count=6,{openSettler=false}={}){
  return {count,stages,parts,bounds:boxes};
 }
 
-export function renderCascade({count=6,mode='intaglio',width=WIDTH,height=HEIGHT,ss=1,cameraSettings=CAMERA,openSettler=false}={}){
+export function renderCascade({count=6,mode='intaglio',width=WIDTH,height=HEIGHT,ss=1,cameraSettings=CAMERA,openSettler=false,hatchProfile='standard'}={}){
  if(!['intaglio','mass'].includes(mode))throw Error('Unknown render mode');
+ if(!['standard','mobile-open'].includes(hatchProfile))throw Error('Unknown hatch profile');
+ if(hatchProfile==='mobile-open'&&(mode!=='intaglio'||!openSettler))throw Error('Mobile hatch profile needs open-settler intaglio');
  if(!cameraSettings||(!Number.isFinite(cameraSettings.azimuth)||Math.abs(cameraSettings.azimuth)>180)||!Number.isFinite(cameraSettings.elevation)||cameraSettings.elevation<1||cameraSettings.elevation>89||!Number.isFinite(cameraSettings.pad)||cameraSettings.pad<0||cameraSettings.pad>=Math.min(width,height)/2)throw Error('Invalid camera settings');
  const geometry=cascadeGeometry(count,{openSettler});
  const cam=I.fitCamera(geometry.bounds,{width,height,pad:cameraSettings.pad,azimuth:cameraSettings.azimuth,elevation:cameraSettings.elevation});
@@ -95,8 +97,9 @@ export function renderCascade({count=6,mode='intaglio',width=WIDTH,height=HEIGHT
  for(const part of geometry.parts){
   const tone=I.lighting({...materials[part.kind],light:LIGHT,view:cam.view});
   for(const surface of part.surfaces){
-   const set=I.hatch(surface,cam,occ.sees,{spacing:mode==='mass'?2.45:3.1,step:2.0});
-   const d=I.ink(set,mode==='mass'?()=>.96:tone,mode==='mass'?{from:.05,to:.72,width:2.7,fill:2.6,min:.025}:{from:.09,to:.78,width:1.3,fill:1.05,min:.075});
+   const compact=hatchProfile==='mobile-open';
+   const set=I.hatch(surface,cam,occ.sees,{spacing:mode==='mass'?2.45:compact?5.4:3.1,step:2.0});
+   const d=I.ink(set,mode==='mass'?()=>.96:tone,mode==='mass'?{from:.05,to:.72,width:2.7,fill:2.6,min:.025}:compact?{from:.11,to:.80,width:1.7,fill:1.4,min:.09}:{from:.09,to:.78,width:1.3,fill:1.05,min:.075});
    if(d.length>4){
     paths.push('<path data-stage="'+(part.stage===null?'manifold':part.stage+1)+'" data-kind="'+part.kind+'" d="'+d+'"/>');
     rendered++;
@@ -105,7 +108,7 @@ export function renderCascade({count=6,mode='intaglio',width=WIDTH,height=HEIGHT
   }
  }
  if(!paths.length)throw Error('Draw Beautiful did not produce vector paths');
- const metadata={engine:'bumicodes/draw-beautiful/kit/intaglio.mjs',revision:ENGINE_REVISION,count,mode,openSettler,rendered_surfaces:rendered,physical_surfaces:solids.length,camera:{...cameraSettings},linesByKind};
+ const metadata={engine:'bumicodes/draw-beautiful/kit/intaglio.mjs',revision:ENGINE_REVISION,count,mode,openSettler,hatchProfile,rendered_surfaces:rendered,physical_surfaces:solids.length,camera:{...cameraSettings},linesByKind};
  const svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+width+'" height="'+height+'" viewBox="0 0 '+width+' '+height+'" role="img" aria-label="Procedural Draw Beautiful rendering of '+count+' mixer-settler modules"><title>Mixer-settler '+count+'-stage '+mode+' study</title><desc>'+count+' separately modeled mixer drums, drive shafts and longer rectangular settlers; source-geometry hatching, not a chemically complete installation.</desc><rect width="'+width+'" height="'+height+'" fill="'+paper+'"/><g fill="#232523">'+paths.join('')+'</g></svg>';
  return {svg,metadata};
 }
