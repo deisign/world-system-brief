@@ -1,0 +1,103 @@
+{
+  "status": "technical_qa_passed__editorial_review_pending",
+  "engine_revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+  "scene": "experiments/rare-earth-cascade-a06/scene.mjs",
+  "camera": {
+    "azimuth_degrees": -43,
+    "elevation_degrees": 29,
+    "padding_svg_units": 72,
+    "width": 960,
+    "height": 640
+  },
+  "outputs": {
+    "mass": {
+      "vector": {
+        "sha256": "acc4d74988b5a9f70df58c66df107f7ace0c80d224b62a2784156ba2c5ec75a0",
+        "bytes": 865255,
+        "physical_vector_layers": 157
+      },
+      "raster": [
+        {
+          "width_px": 390,
+          "height_px": 260,
+          "ink_bbox_px": [
+            56,
+            56,
+            331,
+            225
+          ],
+          "ink_coverage": 0.1722
+        },
+        {
+          "width_px": 960,
+          "height_px": 640,
+          "ink_bbox_px": [
+            139,
+            137,
+            817,
+            556
+          ],
+          "ink_coverage": 0.1705
+        },
+        {
+          "width_px": 1920,
+          "height_px": 1280,
+          "ink_bbox_px": [
+            278,
+            274,
+            1634,
+            1113
+          ],
+          "ink_coverage": 0.1699
+        }
+      ]
+    },
+    "intaglio": {
+      "vector": {
+        "sha256": "8b94b5bed623796d42ed2e183ef983ff168f3045637334271ce259b4eedf93e7",
+        "bytes": 705629,
+        "physical_vector_layers": 154
+      },
+      "raster": [
+        {
+          "width_px": 390,
+          "height_px": 260,
+          "ink_bbox_px": [
+            57,
+            56,
+            331,
+            225
+          ],
+          "ink_coverage": 0.1583
+        },
+        {
+          "width_px": 960,
+          "height_px": 640,
+          "ink_bbox_px": [
+            139,
+            138,
+            816,
+            555
+          ],
+          "ink_coverage": 0.1016
+        },
+        {
+          "width_px": 1920,
+          "height_px": 1280,
+          "ink_bbox_px": [
+            279,
+            276,
+            1634,
+            1111
+          ],
+          "ink_coverage": 0.0826
+        }
+      ]
+    }
+  },
+  "limits": [
+    "These checks establish file validity and basic visual framing, not process-plant accuracy.",
+    "Mobile reading of distinct components needs human review at actual display size.",
+    "Not published in the WSB approved engraving catalog."
+  ]
+}
