@@ -55,10 +55,11 @@ export function cascadeGeometry(count=6){
  return {count,stages,parts,bounds:boxes};
 }
 
-export function renderCascade({count=6,mode='intaglio',width=WIDTH,height=HEIGHT,ss=1}={}){
+export function renderCascade({count=6,mode='intaglio',width=WIDTH,height=HEIGHT,ss=1,cameraSettings=CAMERA}={}){
  if(!['intaglio','mass'].includes(mode))throw Error('Unknown render mode');
+ if(!cameraSettings||![-180,180].includes(cameraSettings.azimuth)&&(!Number.isFinite(cameraSettings.azimuth)||Math.abs(cameraSettings.azimuth)>180)||!Number.isFinite(cameraSettings.elevation)||cameraSettings.elevation<1||cameraSettings.elevation>89||!Number.isFinite(cameraSettings.pad)||cameraSettings.pad<0||cameraSettings.pad>=Math.min(width,height)/2)throw Error('Invalid camera settings');
  const geometry=cascadeGeometry(count);
- const cam=I.fitCamera(geometry.bounds,{width,height,pad:CAMERA.pad,azimuth:CAMERA.azimuth,elevation:CAMERA.elevation});
+ const cam=I.fitCamera(geometry.bounds,{width,height,pad:cameraSettings.pad,azimuth:cameraSettings.azimuth,elevation:cameraSettings.elevation});
  const solids=geometry.parts.flatMap(part=>part.surfaces);
  const occ=I.occlusion(solids,cam,{ss});
  const paper='#F3EBDD';
@@ -90,7 +91,7 @@ export function renderCascade({count=6,mode='intaglio',width=WIDTH,height=HEIGHT
   }
  }
  if(!paths.length)throw Error('Draw Beautiful did not produce vector paths');
- const metadata={engine:'bumicodes/draw-beautiful/kit/intaglio.mjs',revision:ENGINE_REVISION,count,mode,rendered_surfaces:rendered,physical_surfaces:solids.length,camera:CAMERA,linesByKind};
- const svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+width+'" height="'+height+'" viewBox="0 0 '+width+' '+height+'" role="img" aria-label="Procedural Draw Beautiful rendering of '+count+' mixer-settler modules"><title>Mixer-settler '+count+'-stage '+mode+' study</title><desc>Six separately modeled mixer drums, drive shafts and longer rectangular settlers; source-geometry hatching, not a chemically complete installation.</desc><rect width="'+width+'" height="'+height+'" fill="'+paper+'"/><g fill="#232523">'+paths.join('')+'</g></svg>';
+ const metadata={engine:'bumicodes/draw-beautiful/kit/intaglio.mjs',revision:ENGINE_REVISION,count,mode,rendered_surfaces:rendered,physical_surfaces:solids.length,camera:{...cameraSettings},linesByKind};
+ const svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+width+'" height="'+height+'" viewBox="0 0 '+width+' '+height+'" role="img" aria-label="Procedural Draw Beautiful rendering of '+count+' mixer-settler modules"><title>Mixer-settler '+count+'-stage '+mode+' study</title><desc>'+count+' separately modeled mixer drums, drive shafts and longer rectangular settlers; source-geometry hatching, not a chemically complete installation.</desc><rect width="'+width+'" height="'+height+'" fill="'+paper+'"/><g fill="#232523">'+paths.join('')+'</g></svg>';
  return {svg,metadata};
 }
