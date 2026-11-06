@@ -1,0 +1,74 @@
+name: Draw Beautiful rare-earth A03 camera comparison
+on:
+  push:
+    branches:
+      - experiment/draw-beautiful-cascade-a03
+    paths:
+      - experiments/rare-earth-cascade-a03/**
+      - experiments/rare-earth-cascade-a06/scene.mjs
+      - experiments/rare-earth-cascade-a06/vendor/**
+      - .github/workflows/draw-beautiful-a03.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  a03-render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run original Draw Beautiful geometry tests
+        run: |
+          node --test experiments/rare-earth-cascade-a06/scene.test.mjs
+          node --test experiments/rare-earth-cascade-a03/scene.test.mjs
+      - name: Render all three cameras in actual Draw Beautiful
+        run: node experiments/rare-earth-cascade-a03/build.mjs
+      - name: Verify paths, generate preview PNG and small JPEG reviews
+        run: |
+          python -m pip install --quiet cairosvg pillow
+          python - <<'PY'
+          from pathlib import Path
+          import base64,io,json,xml.etree.ElementTree as ET
+          import cairosvg
+          from PIL import Image
+          root=Path('experiments/rare-earth-cascade-a03/renders')
+          report=json.loads((root/'report.json').read_text())
+          assert len(report['files'])==6
+          for entry in report['files']:
+              svg=root/entry['file']
+              data=svg.read_text()
+              parsed=ET.fromstring(data)
+              elements=parsed.findall('.//{http://www.w3.org/2000/svg}path')
+              assert len(elements)>=25,(svg,len(elements))
+              assert svg.stat().st_size<5000000
+              assert '<image' not in data and 'data:image' not in data and '<script' not in data
+              png=svg.with_suffix('.png')
+              cairosvg.svg2png(url=str(svg),write_to=str(png),output_width=960)
+              im=Image.open(png).convert('RGB')
+              im.thumbnail((700,470))
+              buf=io.BytesIO()
+              im.save(buf,'JPEG',quality=83,optimize=True)
+              (root/(svg.stem+'.base64.txt')).write_text(base64.b64encode(buf.getvalue()).decode('ascii'))
+              im.thumbnail((390,270))
+              im.save(root/(svg.stem+'-mobile.jpg'),quality=85,optimize=True)
+              print('PASS actual Draw Beautiful SVG:',svg.name,len(elements),'vector path layers')
+          PY
+      - name: Archive exact vectors and inspection previews
+        uses: actions/upload-artifact@v4
+        with:
+          name: draw-beautiful-a03-three-camera-study
+          path: experiments/rare-earth-cascade-a03/renders/
+          if-no-files-found: error
+      - name: Commit experimental output for review
+        if: github.ref == 'refs/heads/experiment/draw-beautiful-cascade-a03'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/rare-earth-cascade-a03/renders/
+          if ! git diff --cached --quiet; then
+            git commit -m "experiment: store real Draw Beautiful A03 camera comparisons [skip ci]"
+            git push
+          fi
