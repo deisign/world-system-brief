@@ -1,0 +1,69 @@
+{
+  "issue_id": "WSB-0040",
+  "as_of": "2026-11-06",
+  "claims": [
+    {
+      "id": "WSB-0040-CLM-01",
+      "kind": "reported",
+      "statement": "November 6 Reuters reported JPMorgan estimates of global oil supply exceeding demand by 1.1m barrels/day in September and 1.4m barrels/day in October; prior-month bank assessment, not a new physical change dated November 6.",
+      "observed_at": "2026-11-06",
+      "event_date": "2026-10-31",
+      "entity_ids": [
+        "ENT-000050"
+      ],
+      "source_ids": [
+        "WSB-0040-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0040-CLM-02",
+      "kind": "reported",
+      "statement": "Vortexa's preliminary October Gulf exports estimated 14m b/d crude and condensate (~86% pre-war) versus 3.1m b/d refined petroleum products (just over half normal), excluding Iran; incomplete ship tracking could lead to upward revisions.",
+      "observed_at": "2026-11-06",
+      "event_date": "2026-10-31",
+      "entity_ids": [
+        "ENT-000043",
+        "ENT-000035"
+      ],
+      "source_ids": [
+        "WSB-0040-SRC-01",
+        "WSB-0040-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0040-CLM-03",
+      "kind": "reported",
+      "statement": "On November 6 Reuters reported Goldman Sachs judged oil inventories broadly unchanged in September-October, while prompt Brent CFD swaps moved into contango and January 2027 onward futures remained backwardated; these are different instruments and tenors, not equal evidence of product availability.",
+      "observed_at": "2026-11-06",
+      "event_date": "2026-11-06",
+      "entity_ids": [
+        "ENT-000050"
+      ],
+      "source_ids": [
+        "WSB-0040-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0040-CLM-04",
+      "kind": "reported",
+      "statement": "November 5 Reuters reported China end-October commercial diesel stocks at 11.1m tonnes, and forecast November diesel exports below 800000 tonnes; older report used as dated context, not confirmed November 6 export change.",
+      "observed_at": "2026-11-06",
+      "event_date": "2026-11-05",
+      "entity_ids": [
+        "ENT-000020",
+        "ENT-000035"
+      ],
+      "source_ids": [
+        "WSB-0040-SRC-03"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    }
+  ]
+}
