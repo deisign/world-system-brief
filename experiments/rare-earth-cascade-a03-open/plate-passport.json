@@ -1,0 +1,69 @@
+{
+  "id": "rare-earth-separation-study-01",
+  "candidate": "A03-2 Spatial / Open Settler",
+  "status": "editorially_selected_composition__physical_review_pending",
+  "publication_approved": false,
+  "subject_class": "generic_processing_cascade",
+  "engine": {
+    "repository": "bumicodes/draw-beautiful",
+    "source": "experiments/rare-earth-cascade-a06/vendor/intaglio.mjs",
+    "commit": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+    "license": "MIT"
+  },
+  "geometry": {
+    "source": "experiments/rare-earth-cascade-a06/scene.mjs",
+    "stages": 3,
+    "openSettler": true,
+    "stage_pitch_model_units": 3.08,
+    "model_units_are_not_real_world_dimensions": true,
+    "features": [
+      "cylindrical mixing drums",
+      "drive motors",
+      "rectangular gravity settler vessels with exposed recessed liquid surfaces",
+      "two conceptual phase manifolds"
+    ]
+  },
+  "view": {
+    "azimuth_degrees": -43,
+    "elevation_degrees": 29,
+    "padding_svg_units": 72,
+    "width": 960,
+    "height": 640
+  },
+  "light": {
+    "direction_model": "fixed original A06 setup",
+    "source": "I.direction(-128,53)"
+  },
+  "physical_role": {
+    "en": "A generic three-stage mixer–settler group: mechanically agitated mixing chambers alongside larger gravity-settling vessels.",
+    "ua": "Узагальнена група з трьох ступенів «змішувач — відстійник»: камери механічного змішування поруч із більшими ємностями гравітаційного розділення."
+  },
+  "mechanism": {
+    "en": "Industrial separation depends on multi-stage refining and process know-how, not merely on the presence of mineral ore.",
+    "ua": "Промислове розділення залежить від багатоступеневого перероблення та технологічних компетенцій, а не лише від наявності мінеральної руди."
+  },
+  "limitations": {
+    "en": "Not a depiction of a named plant or a verified operating design. The three stages are an illustrative fragment, not an entire rare-earth extraction circuit. The piping is conceptual, not a validated P&ID. No chemistry, productivity, plant geography, market share or supply concentration is proven by this image.",
+    "ua": "Це не зображення конкретного заводу й не перевірений робочий проєкт. Три ступені — умовний фрагмент, а не повний контур екстракції рідкісноземельних елементів. Трубопроводи схематичні, не перевірена технологічна схема. Ілюстрація не доводить хімічного складу, продуктивності, розташування заводу, частки ринку чи концентрації постачання."
+  },
+  "alternate_text": {
+    "en": "Procedurally engraved three-stage industrial mixer–settler cascade, with small cylindrical mixers and larger rectangular settling basins shown in perspective.",
+    "ua": "Процедурна гравюра триступеневого каскаду промислових змішувачів-відстійників: невеликі циліндричні змішувачі та більші прямокутні відстійники у перспективі."
+  },
+  "related_entity_context": [
+    "uk-critical-minerals-resilience"
+  ],
+  "source_bound_editorial_scope": "The image itself is not evidence of real processing concentration; an eventual analytical study must cite sources.",
+  "files": {
+    "vector": "renders/a03-2-spatial-open-settler-intaglio.svg",
+    "mass": "renders/a03-2-spatial-open-settler-mass.svg",
+    "qc": "renders/plate-qa.json"
+  },
+  "publication_gate": [
+    "technical evidence review of phase routing",
+    "actual 390 px readability",
+    "editorial sign-off",
+    "addition of generic_processing_cascade class in main publisher, validated with tests",
+    "paired sourced analytical study"
+  ]
+}
