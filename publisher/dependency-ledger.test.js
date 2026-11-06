@@ -5,10 +5,12 @@ import {validateDependencyAssessments,dependencyLedgerPage} from './dependency-l
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const config=read('knowledge/dependency-assessments.json'),registry=read('knowledge/entities.json');
 const bundle={state:read('issues/0039/state.json'),claims:read('issues/0039/claims.json'),evidence:read('issues/0039/evidence.json')};
+const nextBundle={state:read('issues/0040/state.json'),claims:read('issues/0040/claims.json'),evidence:read('issues/0040/evidence.json')};
+const bundles=[bundle,nextBundle];
 test('first real assessments bind exactly to original issue, claims and sources',()=>{
- assert.equal(validateDependencyAssessments(config,registry,[bundle]),true);
- assert.deepEqual(config.records.map(x=>x.entity_slug),['uk-critical-minerals-resilience','maersk-container-freight-pricing']);
- assert.deepEqual(config.records.map(x=>x.classification),['knowledge_update','knowledge_update']);
+ assert.equal(validateDependencyAssessments(config,registry,bundles),true);
+ assert.deepEqual(config.records.map(x=>x.entity_slug),['uk-critical-minerals-resilience','maersk-container-freight-pricing','global-oil-balance','refined-products-bottleneck']);
+ assert.deepEqual(config.records.map(x=>x.classification),['knowledge_update','knowledge_update','knowledge_update','knowledge_update']);
 });
 test('unknown horizon stays null; an estimated horizon must appear in primary evidence',()=>{
  assert.equal(config.records[1].substitutability.status,'unknown');
@@ -16,27 +18,27 @@ test('unknown horizon stays null; an estimated horizon must appear in primary ev
  assert.equal(config.records[0].substitutability.min_years,10);
  assert.equal(config.records[0].substitutability.max_years,15);
  const unsupported=JSON.parse(JSON.stringify(config));unsupported.records[0].substitutability.max_years=99;
- assert.throws(()=>validateDependencyAssessments(unsupported,registry,[bundle]),/Horizon absent/);
+ assert.throws(()=>validateDependencyAssessments(unsupported,registry,bundles),/Horizon absent/);
  const invented=JSON.parse(JSON.stringify(config));invented.records[1].substitutability.min_years=3;
- assert.throws(()=>validateDependencyAssessments(invented,registry,[bundle]),/Invented horizon/);
+ assert.throws(()=>validateDependencyAssessments(invented,registry,bundles),/Invented horizon/);
 });
 test('fail closed for unlinked claims, sources, status changes and missing translations',()=>{
  const mutate=()=>JSON.parse(JSON.stringify(config));
- let x=mutate();x.records[0].source_ids=['WSB-0039-SRC-03'];assert.throws(()=>validateDependencyAssessments(x,registry,[bundle]),/Unlinked evidence/);
- x=mutate();x.records[0].claim_ids=['WSB-0039-CLM-02'];assert.throws(()=>validateDependencyAssessments(x,registry,[bundle]),/Claim does not support/);
- x=mutate();x.records[0].classification='confirmed_delta';assert.throws(()=>validateDependencyAssessments(x,registry,[bundle]),/Invalid entity/);
- x=mutate();x.records[0].leverage.text.ua='';assert.throws(()=>validateDependencyAssessments(x,registry,[bundle]),/Invalid leverage/);
- x=mutate();x.records.push(x.records[0]);assert.throws(()=>validateDependencyAssessments(x,registry,[bundle]),/Duplicate/);
+ let x=mutate();x.records[0].source_ids=['WSB-0039-SRC-03'];assert.throws(()=>validateDependencyAssessments(x,registry,bundles),/Unlinked evidence/);
+ x=mutate();x.records[0].claim_ids=['WSB-0039-CLM-02'];assert.throws(()=>validateDependencyAssessments(x,registry,bundles),/Claim does not support/);
+ x=mutate();x.records[0].classification='confirmed_delta';assert.throws(()=>validateDependencyAssessments(x,registry,bundles),/Invalid entity/);
+ x=mutate();x.records[0].leverage.text.ua='';assert.throws(()=>validateDependencyAssessments(x,registry,bundles),/Invalid leverage/);
+ x=mutate();x.records.push(x.records[0]);assert.throws(()=>validateDependencyAssessments(x,registry,bundles),/Duplicate/);
 });
 test('bilingual ledger pages preserve source URLs and exact unknown fields',()=>{
  for(const lang of ['en','ua']){
-  const html=dependencyLedgerPage({lang,records:config.records,registry,bundles:[bundle]});
+  const html=dependencyLedgerPage({lang,records:config.records,registry,bundles});
   assert.match(html,/WSB-0039-SRC-01/);
   assert.match(html,/href="https:\/\/publications\.parliament\.uk\//);
   assert.match(html,/WSB-0039-CLM-02/);
   assert.match(html,/ledger\/dependencies\/uk-critical-minerals-resilience/);
   assert.match(html,lang==='en'?/UNKNOWN/:/НЕ ВСТАНОВЛЕНО/);
-  const detail=dependencyLedgerPage({lang,records:config.records,registry,bundles:[bundle],slug:'maersk-container-freight-pricing'});
+  const detail=dependencyLedgerPage({lang,records:config.records,registry,bundles,slug:'maersk-container-freight-pricing'});
   assert.match(detail,/46%/);
   assert.doesNotMatch(detail,/WSB-0039-SRC-01/);
  }
@@ -45,7 +47,7 @@ test('bilingual ledger pages preserve source URLs and exact unknown fields',()=>
 test('engraving appears on both localized critical-minerals detail pages, not unrelated pages',()=>{
  const engravings=read('visualizations/engravings/manifest.json').engravings;
  for(const lang of ['en','ua']){
-  const detail=dependencyLedgerPage({lang,records:config.records,registry,bundles:[bundle],slug:'uk-critical-minerals-resilience',engravings});
+  const detail=dependencyLedgerPage({lang,records:config.records,registry,bundles,slug:'uk-critical-minerals-resilience',engravings});
   assert.match(detail,/<figure class="engraving">/);
   assert.match(detail,/rare-earth-separation-study-01\.svg/);
   assert.match(detail,/rare-earth-separation-study-01-mobile\.svg/);
@@ -53,9 +55,32 @@ test('engraving appears on both localized critical-minerals detail pages, not un
   assert.match(detail,new RegExp('/'+lang+'/engravings/rare-earth-separation-study-01/'));
   assert.match(detail,/width="960" height="640"/);
   assert.match(detail,lang==='ua'?/Паспорт гравюри/:/Engraving details/);
-  const other=dependencyLedgerPage({lang,records:config.records,registry,bundles:[bundle],slug:'maersk-container-freight-pricing',engravings});
+  const other=dependencyLedgerPage({lang,records:config.records,registry,bundles,slug:'maersk-container-freight-pricing',engravings});
   assert.doesNotMatch(other,/rare-earth-separation-study-01/);
-  const index=dependencyLedgerPage({lang,records:config.records,registry,bundles:[bundle],engravings});
+  const index=dependencyLedgerPage({lang,records:config.records,registry,bundles,engravings});
   assert.doesNotMatch(index,/<figure class="engraving">/);
+ }
+});
+
+test('2026-11-06 knowledge updates retain original October observations and refuse invented time horizons',()=>{
+ const global=config.records.find(r=>r.id==='DPA-0040-GLOBAL-OIL-BALANCE');
+ const products=config.records.find(r=>r.id==='DPA-0040-REFINED-PRODUCTS-GAP');
+ assert.equal(validateDependencyAssessments(config,registry,bundles),true);
+ for(const row of [global,products]){
+  assert.equal(row.substitutability.status,'unknown');
+  assert.equal(row.substitutability.min_years,null);
+  assert.equal(row.substitutability.max_years,null);
+  assert.equal(row.rent.status,'unknown');
+  assert.equal(row.leverage.status,'unknown');
+ }
+ assert.deepEqual(products.claim_ids,['WSB-0040-CLM-02']);
+ assert.deepEqual(products.source_ids,['WSB-0040-SRC-01','WSB-0040-SRC-02']);
+ assert.match(products.flow.en,/just over half/);
+ assert.doesNotMatch(products.flow.en,/55%|52%|51%/);
+ for(const lang of ['en','ua']){
+  const html=dependencyLedgerPage({lang,records:config.records,registry,bundles,slug:'refined-products-bottleneck'});
+  assert.match(html,/WSB-0040-SRC-01/);
+  assert.match(html,/WSB-0040-SRC-02/);
+  assert.match(html,lang==='en'?/UNKNOWN/:/НЕ ВСТАНОВЛЕНО/);
  }
 });

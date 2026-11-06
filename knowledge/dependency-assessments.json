@@ -113,6 +113,120 @@
       "source_ids": [
         "WSB-0039-SRC-03"
       ]
+    },
+    {
+      "id": "DPA-0040-GLOBAL-OIL-BALANCE",
+      "issue_id": "WSB-0040",
+      "date": "2026-11-06",
+      "entity_slug": "global-oil-balance",
+      "flow_type": "energy",
+      "classification": "knowledge_update",
+      "flow": {
+        "en": "Aggregated supply-demand balance of global crude oil. JPMorgan estimates refer to September and October 2026, not a new November 6 operating flow.",
+        "ua": "Сукупний баланс пропозиції та попиту на сиру нафту у світі. Оцінки JPMorgan стосуються вересня й жовтня 2026 року, а не нового потоку 6 листопада."
+      },
+      "dependency": {
+        "en": "Market balances depend on demand, production, maritime access and inventories; aggregate crude balance does not resolve product-grade or regional fuel availability.",
+        "ua": "Ринковий баланс залежить від попиту, видобутку, морського доступу та запасів; загальний баланс сирої нафти не визначає доступності конкретних видів пального в окремих регіонах."
+      },
+      "bottleneck": {
+        "en": "A crude surplus estimate is not a measure of functioning refinery throughput, regional product storage or last-mile fuel distribution.",
+        "ua": "Оцінка профіциту сирої нафти не є виміром фактичної потужності НПЗ, регіональних запасів готового пального чи його кінцевого розподілу."
+      },
+      "substitutability": {
+        "status": "unknown",
+        "min_years": null,
+        "max_years": null,
+        "scope": {
+          "en": "No source establishes how quickly a particular damaged refinery, fuel route or product distribution capacity can be substituted; a bank's monthly crude-balance estimate is not such a horizon.",
+          "ua": "Джерела не встановлюють, наскільки швидко можна замінити конкретний пошкоджений НПЗ, маршрут постачання пального або потужність розподілу продуктів; місячна оцінка нафтового балансу банком не є таким горизонтом."
+        }
+      },
+      "leverage": {
+        "status": "unknown",
+        "text": {
+          "en": "The direction of near-term crude pricing is observable, but the cited estimates do not establish which actor exercises operational leverage over product-specific distribution.",
+          "ua": "Напрямок короткострокового ціноутворення на нафту можна спостерігати, але наведені оцінки не встановлюють, хто має фактичні важелі впливу на розподіл конкретних нафтопродуктів."
+        }
+      },
+      "rent": {
+        "status": "unknown",
+        "text": {
+          "en": "Different Brent curve tenors and reported inventory changes do not directly measure scarcity rent or assign earnings to particular producers, refiners or shipping providers.",
+          "ua": "Різні строки контрактів Brent і повідомлення про зміни запасів не вимірюють безпосередньо ренту дефіциту та не визначають прибутки окремих виробників, НПЗ чи перевізників."
+        }
+      },
+      "adaptation": {
+        "status": "unknown",
+        "text": {
+          "en": "Supply and demand adjusted over prior months, but this source does not verify any specific new November 6 refinery, pipeline or maritime capacity restoration.",
+          "ua": "Протягом попередніх місяців пропозиція й попит змінювалися, однак джерело не підтверджує введення конкретної нової потужності НПЗ, нафтопроводу чи морського маршруту 6 листопада."
+        }
+      },
+      "claim_ids": [
+        "WSB-0040-CLM-01",
+        "WSB-0040-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0040-SRC-01"
+      ]
+    },
+    {
+      "id": "DPA-0040-REFINED-PRODUCTS-GAP",
+      "issue_id": "WSB-0040",
+      "date": "2026-11-06",
+      "entity_slug": "refined-products-bottleneck",
+      "flow_type": "energy",
+      "classification": "knowledge_update",
+      "flow": {
+        "en": "October Gulf seaborne exports, excluding Iran: estimated 14.0 million barrels/day crude and condensate (~86% of pre-war exports), versus 3.1 million barrels/day refined products (just over half normal). These are different product categories and denominators.",
+        "ua": "Жовтневий морський експорт із країн Затоки, без Ірану: орієнтовно 14,0 млн барелів на добу сирої нафти й конденсату (~86% довоєнного експорту) проти 3,1 млн барелів на добу нафтопродуктів (трохи більше половини звичайного рівня). Це різні товарні категорії та бази порівняння."
+      },
+      "dependency": {
+        "en": "Usable fuel supply depends on refining, storage, tanker routes, terminals and regional distribution as well as crude production and export access.",
+        "ua": "Постачання готового пального залежить від перероблення, зберігання, танкерних маршрутів, терміналів і регіонального розподілу, а не лише від видобутку й експорту сирої нафти."
+      },
+      "bottleneck": {
+        "en": "The preliminary October tracking estimates show slower recovery of product exports than crude. They do not isolate refinery damage, export controls, stock management or shipping as a measured single cause.",
+        "ua": "Попередні дані відстеження за жовтень показують повільніше відновлення експорту нафтопродуктів, ніж сирої нафти. Вони не визначають як виміряну єдину причину пошкодження НПЗ, експортні обмеження, управління запасами чи судноплавство."
+      },
+      "substitutability": {
+        "status": "unknown",
+        "min_years": null,
+        "max_years": null,
+        "scope": {
+          "en": "No quantified substitution horizon or verified alternative throughput for the Gulf product-export shortfall is established. 'Just over half' is qualitative, not an exact reported recovery percent.",
+          "ua": "Джерела не встановлюють кількісного горизонту заміщення або перевіреної альтернативної пропускної здатності для відставання експорту нафтопродуктів із Затоки. «Трохи більше половини» — якісний опис, а не точний відсоток відновлення."
+        }
+      },
+      "leverage": {
+        "status": "unknown",
+        "text": {
+          "en": "Persisting product-flow restrictions could sustain negotiating or pricing leverage at refining and logistics nodes, but the tracking estimates do not measure actor-specific control.",
+          "ua": "Тривалі обмеження потоків готових продуктів можуть підтримувати ціновий чи переговорний вплив вузлів перероблення та логістики, але дані відстеження не вимірюють контролю конкретних учасників."
+        }
+      },
+      "rent": {
+        "status": "unknown",
+        "text": {
+          "en": "The export-volume gap alone cannot quantify product margins, consumer losses or the distribution of scarcity rents among refiners, states and carriers.",
+          "ua": "Сам розрив в обсягах експорту не визначає маржі нафтопродуктів, втрат споживачів чи розподілу ренти дефіциту між НПЗ, державами й перевізниками."
+        }
+      },
+      "adaptation": {
+        "status": "unknown",
+        "text": {
+          "en": "Crude shipments have recovered faster than refined-product exports in the cited October dataset, but no verified November 6 restoration or substitute refinery route is established.",
+          "ua": "У наведених даних за жовтень експорт сирої нафти відновлювався швидше, ніж експорт нафтопродуктів, але підтвердженого відновлення або заміщення переробних маршрутів станом на 6 листопада немає."
+        }
+      },
+      "claim_ids": [
+        "WSB-0040-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0040-SRC-01",
+        "WSB-0040-SRC-02"
+      ]
     }
   ]
 }
