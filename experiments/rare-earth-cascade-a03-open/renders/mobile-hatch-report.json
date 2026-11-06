@@ -1,0 +1,80 @@
+{
+  "status": "experimental_mobile_profile_not_approved",
+  "engine": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+  "geometry": "same",
+  "camera": {
+    "azimuth": -43,
+    "elevation": 29,
+    "pad": 72
+  },
+  "files": [
+    {
+      "profile": "standard",
+      "name": "a03-2-spatial-open-settler-intaglio.svg",
+      "bytes": 705629,
+      "metadata": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "intaglio",
+        "openSettler": true,
+        "hatchProfile": "standard",
+        "rendered_surfaces": 154,
+        "physical_surfaces": 327,
+        "camera": {
+          "azimuth": -43,
+          "elevation": 29,
+          "pad": 72
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 42,
+          "rim": 34,
+          "surface": 3,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 18,
+          "aqueous": 21
+        }
+      },
+      "sha256": "8b94b5bed623796d42ed2e183ef983ff168f3045637334271ce259b4eedf93e7",
+      "layers": 154
+    },
+    {
+      "profile": "mobile-open",
+      "name": "a03-2-spatial-open-settler-mobile-intaglio.svg",
+      "bytes": 402885,
+      "metadata": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "intaglio",
+        "openSettler": true,
+        "hatchProfile": "mobile-open",
+        "rendered_surfaces": 148,
+        "physical_surfaces": 327,
+        "camera": {
+          "azimuth": -43,
+          "elevation": 29,
+          "pad": 72
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 36,
+          "rim": 34,
+          "surface": 3,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 18,
+          "aqueous": 21
+        }
+      },
+      "sha256": "e907db498b79300c0ac09d50e2ea3b52f74255174fab849504578f61f70f2700",
+      "layers": 148
+    }
+  ]
+}
