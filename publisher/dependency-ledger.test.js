@@ -41,3 +41,21 @@ test('bilingual ledger pages preserve source URLs and exact unknown fields',()=>
   assert.doesNotMatch(detail,/WSB-0039-SRC-01/);
  }
 });
+
+test('engraving appears on both localized critical-minerals detail pages, not unrelated pages',()=>{
+ const engravings=read('visualizations/engravings/manifest.json').engravings;
+ for(const lang of ['en','ua']){
+  const detail=dependencyLedgerPage({lang,records:config.records,registry,bundles:[bundle],slug:'uk-critical-minerals-resilience',engravings});
+  assert.match(detail,/<figure class="engraving">/);
+  assert.match(detail,/rare-earth-separation-study-01\.svg/);
+  assert.match(detail,/rare-earth-separation-study-01-mobile\.svg/);
+  assert.match(detail,/srcset="\/assets\/engravings\/rare-earth-separation-study-01-mobile.svg"/);
+  assert.match(detail,new RegExp('/'+lang+'/engravings/rare-earth-separation-study-01/'));
+  assert.match(detail,/width="960" height="640"/);
+  assert.match(detail,lang==='ua'?/Паспорт гравюри/:/Engraving details/);
+  const other=dependencyLedgerPage({lang,records:config.records,registry,bundles:[bundle],slug:'maersk-container-freight-pricing',engravings});
+  assert.doesNotMatch(other,/rare-earth-separation-study-01/);
+  const index=dependencyLedgerPage({lang,records:config.records,registry,bundles:[bundle],engravings});
+  assert.doesNotMatch(index,/<figure class="engraving">/);
+ }
+});
