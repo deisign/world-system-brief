@@ -1,0 +1,72 @@
+{
+  "engine": "Draw Beautiful",
+  "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+  "status": "experimental_unapproved",
+  "cameraSettings": {
+    "azimuth": -43,
+    "elevation": 29,
+    "pad": 72
+  },
+  "results": [
+    {
+      "name": "a03-2-spatial-open-settler-mass.svg",
+      "bytes": 865255,
+      "metadata": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "mass",
+        "openSettler": true,
+        "rendered_surfaces": 157,
+        "physical_surfaces": 327,
+        "camera": {
+          "azimuth": -43,
+          "elevation": 29,
+          "pad": 72
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 45,
+          "rim": 34,
+          "surface": 3,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 18,
+          "aqueous": 21
+        }
+      }
+    },
+    {
+      "name": "a03-2-spatial-open-settler-intaglio.svg",
+      "bytes": 705629,
+      "metadata": {
+        "engine": "bumicodes/draw-beautiful/kit/intaglio.mjs",
+        "revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+        "count": 3,
+        "mode": "intaglio",
+        "openSettler": true,
+        "rendered_surfaces": 154,
+        "physical_surfaces": 327,
+        "camera": {
+          "azimuth": -43,
+          "elevation": 29,
+          "pad": 72
+        },
+        "linesByKind": {
+          "mixer": 6,
+          "motor": 9,
+          "shaft": 3,
+          "settler": 42,
+          "rim": 34,
+          "surface": 3,
+          "connection": 9,
+          "foundation": 9,
+          "organic": 18,
+          "aqueous": 21
+        }
+      }
+    }
+  ]
+}
