@@ -36,7 +36,7 @@ export function stageGeometry(index,count,{openSettler=false}={}){
    group('S'+(index+1)+'-rim-back',cuboid(x-.48,.59,1.04,x+1.23,.65,1.085),'rim',index),
    group('S'+(index+1)+'-rim-left',cuboid(x-.48,-.47,1.04,x-.42,.59,1.085),'rim',index),
    group('S'+(index+1)+'-rim-right',cuboid(x+1.17,-.47,1.04,x+1.23,.59,1.085),'rim',index),
-   group('S'+(index+1)+'-liquid-surface',cuboid(x-.35,-.36,.81,x+1.09,.47,.824),'surface',index),
+   group('S'+(index+1)+'-liquid-surface',cuboid(x-.35,-.36,.96,x+1.09,.47,.974),'surface',index),
    group('S'+(index+1)+'-transfer-trough',cuboid(xm+.18,-.67,.69,x-.26,-.44,.87),'connection',index)
   ]:[
    group('S'+(index+1)+'-settler',cuboid(x-.47,-.52,.36,x+1.22,.64,1.04),'settler',index),
@@ -81,7 +81,7 @@ export function renderCascade({count=6,mode='intaglio',width=WIDTH,height=HEIGHT
   mixer:{base:.30,ambient:.28,bounce:.10},
   settler:openSettler?{base:.31,ambient:.24,bounce:.13}:{base:.36,ambient:.22,bounce:.12},
   rim:openSettler?{base:.20,ambient:.30,bounce:.06}:{base:.22,ambient:.28,bounce:.06},
-  surface:openSettler?{base:.03,ambient:.52,bounce:.12}:{base:.04,ambient:.46,bounce:.10},
+  surface:openSettler?{base:.24,ambient:.30,bounce:.10}:{base:.04,ambient:.46,bounce:.10},
   motor:{base:.38,ambient:.18,bounce:.07},
   shaft:{base:.35,ambient:.14,bounce:.08},
   foundation:{base:.48,ambient:.15,bounce:.03},
