@@ -1,0 +1,70 @@
+name: Draw Beautiful rare-earth A06 experiment
+on:
+  push:
+    branches:
+      - experiment/draw-beautiful-cascade-a06
+    paths:
+      - experiments/rare-earth-cascade-a06/scene.mjs
+      - experiments/rare-earth-cascade-a06/build.mjs
+      - experiments/rare-earth-cascade-a06/scene.test.mjs
+      - experiments/rare-earth-cascade-a06/vendor/**
+      - .github/workflows/draw-beautiful-a06.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  physical-engraving:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify original renderer against recorded upstream pin
+        run: |
+          node -e "import('./experiments/rare-earth-cascade-a06/scene.mjs').then(m=>{if(m.ENGINE_REVISION!=='86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86')process.exit(1)})"
+          grep -q "Intaglio kit: turns surfaces into engraved line work" experiments/rare-earth-cascade-a06/vendor/intaglio.mjs
+          grep -q "Copyright (c) 2026 bumicodes" experiments/rare-earth-cascade-a06/vendor/LICENSE
+      - name: Test actual physical geometry and ink paths
+        run: node --test experiments/rare-earth-cascade-a06/scene.test.mjs
+      - name: Render one-stage study and six-stage mass/intaglio plates
+        run: node experiments/rare-earth-cascade-a06/build.mjs
+      - name: Verify true SVG path geometry and size limits
+        run: |
+          python - <<'PY'
+          import pathlib,xml.etree.ElementTree as ET,json
+          directory=pathlib.Path('experiments/rare-earth-cascade-a06/renders')
+          reports=json.loads((directory/'report.json').read_text())
+          assert len(reports['files'])==3
+          for file in sorted(directory.glob('*.svg')):
+              content=file.read_text()
+              root=ET.fromstring(content)
+              paths=root.findall('.//{http://www.w3.org/2000/svg}path')
+              assert len(paths)>20,(file,len(paths))
+              assert 'data:image' not in content
+              assert '<image' not in content
+              assert '<script' not in content
+              assert file.stat().st_size<5_000_000,(file,file.stat().st_size)
+              kinds={p.attrib.get('data-kind') for p in paths}
+              assert {'mixer','settler','motor'}<=kinds,(file,kinds)
+              print(f'PASS {file.name}: {len(paths)} vector layers, {file.stat().st_size} bytes')
+          PY
+      - name: Archive unreviewed physical previews and execution report
+        uses: actions/upload-artifact@v4
+        with:
+          name: draw-beautiful-rare-earth-a06
+          path: experiments/rare-earth-cascade-a06/renders/
+          if-no-files-found: error
+      - name: Commit reproducible experimental vectors to the experiment branch
+        if: github.ref == 'refs/heads/experiment/draw-beautiful-cascade-a06'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/rare-earth-cascade-a06/renders/
+          if ! git diff --cached --quiet; then
+            git commit -m "experiment: store actual Draw Beautiful A06 vector output [skip ci]"
+            git push
+          fi
