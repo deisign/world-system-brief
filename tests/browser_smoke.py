@@ -175,9 +175,9 @@ class BrowserSmoke(unittest.TestCase):
             with self.subTest(lang=lang), self.page_at("/%s/brief/2026-11-06/" % lang, 390) as page:
                 chart = page.locator("section.issue-chart svg[aria-labelledby='g-title g-desc']")
                 self.assertEqual(chart.count(), 1)
-                self.assertIn("86%", chart.inner_text())
-                self.assertIn(">50%", chart.inner_text())
-                self.assertIn("WSB-0040-SRC-02", chart.inner_text())
+                self.assertIn("86%", chart.text_content())
+                self.assertIn(">50%", chart.text_content())
+                self.assertIn("WSB-0040-SRC-02", chart.text_content())
                 self.assertLess(chart.bounding_box()["y"], page.locator("article h2").last.bounding_box()["y"])
                 self.assertTrue(page.locator('a[href$="/visualizations/0040/"]').count() > 0)
             with self.subTest(lang=lang, view="full"), self.page_at("/%s/visualizations/0040/" % lang, 960) as page:
