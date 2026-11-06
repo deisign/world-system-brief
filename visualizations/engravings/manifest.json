@@ -47,6 +47,58 @@
           "ua": "Частковий обхід не є повним заміщенням."
         }
       }
+    },
+    {
+      "id": "rare-earth-separation-study-01",
+      "review_status": "reviewed",
+      "engine_revision": "86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+      "model_source": "https://github.com/bumicodes/draw-beautiful/tree/86d03dd5d722f6bd9b7dda8f0dcf308545f3fa86",
+      "title": {
+        "en": "Separation cascade",
+        "ua": "Каскад розділення"
+      },
+      "caption": {
+        "en": "Three-stage physical mixer–settler study, engraved from reproducible geometry. Long gravity settlers are shown with exposed upper basins; smaller mechanical mixers repeat between them. Illustrative, not a plant reconstruction.",
+        "ua": "Дослідження триступеневого каскаду змішувачів-відстійників, гравіроване з відтворюваної геометрії. Великі гравітаційні відстійники показано з відкритими верхніми ємностями, поруч повторюються менші механічні змішувачі. Це умовна конструкція, не реконструкція заводу."
+      },
+      "alt": {
+        "en": "Vector intaglio drawing of three cylindrical mixers with square motor heads beside three elongated open rectangular settling basins, seen diagonally from above.",
+        "ua": "Векторна гравюра трьох циліндричних змішувачів із приводами поруч із трьома подовженими відкритими прямокутними відстійниками, вигляд навскіс згори."
+      },
+      "qa": {
+        "desktop": true,
+        "mobile": true,
+        "reduced_motion": true,
+        "closeup": true
+      },
+      "mobile_plate": "plate-mobile.svg",
+      "svg_dimensions": {
+        "width": 960,
+        "height": 640
+      },
+      "editorial": {
+        "subject_class": "generic_processing_cascade",
+        "physical_role": {
+          "en": "Three representative mixer–settler stages: mechanically agitated mixer chambers alongside larger gravity-settling vessels.",
+          "ua": "Три умовні ступені «змішувач — відстійник»: камери механічного змішування поруч із більшими ємностями гравітаційного відстоювання."
+        },
+        "mechanism": {
+          "en": "Industrial mineral separation relies on multi-stage processing infrastructure and specialized operating knowledge; the image embodies that material process, not a measured market concentration.",
+          "ua": "Промислове розділення мінералів залежить від багатоступеневої переробної інфраструктури й спеціалізованих технологічних компетенцій; зображення показує матеріальну форму процесу, а не виміряну концентрацію ринку."
+        },
+        "limitations": {
+          "en": "A generic technical study, not a real facility or validated operating design. Three stages represent only a fragment; two piping routes are conceptual, not certified engineering. The plate cannot establish processing yield, throughput, plant location, Chinese market share or actual substitutability.",
+          "ua": "Узагальнена технічна студія, не реальний завод і не перевірений робочий проєкт. Три ступені — лише фрагмент; два трубопровідні контури схематичні, а не підтверджене інженерне рішення. Гравюра не доводить виходу продукту, продуктивності, розташування підприємства, частки Китаю на ринку чи фактичної замінності."
+        },
+        "related_entities": [
+          "uk-critical-minerals-resilience"
+        ],
+        "composition_route": "/{lang}/ledger/dependencies/uk-critical-minerals-resilience/",
+        "paired_thesis": {
+          "en": "Concentrated processing creates a long substitution horizon — sourced dependency assessment.",
+          "ua": "Концентрація перероблення подовжує горизонт заміщення — підтверджена джерелами оцінка залежності."
+        }
+      }
     }
   ]
 }
