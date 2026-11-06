@@ -170,6 +170,22 @@ class BrowserSmoke(unittest.TestCase):
                     self.assertTrue(data["url"].endswith(suffix), str(data))
                     self.assertIn("uk-critical-minerals-resilience", page.locator("section.editorial a").first.get_attribute("href"))
 
+    def test_issue_0040_has_real_source_bound_svg_diagram_near_lead(self):
+        for lang in ("en", "ua"):
+            with self.subTest(lang=lang), self.page_at("/%s/brief/2026-11-06/" % lang, 390) as page:
+                chart = page.locator("section.issue-chart svg[aria-labelledby='g-title g-desc']")
+                self.assertEqual(chart.count(), 1)
+                self.assertIn("86%", chart.text_content())
+                self.assertIn(">50%", chart.text_content())
+                self.assertIn("WSB-0040-SRC-02", chart.text_content())
+                self.assertLess(chart.bounding_box()["y"], page.locator("article h2").last.bounding_box()["y"])
+                self.assertTrue(page.locator('a[href$="/visualizations/0040/"]').count() > 0)
+            with self.subTest(lang=lang, view="full"), self.page_at("/%s/visualizations/0040/" % lang, 960) as page:
+                self.assertEqual(page.locator('svg title#g-title').count(), 1)
+                self.assertEqual(page.locator('svg rect').count() > 5, True)
+                self.assertEqual(page.locator('a[href^="https://www.reuters.com/"]').count(), 2)
+                self.assertEqual(page.locator('img').count(), 0)
+
     def test_horizontal_diagrams_touch_and_keyboard(self):
         routes = [
             ("/ua/poster/2026-11-04/", ".diagram"),
