@@ -22,7 +22,7 @@ test("dual-language SVG embeds provenance but no invented exact refined-product 
   assert.match(svg,/86%/);
   assert.match(svg,/3[.,]1/);
   assert.match(svg,/&gt;50%/);
-  assert.match(svg,/WSB-0040-SRC-01, WSB-0040-SRC-02/);
+  assert.match(svg,/WSB-0040-SRC-02, WSB-0040-SRC-01/);
   assert.doesNotMatch(svg,/<image\b|<script\b|<foreignObject\b|data:image/i);
   assert.doesNotMatch(svg,/52%|55%|56%|51%/);
   assert.match(svg,lang==="ua"?/Точну частку джерело не називає/:/Exact recovery percentage not reported/);
