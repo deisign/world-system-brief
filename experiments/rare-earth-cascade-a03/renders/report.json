@@ -12,7 +12,7 @@
       },
       "mode": "mass",
       "bytes": 824695,
-      "ms": 295,
+      "ms": 270,
       "components": [
         {
           "stage": 1,
@@ -68,7 +68,7 @@
       },
       "mode": "intaglio",
       "bytes": 673137,
-      "ms": 181,
+      "ms": 185,
       "components": [
         {
           "stage": 1,
@@ -124,7 +124,7 @@
       },
       "mode": "mass",
       "bytes": 841408,
-      "ms": 185,
+      "ms": 209,
       "components": [
         {
           "stage": 1,
@@ -236,7 +236,7 @@
       },
       "mode": "mass",
       "bytes": 979621,
-      "ms": 156,
+      "ms": 148,
       "components": [
         {
           "stage": 1,
@@ -292,7 +292,7 @@
       },
       "mode": "intaglio",
       "bytes": 783442,
-      "ms": 140,
+      "ms": 135,
       "components": [
         {
           "stage": 1,
