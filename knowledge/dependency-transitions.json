@@ -1,0 +1,65 @@
+{
+  "schema": "wsb-dependency-transitions-v1",
+  "records": [
+    {
+      "id": "DTE-0040-GLOBAL-OIL-BALANCE",
+      "assessment_id": "DPA-0040-GLOBAL-OIL-BALANCE",
+      "entity_slug": "global-oil-balance",
+      "issue_id": "WSB-0040",
+      "observed_at": "2026-11-06",
+      "effective_at": null,
+      "from_state": null,
+      "to_state": null,
+      "classification": "knowledge_update",
+      "direction": "unknown",
+      "claim_ids": [
+        "WSB-0040-CLM-01",
+        "WSB-0040-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0040-SRC-01"
+      ],
+      "reason": {
+        "en": "Retrospective September–October crude balance estimates were reported on November 6.",
+        "ua": "6 листопада оприлюднено ретроспективні оцінки балансу сирої нафти за вересень–жовтень."
+      },
+      "caveat": {
+        "en": "No verified new refinery, port or pipeline capacity; no physical transition is asserted.",
+        "ua": "Нові потужності НПЗ, портів або нафтопроводів не підтверджено; фізичний перехід не заявлено."
+      },
+      "leverage_delta": "unknown",
+      "rent_delta": "unknown",
+      "substitution_horizon": "unknown"
+    },
+    {
+      "id": "DTE-0040-REFINED-PRODUCTS-GAP",
+      "assessment_id": "DPA-0040-REFINED-PRODUCTS-GAP",
+      "entity_slug": "refined-products-bottleneck",
+      "issue_id": "WSB-0040",
+      "observed_at": "2026-11-06",
+      "effective_at": null,
+      "from_state": null,
+      "to_state": null,
+      "classification": "knowledge_update",
+      "direction": "unknown",
+      "claim_ids": [
+        "WSB-0040-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0040-SRC-01",
+        "WSB-0040-SRC-02"
+      ],
+      "reason": {
+        "en": "Preliminary October Gulf tracking shows crude exports recovered faster than refined-product exports.",
+        "ua": "Попередній моніторинг експорту із Затоки за жовтень показує швидше відновлення сирої нафти, ніж нафтопродуктів."
+      },
+      "caveat": {
+        "en": "Product and crude denominators differ; the dataset does not establish a dated physical before/after or exact product-recovery percentage.",
+        "ua": "Бази порівняння нафти й нафтопродуктів різні; дані не встановлюють датованого фізичного переходу або точного відсотка відновлення нафтопродуктів."
+      },
+      "leverage_delta": "unknown",
+      "rent_delta": "unknown",
+      "substitution_horizon": "unknown"
+    }
+  ]
+}
