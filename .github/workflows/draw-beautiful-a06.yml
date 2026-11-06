@@ -65,6 +65,21 @@ jobs:
               assert png.stat().st_size>1000
               print(f'PREVIEW {png.name}: {png.stat().st_size} bytes')
           PY
+      - name: Create compact review previews for visual verification
+        run: |
+          python -m pip install --quiet pillow
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image
+          import io,base64
+          root=Path('experiments/rare-earth-cascade-a06/renders')
+          for png in root.glob('*.png'):
+              im=Image.open(png).convert('RGB')
+              im.thumbnail((560,380))
+              buf=io.BytesIO()
+              im.save(buf,'JPEG',quality=78,optimize=True)
+              (root/(png.stem+'.base64.txt')).write_text(base64.b64encode(buf.getvalue()).decode('ascii'))
+          PY
       - name: Archive unreviewed physical previews and execution report
         uses: actions/upload-artifact@v4
         with:
