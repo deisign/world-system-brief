@@ -52,6 +52,19 @@ jobs:
               assert {'mixer','settler','motor'}<=kinds,(file,kinds)
               print(f'PASS {file.name}: {len(paths)} vector layers, {file.stat().st_size} bytes')
           PY
+      - name: Render inspection PNG from exact vector paths
+        run: |
+          python -m pip install --quiet cairosvg
+          python - <<'PY'
+          from pathlib import Path
+          import cairosvg
+          base=Path('experiments/rare-earth-cascade-a06/renders')
+          for svg in sorted(base.glob('*.svg')):
+              png=svg.with_suffix('.png')
+              cairosvg.svg2png(url=str(svg),write_to=str(png),output_width=960)
+              assert png.stat().st_size>1000
+              print(f'PREVIEW {png.name}: {png.stat().st_size} bytes')
+          PY
       - name: Archive unreviewed physical previews and execution report
         uses: actions/upload-artifact@v4
         with:
