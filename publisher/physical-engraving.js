@@ -34,8 +34,8 @@ export function verifyPhysicalEngraving(entry,root){
   mobilePath=path.join(dir,entry.mobile_plate);
   if(!fs.existsSync(mobilePath))throw new Error("Reviewed mobile engraving SVG missing");
   const mobile=fs.readFileSync(mobilePath,"utf8");
-  if(!/<svg\\s[\\s\\S]*?<\\/svg>/i.test(mobile)||!/<path\\b/i.test(mobile))throw new Error("Invalid mobile vector engraving");
-  if(/<script\\b|<foreignObject\\b|\\son\\w+\\s*=|\\b(?:href|xlink:href)\\s*=\\s*["'](?:https?:|data:|javascript:)/i.test(mobile))throw new Error("Unsafe or externally loaded mobile SVG");
+  if(!/<svg\s[\s\S]*?<\/svg>/i.test(mobile)||!/<path\b/i.test(mobile))throw new Error("Invalid mobile vector engraving");
+  if(/<script\b|<foreignObject\b|\son\w+\s*=|\b(?:href|xlink:href)\s*=\s*["'](?:https?:|data:|javascript:)/i.test(mobile))throw new Error("Unsafe or externally loaded mobile SVG");
   if(mobile.length>5_000_000)throw new Error("Mobile SVG exceeds review budget");
   if(!Number.isInteger(entry.svg_dimensions?.width)||!Number.isInteger(entry.svg_dimensions?.height)||entry.svg_dimensions.width<100||entry.svg_dimensions.height<100)throw new Error("Mobile SVG requires accurate dimensions");
  }
