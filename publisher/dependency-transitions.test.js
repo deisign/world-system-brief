@@ -14,3 +14,20 @@ test('unknown evidence rejected',()=>assert.throws(()=>validateDependencyTransit
 test('knowledge update with effective state rejected',()=>assert.throws(()=>validateDependencyTransitions(doc({...entry,direction:'weakening'}),assessments,bundles),/masquerades/));
 test('bilingual timeline escapes text',()=>{const html=dependencyTransitionTimeline([{...entry,reason:{en:'<script>',ua:'тест'}}],'en','oil');assert.ok(html.includes('&lt;script&gt;'));assert.ok(!html.includes('<script>'));});
 test('no observations states no confirmed transition',()=>assert.match(dependencyTransitionTimeline([],'ua','oil'),/Підтверджених переходів/));
+
+test('Hormuz seven-day history does not invent physical transitions', async () => {
+  const fs = await import('node:fs');
+  const path = await import('node:path');
+  const root = process.cwd();
+  for (let number = 34; number <= 40; number++) {
+    const issue = String(number).padStart(4, '0');
+    const state = JSON.parse(fs.readFileSync(path.join(root, 'issues', issue, 'state.json'), 'utf8'));
+    assert.equal(state.summary.confirmed_delta, 0, issue);
+    const hormuz = state.objects.find(item => item.id === 'hormuz');
+    assert.ok(hormuz, issue);
+    assert.equal(hormuz.change, 'stable', issue);
+    assert.equal(hormuz.current_state, 'persistent_navigation_constraint', issue);
+    const claims = JSON.parse(fs.readFileSync(path.join(root, 'issues', issue, 'claims.json'), 'utf8')).claims;
+    assert.ok(claims.every(claim => claim.status !== 'confirmed_delta'), issue);
+  }
+});
