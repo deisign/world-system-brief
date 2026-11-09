@@ -220,5 +220,21 @@ class BrowserSmoke(unittest.TestCase):
                 self.assertGreater(region.evaluate("e => e.scrollLeft"), 30)
 
 
+    def test_reader_journey_from_issue_to_entity_and_ledger(self):
+        for lang in ("en", "ua"):
+            with self.subTest(lang=lang), self.page_at(f"/{lang}/brief/2026-11-09/", 390) as page:
+                issue = page.locator("#issue-entities")
+                self.assertEqual(issue.count(), 1)
+                page.locator(f'#issue-entities a[href$="/{lang}/entity/ai-gas-turbine-capacity-bottleneck/"]').first.click()
+                self.assertIn("/entity/ai-gas-turbine-capacity-bottleneck/", page.url)
+                page.locator(f'a[href$="/{lang}/ledger/dependencies/ai-gas-turbine-capacity-bottleneck/"]').first.click()
+                self.assertIn("/ledger/dependencies/ai-gas-turbine-capacity-bottleneck/", page.url)
+                page.locator(f'.reader-ledger-bridge a[href$="/{lang}/entity/ai-gas-turbine-capacity-bottleneck/"]').click()
+                self.assertIn("/entity/ai-gas-turbine-capacity-bottleneck/", page.url)
+            with self.subTest(lang=lang, study="oil"), self.page_at(f"/{lang}/entity/hormuz/", 390) as page:
+                page.locator(f'.reader-mechanism a[href$="/{lang}/visualizations/oil-network/"]').click()
+                self.assertIn("/visualizations/oil-network/", page.url)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
