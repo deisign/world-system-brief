@@ -747,6 +747,33 @@
         "en": "UKMTO-reported tanker incident north of Qatar",
         "ua": "Інцидент із танкером на північ від Катару за повідомленням UKMTO"
       }
+    },
+    {
+      "id": "ENT-000084",
+      "slug": "ai-gas-turbine-capacity-bottleneck",
+      "type": "system_constraint",
+      "labels": {
+        "en": "Gas-turbine supply bottleneck for AI power",
+        "ua": "Дефіцит газових турбін для енергоживлення ШІ"
+      }
+    },
+    {
+      "id": "ENT-000085",
+      "slug": "nextdc-uncontracted-data-centre-pauses",
+      "type": "company_decision",
+      "labels": {
+        "en": "NextDC pause of uncontracted projects",
+        "ua": "Призупинення неконтрактованих проєктів NextDC"
+      }
+    },
+    {
+      "id": "ENT-000086",
+      "slug": "hormuz-navigation-aid-damage-claim",
+      "type": "maritime_security_observation",
+      "labels": {
+        "en": "Unverified Hormuz navigation-aid damage claim",
+        "ua": "Непідтверджена заява про пошкодження навігації в Ормузі"
+      }
     }
   ]
 }
