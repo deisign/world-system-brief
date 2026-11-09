@@ -261,5 +261,23 @@ class BrowserSmoke(unittest.TestCase):
                 self.assertTrue(all(url.startswith("https://") for url in source_urls))
 
 
+    def test_relation_changelog_tracks_selected_date_without_inventing_delta(self):
+        for lang in ("en", "ua"):
+            with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
+                self.assertEqual(page.locator("#relation-changelog").count(), 1)
+                self.assertEqual(page.locator("#relation-changelog .relation-change").count(), 0)
+                date = page.evaluate("""() => {
+                    const d=JSON.parse(document.getElementById('map-data').textContent);
+                    return Object.keys(d.changeViews).find(x => d.changeViews[x].includes('class="relation-change"'));
+                }""")
+                self.assertIsNotNone(date)
+                page.locator("#map-date").select_option(date)
+                self.assertGreater(page.locator("#relation-changelog .relation-change").count(), 0)
+                self.assertEqual(page.locator("#map-asof").inner_text(), date)
+                page.locator("#map-date").select_option("2026-11-09")
+                self.assertEqual(page.locator("#relation-changelog .relation-change").count(), 0)
+                self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-09")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
