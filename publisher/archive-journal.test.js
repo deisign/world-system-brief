@@ -49,6 +49,7 @@ test('layout is grid-based and uses Manrope Cyrillic-safe headings',()=>{
  assert.match(archiveStyles,/@media\(max-width:680px\)/);
  assert.match(archiveStyles,/font:800 clamp\(32px,4\.8vw,65px\).*"Manrope"/);
  assert.doesNotMatch(archiveStyles,/Impact/);
+ assert.match(archiveStyles,/-webkit-line-clamp:2/);
 });
 test('publisher records issue-specific canonical bilingual locale copy',()=>{
  const source=fs.readFileSync('publisher/build.js','utf8');
