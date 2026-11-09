@@ -15,6 +15,9 @@ ROUTES = {
     "archive": "/{lang}/archive/",
     "ledger": "/{lang}/ledger/dependencies/",
     "ledger-entity": "/{lang}/ledger/dependencies/ai-gas-turbine-capacity-bottleneck/",
+    "entities": "/{lang}/entities/",
+    "entity-hormuz": "/{lang}/entity/hormuz/",
+    "entity-turbines": "/{lang}/entity/ai-gas-turbine-capacity-bottleneck/",
 }
 WIDTHS = (390, 768, 1440)
 
