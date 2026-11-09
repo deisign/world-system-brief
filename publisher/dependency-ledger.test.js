@@ -6,11 +6,12 @@ const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const config=read('knowledge/dependency-assessments.json'),registry=read('knowledge/entities.json');
 const bundle={state:read('issues/0039/state.json'),claims:read('issues/0039/claims.json'),evidence:read('issues/0039/evidence.json')};
 const nextBundle={state:read('issues/0040/state.json'),claims:read('issues/0040/claims.json'),evidence:read('issues/0040/evidence.json')};
-const bundles=[bundle,nextBundle];
+const currentBundle={state:read('issues/0041/state.json'),claims:read('issues/0041/claims.json'),evidence:read('issues/0041/evidence.json')};
+const bundles=[bundle,nextBundle,currentBundle];
 test('first real assessments bind exactly to original issue, claims and sources',()=>{
  assert.equal(validateDependencyAssessments(config,registry,bundles),true);
- assert.deepEqual(config.records.map(x=>x.entity_slug),['uk-critical-minerals-resilience','maersk-container-freight-pricing','global-oil-balance','refined-products-bottleneck']);
- assert.deepEqual(config.records.map(x=>x.classification),['knowledge_update','knowledge_update','knowledge_update','knowledge_update']);
+ assert.deepEqual(config.records.map(x=>x.entity_slug),['uk-critical-minerals-resilience','maersk-container-freight-pricing','global-oil-balance','refined-products-bottleneck','ai-gas-turbine-capacity-bottleneck']);
+ assert.deepEqual(config.records.map(x=>x.classification),Array(5).fill('knowledge_update'));
 });
 test('unknown horizon stays null; an estimated horizon must appear in primary evidence',()=>{
  assert.equal(config.records[1].substitutability.status,'unknown');
@@ -81,6 +82,27 @@ test('2026-11-06 knowledge updates retain original October observations and refu
   const html=dependencyLedgerPage({lang,records:config.records,registry,bundles,slug:'refined-products-bottleneck'});
   assert.match(html,/WSB-0040-SRC-01/);
   assert.match(html,/WSB-0040-SRC-02/);
+  assert.match(html,lang==='en'?/UNKNOWN/:/НЕ ВСТАНОВЛЕНО/);
+ }
+});
+
+
+test('9 November turbine assessment retains non-comparable order and annual output measurements',()=>{
+ const row=config.records.find(record=>record.id==='DPA-0041-AI-TURBINE-POWER');
+ assert.ok(row);
+ assert.equal(validateDependencyAssessments(config,registry,bundles),true);
+ assert.equal(row.classification,'knowledge_update');
+ assert.equal(row.substitutability.status,'unknown');
+ assert.equal(row.substitutability.min_years,null);
+ assert.equal(row.leverage.status,'unknown');
+ assert.equal(row.rent.status,'unknown');
+ assert.deepEqual(row.claim_ids,['WSB-0041-CLM-01']);
+ assert.deepEqual(row.source_ids,['WSB-0041-SRC-01']);
+ assert.match(row.flow.en,/100 GW/);
+ assert.match(row.flow.en,/60–70 GW/);
+ for(const lang of ['en','ua']){
+  const html=dependencyLedgerPage({lang,records:config.records,registry,bundles,slug:row.entity_slug});
+  assert.match(html,/WSB-0041-SRC-01/);
   assert.match(html,lang==='en'?/UNKNOWN/:/НЕ ВСТАНОВЛЕНО/);
  }
 });

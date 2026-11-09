@@ -1,0 +1,68 @@
+{
+  "issue_id": "WSB-0041",
+  "as_of": "2026-11-09",
+  "claims": [
+    {
+      "id": "WSB-0041-CLM-01",
+      "kind": "reported",
+      "statement": "Reuters on November 9 reported global turbine orders topping 100 GW versus 60–70 GW estimated annual manufacturing capability, as US turbine delivery discussions stretched into 2030–31 and second-hand equipment searches intensified; stock/orders and annual production are not a comparable yearly shortage estimate.",
+      "observed_at": "2026-11-09",
+      "event_date": "2026-11-09",
+      "entity_ids": [
+        "ENT-000084"
+      ],
+      "source_ids": [
+        "WSB-0041-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0041-CLM-02",
+      "kind": "reported",
+      "statement": "NextDC said on November 9 it would pause projects lacking customer contracts after its Melbourne M3 power and community setback; this is a company decision rather than a verified incremental loss of operating electricity capacity.",
+      "observed_at": "2026-11-09",
+      "event_date": "2026-11-09",
+      "entity_ids": [
+        "ENT-000085"
+      ],
+      "source_ids": [
+        "WSB-0041-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0041-CLM-03",
+      "kind": "attributed_claim",
+      "statement": "On November 9 an unnamed Iranian official asserted southern Hormuz navigation aids had been destroyed and no unauthorised ships transited overnight; Reuters did not establish the timing, physical effect or independently verified transit restriction.",
+      "observed_at": "2026-11-09",
+      "event_date": "2026-11-09",
+      "entity_ids": [
+        "ENT-000086",
+        "ENT-000001"
+      ],
+      "source_ids": [
+        "WSB-0041-SRC-03"
+      ],
+      "confidence": "medium",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0041-CLM-04",
+      "kind": "reported",
+      "statement": "November 9 oil-price declines following US statements about restraint are financial and diplomatic signals, not independent evidence of restored Hormuz transit throughput or new refining capacity.",
+      "observed_at": "2026-11-09",
+      "event_date": "2026-11-09",
+      "entity_ids": [
+        "ENT-000001",
+        "ENT-000050"
+      ],
+      "source_ids": [
+        "WSB-0041-SRC-04"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}

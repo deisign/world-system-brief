@@ -1,0 +1,68 @@
+{
+  "issue_id": "WSB-0041",
+  "as_of": "2026-11-09",
+  "records": [
+    {
+      "id": "WSB-0041-SRC-01",
+      "source": "Reuters / AI power turbine equipment market",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "url": "https://www.reuters.com/business/aerospace-defense/ai-power-rush-sends-data-centres-hunting-used-turbines-jet-engines-2026-11-09/",
+      "publication_date": "2026-11-09",
+      "claim": "Global gas-turbine orders topped 100 GW according to Wood Mackenzie versus 60–70 GW estimated annual manufacturing capacity; US delivery talks extend toward 2030–31, and developers seek used turbine or aeroderivative alternatives.",
+      "observation": "Reported market estimates and lead-time conversations; not audited installed capacity or a same-day physical change.",
+      "assessment": "EVIDENCE UPDATE — EQUIPMENT PRODUCTION AND POWER INFRASTRUCTURE CONSTRAINT",
+      "supports": [
+        "ai-gas-turbine-capacity-bottleneck"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0041-SRC-02",
+      "source": "Reuters / NextDC uncontracted project pauses",
+      "source_type": "newswire",
+      "role": "dated_company_action_report",
+      "url": "https://www.reuters.com/world/asia-pacific/nextdc-pauses-uncontracted-projects-after-australian-data-centre-woes-2026-11-09/",
+      "publication_date": "2026-11-09",
+      "claim": "NextDC chief said firm would stop work on projects without customer contracts following delays at Melbourne M3 expansion caused by power and community concerns; count and aggregate installed-MW impact not provided.",
+      "observation": "Specific company choice made/reported on November 9, not evidence of new national grid-capacity loss.",
+      "assessment": "COMPANY DECISION — NOT COMMISSIONED OR LOST GRID CAPACITY",
+      "supports": [
+        "nextdc-uncontracted-data-centre-pauses"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0041-SRC-03",
+      "source": "Reuters / Iranian statement on Hormuz navigation aids",
+      "source_type": "newswire",
+      "role": "attributed_unverified_claim",
+      "url": "https://www.reuters.com/world/iran-says-no-unauthorised-vessels-transited-strait-hormuz-overnight-after-2026-11-09/",
+      "publication_date": "2026-11-09",
+      "claim": "An unnamed IRGC Navy official claimed navigation aid systems in the southern Strait were destroyed and no unauthorised vessel transited overnight; no independent proof, destruction date, culprit or throughput effects given.",
+      "observation": "Reported speech, not established damage extent or verified independent vessel data.",
+      "assessment": "UNVERIFIED CLAIM — NO NEW CONFIRMED CAPACITY LOSS",
+      "supports": [
+        "hormuz-navigation-aid-damage-claim",
+        "hormuz"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "id": "WSB-0041-SRC-04",
+      "source": "Reuters / oil prices and Hormuz diplomacy on November 9",
+      "source_type": "newswire",
+      "role": "dated_market_context",
+      "url": "https://live.euronext.com/en/financial-news/oil-falls-trump-signals-restraint-iran-amid-fresh-hormuz-shipping-attacks",
+      "publication_date": "2026-11-09",
+      "claim": "Oil prices fell on November 9 after remarks suggesting US restraint regarding Iran, while maritime threats remained; price change and comments cannot establish physically normalised Hormuz shipping.",
+      "observation": "Intraday prices and political statement, not a verified vessel throughput series.",
+      "assessment": "MARKET SIGNAL — NOT VERIFIED CORRIDOR REOPENING",
+      "supports": [
+        "hormuz",
+        "global-oil-balance"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
