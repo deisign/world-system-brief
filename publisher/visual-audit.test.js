@@ -27,7 +27,7 @@ test('READ typography constrains long Cyrillic headlines on narrow phones',async
  const {editorialSkin}=await import('./editorial-skin.js');
  assert.match(editorialSkin,/article>h1\{[^}]*overflow-wrap:anywhere/);
  assert.match(editorialSkin,/@media\(max-width:680px\)/);
- assert.match(editorialSkin,/article>h1\{font-size:clamp\(34px,8\.8vw,54px\)/);
+ assert.match(editorialSkin,/article>h1\{font-size:clamp\(34px,8vw,51px\)/);
 });
 test('mobile POSTER retains 1400×2000 print canvas but exposes a legible scrollable graph',()=>{
  const html=renderPoster(JSON.parse(poster),locale,'en');
