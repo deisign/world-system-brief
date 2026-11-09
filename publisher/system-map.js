@@ -4,7 +4,7 @@ export function buildTemporalRelations(issueBundles, registry={entities:[]}){
  const byKey=new Map();
  for(const b of issueBundles){for(const r of b.relations?.relations||b.relations?.records||[]){
   const from=aliases.get(r.from)||r.from,to=aliases.get(r.to)||r.to,type=r.type||r.predicate||"related_to",key=`${from}|${type}|${to}`;
-  const x=byKey.get(key)||{key,from,to,type,events:[]};x.events.push({date:b.state.date,issue:b.state.issue_id,state:r.state||"active",claim_ids:r.claim_ids||[],source_ids:r.source_ids||[]});byKey.set(key,x);
+  const x=byKey.get(key)||{key,from,to,type,events:[]};const sources=new Map((b.evidence?.records||[]).map(v=>[v.id,v]));x.events.push({date:b.state.date,issue:b.state.issue_id,state:r.state||"active",claim_ids:r.claim_ids||[],source_ids:r.source_ids||[],sources:(r.source_ids||[]).map(id=>sources.get(id)).filter(v=>v&&/^https:\/\//.test(v.url||"")).map(v=>({id:v.id,url:v.url,name:v.source||v.id}))});byKey.set(key,x);
  }}
  return [...byKey.values()].map(r=>({...r,first:r.events[0].date,last:r.events.at(-1).date,current_state:r.events.at(-1).state,appearances:r.events.length,from_entity:entities.get(r.from),to_entity:entities.get(r.to)})).sort((a,b)=>b.last.localeCompare(a.last)||b.appearances-a.appearances);
 }
