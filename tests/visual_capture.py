@@ -18,6 +18,7 @@ ROUTES = {
     "entities": "/{lang}/entities/",
     "entity-hormuz": "/{lang}/entity/hormuz/",
     "entity-turbines": "/{lang}/entity/ai-gas-turbine-capacity-bottleneck/",
+    "system-map": "/{lang}/map/",
 }
 WIDTHS = (390, 768, 1440)
 
