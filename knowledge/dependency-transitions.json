@@ -60,6 +60,35 @@
       "leverage_delta": "unknown",
       "rent_delta": "unknown",
       "substitution_horizon": "unknown"
+    },
+    {
+      "id": "DTE-0041-AI-TURBINE-POWER",
+      "assessment_id": "DPA-0041-AI-TURBINE-POWER",
+      "entity_slug": "ai-gas-turbine-capacity-bottleneck",
+      "issue_id": "WSB-0041",
+      "observed_at": "2026-11-09",
+      "effective_at": null,
+      "from_state": null,
+      "to_state": null,
+      "classification": "knowledge_update",
+      "direction": "unknown",
+      "claim_ids": [
+        "WSB-0041-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0041-SRC-01"
+      ],
+      "reason": {
+        "en": "Reuters reports an equipment-market bottleneck and long US lead times, not a newly dated completed physical capacity change.",
+        "ua": "Reuters описує вузьке місце ринку обладнання та тривалі строки постачання у США, але не нову доведену фізичну зміну потужностей."
+      },
+      "caveat": {
+        "en": "Outstanding orders and yearly manufacturing are different units; no exact universal substitute horizon or measured change of supplier leverage.",
+        "ua": "Портфель замовлень і річний випуск — різні величини; немає універсального строку заміщення чи виміряної зміни впливу постачальників."
+      },
+      "leverage_delta": "unknown",
+      "rent_delta": "unknown",
+      "substitution_horizon": "unknown"
     }
   ]
 }
