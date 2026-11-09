@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {classifyRelationObservations,relationChangesForDate,renderRelationChangeLog} from './relation-changelog.js';
 import {systemMapPage} from './system-map-page.js';
+import {buildTemporalRelations,currentSystemMap} from './system-map.js';
 import {systemMapClientScript} from './system-map-client.js';
 
 const registry={entities:[{id:'E1',slug:'a',labels:{en:'A',ua:'А'}},{id:'E2',slug:'b',labels:{en:'B',ua:'Б'}}]};
@@ -83,4 +84,15 @@ test('map binds dated digest into page and client changes it with as-of selector
  const js=systemMapClientScript({temporal:[],entities:{},lang:'en',changeViews:{'2026-10-01':'<section id="relation-changelog">Test</section>'}});
  assert.match(js,/D\.changeViews/);
  assert.match(js,/getElementById\("map-date"\)/);
+});
+
+test('uncorroborated termination is still visible as an unverified relation, not silently deleted',()=>{
+ const history=buildTemporalRelations([issue('2026-10-01','WSB-01',[relation()]),issue('2026-10-02','WSB-02',[relation('ended')])],registry);
+ assert.equal(history.length,1);
+ assert.equal(history[0].events.at(-1).state,'unverified_terminal');
+ assert.equal(history[0].events.at(-1).asserted_state,'ended');
+ assert.equal(currentSystemMap(history).edges.length,1);
+ const confirmed=buildTemporalRelations([issue('2026-10-01','WSB-01',[relation()]),issue('2026-10-02','WSB-02',[relation('ended')],'confirmed_delta')],registry);
+ assert.equal(confirmed[0].events.at(-1).state,'ended');
+ assert.equal(currentSystemMap(confirmed).edges.length,0);
 });
