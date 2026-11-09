@@ -236,5 +236,30 @@ class BrowserSmoke(unittest.TestCase):
                 self.assertIn("/visualizations/oil-network/", page.url)
 
 
+    def test_system_topology_keyboard_and_temporal_filters(self):
+        for lang in ("en", "ua"):
+            with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
+                visual = page.locator("#system-visual-svg")
+                self.assertEqual(visual.count(), 1)
+                self.assertIn("not a geographic map" if lang=="en" else "не географічна карта", visual.locator("title").inner_text())
+                total = int(page.locator("#edge-count").inner_text())
+                self.assertGreater(total, 0)
+                self.assertGreater(page.locator("[data-map-visual-node]").count(), 0)
+                initial = page.locator("[data-map-visual-node]").first.get_attribute("data-map-visual-node")
+                page.locator("[data-map-visual-node]").first.focus()
+                page.keyboard.press("Enter")
+                self.assertIn("1-hop", page.locator("#map-focus").inner_text())
+                self.assertLessEqual(int(page.locator("#edge-count").inner_text()), total)
+                self.assertEqual(page.locator("[data-map-visual-node].is-focus").count(), 1)
+                page.locator("#map-reset").click()
+                self.assertEqual(int(page.locator("#edge-count").inner_text()), total)
+                self.assertEqual(page.locator("#map-focus").inner_text().strip(), "all" if lang=="en" else "усі")
+                box = page.locator(".map-visual-frame")
+                dims = box.evaluate("e => ({client:e.clientWidth,scroll:e.scrollWidth})")
+                self.assertGreater(dims["scroll"],dims["client"])
+                source_urls = page.locator(".map-edge-sources a").evaluate_all("a=>a.map(x=>x.href)")
+                self.assertTrue(all(url.startswith("https://") for url in source_urls))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
