@@ -112,7 +112,7 @@ class BrowserSmoke(unittest.TestCase):
                 page.keyboard.press("Enter")
                 self.assertIn("1-hop", page.locator("#map-focus").inner_text())
                 self.assertLessEqual(int(page.locator("#edge-count").inner_text()), original)
-                hrefs = page.locator("#map-edges a").evaluate_all(
+                hrefs = page.locator("#map-edges .map-edge > span a").evaluate_all(
                     "links => links.map(a=>a.getAttribute('href'))"
                 )
                 self.assertTrue(hrefs)
@@ -241,7 +241,7 @@ class BrowserSmoke(unittest.TestCase):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 visual = page.locator("#system-visual-svg")
                 self.assertEqual(visual.count(), 1)
-                self.assertIn("not a geographic map" if lang=="en" else "не географічна карта", visual.locator("title").inner_text())
+                self.assertIn("not a geographic map" if lang=="en" else "не географічна карта", visual.locator("title#system-visual-title").inner_text())
                 total = int(page.locator("#edge-count").inner_text())
                 self.assertGreater(total, 0)
                 self.assertGreater(page.locator("[data-map-visual-node]").count(), 0)
