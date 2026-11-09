@@ -241,7 +241,7 @@ class BrowserSmoke(unittest.TestCase):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 visual = page.locator("#system-visual-svg")
                 self.assertEqual(visual.count(), 1)
-                self.assertIn("not a geographic map" if lang=="en" else "не географічна карта", visual.locator("title#system-visual-title").inner_text())
+                self.assertIn("not a geographic map" if lang=="en" else "не географічна карта", visual.locator("title#system-visual-title").text_content())
                 total = int(page.locator("#edge-count").inner_text())
                 self.assertGreater(total, 0)
                 self.assertGreater(page.locator("[data-map-visual-node]").count(), 0)
