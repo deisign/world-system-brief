@@ -227,6 +227,62 @@
         "WSB-0040-SRC-01",
         "WSB-0040-SRC-02"
       ]
+    },
+    {
+      "id": "DPA-0041-AI-TURBINE-POWER",
+      "issue_id": "WSB-0041",
+      "date": "2026-11-09",
+      "entity_slug": "ai-gas-turbine-capacity-bottleneck",
+      "flow_type": "energy",
+      "classification": "knowledge_update",
+      "flow": {
+        "en": "Gas turbines and dispatchable electricity for expanding AI datacentres; reported turbine orders exceed 100 GW while estimated annual turbine output is 60–70 GW, different stock/flow measures.",
+        "ua": "Газові турбіни й керована генерація для розбудови датацентрів ШІ; замовлення перевищують 100 ГВт, а оцінюваний річний випуск становить 60–70 ГВт — це різні показники запасу та потоку."
+      },
+      "dependency": {
+        "en": "Data-centre buildout requires manufactured turbines or alternative generation, fuel and viable grid, permit and connection infrastructure.",
+        "ua": "Розбудова датацентрів залежить від виготовлених турбін або альтернативної генерації, пального, мережі, дозволів і підключень."
+      },
+      "bottleneck": {
+        "en": "Manufacturing lead times extending toward 2030–31 in US market conversations, with limited refurbished supply and separate electricity connection constraints.",
+        "ua": "Строки виробництва у США обговорюють до 2030–2031 років; пропозиція відновленого обладнання обмежена, а приєднання до мережі є окремим бар'єром."
+      },
+      "substitutability": {
+        "status": "unknown",
+        "min_years": null,
+        "max_years": null,
+        "scope": {
+          "en": "Quoted delivery window is not a verified project-agnostic substitution horizon; used turbines and aeroderivative units only partially bypass supply queues.",
+          "ua": "Наведений строк постачання не є універсальним підтвердженим горизонтом заміщення; вживані турбіни й авіадвигуни лише частково обходять черги."
+        }
+      },
+      "leverage": {
+        "status": "unknown",
+        "text": {
+          "en": "Equipment scarcity may raise bargaining power of specialised manufacturers, but no supplier-specific controlled access or leverage metric is established.",
+          "ua": "Дефіцит обладнання може посилювати переговорні позиції спеціалізованих виробників, однак вплив конкретних постачальників не виміряно."
+        }
+      },
+      "rent": {
+        "status": "unknown",
+        "text": {
+          "en": "Reported secondary equipment price escalation does not allocate causal scarcity rents by participant.",
+          "ua": "Повідомлення про подорожчання вживаного обладнання не визначає причинного розподілу ренти дефіциту."
+        }
+      },
+      "adaptation": {
+        "status": "unknown",
+        "text": {
+          "en": "Refurbishment, retired jet-engine conversions and alternative gas engines are reported procurement practices; no new dated installed capacity proven by this report.",
+          "ua": "Ремонт, використання списаних авіадвигунів і газопоршневих установок — описані закупівельні альтернативи; нових датованих введених потужностей джерело не доводить."
+        }
+      },
+      "claim_ids": [
+        "WSB-0041-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0041-SRC-01"
+      ]
     }
   ]
 }
