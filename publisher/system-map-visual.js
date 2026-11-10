@@ -1,8 +1,9 @@
 // Deterministic, schematic topology. Positions are editorial layout, never geographic coordinates.
-export function systemMapVisualSVG(edges,entities,lang,focus=null){
+export function systemMapVisualSVG(edges,entities,lang,focus=null,contextEdges=[]){
  const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const degree=new Map();
- for(const edge of edges){for(const id of [edge.from,edge.to])degree.set(id,(degree.get(id)||0)+1);}
+ for(const edge of edges){for(const id of [edge.from,edge.to])degree.set(id,(degree.get(id)||0)+2);}
+ for(const edge of contextEdges){for(const id of [edge.from,edge.to])degree.set(id,(degree.get(id)||0)+1);}
  const ids=[...degree.keys()].sort((a,b)=>degree.get(b)-degree.get(a)||a.localeCompare(b));
  const visible=ids.slice(0,21),show=new Set(visible);
  const positions=new Map();
@@ -16,6 +17,11 @@ export function systemMapVisualSVG(edges,entities,lang,focus=null){
   const a=positions.get(e.from),b=positions.get(e.to);
   return '<line class="visual-edge" x1="'+a.x.toFixed(1)+'" y1="'+a.y.toFixed(1)+'" x2="'+b.x.toFixed(1)+'" y2="'+b.y.toFixed(1)+'" stroke="#7D827C" stroke-width="'+(Math.min(2.3,1.05+.18*(e.appearances||1))).toFixed(2)+'" stroke-opacity=".55" marker-end="url(#wsb-arrow)"><title>'+esc(e.type.replaceAll('_',' ')+' · '+e.from+' → '+e.to)+'</title></line>';
  }).join('');
+ const contextLines=contextEdges.filter(e=>show.has(e.from)&&show.has(e.to)).map(e=>{
+  const a=positions.get(e.from),b=positions.get(e.to);
+  const label=lang==='ua'?'Спільні джерела або твердження; не причинність':'Shared claims or sources; not causation';
+  return '<line class="visual-context-edge" x1="'+a.x.toFixed(1)+'" y1="'+a.y.toFixed(1)+'" x2="'+b.x.toFixed(1)+'" y2="'+b.y.toFixed(1)+'" stroke="#A08039" stroke-width="1.5" stroke-dasharray="5 7" stroke-opacity=".75"><title>'+esc(label+' · '+e.from+' ↔ '+e.to)+'</title></line>';
+ }).join('');
  const nodes=visible.map((id,i)=>{
   const p=positions.get(id),entity=entities[id]||{},type=entity.type||'unknown',name=entity.labels?.[lang]||id,active=id===focus,short=name.length>29?name.slice(0,27)+'…':name,shade=color(type);
   const labelY=p.y+(i===0?45:p.y>=350?31:-25);
@@ -24,5 +30,5 @@ export function systemMapVisualSVG(edges,entities,lang,focus=null){
  const count=ids.length-visible.length;
  const summary=lang==='ua'?'Схема відношень, не географічна карта':'Relation topology, not a geographic map';
  const limit=count?(lang==='ua'?'Показано 21 із '+ids.length+' вузлів; повний перелік нижче':'Showing 21 of '+ids.length+' nodes; all listed below'):(lang==='ua'?'Усі вузли поточного відбору':'All nodes in current selection');
- return '<svg id="system-visual-svg" viewBox="0 0 1200 720" role="img" aria-labelledby="system-visual-title system-visual-desc" xmlns="http://www.w3.org/2000/svg"><title id="system-visual-title">'+esc(summary)+'</title><desc id="system-visual-desc">'+esc(limit)+'. '+esc(edges.length)+' '+(lang==='ua'?'підтверджених записами зв’язків':'relations backed by issue records')+'.</desc><defs><marker id="wsb-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#7D827C" stroke-width="1"/></marker></defs><g>'+lines+'</g><g>'+nodes+'</g></svg>';
+ return '<svg id="system-visual-svg" viewBox="0 0 1200 720" role="img" aria-labelledby="system-visual-title system-visual-desc" xmlns="http://www.w3.org/2000/svg"><title id="system-visual-title">'+esc(summary)+'</title><desc id="system-visual-desc">'+esc(limit)+'. '+esc(edges.length)+' '+(lang==='ua'?'підтверджених записами зв’язків':'relations backed by issue records')+'.</desc><defs><marker id="wsb-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#7D827C" stroke-width="1"/></marker></defs><g>'+lines+'</g><g>'+contextLines+'</g><g>'+nodes+'</g></svg>';
 }
