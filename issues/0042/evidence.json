@@ -1,0 +1,70 @@
+{
+  "issue_id": "WSB-0042",
+  "as_of": "2026-11-10",
+  "records": [
+    {
+      "id": "WSB-0042-SRC-01",
+      "source": "Reuters / Joe Cash and John Geddie / Chinese smart ports",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "url": "https://www.reuters.com/world/china/china-seeks-high-tech-upper-hand-industry-carrying-80-global-trade-2026-11-10/",
+      "publication_date": "2026-11-10",
+      "claim": "China's transport ministry reports 60 domestic automated terminals with a target of 90 by 2030; Qingdao Qianwan terminal reports 61 containers per crane-hour; China Merchants Port cited existing overseas terminal software deployments and Beijing proposed work on electronic bills of lading.",
+      "observation": "Reported statistics, company filings and proposals; does not demonstrate new 10 Nov commissioning or Chinese operational control over global shipping.",
+      "assessment": "EVIDENCE UPDATE — GOODS/DATA INFRASTRUCTURE",
+      "supports": [
+        "china-smart-port-technology-stack",
+        "overseas-terminal-operating-systems"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0042-SRC-02",
+      "source": "Reuters commentary / Gavin Maguire / European flexible electricity",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/europes-shrinking-flexible-power-cushion-leaves-germany-exposed-2026-11-10/",
+      "publication_date": "2026-11-10",
+      "claim": "LSEG data in Reuters commentary indicate German wind output below seasonal norms since late October, Nordic hydro at multi-year lows and Danube basin hydro weakness, with gas generation increasingly balancing the German grid.",
+      "observation": "Analytical commentary with referenced LSEG series; no single new measured 10 Nov capacity-loss event or universal storage requirement established.",
+      "assessment": "EVIDENCE UPDATE — ENERGY FLEXIBILITY",
+      "supports": [
+        "europe-dispatchable-power-flexibility"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0042-SRC-03",
+      "source": "Reuters / Enes Tunagur / oil risk premium and Hormuz",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "url": "https://www.reuters.com/business/energy/oil-falls-trump-downplays-prospect-escalation-with-iran-2026-11-10/",
+      "publication_date": "2026-11-10",
+      "claim": "As of 09:30 GMT, Brent traded at $90.18 after briefly falling below $90; WTI $84.74. The report attributes repricing to prospects of U.S. restraint, oversupply concerns and continued shipping security risks.",
+      "observation": "Intraday price quotation and attributed political statements; neither an independent ship-transit series nor verified reopening.",
+      "assessment": "MARKET EVIDENCE — NOT CONFIRMED PHYSICAL FLOW CHANGE",
+      "supports": [
+        "hormuz-oil-risk-repricing",
+        "hormuz",
+        "global-oil-balance"
+      ],
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0042-SRC-04",
+      "source": "Reuters / LOGINK international retreat background",
+      "source_type": "newswire",
+      "role": "prior_context",
+      "url": "https://www.reuters.com/business/media-telecom/us-said-china-was-priming-trade-superweapon-then-it-vanished-2026-10-05/",
+      "publication_date": "2026-10-05",
+      "claim": "Reuters investigation found international retreat of China's LOGINK logistics-data platform, failed/stalled partnerships and operational difficulties despite previous ambitions.",
+      "observation": "Background published October 5, not a November 10 event; important counterevidence against equating overseas port hardware with integrated data control.",
+      "assessment": "CONTRARY BACKGROUND — NO UNIFIED WORLDWIDE DATA PLATFORM",
+      "supports": [
+        "china-smart-port-technology-stack",
+        "overseas-terminal-operating-systems"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
