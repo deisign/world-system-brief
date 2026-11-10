@@ -89,6 +89,37 @@
       "leverage_delta": "unknown",
       "rent_delta": "unknown",
       "substitution_horizon": "unknown"
+    },
+    {
+      "id": "DTE-0042-PORT-TECH-STACK",
+      "assessment_id": "DPA-0042-PORT-TECH-STACK",
+      "entity_slug": "china-smart-port-technology-stack",
+      "issue_id": "WSB-0042",
+      "observed_at": "2026-11-10",
+      "effective_at": null,
+      "from_state": null,
+      "to_state": null,
+      "classification": "knowledge_update",
+      "direction": "unknown",
+      "claim_ids": [
+        "WSB-0042-CLM-01",
+        "WSB-0042-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0042-SRC-01",
+        "WSB-0042-SRC-04"
+      ],
+      "reason": {
+        "en": "Reuters linked attributed Chinese domestic automation counts and previous overseas TOS installations into one analysis, but established no new Nov 10 physical deployment.",
+        "ua": "Reuters пов'язав атрибутовану кількість автоматизованих китайських портів із попередніми закордонними інсталяціями TOS, але не довів нового фізичного впровадження 10 листопада."
+      },
+      "caveat": {
+        "en": "LOGINK's reported retreat illustrates why equipment presence cannot be equated with globally integrated logistics-data control.",
+        "ua": "Повідомлений відступ LOGINK пояснює, чому наявність обладнання не дорівнює глобальному контролю логістичних даних."
+      },
+      "leverage_delta": "unknown",
+      "rent_delta": "unknown",
+      "substitution_horizon": "unknown"
     }
   ]
 }
