@@ -278,5 +278,27 @@ class BrowserSmoke(unittest.TestCase):
                 self.assertEqual(page.locator("#relation-changelog .relation-change").first.get_attribute("data-change-kind"), "first_recorded")
 
 
+    def test_entity_connectivity_directory_audits_registered_entities_without_fabricating_links(self):
+        for lang in ("en", "ua"):
+            with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
+                entries = page.locator("#entity-connections .connectivity-item")
+                self.assertEqual(entries.count(), 95)
+                self.assertEqual(page.locator("#connectivity-visible").inner_text(), "95")
+                page.locator("#connectivity-mode").select_option("isolated")
+                remaining = page.locator("#entity-connections .connectivity-item:visible")
+                self.assertGreater(remaining.count(), 0)
+                self.assertLess(remaining.count(), 95)
+                page.locator("#connectivity-search").fill("europe-dispatchable-power-flexibility")
+                self.assertEqual(page.locator("#entity-connections .connectivity-item:visible").count(), 1)
+                self.assertEqual(page.locator("#entity-connections .connectivity-item:visible").first.get_attribute("data-mode"), "isolated")
+                page.locator("#connectivity-mode").select_option("all")
+                page.locator("#connectivity-search").fill("china-smart-port-technology-stack")
+                card = page.locator("#entity-connections .connectivity-item:visible")
+                self.assertEqual(card.count(), 1)
+                card.locator("summary").click()
+                self.assertGreater(card.locator(".connectivity-proof a").count(), 0)
+                self.assertIn("/entity/china-smart-port-technology-stack/", card.locator(".connectivity-detail a[href*='/entity/']").get_attribute("href"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

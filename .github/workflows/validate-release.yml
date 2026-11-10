@@ -32,6 +32,16 @@ jobs:
       - name: Validate, test and generate publication
         run: npm run build
 
+      - name: Audit all entity source and relation coverage
+        run: node publisher/entity-connectivity-audit.js
+      - name: Upload entity connectivity audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wsb-entity-connectivity-${{ github.sha }}
+          path: artifacts/entity-audit/
+          if-no-files-found: error
+          retention-days: 30
       - name: Prepare Pages publication assets and paths
         run: |
           node publisher/self-host-fonts.js dist
