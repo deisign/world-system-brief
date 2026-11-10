@@ -19,7 +19,7 @@ test('entity detail locale switch preserves the entity id',()=>{
 test('Ledger renders a bounded Manrope title on EN and UA without deleting dated assessments',()=>{
  const config=read('knowledge/dependency-assessments.json');
  const registry=read('knowledge/entities.json');
- const bundles=['0039','0040','0041'].map(id=>({
+ const bundles=['0039','0040','0041','0042'].map(id=>({
   state:read('issues/'+id+'/state.json'),
   claims:read('issues/'+id+'/claims.json'),
   evidence:read('issues/'+id+'/evidence.json')
