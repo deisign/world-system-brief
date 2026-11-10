@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const uniq = values=>[...new Set(values)];
 const validUrl = value=>typeof value==='string'&&/^https:\/\//.test(value);
+const admissible=s=>!!s&&validUrl(s.url)&&s.role!=='baseline'&&s.source_type!=='internal';
 export function auditEntityConnectivity({registry,bundles,assessments}){
  if(!Array.isArray(registry?.entities)||!Array.isArray(bundles)||!Array.isArray(assessments?.records))throw Error('Invalid entity audit inputs');
  const canonical = new Map();
@@ -22,8 +23,9 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
    for(const raw of s.supports||[]){const slug=resolve(raw,issue+':source:'+s.id);if(slug)bySlug.get(slug).source_ids.add(s.id);}
   }
   for(const source of evidence?.records||[]){
-   if(!validUrl(source.url))continue;
+   if(!admissible(source))continue;
    const slugs=uniq((source.supports||[]).map(id=>canonical.get(id)).filter(Boolean));
+   if(slugs.length>3)continue;
    for(let i=0;i<slugs.length;i++)for(let j=i+1;j<slugs.length;j++){
     const [from,to]=[slugs[i],slugs[j]].sort(),key=from+'|context|'+to;
     const edge=contextual.get(key)||{key,from,to,type:'contextual_association',level:'contextual',basis:[],issues:[],claim_ids:[],source_ids:[],sources:[]};
@@ -35,7 +37,7 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
   for(const c of claims?.claims||[]){
    const slugs=uniq((c.entity_ids||[]).map(id=>resolve(id,issue+':claim:'+c.id)).filter(Boolean));
    for(const slug of slugs)bySlug.get(slug).claim_ids.add(c.id);
-   const verifiedSources=(c.source_ids||[]).filter(id=>{const src=sourceMap.get(id);return src&&validUrl(src.url)}).sort();
+   const verifiedSources=(c.source_ids||[]).filter(id=>{const src=sourceMap.get(id);return admissible(src)}).sort();
    if(slugs.length<2||!verifiedSources.length)continue;
    for(let i=0;i<slugs.length;i++)for(let j=i+1;j<slugs.length;j++){
     const [from,to]=[slugs[i],slugs[j]].sort(),key=from+'|context|'+to;
