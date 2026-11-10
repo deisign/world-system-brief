@@ -23,7 +23,7 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
   }
   for(const source of evidence?.records||[]){
    if(!validUrl(source.url))continue;
-   const slugs=uniq((source.supports||[]).map(id=>resolve(id,issue+':source:'+source.id)).filter(Boolean));
+   const slugs=uniq((source.supports||[]).map(id=>canonical.get(id)).filter(Boolean));
    for(let i=0;i<slugs.length;i++)for(let j=i+1;j<slugs.length;j++){
     const [from,to]=[slugs[i],slugs[j]].sort(),key=from+'|context|'+to;
     const edge=contextual.get(key)||{key,from,to,type:'contextual_association',level:'contextual',basis:[],issues:[],claim_ids:[],source_ids:[],sources:[]};
