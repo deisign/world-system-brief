@@ -21,15 +21,26 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
   for(const s of evidence?.records||[]){
    for(const raw of s.supports||[]){const slug=resolve(raw,issue+':source:'+s.id);if(slug)bySlug.get(slug).source_ids.add(s.id);}
   }
+  for(const source of evidence?.records||[]){
+   if(!validUrl(source.url))continue;
+   const slugs=uniq((source.supports||[]).map(id=>resolve(id,issue+':source:'+source.id)).filter(Boolean));
+   for(let i=0;i<slugs.length;i++)for(let j=i+1;j<slugs.length;j++){
+    const [from,to]=[slugs[i],slugs[j]].sort(),key=from+'|context|'+to;
+    const edge=contextual.get(key)||{key,from,to,type:'contextual_association',level:'contextual',basis:[],issues:[],claim_ids:[],source_ids:[],sources:[]};
+    edge.basis.push('shared_source');edge.issues.push(issue);edge.source_ids.push(source.id);edge.sources.push({id:source.id,url:source.url,source:source.source||source.id,issue,date});
+    contextual.set(key,edge);
+    for(const slug of [from,to])bySlug.get(slug).context_edges.add(key);
+   }
+  }
   for(const c of claims?.claims||[]){
    const slugs=uniq((c.entity_ids||[]).map(id=>resolve(id,issue+':claim:'+c.id)).filter(Boolean));
    for(const slug of slugs)bySlug.get(slug).claim_ids.add(c.id);
    const verifiedSources=(c.source_ids||[]).filter(id=>{const src=sourceMap.get(id);return src&&validUrl(src.url)}).sort();
    if(slugs.length<2||!verifiedSources.length)continue;
    for(let i=0;i<slugs.length;i++)for(let j=i+1;j<slugs.length;j++){
-    const [from,to]=[slugs[i],slugs[j]].sort(),key=from+'|co_claim|'+to;
-    const edge=contextual.get(key)||{key,from,to,type:'co_claim',level:'contextual',issues:[],claim_ids:[],source_ids:[],sources:[]};
-    edge.issues.push(issue);edge.claim_ids.push(c.id);edge.source_ids.push(...verifiedSources);
+    const [from,to]=[slugs[i],slugs[j]].sort(),key=from+'|context|'+to;
+    const edge=contextual.get(key)||{key,from,to,type:'contextual_association',level:'contextual',basis:[],issues:[],claim_ids:[],source_ids:[],sources:[]};
+    edge.basis.push('shared_claim');edge.issues.push(issue);edge.claim_ids.push(c.id);edge.source_ids.push(...verifiedSources);
     for(const id of verifiedSources){const src=sourceMap.get(id);edge.sources.push({id,url:src.url,source:src.source||id,issue,date});}
     contextual.set(key,edge);
     for(const slug of [from,to])bySlug.get(slug).context_edges.add(key);
@@ -48,7 +59,7 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
   }
  }
  for(const entry of assessments.records){const slug=resolve(entry.entity_slug,'ledger:'+entry.id);if(slug)bySlug.get(slug).ledger_ids.add(entry.id);}
- const pack=e=>({...e,issues:uniq(e.issues),claim_ids:uniq(e.claim_ids),source_ids:uniq(e.source_ids),sources:uniq(e.sources.map(s=>JSON.stringify(s))).map(s=>JSON.parse(s))});
+ const pack=e=>({...e,issues:uniq(e.issues),claim_ids:uniq(e.claim_ids),source_ids:uniq(e.source_ids),sources:uniq(e.sources.map(s=>JSON.stringify(s))).map(s=>JSON.parse(s)),basis:uniq(e.basis||[])});
  const entities=[...bySlug.values()].map(e=>({...e,issues:[...e.issues],claim_ids:[...e.claim_ids],source_ids:[...e.source_ids],explicit_edges:[...e.explicit_edges],context_edges:[...e.context_edges],ledger_ids:[...e.ledger_ids],study_ids:[...e.study_ids]})).sort((a,b)=>a.slug.localeCompare(b.slug));
  const counts={registry:entities.length,in_issues:entities.filter(e=>e.issues.length).length,in_claims:entities.filter(e=>e.claim_ids.length).length,in_evidence:entities.filter(e=>e.source_ids.length).length,in_explicit_graph:entities.filter(e=>e.explicit_edges.length).length,in_context_graph:entities.filter(e=>e.context_edges.length).length,in_any_graph:entities.filter(e=>e.explicit_edges.length||e.context_edges.length).length,in_ledger:entities.filter(e=>e.ledger_ids.length).length,fully_isolated:entities.filter(e=>!e.explicit_edges.length&&!e.context_edges.length).length,explicit_relations:explicit.size,context_relations:contextual.size,anomalies:anomalies.length};
  return {schema:'wsb-entity-connectivity-audit-v1',counts,entities,explicit_relations:[...explicit.values()].map(pack),context_relations:[...contextual.values()].map(pack),anomalies};
