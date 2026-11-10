@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {auditEntityConnectivity} from './entity-connectivity-audit.js';
+import {entityConnectivityDirectory,connectivityClientJS} from './entity-connectivity-directory.js';
 const registry={entities:[{id:'E1',slug:'a',labels:{en:'A',ua:'А'}},{id:'E2',slug:'b',labels:{en:'B',ua:'Б'}},{id:'E3',slug:'c',labels:{en:'C',ua:'В'}}]};
 const bundle={state:{issue_id:'WSB-01',date:'2026-11-01',objects:[{id:'a'},{id:'b'},{id:'c'}]},claims:{claims:[{id:'CLM',entity_ids:['E1','E2'],source_ids:['SRC']}]},evidence:{records:[{id:'SRC',url:'https://example.org/report',source:'News',supports:['a','b']}]},relations:{relations:[{from:'a',to:'b',type:'feeds',source_ids:['SRC'],claim_ids:['CLM']}]}};
 const cfg={records:[{id:'LEDGER1',entity_slug:'a'}]};
@@ -28,6 +29,7 @@ test('a joint claim without verified URL does not create contextual link',()=>{
 test('single entity claim never creates a link',()=>{
  const b=structuredClone(bundle);
  b.claims.claims[0].entity_ids=['a'];
+ b.evidence.records[0].supports=['a'];
  const report=auditEntityConnectivity({registry,bundles:[b],assessments:{records:[]}});
  assert.equal(report.counts.context_relations,0);
 });
@@ -43,4 +45,17 @@ test('later silence leaves earlier explicit relation recorded',()=>{
  const report=auditEntityConnectivity({registry,bundles:[b,bundle],assessments:cfg});
  assert.equal(report.counts.explicit_relations,1);
  assert.equal(report.explicit_relations[0].issues[0],'WSB-01');
+});
+
+test('the full registry is visible even if a record has no entity-to-entity relations',()=>{
+ const audit=auditEntityConnectivity({registry,bundles:[bundle],assessments:cfg});
+ for(const lang of ['en','ua']){
+  const html=entityConnectivityDirectory({lang,audit});
+  assert.equal((html.match(/class="connectivity-item"/g)||[]).length,3);
+  assert.match(html,/data-mode="isolated"/);
+  assert.match(html,/https:\/\/example.org\/report/);
+  assert.match(html,new RegExp('/'+lang+'/entity/a/'));
+  assert.match(html,/co-occurrence|спільні джерела/);
+ }
+ assert.match(connectivityClientJS,/connectivity-mode/);
 });
