@@ -7,7 +7,7 @@ const read=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const assessments=read('knowledge/dependency-assessments.json');
 const registry=read('knowledge/entities.json');
 const transitions=read('knowledge/dependency-transitions.json').records;
-const bundles=['0039','0040','0041'].map(id=>({
+const bundles=['0039','0040','0041','0042'].map(id=>({
  state:read('issues/'+id+'/state.json'),
  evidence:read('issues/'+id+'/evidence.json'),
  claims:read('issues/'+id+'/claims.json')

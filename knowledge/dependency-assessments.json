@@ -283,6 +283,64 @@
       "source_ids": [
         "WSB-0041-SRC-01"
       ]
+    },
+    {
+      "id": "DPA-0042-PORT-TECH-STACK",
+      "issue_id": "WSB-0042",
+      "date": "2026-11-10",
+      "entity_slug": "china-smart-port-technology-stack",
+      "flow_type": "data",
+      "classification": "knowledge_update",
+      "flow": {
+        "en": "Maritime goods are physically moved by cranes and vehicles while terminal software and electronic documents coordinate cargo handling; 60 automated Chinese terminals is a ministry count, and 90 by 2030 is a target.",
+        "ua": "Морські вантажі фізично переміщують крани й транспорт, а термінальне ПЗ та електронні документи координують обробку; 60 автоматизованих китайських терміналів — дані міністерства, 90 до 2030 року — план."
+      },
+      "dependency": {
+        "en": "Operators depend on terminal equipment, operating systems and interoperable customs/shipping information; these separate layers are not proved to form one Chinese-controlled network.",
+        "ua": "Оператори залежать від портового обладнання, систем керування терміналами та сумісних митних і транспортних даних; не доведено, що ці окремі рівні становлять єдину підконтрольну Китаю мережу."
+      },
+      "bottleneck": {
+        "en": "Switching costs can arise from terminal operating systems, vendor maintenance and data interchange standards; Reuters reports a selected installed base but no measured worldwide lock-in.",
+        "ua": "Витрати переходу можуть створювати термінальні системи, сервісне обслуговування постачальників та формати обміну; Reuters повідомляє про окремі інсталяції, але не вимірює глобальної залежності."
+      },
+      "substitutability": {
+        "status": "unknown",
+        "min_years": null,
+        "max_years": null,
+        "scope": {
+          "en": "Rival suppliers and terminal software systems exist; neither global vendor-switching duration nor exact installation costs were established in sources.",
+          "ua": "Існують конкуруючі постачальники й системи ПЗ; джерела не встановлюють загального строку заміни або точних витрат на перехід."
+        }
+      },
+      "leverage": {
+        "status": "unknown",
+        "text": {
+          "en": "Control of compatible software and logistics standards may create negotiating or information leverage; no verified monopolistic access or coercive action established.",
+          "ua": "Контроль сумісного ПЗ та логістичних стандартів може створювати переговорні чи інформаційні важелі; монополізованого доступу або примусових дій не підтверджено."
+        }
+      },
+      "rent": {
+        "status": "unknown",
+        "text": {
+          "en": "Terminal productivity and equipment financing do not establish the vendor, port operator or state share of resulting scarcity rent.",
+          "ua": "Продуктивність терміналів та фінансування обладнання не доводять частку постачальника, оператора чи держави в одержаній ренті."
+        }
+      },
+      "adaptation": {
+        "status": "unknown",
+        "text": {
+          "en": "Countries can tender alternative terminal systems and pursue interoperability; the October LOGINK retreat shows that software/data adoption differs from hardware deployment.",
+          "ua": "Країни можуть закуповувати альтернативні TOS і забезпечувати сумісність; жовтневий відступ LOGINK показує відмінність між поширенням обладнання й прийняттям цифрових платформ."
+        }
+      },
+      "claim_ids": [
+        "WSB-0042-CLM-01",
+        "WSB-0042-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0042-SRC-01",
+        "WSB-0042-SRC-04"
+      ]
     }
   ]
 }

@@ -774,6 +774,42 @@
         "en": "Unverified Hormuz navigation-aid damage claim",
         "ua": "Непідтверджена заява про пошкодження навігації в Ормузі"
       }
+    },
+    {
+      "id": "ENT-000087",
+      "slug": "china-smart-port-technology-stack",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Chinese smart-port hardware and software stack",
+        "ua": "Китайський комплекс технологій автоматизованих портів"
+      }
+    },
+    {
+      "id": "ENT-000088",
+      "slug": "overseas-terminal-operating-systems",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Overseas terminal operating systems",
+        "ua": "Програмні системи закордонних портових терміналів"
+      }
+    },
+    {
+      "id": "ENT-000089",
+      "slug": "europe-dispatchable-power-flexibility",
+      "type": "system_constraint",
+      "labels": {
+        "en": "European flexible electricity supply cushion",
+        "ua": "Резерв гнучкості електропостачання Європи"
+      }
+    },
+    {
+      "id": "ENT-000090",
+      "slug": "hormuz-oil-risk-repricing",
+      "type": "market_signal",
+      "labels": {
+        "en": "Hormuz oil-market risk repricing",
+        "ua": "Переоцінка нафтового ризику Ормузу"
+      }
     }
   ]
 }

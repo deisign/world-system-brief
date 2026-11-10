@@ -265,18 +265,17 @@ class BrowserSmoke(unittest.TestCase):
         for lang in ("en", "ua"):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 self.assertEqual(page.locator("#relation-changelog").count(), 1)
-                self.assertEqual(page.locator("#relation-changelog .relation-change").count(), 0)
-                date = page.evaluate("""() => {
-                    const d=JSON.parse(document.getElementById('map-data').textContent);
-                    return Object.keys(d.changeViews).find(x => d.changeViews[x].includes('class="relation-change"'));
-                }""")
-                self.assertIsNotNone(date)
-                page.locator("#map-date").select_option(date)
-                self.assertGreater(page.locator("#relation-changelog .relation-change").count(), 0)
-                self.assertEqual(page.locator("#map-asof").inner_text(), date)
+                self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-10")
+                current = page.locator("#relation-changelog .relation-change")
+                self.assertEqual(current.count(), 1)
+                self.assertEqual(current.first.get_attribute("data-change-kind"), "first_recorded")
+                self.assertEqual(page.locator("#relation-changelog [data-change-kind^='confirmed']").count(), 0)
                 page.locator("#map-date").select_option("2026-11-09")
                 self.assertEqual(page.locator("#relation-changelog .relation-change").count(), 0)
                 self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-09")
+                page.locator("#map-date").select_option("2026-11-10")
+                self.assertEqual(page.locator("#relation-changelog .relation-change").count(), 1)
+                self.assertEqual(page.locator("#relation-changelog .relation-change").first.get_attribute("data-change-kind"), "first_recorded")
 
 
 if __name__ == "__main__":

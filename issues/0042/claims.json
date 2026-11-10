@@ -1,0 +1,70 @@
+{
+  "issue_id": "WSB-0042",
+  "as_of": "2026-11-10",
+  "claims": [
+    {
+      "id": "WSB-0042-CLM-01",
+      "kind": "reported",
+      "statement": "Reuters reported China's transport ministry count of 60 automated terminals and a target of 90 by 2030; Qianwan's 61 containers per crane-hour is a terminal-reported throughput claim, not a global verified capacity change.",
+      "observed_at": "2026-11-10",
+      "event_date": "2026-11-10",
+      "entity_ids": [
+        "ENT-000087"
+      ],
+      "source_ids": [
+        "WSB-0042-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0042-CLM-02",
+      "kind": "reported",
+      "statement": "Reuters described selected existing Chinese terminal operating-system installations overseas, citing a 2025 China Merchants Port filing, while separate LOGINK logistics-data platform ambitions had retreated by October 2026. Existing deployment is not evidence of new installations on November 10 or global coercive control.",
+      "observed_at": "2026-11-10",
+      "event_date": "2026-11-10",
+      "entity_ids": [
+        "ENT-000087",
+        "ENT-000088"
+      ],
+      "source_ids": [
+        "WSB-0042-SRC-01",
+        "WSB-0042-SRC-04"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0042-CLM-03",
+      "kind": "reported",
+      "statement": "Reuters commentary, using LSEG series, linked German weak wind and depressed Nordic and Danube hydro availability to rising gas generation and prices; this describes a simultaneous flexibility shortage rather than a newly commissioned or lost physical plant on Nov 10.",
+      "observed_at": "2026-11-10",
+      "event_date": "2026-11-10",
+      "entity_ids": [
+        "ENT-000089"
+      ],
+      "source_ids": [
+        "WSB-0042-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0042-CLM-04",
+      "kind": "reported",
+      "statement": "Reuters reported Brent at $90.18 and WTI $84.74 at 09:30 GMT amid declining perceived Iran escalation risk and oversupply expectations; the prices are market signals and do not independently verify Hormuz vessel throughput.",
+      "observed_at": "2026-11-10",
+      "event_date": "2026-11-10",
+      "entity_ids": [
+        "ENT-000090",
+        "ENT-000001",
+        "ENT-000050"
+      ],
+      "source_ids": [
+        "WSB-0042-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}
