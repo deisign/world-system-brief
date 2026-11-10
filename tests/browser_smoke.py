@@ -300,5 +300,22 @@ class BrowserSmoke(unittest.TestCase):
                 self.assertIn("/entity/china-smart-port-technology-stack/", card.locator(".connectivity-detail a[href*='/entity/']").get_attribute("href"))
 
 
+    def test_context_overlay_is_opt_in_and_never_changes_explicit_relation_count(self):
+        for lang in ("en", "ua"):
+            with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
+                toggle = page.locator("#map-context-toggle")
+                self.assertFalse(toggle.is_checked())
+                self.assertEqual(page.locator("#system-visual-svg .visual-context-edge").count(), 0)
+                explicit = int(page.locator("#edge-count").inner_text())
+                toggle.check()
+                self.assertTrue(toggle.is_checked())
+                self.assertGreater(page.locator("#system-visual-svg .visual-context-edge").count(), 0)
+                self.assertEqual(int(page.locator("#edge-count").inner_text()), explicit)
+                self.assertGreater(page.locator("#system-visual-svg .visual-edge").count(), 0)
+                page.locator("#map-reset").click()
+                self.assertFalse(toggle.is_checked())
+                self.assertEqual(page.locator("#system-visual-svg .visual-context-edge").count(), 0)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
