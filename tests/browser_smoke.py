@@ -297,7 +297,7 @@ class BrowserSmoke(unittest.TestCase):
                 self.assertEqual(card.count(), 1)
                 card.locator("summary").click()
                 self.assertGreater(card.locator(".connectivity-proof a").count(), 0)
-                self.assertIn("/entity/china-smart-port-technology-stack/", card.locator("summary a").get_attribute("href"))
+                self.assertIn("/entity/china-smart-port-technology-stack/", card.locator(".connectivity-detail a[href*='/entity/']").get_attribute("href"))
 
 
 if __name__ == "__main__":
