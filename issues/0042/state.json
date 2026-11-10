@@ -1,0 +1,332 @@
+{
+  "issue_id": "WSB-0042",
+  "date": "2026-11-10",
+  "day_type": {
+    "system_activity": "low",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 4,
+    "persistent": 4
+  },
+  "objects": [
+    {
+      "id": "yandex-data-centre-network",
+      "entering_state": "vladimir_site_operations_suspended",
+      "current_state": "vladimir_site_operations_suspended",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-perm-tech-suspensions",
+      "entering_state": "named_firms_suspended_from_perm",
+      "current_state": "named_firms_suspended_from_perm",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "entering_state": "storm_shutins_continue",
+      "current_state": "storm_shutins_continue",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "hormuz",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "shadow-fleet-shipping-services",
+      "entering_state": "existing_restrictions_under_review",
+      "current_state": "existing_restrictions_under_review",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "iran-lpg-blockade-circumvention",
+      "entering_state": "limited_undated_shipments_detected",
+      "current_state": "limited_undated_shipments_detected",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "china-ai-technology-export-regime",
+      "entering_state": "draft_export_control_list_published",
+      "current_state": "draft_export_control_list_published",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "us-russia-graham-act-waiver",
+      "entering_state": "friday_waiver_reported",
+      "current_state": "friday_waiver_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-reopening-negotiation",
+      "entering_state": "conditional_reopening_offer_reiterated",
+      "current_state": "conditional_reopening_offer_reiterated",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "china-export-demand-imbalance",
+      "entering_state": "q3_growth_4_5_export_led",
+      "current_state": "q3_growth_4_5_export_led",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "gulf-shipping-risk-premium",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "saudi-crude-export-recovery",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "tsmc-rare-earth-equipment-substitution",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "india-hpcl-delivered-crude-contracts",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "saudi-energy-attack-claims",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "iranian-seafarer-rescue-sri-lanka",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "indonesia-singapore-gas-supply-adjustment",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-market-security-premium",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "world-bank-commodity-shock-outlook",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-vessel-fire-claim-separation",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-limpet-mine-ship-attack",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-security-claims-weekend-persistence",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "opec-december-2026-production-targets",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "adnoc-energy-buffer-depletion",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "aramco-hormuz-pipeline-expansion-plans",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "irgc-hormuz-mine-seizure-claims",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "uk-critical-minerals-resilience",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "maersk-container-freight-pricing",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "gulf-qatar-ukmto-tanker-incident",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "global-oil-balance",
+      "entering_state": "september_october_surplus_bank_estimates_reported",
+      "current_state": "september_october_surplus_bank_estimates_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "gulf-oil-flow",
+      "entering_state": "october_crude_recovery_product_exports_lag",
+      "current_state": "october_crude_recovery_product_exports_lag",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "refined-products-bottleneck",
+      "entering_state": "gulf_products_lag_crude_export_recovery",
+      "current_state": "gulf_products_lag_crude_export_recovery",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "china-fuel-export-suspension",
+      "entering_state": "november_diesel_exports_constrained_by_domestic_stocks",
+      "current_state": "november_diesel_exports_constrained_by_domestic_stocks",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "ai-gas-turbine-capacity-bottleneck",
+      "entering_state": "turbine_order_backlog_and_secondary_market_reported",
+      "current_state": "turbine_order_backlog_and_secondary_market_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "nextdc-uncontracted-data-centre-pauses",
+      "entering_state": "company_pause_of_uncontracted_projects_announced",
+      "current_state": "company_pause_of_uncontracted_projects_announced",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-navigation-aid-damage-claim",
+      "entering_state": "iranian_official_unverified_damage_claim",
+      "current_state": "iranian_official_unverified_damage_claim",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "china-smart-port-technology-stack",
+      "entering_state": "not_observed_in_previous_issue",
+      "current_state": "chinese_port_automation_exports_reported",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "overseas-terminal-operating-systems",
+      "entering_state": "not_observed_in_previous_issue",
+      "current_state": "selected_foreign_terminal_software_deployments_reported",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "europe-dispatchable-power-flexibility",
+      "entering_state": "not_observed_in_previous_issue",
+      "current_state": "weather_correlated_flexibility_shortfall_reported",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-oil-risk-repricing",
+      "entering_state": "not_observed_in_previous_issue",
+      "current_state": "oil_risk_premium_unwinding_reported",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "china-smart-port-technology-stack",
+    "type": "evidence_update",
+    "sequence": [
+      "china-smart-port-technology-stack",
+      "overseas-terminal-operating-systems"
+    ],
+    "edges": [],
+    "assessment": "port_hardware_deployments_do_not_prove_universal_software_control"
+  },
+  "notes": [
+    "Reuters 10 Nov reports China's transport ministry says 60 automated port terminals now, 90 targeted by 2030: do not treat target as installed capacity.",
+    "Qianwan crane throughput is a terminal-reported site metric, not independently audited global throughput.",
+    "China Merchants Port filing described completed terminal operating system deployment at Paranagua in 2025 and other sites: historical installations reported today, not new Nov 10 commissioning.",
+    "Reuters separately reported LOGINK's loss of international momentum in October; hardware and port terminals must not be conflated with a unified Chinese data network.",
+    "Reuters commentary reports German wind weakness coinciding with Nordic/Danube hydro shortage and gas marginal pricing; no measured Nov 10 installed capacity loss established.",
+    "Reuters oil market data as of 09:30 UTC reflects price and diplomatic expectations, not independently verified full reopening of Hormuz.",
+    "WSB-0042 records first observed links as knowledge, not physical creation. Claims with confirmed_delta: none."
+  ],
+  "chain": [
+    "china-smart-port-technology-stack",
+    "overseas-terminal-operating-systems"
+  ],
+  "noise": [
+    {
+      "id": "port_terminal_count_not_worldwide_control",
+      "result": "not_established"
+    },
+    {
+      "id": "software_installation_not_realtime_trade_coercion",
+      "result": "not_established"
+    },
+    {
+      "id": "oil_price_not_shipping_throughput",
+      "result": "not_established"
+    }
+  ]
+}
