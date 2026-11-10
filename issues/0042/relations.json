@@ -1,0 +1,20 @@
+{
+  "issue_id": "WSB-0042",
+  "as_of": "2026-11-10",
+  "relations": [
+    {
+      "id": "WSB-0042-REL-01",
+      "from": "china-smart-port-technology-stack",
+      "to": "overseas-terminal-operating-systems",
+      "type": "reported_deployment_at",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0042-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0042-SRC-01"
+      ],
+      "note": "First recorded relation; source describes existing 2025/earlier terminal operating-system deployments, not a new installation on November 10 or physical transition."
+    }
+  ]
+}
