@@ -80,3 +80,16 @@ test('omnibus primary source for more than three entities is not mistaken for pa
  const result=auditEntityConnectivity({registry:larger,bundles:[b],assessments:{records:[]}});
  assert.equal(result.counts.context_relations,0);
 });
+
+test('audit preserves direct dated source and claim links independent of graph edges',()=>{
+ const report=auditEntityConnectivity({registry,bundles:[bundle],assessments:cfg});
+ const e=report.entities.find(x=>x.slug==='a');
+ assert.ok(e.issue_refs.some(x=>x.id==='WSB-01'&&x.date==='2026-11-01'));
+ assert.ok(e.claim_refs.some(x=>x.id==='CLM'));
+ assert.ok(e.source_refs.some(x=>x.url==='https://example.org/report'));
+ const html=entityConnectivityDirectory({lang:'en',audit:report});
+ assert.match(html,/href="\/en\/claim\/CLM\/"/);
+ assert.match(html,/href="\/en\/brief\/2026-11-01\/"/);
+ assert.match(html,/href="https:\/\/example.org\/report"/);
+ assert.match(html,/href="\/en\/entity\/c\/"/);
+});
