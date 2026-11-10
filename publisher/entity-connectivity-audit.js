@@ -11,7 +11,7 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
   if(!e.id||!e.slug||canonical.has(e.slug))throw Error('Invalid or duplicate entity');
   canonical.set(e.id,e.slug);canonical.set(e.slug,e.slug);
  }
- const bySlug=new Map(registry.entities.map(e=>[e.slug,{id:e.id,slug:e.slug,type:e.type,labels:e.labels,issues:new Set(),claim_ids:new Set(),source_ids:new Set(),explicit_edges:new Set(),context_edges:new Set(),ledger_ids:new Set(),study_ids:new Set()}]));
+ const bySlug=new Map(registry.entities.map(e=>[e.slug,{id:e.id,slug:e.slug,type:e.type,labels:e.labels,issues:new Set(),claim_ids:new Set(),source_ids:new Set(),baseline_ids:new Set(),explicit_edges:new Set(),context_edges:new Set(),ledger_ids:new Set(),study_ids:new Set()}]));
  const anomalies=[],explicit=new Map(),contextual=new Map();
  const resolve=(id,where)=>{const slug=canonical.get(id);if(!slug)anomalies.push({type:'unknown_entity',id,where});return slug;};
  const series=bundles.slice().sort((a,b)=>a.state.date.localeCompare(b.state.date));
@@ -20,7 +20,7 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
   if(!issue||!date)throw Error('Invalid issue date or ID');
   for(const o of state.objects||[]){const slug=resolve(o.id,issue+':state');if(slug)bySlug.get(slug).issues.add(issue);}
   for(const s of evidence?.records||[]){
-   for(const raw of s.supports||[]){const slug=resolve(raw,issue+':source:'+s.id);if(slug)bySlug.get(slug).source_ids.add(s.id);}
+   for(const raw of s.supports||[]){const slug=resolve(raw,issue+':source:'+s.id);if(slug)(admissible(s)?bySlug.get(slug).source_ids:bySlug.get(slug).baseline_ids).add(s.id);}
   }
   for(const source of evidence?.records||[]){
    if(!admissible(source))continue;
@@ -62,8 +62,8 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
  }
  for(const entry of assessments.records){const slug=resolve(entry.entity_slug,'ledger:'+entry.id);if(slug)bySlug.get(slug).ledger_ids.add(entry.id);}
  const pack=e=>({...e,issues:uniq(e.issues),claim_ids:uniq(e.claim_ids),source_ids:uniq(e.source_ids),sources:uniq(e.sources.map(s=>JSON.stringify(s))).map(s=>JSON.parse(s)),basis:uniq(e.basis||[])});
- const entities=[...bySlug.values()].map(e=>({...e,issues:[...e.issues],claim_ids:[...e.claim_ids],source_ids:[...e.source_ids],explicit_edges:[...e.explicit_edges],context_edges:[...e.context_edges],ledger_ids:[...e.ledger_ids],study_ids:[...e.study_ids]})).sort((a,b)=>a.slug.localeCompare(b.slug));
- const counts={registry:entities.length,in_issues:entities.filter(e=>e.issues.length).length,in_claims:entities.filter(e=>e.claim_ids.length).length,in_evidence:entities.filter(e=>e.source_ids.length).length,in_explicit_graph:entities.filter(e=>e.explicit_edges.length).length,in_context_graph:entities.filter(e=>e.context_edges.length).length,in_any_graph:entities.filter(e=>e.explicit_edges.length||e.context_edges.length).length,in_ledger:entities.filter(e=>e.ledger_ids.length).length,fully_isolated:entities.filter(e=>!e.explicit_edges.length&&!e.context_edges.length).length,explicit_relations:explicit.size,context_relations:contextual.size,anomalies:anomalies.length};
+ const entities=[...bySlug.values()].map(e=>({...e,issues:[...e.issues],claim_ids:[...e.claim_ids],source_ids:[...e.source_ids],baseline_ids:[...e.baseline_ids],explicit_edges:[...e.explicit_edges],context_edges:[...e.context_edges],ledger_ids:[...e.ledger_ids],study_ids:[...e.study_ids]})).sort((a,b)=>a.slug.localeCompare(b.slug));
+ const counts={registry:entities.length,in_issues:entities.filter(e=>e.issues.length).length,in_claims:entities.filter(e=>e.claim_ids.length).length,in_evidence:entities.filter(e=>e.source_ids.length).length,in_baseline_only:entities.filter(e=>!e.source_ids.length&&e.baseline_ids.length).length,in_explicit_graph:entities.filter(e=>e.explicit_edges.length).length,in_context_graph:entities.filter(e=>e.context_edges.length).length,in_any_graph:entities.filter(e=>e.explicit_edges.length||e.context_edges.length).length,in_ledger:entities.filter(e=>e.ledger_ids.length).length,fully_isolated:entities.filter(e=>!e.explicit_edges.length&&!e.context_edges.length).length,explicit_relations:explicit.size,context_relations:contextual.size,anomalies:anomalies.length};
  return {schema:'wsb-entity-connectivity-audit-v1',counts,entities,explicit_relations:[...explicit.values()].map(pack),context_relations:[...contextual.values()].map(pack),anomalies};
 }
 export function runConnectivityAudit(root=process.cwd()){
