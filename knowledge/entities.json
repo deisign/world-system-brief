@@ -810,6 +810,51 @@
         "en": "Hormuz oil-market risk repricing",
         "ua": "Переоцінка нафтового ризику Ормузу"
       }
+    },
+    {
+      "id": "ENT-000091",
+      "slug": "gulf-crude-export-flow",
+      "type": "system_flow",
+      "labels": {
+        "en": "Gulf crude-export flow",
+        "ua": "Потік експорту сирої нафти з Перської затоки"
+      }
+    },
+    {
+      "id": "ENT-000092",
+      "slug": "gulf-of-oman-sts",
+      "type": "adaptation_route",
+      "labels": {
+        "en": "Ship-to-ship transfers in the Gulf of Oman",
+        "ua": "Перевалка нафти з судна на судно в Оманській затоці"
+      }
+    },
+    {
+      "id": "ENT-000093",
+      "slug": "nvidia-china",
+      "type": "technology_export_policy",
+      "labels": {
+        "en": "Nvidia GPU sales to Chinese buyers",
+        "ua": "Продажі графічних процесорів Nvidia китайським покупцям"
+      }
+    },
+    {
+      "id": "ENT-000094",
+      "slug": "lng-canada-phase-2",
+      "type": "energy_infrastructure",
+      "labels": {
+        "en": "LNG Canada Phase 2 expansion",
+        "ua": "Розширення LNG Canada — друга черга"
+      }
+    },
+    {
+      "id": "ENT-000095",
+      "slug": "pacific-lng-optionality",
+      "type": "system_dependency",
+      "labels": {
+        "en": "Pacific LNG export optionality",
+        "ua": "Можливості маневру експорту ЗПГ через Тихий океан"
+      }
     }
   ]
 }
