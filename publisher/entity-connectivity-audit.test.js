@@ -59,3 +59,24 @@ test('the full registry is visible even if a record has no entity-to-entity rela
  }
  assert.match(connectivityClientJS,/connectivity-mode/);
 });
+
+test('large inherited baseline and internal source never forms synthetic context clique',()=>{
+ const b=structuredClone(bundle);
+ b.claims.claims=[];
+ b.relations.relations=[];
+ b.evidence.records=[{id:'INHERITED',source_type:'internal',role:'baseline',url:'https://example.org/internal',supports:['a','b','c']}];
+ const result=auditEntityConnectivity({registry,bundles:[b],assessments:{records:[]}});
+ assert.equal(result.counts.context_relations,0);
+ assert.equal(result.counts.in_evidence,0);
+ assert.equal(result.counts.in_baseline_only,3);
+ assert.equal(result.counts.fully_isolated,3);
+});
+test('omnibus primary source for more than three entities is not mistaken for pairwise relations',()=>{
+ const larger={entities:[...registry.entities,{id:'E4',slug:'d',labels:{en:'D',ua:'Д'}}]};
+ const b=structuredClone(bundle);
+ b.claims.claims=[];
+ b.relations.relations=[];
+ b.evidence.records=[{id:'OMNIBUS',url:'https://example.org/omnibus',supports:['a','b','c','d']}];
+ const result=auditEntityConnectivity({registry:larger,bundles:[b],assessments:{records:[]}});
+ assert.equal(result.counts.context_relations,0);
+});
