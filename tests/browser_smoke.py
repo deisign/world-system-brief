@@ -100,7 +100,16 @@ class BrowserSmoke(unittest.TestCase):
                             .map(x => ({tag:x.el.tagName, cls: String(x.el.className).slice(0, 90),
                               text:x.el.textContent.slice(0, 90), width:Math.round(x.r.width),
                               right:Math.round(x.r.right), html:x.el.outerHTML.slice(0, 180)}))""")
-                        print("LATEST_READ_OVERFLOW", lang, width, offenders, flush=True)
+                        widths = page.evaluate("""() => [...document.querySelectorAll('html, body, main, article, body *')]
+                          .map(e => ({tag:e.tagName, cls:String(e.className).slice(0,55),
+                            scroll:e.scrollWidth,client:e.clientWidth,offset:e.offsetWidth,
+                            rect:Math.round(e.getBoundingClientRect().width),
+                            overflow:getComputedStyle(e).overflowX,
+                            left:Math.round(e.getBoundingClientRect().left),
+                            right:Math.round(e.getBoundingClientRect().right)}))
+                          .filter(x=>x.scroll>x.client+1)
+                          .sort((a,b)=>(b.scroll-b.client)-(a.scroll-a.client)).slice(0,15)""")
+                        print("LATEST_READ_OVERFLOW", lang, width, offenders, widths, flush=True)
                     self.assertLessEqual(horizontal["scroll"], horizontal["client"] + 1)
                     self.assertGreater(page.locator(".sources a[href^='https://']").count(), 0)
 
