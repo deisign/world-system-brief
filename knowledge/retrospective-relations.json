@@ -931,6 +931,334 @@
         "en": "Russian Yandex data-centre equipment damage and Australian NextDC project pauses are different infrastructure risks: physical incident versus project contracting and siting. They are not causally linked.",
         "ua": "Пошкодження датацентрів Yandex у Росії та призупинення проєктів NextDC в Австралії — різні ризики: фізичний інцидент та контрактно-інфраструктурні обмеження. Причинного зв'язку між ними немає."
       }
+    },
+    {
+      "id": "RET-20261111-32",
+      "from": "us-spr-refiner-loans",
+      "to": "us-strategic-petroleum-reserve",
+      "type": "repayable_loans_from",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0003",
+          "claim_ids": [
+            "CLM-260930-01"
+          ],
+          "source_ids": [
+            "WSB-SRC-0003-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "US announced up to 40 million barrels in repayable SPR loans to energy companies; announcement is not measured withdrawal or delivery.",
+        "ua": "США запропонували до 40 млн барелів із SPR як поворотні позики енергокомпаніям; це оголошення, а не доведене фактичне постачання."
+      }
+    },
+    {
+      "id": "RET-20261111-33",
+      "from": "cheniere-petrobras-lng",
+      "to": "petrobras",
+      "type": "long_term_lng_offtake_agreement_with",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0003",
+          "claim_ids": [
+            "CLM-260930-03"
+          ],
+          "source_ids": [
+            "WSB-SRC-0003-02"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Cheniere Marketing and Petrobras announced an approximately 0.8 mtpa FOB LNG purchase agreement for 22 years; contractual capacity is not current delivered volumes.",
+        "ua": "Cheniere Marketing та Petrobras уклали угоду FOB приблизно на 0,8 млн тонн ЗПГ на рік строком 22 роки; контракт не дорівнює поточним фізичним поставкам."
+      }
+    },
+    {
+      "id": "RET-20261111-34",
+      "from": "eu-grid-guarantees",
+      "to": "eib-bnp-guarantees",
+      "type": "funded_by_guarantee_instrument",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0003",
+          "claim_ids": [
+            "CLM-260930-04"
+          ],
+          "source_ids": [
+            "WSB-SRC-0003-03"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "EIB and BNP Paribas signed a €700 million guarantee instrument supporting European grid manufacturers; promised leverage up to €2.8 billion is forecast investment, not built grid.",
+        "ua": "ЄІБ і BNP Paribas уклали гарантійну угоду на €700 млн для виробників електромережевого обладнання; можливі €2,8 млрд інвестицій ще не є збудованими мережами."
+      }
+    },
+    {
+      "id": "RET-20261111-35",
+      "from": "capital-unblocks-grid-capacity",
+      "to": "eu-grid-capacity",
+      "type": "targets_investment_in",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0003",
+          "claim_ids": [
+            "CLM-260930-05"
+          ],
+          "source_ids": [
+            "WSB-SRC-0003-03"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Public risk-bearing instruments were expected to ease EU grid equipment capital bottlenecks; future investment and grid capacity not counted as built.",
+        "ua": "Гарантії мають зменшити фінансові обмеження виробників обладнання; очікувані інвестиції й майбутні потужності не прирівнюємо до введених."
+      }
+    },
+    {
+      "id": "RET-20261111-36",
+      "from": "bidirectional-charging",
+      "to": "germany-mispel-storage",
+      "type": "enabled_under_mispel_market_rules",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0004",
+          "claim_ids": [
+            "CLM-261001-03"
+          ],
+          "source_ids": [
+            "WSB-SRC-0004-02"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "German regulator adopted MiSpeL integration for electricity storage and bidirectional charging, with transitional implementation through September 2027; regulatory access not actual storage capacity.",
+        "ua": "Німецький регулятор ухвалив правила MiSpeL для накопичувачів і двонапрямного заряджання з переходом до вересня 2027 року; доступ до ринку не означає нові потужності."
+      }
+    },
+    {
+      "id": "RET-20261111-37",
+      "from": "taiwan-energy-buffer",
+      "to": "taiwan-public-balance-sheet",
+      "type": "absorbs_energy_price_shock_through",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0004",
+          "claim_ids": [
+            "CLM-261001-06"
+          ],
+          "source_ids": [
+            "WSB-SRC-0004-03"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Taiwan's cabinet budget transfers energy price differentials onto public finances; approved allocations are not measured grid or fuel throughput.",
+        "ua": "Бюджет Тайваню переносить частину енергетичних цінових витрат на державні фінанси; затверджені асигнування не дорівнюють фізичним потокам."
+      }
+    },
+    {
+      "id": "RET-20261111-38",
+      "from": "hormuz-navigation-aid-damage-claim",
+      "to": "hormuz",
+      "type": "unverified_navigation_damage_claim_concerns",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0041",
+          "claim_ids": [
+            "WSB-0041-CLM-03"
+          ],
+          "source_ids": [
+            "WSB-0041-SRC-03"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Reuters quotes an unnamed Iranian official alleging damage to southern Hormuz navigation aids; no independent proof of destruction or shipping halt was established.",
+        "ua": "Reuters передає заяву неназваного іранського посадовця про пошкодження навігаційних засобів Ормузу; незалежних доказів руйнування чи зупинки руху немає."
+      }
+    },
+    {
+      "id": "RET-20261111-39",
+      "from": "hormuz-oil-risk-repricing",
+      "to": "hormuz",
+      "type": "market_risk_premium_associated_with",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0042",
+          "claim_ids": [
+            "WSB-0042-CLM-04"
+          ],
+          "source_ids": [
+            "WSB-0042-SRC-03"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Intraday Brent/WTI moves accompanied changes in perceived Hormuz and Iran escalation risks; no physical maritime throughput inferred.",
+        "ua": "Внутрішньоденні зміни Brent/WTI супроводжували зміну оцінок ризику Ормузу й ескалації навколо Ірану; фізичний обсяг проходів не доведено."
+      }
+    },
+    {
+      "id": "RET-20261111-40",
+      "from": "irgc-hormuz-mine-seizure-claims",
+      "to": "hormuz",
+      "type": "attributed_unverified_incident_claims_concern",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0039",
+          "claim_ids": [
+            "WSB-0039-CLM-03"
+          ],
+          "source_ids": [
+            "WSB-0039-SRC-04"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "IRGC asserted vessel fires around Hormuz on 5 November; no independent verification of specific losses; link indexes the claim's geographical subject only.",
+        "ua": "КВІР заявив про пожежі суден поблизу Ормузу 5 листопада; конкретні втрати не підтверджені. Зв’язок вказує предмет заяви, а не факт ураження."
+      }
+    },
+    {
+      "id": "RET-20261111-41",
+      "from": "gulf-qatar-ukmto-tanker-incident",
+      "to": "hormuz",
+      "type": "reported_regional_merchant_vessel_threat",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0039",
+          "claim_ids": [
+            "WSB-0039-CLM-04"
+          ],
+          "source_ids": [
+            "WSB-0039-SRC-06"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "UKMTO reported a separate tanker strike north of Qatar, in the wider Gulf shipping risk area. This does not establish that the incident occurred inside the Strait of Hormuz.",
+        "ua": "UKMTO повідомило про окреме ураження танкера північніше Катару в ширшій зоні ризику Перської затоки. Це не означає, що подія відбулася безпосередньо в Ормузькій протоці."
+      }
+    },
+    {
+      "id": "RET-20261111-42",
+      "from": "gulf-crude-export-flow",
+      "to": "hormuz",
+      "type": "reported_crude_export_flow_through",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [],
+      "external_sources": [
+        {
+          "id": "RET-SRC-GULF-FLOW-01",
+          "source": "Reuters / Kpler preliminary September exports, 28 Sep 2026",
+          "url": "https://www.reuters.com/business/energy/",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "gulf-crude-export-flow",
+            "hormuz"
+          ]
+        }
+      ],
+      "note": {
+        "en": "Reuters cited preliminary Kpler Gulf crude-export and Hormuz transit estimates; these are reported physical flows rather than a new event on the retrospective registration date.",
+        "ua": "Reuters навів попередні оцінки Kpler експорту нафти із затоки та проходу Ормузу; це повідомлені потоки, не нова подія дня реєстрації."
+      }
+    },
+    {
+      "id": "RET-20261111-43",
+      "from": "gulf-of-oman-sts",
+      "to": "east-west-pipeline",
+      "type": "adaptation_route_used_after_pipeline_disruption",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [],
+      "external_sources": [
+        {
+          "id": "RET-SRC-OMAN-STS-01",
+          "source": "Reuters / Saudi exports rerouted after pipeline attack, 21 Sep 2026",
+          "url": "https://www.reuters.com/business/energy/saudi-arabia-ramps-up-gulf-oil-exports-after-pipeline-attack-shipping-data-shows-2026-09-21/",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "gulf-of-oman-sts",
+            "east-west-pipeline"
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ship-to-ship transfers near Oman were part of Saudi Arabia's response to East–West pipeline damage; not an unlimited alternative bypass.",
+        "ua": "Перевалка нафти між суднами поблизу Оману була частиною реакції Саудівської Аравії на пошкодження East–West; це не безмежна альтернативна потужність."
+      }
+    },
+    {
+      "id": "RET-20261111-44",
+      "from": "pacific-lng-optionality",
+      "to": "lng-canada-phase-2",
+      "type": "future_export_option_enabled_by_project_commitment",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [],
+      "external_sources": [
+        {
+          "id": "RET-SRC-LNG-OPTION-01",
+          "source": "Reuters / LNG Canada Phase 2 FID, 29 Sep 2026",
+          "url": "https://www.reuters.com/business/energy/shell-led-lng-canada-greenlights-phase-2-expansion-doubling-export-capacity-2026-09-29/",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "pacific-lng-optionality",
+            "lng-canada-phase-2"
+          ]
+        }
+      ],
+      "note": {
+        "en": "Phase 2 FID increased committed future Pacific LNG liquefaction optionality; no Phase 2 operating capacity was commissioned on the filing date.",
+        "ua": "Інвестиційне рішення щодо Phase 2 збільшило майбутні можливості експорту ЗПГ з Тихоокеанського узбережжя; нову діючу потужність не введено."
+      }
     }
   ]
 }
