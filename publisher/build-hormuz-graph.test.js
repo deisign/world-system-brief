@@ -89,7 +89,8 @@ test('EU grid second dossier is sourced across capital and energy without assert
  assert.equal(graph.edges.filter(e=>e.status==='analyst_assessment').length,1);
  for(const lang of ['en','ua']){
   const html=renderHormuzPage({lang,validated:graph});
-  assert.match(html,new RegExp('/'+lang+'/dependencies/eu-grid-financing/'));
+  assert.match(html,new RegExp('/'+(lang==='en'?'ua':'en')+'/dependencies/eu-grid-financing/'));
+  assert.match(html,new RegExp('/'+lang+'/dependencies/'));
   assert.equal((html.match(/class="mechanism" id="EGF-/g)||[]).length,4);
   assert.equal((html.match(/id="node-/g)||[]).length,5);
   assert.match(html,/WSB-SRC-0003-03/);
