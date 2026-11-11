@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "provenance": "unverified_model_research_draft",
+  "generated_at": "2026-10-14T12:20:42.293Z",
+  "research_model": "gpt-5-mini",
+  "review_summary": {
+    "downgraded_confirmed_deltas": 0,
+    "all_claims_require_independent_verification": true
+  },
+  "issue_date": "2026-10-10",
+  "baseline_issue_id": "WSB-0012",
+  "as_of_note": "Searched open-source reporting and primary company statements available on or before 2026-10-10 (Europe/Kyiv issue date). Citations attach to the most load-bearing published assertions; where official releases were not found, reporting is noted as such and flagged in 'limitations'.",
+  "candidates": [
+    {
+      "id": "yandex-data-centre-network",
+      "headline": "Ukrainian drone strikes damaged Yandex data centres (Sasovo Oct 8; Kaluga Oct 9) — evidence clarifies compute concentration and cloud-customer exposure, but company-wide capacity effects remain unquantified",
+      "classification": "evidence_update",
+      "entering_state": "ryazan_data_centre_struck_on_october_8",
+      "current_state": "kaluga_modules_disabled_second_site; company_compute_effects_unquantified",
+      "why_structural": "Open-source and company statements show two separate strikes (Sasovo, reported Oct 8; Kaluga, reported Oct 9). Independent reporting and company disclosures indicate Sasovo hosted large, specialised AI compute (two named supercomputers). That concentrates scarce high-performance compute inside a small number of physical sites, increasing systemic exposure: loss of a single site reduces training capacity for large models, constrains workload placement for customers that relied on Yandex Cloud, and raises short-term substitutability costs (data migration, capacity scarcity, vendor lock-in for specialised models). Routing user-facing services may be possible, but restoring specialised hardware and large-scale training capacity is slower than restoring stateless application hosting — implying asymmetric recovery times and potential long-tail effects on AI development timelines and customers with on-site dependencies.",
+      "event_date": "2026-10-08",
+      "confidence": "medium",
+      "source_ids": [
+        "SRC-001",
+        "SRC-002",
+        "SRC-003",
+        "SRC-008"
+      ],
+      "uncertainties": [
+        "Extent of physical damage to named supercomputers (Chervonenkis, Lyapunov) at Sasovo — Yandex did not disclose equipment-level damage as of 2026-10-09.",
+        "How much of Yandex Cloud customer workloads (especially AI training checkpoints, datasets and private models) were irreversibly lost versus temporarily unavailable.",
+        "Whether Yandex has immediate spare GPU/GPU-cluster capacity elsewhere or contractual access to third-party clouds sufficient to host high-demand training workloads without major degradation.",
+        "Insurance, replacement and logistics timelines for specialised AI hardware (supply-chain and import constraints may extend replacement times).",
+        "Causal linkage between the data-center strikes and unrelated economic/policy events noted in baseline (no proven causal link in sources)."
+      ]
+    },
+    {
+      "id": "us-perm-tech-suspensions",
+      "headline": "U.S. administration announced suspension of PERM processing for named tech firms (announced Oct 8) — procedural blockade on a permanent-residency channel for affected employers; enforcement scope and duration remain unclear",
+      "classification": "developing",
+      "entering_state": "employer_perm_access_before_october_8",
+      "current_state": "named_firms_suspended_from_perm",
+      "why_structural": "Official statements reported on Oct 8 say the Labor Department (announced at a White House news conference) will not accept new or process pending PERM (permanent labor certification) applications for a set of named employers. PERM is a key employer-channel to permanent residency for many skilled foreign workers; suspending employer access creates an immediate choke on that flow for affected firms, raising retention risk for employees who expected a pathway to permanent status, increasing bargaining/leverage asymmetries between firms and affected workers, and potentially shifting talent acquisition strategies (greater hiring of domestic workers, use of other visa pathways where available, or reliance on short-term contractors). The practical effect depends on (a) whether the action is procedural (processing hold) versus a formal debarment, (b) how many pending cases are frozen, and (c) legal or administrative follow-up.",
+      "event_date": "2026-10-08",
+      "confidence": "medium",
+      "source_ids": [
+        "SRC-004",
+        "SRC-005",
+        "SRC-009"
+      ],
+      "uncertainties": [
+        "As of 2026-10-10 a formal Department of Labor administrative order or public DOL press release with text/authority for the suspensions was not found; reporting traces to a White House news conference and subsequent press coverage — the presence/format of a formal DOL order, its legal basis, and exact scope (new vs pending cases, internal procedural guidance) were not located in an authoritative DOL publication.",
+        "Duration of the suspension (temporary hold vs indefinite restriction) and whether affected employers can challenge or seek emergency processing remains unclear.",
+        "Whether H-1B nonimmigrant admissions or new H-1B petition filings are affected (reporting distinguishes PERM from H-1B; officials emphasized PERM but public statements are rhetorically broader).",
+        "Quantitative exposure — the number of pending PERM cases at each named firm and the fraction of talent flows affected — was not disclosed publicly in the sources reviewed."
+      ]
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "headline": "Hurricane-related precautionary shut-ins removed large volumes of U.S. Gulf of Mexico offshore output (Oct 8–10) — temporarily tightens local supply and raises restart/inspection bottlenecks",
+      "classification": "persistent",
+      "entering_state": "confirmed_offshore_production_shutins",
+      "current_state": "storm_shutins_continue",
+      "why_structural": "Weather (Hurricane Isaias) forced precautionary evacuation of platforms and shut-in of wells in the US Gulf of Mexico; contemporaneous reporting estimated on the order of ~1.2–1.5 million barrels per day of oil production shut in (roughly 60–72% of regional output, per industry aggregators and market briefers). This is a removal of physical flow rather than a price-only shock: crude and product flows are constrained until inspections and restarts occur. Short-term substitutability depends on SPR releases, refinery crude sourcing flexibility, and spare tanker/terminal capacity. Physical restart requires site access and integrity checks, producing an uneven recovery profile across fields.",
+      "event_date": "2026-10-08",
+      "confidence": "high",
+      "source_ids": [
+        "SRC-006",
+        "SRC-007"
+      ],
+      "uncertainties": [
+        "Distinction between precautionary shut-ins and damage-caused long-term outages — many platforms are shut as a safety measure and can return quickly, but damaged infrastructure leads to prolonged loss; initial reporting conflates both before inspections.",
+        "Exact industry tallies vary by operator and aggregator; aggregated shut-in numbers are provisional and subject to operator updates after inspections.",
+        "Downstream impacts (refinery crude runs and product availability) depend on duration of shut-ins and regional inventories; measured market effects lag physical-site information."
+      ]
+    },
+    {
+      "id": "hormuz",
+      "headline": "Strait of Hormuz remains a structural navigation constraint — constrained throughput, high insurance/operational costs and limited substitutability continue to shape energy flows",
+      "classification": "persistent",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint",
+      "why_structural": "Multiple operational and analytical sources report that commercial transit through the Strait of Hormuz remains well below pre-crisis norms. The waterway continues to function as a chokepoint: transits are possible but subject to elevated risk, special routing, insurance premiums, and convoy/escort arrangements. That persistent structural constraint raises rents on assured cargo movement, favors physical bypasses and pipeline re-routing where available (and expensive), and sustains leverage for actors controlling corridor access. Reopening at scale requires verified, durable de-escalation and credible assurances for insurers and operators; diplomatic signals alone have not restored normal throughput.",
+      "event_date": "2026-04-10",
+      "confidence": "high",
+      "source_ids": [
+        "SRC-012",
+        "SRC-013"
+      ],
+      "uncertainties": [
+        "Throughput metrics are reported by a mix of intelligence briefs, shipping trackers and industry analyses rather than a single global official flow-statistic; exact daily transit counts vary by source and definition (e.g., tankers vs all vessels).",
+        "A negotiated or procedural mechanism that could reopen regular traffic remains a political outcome; timing and terms are uncertain and would materially change this assessment.",
+        "Insurance and charter-market responses can change rapidly with a single credible security de-escalation — the current persistence of high logistical costs could therefore reverse quickly if underwritten assurances are provided."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-001",
+      "title": "What is happening to our data centers, the iron heart of Yandex",
+      "url": "https://yandex.com/company/news/2026-10-09",
+      "publisher": "Yandex (official company blog)",
+      "publication_date": "2026-10-09",
+      "claim": "Yandex stated the Sasovo data centre was seriously damaged on the night of October 7–8 and completely shut down; on Oct. 9 it said another data centre in Kaluga was attacked and part of its infrastructure was out of service.",
+      "observation": "Company assertion describing attack dates, affected sites, service disruptions and that teams are assessing infrastructure; company did not provide equipment-level damage details in the statement.",
+      "limitations": "Corporate statement confirms incidents and outages but does not specify damage to named supercomputers or quantify company-wide compute loss; it is a primary source for event timing and immediate operational status but limited on granular hardware condition."
+    },
+    {
+      "id": "SRC-002",
+      "title": "Ukrainian Drones Hit Yandex Data Center, Industrial Facilities Across Russia",
+      "url": "https://www.themoscowtimes.com/2026/10/08/ukrainian-drones-hit-yandex-data-center-after-wave-of-russian-attacks-a93915",
+      "publisher": "The Moscow Times (news report, includes Reuters reporting)",
+      "publication_date": "2026-10-08",
+      "claim": "Reported a drone attack at Sasovo (Ryazan) on Oct 8 that ignited a fire, suspended operations and caused service disruptions; cited Downdetector and NASA FIRMS thermal detection.",
+      "observation": "Independent reporting corroborates the timing and immediate operational consequences and cites telemetry (NASA FIRMS) and outage-monitoring services.",
+      "limitations": "Media report synthesises company statements, local authorities and third-party telemetry; not an equipment-level forensic source and may rely on rapidly evolving information."
+    },
+    {
+      "id": "SRC-003",
+      "title": "Ukraine strikes Yandex data center housing two of the company’s supercomputers",
+      "url": "https://meduza.io/en/feature/2026/10/08/ukraine-strikes-yandex-data-center-housing-two-of-the-company-s-supercomputers",
+      "publisher": "Meduza (independent Russian-language outlet, English translation)",
+      "publication_date": "2026-10-08",
+      "claim": "Reported that the Sasovo site housed two of Yandex's three named supercomputers (Chervonenkis and Lyapunov) and that those systems are central to the company's AI training capacity.",
+      "observation": "Provides detail on compute concentration and historical Top500 rankings, supporting structural inference that loss of Sasovo affects AI training capability.",
+      "limitations": "Meduza compiles prior disclosures and reporting; it interprets corporate and archival material to identify hardware location but does not provide on-site forensic confirmation of damage to named systems."
+    },
+    {
+      "id": "SRC-004",
+      "title": "US bars Microsoft, Adobe, and major IT firms from green card program for skilled foreign workers",
+      "url": "https://techcrunch.com/2026/10/08/us-bars-microsoft-adobe-and-major-it-firms-from-green-card-program-for-skilled-foreign-workers/",
+      "publisher": "TechCrunch",
+      "publication_date": "2026-10-08",
+      "claim": "Reported that Vice President JD Vance and Department of Labor officials announced on Oct 8 that Microsoft, Adobe and six major IT outsourcers would be suspended from participation in PERM (permanent labor certification) and that DOL would not accept new or process pending PERM applications for the named firms.",
+      "observation": "Tech-sector reporting of the Oct 8 announcement, includes a Microsoft response and frames the measure as targeting PERM specifically (not H-1B suspensions).",
+      "limitations": "TechCrunch reports on the press conference and corporate responses; the story references government statements but TechCrunch is not the original transcript of the announcement; a formal DOL administrative release with operative text was not found in parallel searches as of 2026-10-10."
+    },
+    {
+      "id": "SRC-005",
+      "title": "Trump administration freezes green cards for Microsoft, IT firms, probes universities (Reuters syndicated)",
+      "url": "https://www.investing.com/news/stock-market-news/us-suspending-permanent-residency-program-formicrosoft-vance-says-4939365",
+      "publisher": "Investing.com (syndication of Reuters dispatch)",
+      "publication_date": "2026-10-08",
+      "claim": "Syndicated Reuters reporting that the U.S. suspended Microsoft, Adobe and several IT services firms from PERM on Oct 8 and that officials cited alleged fraud and protective labor-policy goals.",
+      "observation": "Reuters' reporting is the primary international-wire account summarising the Oct 8 White House/Labor announcement and enumerating the firms named; useful for cross-market corroboration.",
+      "limitations": "The Investing.com page republishes Reuters copy; the original Reuters page was referenced across outlets but a direct DOL order or press-release text was not identified in the open-source search by 2026-10-10."
+    },
+    {
+      "id": "SRC-006",
+      "title": "About 71.5% of US Gulf oil production shut in ahead of Hurricane Isaias",
+      "url": "https://boereport.com/2026/10/09/about-71-5-of-us-gulf-oil-production-shut-in-ahead-of-hurricane-isaias/",
+      "publisher": "BOE Report",
+      "publication_date": "2026-10-09",
+      "claim": "Industry-aggregator estimate that approximately 70–72% of Gulf of Mexico production was shut in as operators evacuated platforms ahead of Hurricane Isaias and landfall around Oct 9–10.",
+      "observation": "Provides preliminary aggregated figures used by market briefers and traders to gauge immediate lost physical flows and to model short-term supply impact.",
+      "limitations": "Aggregate numbers are provisional, derived from operator updates and industry surveys; final operator reports and post-storm inspections are required to distinguish precautionary shut-ins from damage-caused long outages."
+    },
+    {
+      "id": "SRC-007",
+      "title": "Morning Market Briefing: 9 Oct 2026 (Gulf shut-ins estimate, market context)",
+      "url": "https://www.marketsmastered.com/briefings/morning-market-briefing-9-oct-2026",
+      "publisher": "MarketsMastered (market briefing)",
+      "publication_date": "2026-10-09",
+      "claim": "Market-brief summarises that nearly two-thirds (~62.9%) of US Gulf production had been shut down ahead of the storm and quantifies potential barrels removed from market (order-of-magnitude 1.2–1.4 million bpd).",
+      "observation": "Market commentary contextualises shut-ins against oil-price moves and downstream refining exposure.",
+      "limitations": "Market briefings are interpretive and rely on operator/aggregator numbers; they are suitable for situational awareness but not a substitute for operator-level post-inspection reports."
+    },
+    {
+      "id": "SRC-008",
+      "title": "Yandex’s five data centres hid a single AI-compute bottleneck (analysis)",
+      "url": "https://noah-news.com/yandexs-five-data-centres-hid-a-single-ai-compute-bottleneck/",
+      "publisher": "Noah Intelligence (analysis)",
+      "publication_date": "2026-10-09",
+      "claim": "Analyst note that Sasovo hosted two named supercomputers and that the Sasovo strike therefore concentrates risk to Yandex's AI-training capacity; provides probabilistic outlooks for restoration of services versus specialised compute.",
+      "observation": "Analytic interpretation connecting company-disclosed hardware locations to systemic compute risk and customer impact; supports structural reading (scarcity of high-performance compute, asymmetric recovery).",
+      "limitations": "Analyst forecasts/probabilities are model-driven and interpretive; they should be treated as structured judgment backed by open-source facts rather than direct measurement of hardware condition."
+    },
+    {
+      "id": "SRC-009",
+      "title": "H-1B visas aren't suspended. Here's what Vance is really targeting",
+      "url": "https://www.axios.com/2026/10/08/h1b-vs-perm-vance-tech-worker-ban",
+      "publisher": "Axios",
+      "publication_date": "2026-10-08",
+      "claim": "Explainer summarising that the Oct 8 announcement targeted PERM (permanent labor certification) rather than H-1B nonimmigrant admissions, clarifying which talent flows are immediately affected.",
+      "observation": "Useful explanatory source distinguishing policy instruments (PERM v. H-1B) and the probable channeling of effects on talent flows.",
+      "limitations": "Explainer synthesises reporting and official remarks; it is not a primary legal document and notes ambiguities around implementation that persisted as of Oct 10."
+    },
+    {
+      "id": "SRC-012",
+      "title": "Hormuz Traffic Stays Severely Constrained (analytical brief)",
+      "url": "https://global-energy-flow.com/hormuz/",
+      "publisher": "Global-Energy-Flow / domain intelligence briefing",
+      "publication_date": "2026-10-10",
+      "claim": "Analytic brief (dated 2026-10-10) stating the Strait of Hormuz remained the binding constraint on the world oil system, with throughput down and persistent risk factors continuing to limit open commercial traffic.",
+      "observation": "Summarises incident record, insurance and operational constraints and notes that diplomatic signaling had not produced normalised flows as of publication.",
+      "limitations": "Operational flow estimates are model-derived and aggregated from incident reporting, AIS trackers and industry sources; exact transit counts differ by data supplier."
+    },
+    {
+      "id": "SRC-013",
+      "title": "Maritime security update: Gulf Region / Strait of Hormuz and Red Sea",
+      "url": "https://www.skuld.com/topics/port/port-news/asia/maritime-security-update-gulf-region--strait-of-hormuz-and-red-sea/",
+      "publisher": "Skuld (marine insurance commentary)",
+      "publication_date": "2026-08-11",
+      "claim": "Skuld's maritime security updates document persistent elevated risk in Hormuz and surrounding waters, reduced traffic and insurance/operational constraints as of August 2026.",
+      "observation": "Provides insurer/operator perspective on continuing non-standard navigation conditions and their commercial implications.",
+      "limitations": "Published prior to Oct 10 but representative of the persistent risk environment; specifics may have evolved since publication but structural constraints remained visible in later briefs."
+    }
+  ],
+  "editorial_flags": [
+    "Conservative classifications: 'confirmed_delta' is reserved for newly documented state changes on the issue date (2026-10-10). Where the principal events occurred on Oct 8–9, they are treated as prior confirmed events; this edition emphasises evidence updates and persistence unless a new event occurred on 2026-10-10.",
+    "Sourcing: relied on primary company statement (Yandex) and wire/regional reporting (Reuters syndication, Moscow Times, Meduza) for physical incidents; relied on White House/press-conference reporting reproduced by major outlets (TechCrunch, Reuters syndication, Axios) for the PERM announcement. A formal DOL administrative order text was not found in public DOL press releases accessible by 2026-10-10 — this is flagged in the PERM candidate 'limitations' and 'uncertainties'.",
+    "Skepticism and linkage: no credible primary-source evidence was found linking Yandex strikes causally to U.S. PERM action or to energy chokepoints; such links are treated as unproven and are not asserted.",
+    "Citation rule: each candidate lists sources that appeared in web search; the five most load-bearing statements in the narrative are directly sourced above.",
+    "Do not republish: this research product is not a published WSB edition but a candidate analysis prepared from open sources and conservative inference."
+  ],
+  "rejected_sources": []
+}
