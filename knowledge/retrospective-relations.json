@@ -1194,8 +1194,8 @@
       "external_sources": [
         {
           "id": "RET-SRC-GULF-FLOW-01",
-          "source": "Reuters / Kpler preliminary September exports, 28 Sep 2026",
-          "url": "https://www.reuters.com/business/energy/",
+          "source": "Florence Tan / Reuters via MarketScreener, 28 Sep 2026 (preliminary Kpler figures)",
+          "url": "https://www.marketscreener.com/news/mideast-oil-exports-rebound-in-september-as-saudi-arabia-boosts-shipments-ce785adcd880f624",
           "checked_at": "2026-11-11",
           "supports": [
             "gulf-crude-export-flow",
@@ -1204,8 +1204,8 @@
         }
       ],
       "note": {
-        "en": "Reuters cited preliminary Kpler Gulf crude-export and Hormuz transit estimates; these are reported physical flows rather than a new event on the retrospective registration date.",
-        "ua": "Reuters навів попередні оцінки Kpler експорту нафти із затоки та проходу Ормузу; це повідомлені потоки, не нова подія дня реєстрації."
+        "en": "Reuters cited preliminary Kpler Gulf crude-export and Hormuz transit estimates; these are reported physical flows rather than a new event on the retrospective registration date. Kpler estimates were preliminary and later syndications differ; figures are not pinned as a settled audit total.",
+        "ua": "Reuters навів попередні оцінки Kpler експорту нафти із затоки та проходу Ормузу; це повідомлені потоки, не нова подія дня реєстрації. Попередні оцінки Kpler в пізніших передруках різняться; не вважаємо їх остаточними аудитованими даними."
       }
     },
     {
@@ -1246,8 +1246,8 @@
       "external_sources": [
         {
           "id": "RET-SRC-LNG-OPTION-01",
-          "source": "Reuters / LNG Canada Phase 2 FID, 29 Sep 2026",
-          "url": "https://www.reuters.com/business/energy/shell-led-lng-canada-greenlights-phase-2-expansion-doubling-export-capacity-2026-09-29/",
+          "source": "LNG Canada / official Phase 2 final investment decision announcement, 28 Sep 2026",
+          "url": "https://www.lngcanada.ca/news/lng-canada-announces-phase-2-final-investment-decision/",
           "checked_at": "2026-11-11",
           "supports": [
             "pacific-lng-optionality",
