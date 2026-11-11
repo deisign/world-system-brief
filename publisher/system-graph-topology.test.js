@@ -12,7 +12,7 @@ test('one drawn SVG node per registered entity even when multiple mechanisms mee
  for(const lang of ['en','ua']){
   const svg=renderDependencyTopologySVG(graph,lang);
   assert.equal((svg.match(/<g id="node-/g)||[]).length,9);
-  assert.equal((svg.match(/<path d="M/g)||[]).length,7);
+  assert.equal((svg.match(/marker-end="url\(#sg-arrow\)"/g)||[]).length,7);
   assert.match(svg,/stroke-dasharray="6 5"/);
   assert.match(svg,/HMX-06/);
   assert.match(svg,/<svg role="img"/);
