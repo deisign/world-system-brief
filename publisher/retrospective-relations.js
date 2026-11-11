@@ -12,7 +12,7 @@ export function resolveRetrospectiveRelations(config,bundles,registry){
   if(!from||!to||from===to||!r.type||!r.note?.en||!r.note?.ua)throw Error('Unregistered retrospective endpoint '+r.id);
   const key=from+'|'+r.type+'|'+to;if(keys.has(key))throw Error('Duplicate retrospective relation '+key);keys.add(key);
   if(!Array.isArray(r.evidence)||!Array.isArray(r.external_sources)||!(r.evidence.length||r.external_sources.length))throw Error('Missing retrospective proof '+r.id);
-  const sources=[],claimIds=[],sourceIds=[],citedEndpoints=new Set(),supportEndpoints=new Set();
+  const sources=[],claimIds=[],sourceIds=[],citedEndpoints=new Set(),supportEndpoints=new Set(),externalEndpoints=new Set();
   for(const proof of r.evidence){
    const b=issues.get(proof.issue_id);
    if(!b||b.state.date>r.registered_at||!proof.claim_ids?.length||!proof.source_ids?.length)throw Error('Invalid evidence issue '+r.id);
@@ -33,10 +33,15 @@ export function resolveRetrospectiveRelations(config,bundles,registry){
   }
   for(const s of r.external_sources){
    if(!s.id||!s.source||!validUrl(s.url)||!validDate(s.checked_at)||s.checked_at>r.registered_at)throw Error('Invalid external source '+r.id);
+   if(s.supports!==undefined){
+    if(!Array.isArray(s.supports)||!s.supports.length)throw Error('Invalid external endpoint support '+r.id);
+    for(const endpoint of s.supports){const slug=alias.get(endpoint);if(!slug||![from,to].includes(slug))throw Error('Unsupported external endpoint '+r.id+':'+endpoint);externalEndpoints.add(slug);}
+   }
    sourceIds.push(s.id);sources.push({id:s.id,url:s.url,name:s.source,source:s.source,issue:null,date:r.registered_at,evidence_date:null});
   }
   if(r.evidence.length&&(!citedEndpoints.has(from)&&!citedEndpoints.has(to)||!supportEndpoints.size))throw Error('Proof does not support endpoints '+r.id);
-  if(r.classification==='comparative'&&(!citedEndpoints.has(from)||!citedEndpoints.has(to)))throw Error('Comparative proof missing an endpoint '+r.id);
+  if(r.classification==='comparative'&&(![...citedEndpoints,...externalEndpoints].includes(from)||![...citedEndpoints,...externalEndpoints].includes(to)))throw Error('Comparative proof missing an endpoint '+r.id);
+  if(r.external_sources.length&&r.id>='RET-20261111-20'&&(![...citedEndpoints,...externalEndpoints].includes(from)||![...citedEndpoints,...externalEndpoints].includes(to)))throw Error('Documented external proof missing an endpoint '+r.id);
   if(r.classification==='documented'&&r.evidence.length>1)throw Error('Documented relation requires one issue-backed proposition '+r.id);
   const row={id:r.id,key,from,to,type:r.type,classification:r.classification,registered_at:r.registered_at,physical_delta:false,from_entity:entities.get(from),to_entity:entities.get(to),note:r.note,claim_ids:[...new Set(claimIds)],source_ids:[...new Set(sourceIds)],sources};
   (r.classification==='documented'?documented:comparative).push(row);
