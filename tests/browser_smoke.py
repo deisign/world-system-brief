@@ -350,7 +350,7 @@ class BrowserSmoke(unittest.TestCase):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 note = page.locator("#map-retrospective")
                 self.assertEqual(note.count(), 1)
-                self.assertIn("21", note.inner_text())
+                self.assertIn("34", note.inner_text())
                 self.assertIn("10", note.inner_text())
                 self.assertGreater(page.locator("#map-edges .map-edge").count(), 32)
                 self.assertGreater(page.locator("#map-edges .map-edge:has-text('RETROSPECTIVE REVIEW')").count() if lang=="en" else page.locator("#map-edges .map-edge:has-text('РЕТРОСПЕКТИВНО ДОДАНО')").count(), 0)

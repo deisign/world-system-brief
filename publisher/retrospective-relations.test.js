@@ -14,10 +14,10 @@ const bundles=issues.map(id=>{
 });
 test('retrospective evidence resolves actual historic claims and HTTPS sources',()=>{
  const result=resolveRetrospectiveRelations(config,bundles,registry);
- assert.equal(result.documented.length,21);
+ assert.equal(result.documented.length,34);
  assert.equal(result.comparative.length,10);
  const all=[...result.documented,...result.comparative];
- assert.equal(all.length,31);
+ assert.equal(all.length,44);
  assert.ok(all.every(r=>r.sources.length>0&&r.sources.every(s=>s.url.startsWith('https://'))));
  assert.ok(all.every(r=>r.physical_delta===false));
  assert.ok(all.every(r=>r.note.en&&r.note.ua));
@@ -29,21 +29,21 @@ test('backfill date is discovery date, not the date of historical physical chang
  assert.ok(edges.every(e=>e.events[0].issue==='RETROSPECTIVE'));
  assert.ok(edges.some(e=>e.sources.some(s=>s.evidence_date<'2026-11-11')));
  assert.equal(currentSystemMap(edges,{asOf:'2026-11-10'}).edges.length,0);
- assert.equal(currentSystemMap(edges,{asOf:'2026-11-11'}).edges.length,21);
+ assert.equal(currentSystemMap(edges,{asOf:'2026-11-11'}).edges.length,34);
 });
 test('all dated relations from original issues remain unchanged',()=>{
  const old=buildTemporalRelations(bundles,registry);
  const {documented}=resolveRetrospectiveRelations(config,bundles,registry);
  const recovered=retrospectiveTemporalEdges(documented);
  assert.equal(old.length,32);
- assert.equal(recovered.length,21);
+ assert.equal(recovered.length,34);
  assert.ok(recovered.every(x=>!old.some(y=>y.key===x.key)));
 });
 test('audit counts distinct retrospective levels without changing primary history',()=>{
  const report=runConnectivityAudit();
  assert.equal(report.counts.registry,103);
  assert.equal(report.counts.anomalies,0);
- assert.equal(report.counts.explicit_relations,53);
+ assert.equal(report.counts.explicit_relations,66);
  assert.equal(report.counts.in_any_graph,103);
  assert.equal(report.counts.fully_isolated,0);
  for(const slug of ['zeiss-smt','asml','ai-gas-turbine-capacity-bottleneck','uk-critical-minerals-resilience']){
@@ -79,7 +79,7 @@ test('remaining 12 are connected through exact source-backed counterparts',()=>{
   assert.ok(e&&e.explicit_edges.length+e.context_edges.length>0,name);
  }
  assert.equal(audit.counts.anomalies,0);
- assert.equal(recovered.documented.length,21);
+ assert.equal(recovered.documented.length,34);
  assert.equal(recovered.comparative.length,10);
  assert.ok(recovered.comparative.every(x=>x.physical_delta===false));
 });
@@ -95,8 +95,36 @@ test('source to counterpart validation rejects fabricated external support',()=>
 });
 test('all new relationship explanations distinguish plans, reports and independent mechanisms',()=>{
  const rows=config.records.filter(x=>Number(x.id.slice(-2))>=20);
- assert.equal(rows.length,12);
+ assert.equal(rows.length,25);
  assert.ok(rows.every(x=>x.physical_delta===false&&x.note.en&&x.note.ua));
  assert.ok(rows.every(x=>x.evidence.length||x.external_sources.length));
  assert.ok(rows.every(x=>x.registered_at==='2026-11-11'));
+});
+
+test('13 context-only entities promoted to direct source-proven relations without physical delta',()=>{
+ const report=runConnectivityAudit();
+ const previouslyContextOnly=['us-spr-refiner-loans','cheniere-petrobras-lng','eu-grid-guarantees','capital-unblocks-grid-capacity','bidirectional-charging','taiwan-energy-buffer','hormuz-navigation-aid-damage-claim','hormuz-oil-risk-repricing','irgc-hormuz-mine-seizure-claims','gulf-qatar-ukmto-tanker-incident','gulf-crude-export-flow','gulf-of-oman-sts','pacific-lng-optionality'];
+ assert.equal(previouslyContextOnly.length,13);
+ for(const slug of previouslyContextOnly){
+  const e=report.entities.find(x=>x.slug===slug);
+  assert.ok(e&&e.explicit_edges.length,slug);
+  const edge=report.explicit_relations.find(x=>e.explicit_edges.includes(x.key)&&x.basis.includes('retrospective_source_review'));
+  assert.ok(edge&&edge.sources.length&&edge.sources.every(s=>s.url.startsWith('https://')),slug);
+ }
+ assert.equal(report.counts.in_explicit_graph,89);
+ assert.equal(report.counts.in_any_graph,103);
+ assert.equal(report.counts.fully_isolated,0);
+});
+test('source-upgraded rows retain uncertainty and original material-delta dates',()=>{
+ const upgrades=config.records.filter(x=>Number(x.id.slice(-2))>=32);
+ assert.equal(upgrades.length,13);
+ assert.ok(upgrades.every(x=>x.classification==='documented'&&x.registered_at==='2026-11-11'&&x.physical_delta===false));
+ assert.ok(upgrades.every(x=>x.note.en&&x.note.ua));
+ assert.ok(upgrades.every(x=>x.evidence.length||x.external_sources.length));
+ const navigation=upgrades.find(x=>x.from==='hormuz-navigation-aid-damage-claim');
+ assert.match(navigation.note.en,/no independent proof/i);
+ const fid=upgrades.find(x=>x.from==='pacific-lng-optionality');
+ assert.match(fid.external_sources[0].url,/lngcanada.ca/);
+ const flow=upgrades.find(x=>x.from==='gulf-crude-export-flow');
+ assert.ok(!flow.external_sources[0].url.endsWith('/business/energy/'));
 });
