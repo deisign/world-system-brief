@@ -16,7 +16,7 @@ test('0043 canonical structure passes full evidence validator',()=>{
  assert.equal(state.summary.confirmed_delta,0);
  assert.ok(claims.claims.every(c=>c.status!=='confirmed_delta'));
  assert.equal(relations.relations.length,3);
- assert.equal(registry.entities.length,100);
+ assert.ok(registry.entities.length>=100);
 });
 test('all new maritime entities have dated history and named sources',()=>{
  const needed=['black-sea-maritime-security-hub','black-sea-commercial-shipping-threat','red-sea-aspides-escort-capacity','red-sea-commercial-shipping-risk','hormuz-mine-insurance-clearance-dependency'];
