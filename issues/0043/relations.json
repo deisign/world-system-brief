@@ -1,0 +1,50 @@
+{
+  "issue_id": "WSB-0043",
+  "as_of": "2026-11-11",
+  "relations": [
+    {
+      "id": "WSB-0043-REL-01",
+      "from": "black-sea-commercial-shipping-threat",
+      "to": "black-sea-maritime-security-hub",
+      "type": "reported_policy_response_to",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0043-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-02",
+        "WSB-0043-SRC-03"
+      ],
+      "note": "Reported funding/policy plan, not deployment or verified causal improvement in safety."
+    },
+    {
+      "id": "WSB-0043-REL-02",
+      "from": "red-sea-aspides-escort-capacity",
+      "to": "red-sea-commercial-shipping-risk",
+      "type": "reported_protection_gap_for",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0043-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-04"
+      ],
+      "note": "Attributed assessment of insufficient reinforcement, not a count of operational warships or new loss of escorts."
+    },
+    {
+      "id": "WSB-0043-REL-03",
+      "from": "hormuz-mine-insurance-clearance-dependency",
+      "to": "hormuz",
+      "type": "conditions_safe_shipping_through",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0043-CLM-04",
+        "WSB-0043-CLM-05"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-01"
+      ],
+      "note": "LSEG assessment of barriers to restored shipping; separate from any independently confirmed mined route."
+    }
+  ]
+}
