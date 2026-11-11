@@ -510,6 +510,427 @@
         "en": "ASML states that all its lithography systems since the late 1980s use optics from strategic partner ZEISS; this is a long-standing supply-chain dependency, not a new November 2026 event.",
         "ua": "ASML підтверджує, що її літографічні системи від кінця 1980-х використовують оптику партнера ZEISS; це давня залежність, а не нова подія листопада 2026 року."
       }
+    },
+    {
+      "id": "RET-20261111-20",
+      "from": "cosco-zippel",
+      "to": "china-smart-port-technology-stack",
+      "type": "distinct_modes_of_chinese_logistics_technology_leverage",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0042",
+          "claim_ids": [
+            "WSB-0042-CLM-02"
+          ],
+          "source_ids": [
+            "WSB-0042-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [
+        {
+          "id": "RET-SRC-COSCO-01",
+          "source": "Holger Hansen & Thomas Seythal / Reuters, 7 Oct 2026",
+          "url": "https://live.euronext.com/en/financial-news/germany-blocks-sale-logistics-company-chinas-cosco",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "cosco-zippel"
+          ]
+        }
+      ],
+      "note": {
+        "en": "Germany blocked the Cosco–Zippel acquisition; compare foreign logistics ownership screening with Chinese smart-port equipment/software exports. These are different mechanisms, not one project or proven shared control.",
+        "ua": "Німеччина заблокувала придбання Zippel компанією Cosco; порівнюємо перевірку іноземної власності й експорт китайських портових технологій. Це різні механізми, не спільний проєкт."
+      }
+    },
+    {
+      "id": "RET-20261111-21",
+      "from": "estonia-grain-transit",
+      "to": "russian-grain-black-sea-export-rerouting",
+      "type": "blocks_proposed_baltic_transit_alternative",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [],
+      "external_sources": [
+        {
+          "id": "RET-SRC-ESTONIA-01",
+          "source": "Estonian Ministry of Foreign Affairs, 1 Oct 2026",
+          "url": "https://www.vm.ee/en/news/tsahkna-estonia-bans-transit-russian-and-belarusian-grain-through-estonian-ports",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "estonia-grain-transit",
+            "russian-grain-black-sea-export-rerouting"
+          ]
+        },
+        {
+          "id": "RET-SRC-ESTONIA-02",
+          "source": "Estonian Railways, 8 Oct 2026",
+          "url": "https://www.evr.ee/en/news/3563-ban-on-the-transit-of-russian-and-belarusian-grain-takes-effect-on-8-october",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "estonia-grain-transit"
+          ]
+        }
+      ],
+      "note": {
+        "en": "Estonia's 8 October transit ban prevents a potential alternative export corridor for Russian and Belarusian grain. Officials said prior transit was virtually nonexistent; this is a regulatory block on prospective rerouting, not measured lost flows.",
+        "ua": "Естонська заборона транзиту з 8 жовтня перекриває потенційний альтернативний маршрут російського й білоруського зерна. За заявою влади, попередній транзит майже не існував: це правова заборона майбутнього маршруту, не виміряне скорочення потоку."
+      }
+    },
+    {
+      "id": "RET-20261111-22",
+      "from": "indonesia-singapore-gas-supply-adjustment",
+      "to": "singapore-pipeline-gas-import-dependency",
+      "type": "cuts_delivery_within_contractual_minimum",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0029",
+          "claim_ids": [
+            "WSB-0029-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0029-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [
+        {
+          "id": "RET-SRC-SINGAPORE-01",
+          "source": "Reuters / Indonesia gas supply, 26 Oct 2026",
+          "url": "https://www.reuters.com/business/energy/indonesia-meeting-gas-deal-terms-with-singapore-despite-supply-cut-minister-says-2026-10-26/",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "indonesia-singapore-gas-supply-adjustment",
+            "singapore-pipeline-gas-import-dependency"
+          ]
+        }
+      ],
+      "note": {
+        "en": "A 31 million scf/day Indonesian pipeline-gas delivery cut affects Singapore import supply, reported as about 2% of national demand; contractual minimum deliveries remain met. No total disruption is inferred.",
+        "ua": "Скорочення індонезійських трубопровідних поставок на 31 млн куб. футів на добу стосується імпорту Сінгапуру (близько 2% попиту); контрактні мінімуми дотримано. Повної зупинки немає."
+      }
+    },
+    {
+      "id": "RET-20261111-23",
+      "from": "iranian-seafarer-rescue-sri-lanka",
+      "to": "us-iran-maritime-blockade",
+      "type": "humanitarian_rescue_reported_amid_blockade",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0028",
+          "claim_ids": [
+            "WSB-0028-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0028-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [
+        {
+          "id": "RET-SRC-IRAN-SAILORS-01",
+          "source": "Uditha Jayasinghe / Reuters, 25 Oct 2026",
+          "url": "https://www.reuters.com/world/asia-pacific/sri-lanka-rescues-40-iranian-sailors-spokesman-says-2026-10-25/",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "iranian-seafarer-rescue-sri-lanka",
+            "us-iran-maritime-blockade"
+          ]
+        }
+      ],
+      "note": {
+        "en": "Sri Lanka's humanitarian rescue of Iranian crews occurred during the US maritime blockade. Official accounts did not establish that the blockade caused the medical emergencies or that the operation changed transit or sanctions.",
+        "ua": "Гуманітарна евакуація іранських моряків відбулася під час морської блокади США. Офіційні повідомлення не доводять, що саме блокада спричинила медичні проблеми чи змінила режим перевезень."
+      }
+    },
+    {
+      "id": "RET-20261111-24",
+      "from": "lng-canada-upstream",
+      "to": "lng-canada-phase-2",
+      "type": "gas_pipeline_expansion_intended_to_supply_project",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [],
+      "external_sources": [
+        {
+          "id": "RET-SRC-CGL-01",
+          "source": "Reuters / TC Energy Coastal GasLink, 29 Sep 2026",
+          "url": "https://www.reuters.com/business/energy/tc-energy-advances-coastal-gaslink-after-lng-canada-decision-2026-09-29/",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "lng-canada-upstream",
+            "lng-canada-phase-2"
+          ]
+        }
+      ],
+      "note": {
+        "en": "The final investment decision on LNG Canada Phase 2 underpins TC Energy's move toward additional Coastal GasLink transmission. This is committed/planned feedgas infrastructure, not new operating upstream gas flow.",
+        "ua": "Рішення щодо LNG Canada Phase 2 створило основу для нарощування пропускної спроможності Coastal GasLink. Це майбутнє забезпечення газом, а не вже запущений додатковий потік."
+      }
+    },
+    {
+      "id": "RET-20261111-25",
+      "from": "maersk-container-freight-pricing",
+      "to": "red-sea-commercial-shipping-risk",
+      "type": "freight_rates_exposed_to_suez_red_sea_routing",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0039",
+          "claim_ids": [
+            "WSB-0039-CLM-02"
+          ],
+          "source_ids": [
+            "WSB-0039-SRC-03"
+          ]
+        }
+      ],
+      "external_sources": [
+        {
+          "id": "RET-SRC-MAERSK-01",
+          "source": "Reuters / Maersk Q3, 5 Nov 2026",
+          "url": "https://www.reuters.com/business/container-shipping-group-maersk-raises-outlook-again-2026-11-05/",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "maersk-container-freight-pricing",
+            "red-sea-commercial-shipping-risk"
+          ]
+        }
+      ],
+      "note": {
+        "en": "Maersk linked unusually high freight rates to congestion and disrupted routing while gradually restoring Suez services previously abandoned after Red Sea attacks. Prices are not a physical transit count.",
+        "ua": "Maersk пов'язувала підвищені ставки фрахту з перевантаженням портів та змінами маршрутів під час поступового повернення до Суецу після атак у Червоному морі. Ціни — не вимір фізичного транзиту."
+      }
+    },
+    {
+      "id": "RET-20261111-26",
+      "from": "nord-stream-restart-option",
+      "to": "europe-dispatchable-power-flexibility",
+      "type": "distinct_european_gas_supply_and_power_flexibility_constraints",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0011",
+          "claim_ids": [
+            "CLM-261008-05"
+          ],
+          "source_ids": [
+            "WSB-SRC-0011-05"
+          ]
+        },
+        {
+          "issue_id": "WSB-0042",
+          "claim_ids": [
+            "WSB-0042-CLM-03"
+          ],
+          "source_ids": [
+            "WSB-0042-SRC-02"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "A speculative, sanctioned Nord Stream gas-import restart and Germany's weather-correlated flexible electricity shortfall are distinct European energy constraints; no operational pipeline contribution or physical coupling is shown.",
+        "ua": "Гіпотетичне відновлення санкційного Nord Stream і дефіцит гнучкості електромереж Німеччини — різні енергетичні обмеження. Експлуатаційного зв'язку трубопроводу з балансуванням не доведено."
+      }
+    },
+    {
+      "id": "RET-20261111-27",
+      "from": "nvidia-china",
+      "to": "china-ai-technology-export-regime",
+      "type": "opposite_directions_of_cross_border_ai_technology_controls",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0019",
+          "claim_ids": [
+            "CLM-0019-02"
+          ],
+          "source_ids": [
+            "WSB-SRC-0019-02"
+          ]
+        }
+      ],
+      "external_sources": [
+        {
+          "id": "RET-SRC-NVIDIA-01",
+          "source": "Reuters citing The Information, 27 Sep 2026",
+          "url": "https://finance.yahoo.com/technology/articles/china-weighs-allowing-bytedance-alibaba-152402813.html",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "nvidia-china"
+          ]
+        }
+      ],
+      "note": {
+        "en": "The unverified possible relaxation of Chinese purchases of US Nvidia chips and China's proposed controls on AI technology leaving China concern opposite cross-border directions. No Nvidia purchases are verified and the policies are not linked.",
+        "ua": "Непідтверджена можлива лібералізація закупівель американських чипів Nvidia та запропоновані Китаєм обмеження експорту технологій ШІ стосуються протилежних напрямків руху. Закупівлі не підтверджено."
+      }
+    },
+    {
+      "id": "RET-20261111-28",
+      "from": "riyadh-aramco-fire",
+      "to": "saudi-energy-attack-claims",
+      "type": "separate_saudi_energy_site_attack_reports",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0006",
+          "claim_ids": [
+            "CLM-261003-01"
+          ],
+          "source_ids": [
+            "WSB-SRC-0006-01"
+          ]
+        },
+        {
+          "issue_id": "WSB-0027",
+          "claim_ids": [
+            "WSB-0027-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0027-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [
+        {
+          "id": "RET-SRC-RIYADH-01",
+          "source": "Reuters / Riyadh Aramco fire and claims, 3 Oct 2026",
+          "url": "https://www.reuters.com/business/energy/fire-smoke-seen-near-aramco-facility-riyadh-witness-says-2026-10-03/",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "riyadh-aramco-fire"
+          ]
+        }
+      ],
+      "note": {
+        "en": "Compare separately dated Houthi claims and observed smoke near Riyadh with later claims about Saudi energy targets. Neither establishes verified pipeline or refinery capacity loss; incidents must not be merged.",
+        "ua": "Порівняння різнодатованих заяв хуситів і повідомлення про дим біля об'єкта в Ер-Ріяді з пізнішими заявами щодо енергетичних цілей. Втрати потужності не доведені; інциденти не об'єднуємо."
+      }
+    },
+    {
+      "id": "RET-20261111-29",
+      "from": "shadow-fleet-shipping-services",
+      "to": "us-russia-graham-act-waiver",
+      "type": "different_russian_energy_sanction_relief_mechanisms",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0018",
+          "claim_ids": [
+            "CLM-0018-02"
+          ],
+          "source_ids": [
+            "WSB-SRC-0018-02"
+          ]
+        },
+        {
+          "issue_id": "WSB-0020",
+          "claim_ids": [
+            "WSB-0020-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0020-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Debate over shadow-fleet tanker service restrictions and the documented Graham Act waiver relate to different Russia-energy sanction instruments. Neither alone verifies restoration of tanker services.",
+        "ua": "Обговорення обмежень послуг для тіньового флоту та звільнення від санкцій за законом Грема стосуються різних інструментів політики щодо російської енергетики. Відновлення доступу танкерів не доведено."
+      }
+    },
+    {
+      "id": "RET-20261111-30",
+      "from": "us-perm-tech-suspensions",
+      "to": "us-perm-employer-sponsored-migration",
+      "type": "suspends_employer_sponsorship_processing",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0012",
+          "claim_ids": [
+            "CLM-261009-03"
+          ],
+          "source_ids": [
+            "WSB-SRC-0012-03"
+          ]
+        }
+      ],
+      "external_sources": [
+        {
+          "id": "RET-SRC-PERM-01",
+          "source": "Akash Sriram & Steve Holland / Reuters, 8 Oct 2026",
+          "url": "https://www.investing.com/news/stock-market-news/us-suspending-permanent-residency-program-formicrosoft-vance-says-4939365",
+          "checked_at": "2026-11-11",
+          "supports": [
+            "us-perm-tech-suspensions",
+            "us-perm-employer-sponsored-migration"
+          ]
+        }
+      ],
+      "note": {
+        "en": "PERM suspensions affected employer-sponsored permanent labour certification at named firms, not all US visas or all high-skill worker mobility.",
+        "ua": "Призупинення PERM стосується сертифікації працевлаштування для постійного проживання в окремих компаніях, а не всіх віз США чи всієї мобільності фахівців."
+      }
+    },
+    {
+      "id": "RET-20261111-31",
+      "from": "yandex-data-centre-network",
+      "to": "nextdc-uncontracted-data-centre-pauses",
+      "type": "distinct_data_centre_resilience_and_development_disruptions",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0012",
+          "claim_ids": [
+            "CLM-261009-01"
+          ],
+          "source_ids": [
+            "WSB-SRC-0012-01"
+          ]
+        },
+        {
+          "issue_id": "WSB-0041",
+          "claim_ids": [
+            "WSB-0041-CLM-02"
+          ],
+          "source_ids": [
+            "WSB-0041-SRC-02"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Russian Yandex data-centre equipment damage and Australian NextDC project pauses are different infrastructure risks: physical incident versus project contracting and siting. They are not causally linked.",
+        "ua": "Пошкодження датацентрів Yandex у Росії та призупинення проєктів NextDC в Австралії — різні ризики: фізичний інцидент та контрактно-інфраструктурні обмеження. Причинного зв'язку між ними немає."
+      }
     }
   ]
 }
