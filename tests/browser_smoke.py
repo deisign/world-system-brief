@@ -92,6 +92,15 @@ class BrowserSmoke(unittest.TestCase):
                     self.assertIn("WSB-", page.title())
                     self.assertGreater(page.locator("h1").count(), 0)
                     horizontal = page.evaluate("({scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth})")
+                    if horizontal["scroll"] > horizontal["client"] + 1:
+                        offenders = page.evaluate("""() => [...document.querySelectorAll('body *')]
+                            .map(e => ({el:e, r:e.getBoundingClientRect()}))
+                            .filter(x => x.r.width > 0 && x.r.right > innerWidth + 1)
+                            .slice(0, 12)
+                            .map(x => ({tag:x.el.tagName, cls: String(x.el.className).slice(0, 90),
+                              text:x.el.textContent.slice(0, 90), width:Math.round(x.r.width),
+                              right:Math.round(x.r.right), html:x.el.outerHTML.slice(0, 180)}))""")
+                        print("LATEST_READ_OVERFLOW", lang, width, offenders, flush=True)
                     self.assertLessEqual(horizontal["scroll"], horizontal["client"] + 1)
                     self.assertGreater(page.locator(".sources a[href^='https://']").count(), 0)
 
