@@ -1,0 +1,515 @@
+{
+  "schema": "wsb-retrospective-relations-v1",
+  "registered_at": "2026-11-11",
+  "records": [
+    {
+      "id": "RET-20261111-01",
+      "from": "adnoc-energy-buffer-depletion",
+      "to": "hormuz",
+      "type": "attributes_inventory_drawdown_to_hormuz_disruption",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0036",
+          "claim_ids": [
+            "WSB-0036-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0036-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Executive estimate attributes inventory depletion to Hormuz disruption; estimate is not independently audited.",
+        "ua": "Оцінка керівника пов’язує скорочення запасів із кризою в Ормузі; незалежного аудиту немає."
+      }
+    },
+    {
+      "id": "RET-20261111-02",
+      "from": "aramco-hormuz-pipeline-expansion-plans",
+      "to": "hormuz",
+      "type": "proposes_bypass_of",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0037",
+          "claim_ids": [
+            "WSB-0037-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0037-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Aramco reports work on a bypassing pipeline; this is a plan, not newly commissioned throughput.",
+        "ua": "Aramco повідомляє про роботу над обхідним трубопроводом; це план, а не нова введена потужність."
+      }
+    },
+    {
+      "id": "RET-20261111-03",
+      "from": "europe-dispatchable-power-flexibility",
+      "to": "german-electricity-flexibility",
+      "type": "includes_german_balancing_constraint",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0042",
+          "claim_ids": [
+            "WSB-0042-CLM-03"
+          ],
+          "source_ids": [
+            "WSB-0042-SRC-02"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "German low-wind balancing is an observed component of the wider European flexibility constraint, not a separate plant outage.",
+        "ua": "Німецьке балансування за слабкого вітру — складова ширшого європейського обмеження гнучкості, а не нова аварія."
+      }
+    },
+    {
+      "id": "RET-20261111-04",
+      "from": "hormuz-limpet-mine-ship-attack",
+      "to": "hormuz",
+      "type": "reported_incident_in",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0033",
+          "claim_ids": [
+            "WSB-0033-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0033-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Maritime sources report a limpet-mine incident in Hormuz on 29 October; attacker was not identified.",
+        "ua": "Морські джерела повідомили про інцидент із мінами в Ормузі 29 жовтня; виконавця не встановлено."
+      }
+    },
+    {
+      "id": "RET-20261111-05",
+      "from": "hormuz-market-security-premium",
+      "to": "hormuz",
+      "type": "pricing_risk_of",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0030",
+          "claim_ids": [
+            "WSB-0030-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0030-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "October oil-price movement reflected Strait shipping fears, not verified physical closure.",
+        "ua": "Жовтнева зміна ціни на нафту відбивала страхи щодо судноплавства, а не доведене перекриття."
+      }
+    },
+    {
+      "id": "RET-20261111-06",
+      "from": "hormuz-security-claims-weekend-persistence",
+      "to": "hormuz",
+      "type": "unverified_claims_concerning",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0034",
+          "claim_ids": [
+            "WSB-0034-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0034-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Repeated IRGC claims concern Hormuz; source does not independently confirm burning vessels.",
+        "ua": "Повторні заяви КВІР стосуються Ормузу; джерело не підтверджує незалежно пожежі на суднах."
+      }
+    },
+    {
+      "id": "RET-20261111-07",
+      "from": "hormuz-vessel-fire-claim-separation",
+      "to": "hormuz",
+      "type": "disputed_incident_reports_in",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0032",
+          "claim_ids": [
+            "WSB-0032-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0032-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Separate observed ship fire from unverified multiple-mine claims around Hormuz.",
+        "ua": "Відокремлюємо спостереження пожежі від непідтверджених заяв про кілька мінних інцидентів біля Ормузу."
+      }
+    },
+    {
+      "id": "RET-20261111-08",
+      "from": "opec-december-2026-production-targets",
+      "to": "global-oil-balance",
+      "type": "sets_policy_target_relevant_to",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0035",
+          "claim_ids": [
+            "WSB-0035-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0035-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Unchanged OPEC+ target is a policy supply setting, not measured physical output.",
+        "ua": "Незмінна ціль OPEC+ — параметр політики пропозиції, а не виміряний фізичний видобуток."
+      }
+    },
+    {
+      "id": "RET-20261111-09",
+      "from": "opec7-november-output",
+      "to": "global-oil-balance",
+      "type": "sets_policy_target_relevant_to",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0007",
+          "claim_ids": [
+            "CLM-261004-04"
+          ],
+          "source_ids": [
+            "WSB-SRC-0007-03"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "November production decision sets a target; no extra barrels are inferred.",
+        "ua": "Листопадове рішення встановлює ціль; додаткові барелі не припускаються."
+      }
+    },
+    {
+      "id": "RET-20261111-10",
+      "from": "saudi-crude-export-recovery",
+      "to": "gulf-oil-flow",
+      "type": "reported_component_of",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0024",
+          "claim_ids": [
+            "WSB-0024-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0024-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Historical August Saudi crude export volume contributes to the regional Gulf oil-flow observation; not new October capacity.",
+        "ua": "Серпневий експорт нафти Саудівської Аравії є складовою регіонального потоку; не нова жовтнева потужність."
+      }
+    },
+    {
+      "id": "RET-20261111-11",
+      "from": "saudi-energy-attack-claims",
+      "to": "east-west-pipeline",
+      "type": "unverified_targeting_claim_about",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0027",
+          "claim_ids": [
+            "WSB-0027-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0027-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Houthi assertion named the East-West pipeline; damage and reduced flows were not confirmed.",
+        "ua": "Заява хуситів називала трубопровід East–West; пошкодження й падіння потоку не підтверджені."
+      }
+    },
+    {
+      "id": "RET-20261111-12",
+      "from": "world-bank-commodity-shock-outlook",
+      "to": "global-oil-balance",
+      "type": "projects_risk_to",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0031",
+          "claim_ids": [
+            "WSB-0031-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0031-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "World Bank's 5.2% oil supply decline is a model forecast, not verified loss of output.",
+        "ua": "Прогноз Світового банку про падіння пропозиції на 5,2% — модель, а не виміряні втрати."
+      }
+    },
+    {
+      "id": "RET-20261111-13",
+      "from": "forties-pipeline-strike-risk",
+      "to": "global-oil-balance",
+      "type": "potential_supply_risk_to",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0008",
+          "claim_ids": [
+            "CLM-261005-04"
+          ],
+          "source_ids": [
+            "WSB-SRC-0008-04"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Industrial action could interrupt North Sea crude transport; the pipeline was not shut down.",
+        "ua": "Страйк може порушити транспортування північноморської нафти; трубопровід не зупинено."
+      }
+    },
+    {
+      "id": "RET-20261111-14",
+      "from": "india-hpcl-delivered-crude-contracts",
+      "to": "gulf-oil-flow",
+      "type": "reallocates_freight_risk_for_regional_crude",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0026",
+          "claim_ids": [
+            "WSB-0026-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0026-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "HPCL shift to delivered-cost Middle East purchases changes contract freight-risk allocation, not proven market-wide adaptation.",
+        "ua": "Перехід HPCL на доставлену нафту Близького Сходу перерозподіляє фрахтовий ризик, а не доводить загальноринкову адаптацію."
+      }
+    },
+    {
+      "id": "RET-20261111-15",
+      "from": "siemens-ukraine-energy-cooperation",
+      "to": "ukraine-germany-energy-support",
+      "type": "parallel_energy_resilience_initiatives",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0007",
+          "claim_ids": [
+            "CLM-261004-03"
+          ],
+          "source_ids": [
+            "WSB-SRC-0007-02"
+          ]
+        },
+        {
+          "issue_id": "WSB-0007",
+          "claim_ids": [
+            "CLM-261004-01"
+          ],
+          "source_ids": [
+            "WSB-SRC-0007-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Two separately sourced German–Ukrainian energy-resilience initiatives. No proof that one financed the other.",
+        "ua": "Дві окремо задокументовані німецько-українські енергетичні ініціативи; фінансового зв’язку між ними не доведено."
+      }
+    },
+    {
+      "id": "RET-20261111-16",
+      "from": "tsmc-rare-earth-equipment-substitution",
+      "to": "uk-critical-minerals-resilience",
+      "type": "parallel_response_to_chinese_rare_earth_dependency",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0025",
+          "claim_ids": [
+            "WSB-0025-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0025-SRC-01"
+          ]
+        },
+        {
+          "issue_id": "WSB-0039",
+          "claim_ids": [
+            "WSB-0039-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0039-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Taiwanese equipment sourcing study and UK policy recommendations separately address China-linked rare-earth dependency; neither is a completed replacement.",
+        "ua": "Дослідження альтернативного обладнання TSMC та британські рекомендації окремо реагують на залежність від Китаю; заміну не завершено."
+      }
+    },
+    {
+      "id": "RET-20261111-17",
+      "from": "ai-gas-turbine-capacity-bottleneck",
+      "to": "nextdc-uncontracted-data-centre-pauses",
+      "type": "parallel_ai_power_buildout_constraints",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0041",
+          "claim_ids": [
+            "WSB-0041-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0041-SRC-01"
+          ]
+        },
+        {
+          "issue_id": "WSB-0041",
+          "claim_ids": [
+            "WSB-0041-CLM-02"
+          ],
+          "source_ids": [
+            "WSB-0041-SRC-02"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Distinct barriers to AI data-centre buildout: gas-turbine procurement backlog and NextDC's contracted-demand/power siting decisions; no causal link between the cases.",
+        "ua": "Різні обмеження розбудови датацентрів ШІ: дефіцит турбін і рішення NextDC щодо контрактів та електропостачання; причинний зв’язок не доведено."
+      }
+    },
+    {
+      "id": "RET-20261111-18",
+      "from": "gulf-shipping-risk-premium",
+      "to": "hormuz-market-security-premium",
+      "type": "parallel_market_assessments_of_gulf_risk",
+      "classification": "comparative",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [
+        {
+          "issue_id": "WSB-0023",
+          "claim_ids": [
+            "WSB-0023-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0023-SRC-01"
+          ]
+        },
+        {
+          "issue_id": "WSB-0030",
+          "claim_ids": [
+            "WSB-0030-CLM-01"
+          ],
+          "source_ids": [
+            "WSB-0030-SRC-01"
+          ]
+        }
+      ],
+      "external_sources": [],
+      "note": {
+        "en": "Two dated risk-pricing observations about Middle Eastern shipping; no common quantified causal series established.",
+        "ua": "Два датовані спостереження щодо оцінки ризику судноплавства; спільний кількісний причинний ряд не встановлено."
+      }
+    },
+    {
+      "id": "RET-20261111-19",
+      "from": "zeiss-smt",
+      "to": "asml",
+      "type": "supplies_lithography_optics_to",
+      "classification": "documented",
+      "registered_at": "2026-11-11",
+      "physical_delta": false,
+      "evidence": [],
+      "external_sources": [
+        {
+          "id": "RET-SRC-ASML-01",
+          "source": "ASML / Lenses and mirrors",
+          "url": "https://www.asml.com/en/technology/lithography-principles/lenses-and-mirrors",
+          "publication_date": "2026-11-11",
+          "role": "current_corporate_documentation"
+        }
+      ],
+      "note": {
+        "en": "ASML states that all its lithography systems since the late 1980s use optics from strategic partner ZEISS; this is a long-standing supply-chain dependency, not a new November 2026 event.",
+        "ua": "ASML підтверджує, що її літографічні системи від кінця 1980-х використовують оптику партнера ZEISS; це давня залежність, а не нова подія листопада 2026 року."
+      }
+    }
+  ]
+}
