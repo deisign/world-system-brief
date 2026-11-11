@@ -151,5 +151,35 @@
       },
       "physical_delta": false
     }
-  ]
+  ],
+  "dimensions": {
+    "flow": {
+      "en": "Gulf crude through Hormuz, partial Saudi pipeline alternatives and ship-to-ship transfers around Oman; verified route dependence, not a single homogeneous capacity figure.",
+      "ua": "Нафта затоки через Ормуз, часткові саудівські трубопровідні альтернативи й перевалка біля Оману; підтверджена залежність від маршрутів, а не єдина виміряна потужність."
+    },
+    "dependency": {
+      "en": "Physical transit and commercial viability depend on distinct assets: navigable passage, pipeline operation, transshipment, safety and insurer/shipowner acceptance.",
+      "ua": "Фізичний транзит і комерційна придатність залежать від різних ланок: проходу протокою, роботи трубопроводу, перевалки, безпеки й згоди страховиків та судновласників."
+    },
+    "bottleneck": {
+      "en": "Hormuz security risk, constrained alternative capacity and unresolved clearance/insurance conditions are different bottlenecks. They must not be collapsed into a price quotation.",
+      "ua": "Загрози в Ормузі, обмежена місткість обхідних маршрутів і невирішені питання розмінування/страхування — різні вузькі місця. Їх не можна зводити до ціни на нафту."
+    },
+    "substitutability": {
+      "en": "Partial alternatives are evidenced; an equivalent substitute for all Gulf shipping and any replacement horizon are not established. Announced pipeline expansion remains prospective.",
+      "ua": "Часткові альтернативи підтверджені; повного заміщення всіх перевезень затоки та строків заміни не встановлено. Оголошене розширення трубопроводу залишається перспективою."
+    },
+    "leverage": {
+      "en": "Risk to the maritime chokepoint may influence market and routing decisions, but current evidence does not quantify a newly gained coercive advantage.",
+      "ua": "Загроза морському вузькому місцю може впливати на ринок і вибір маршрутів, але джерела не вимірюють нового примусового важеля впливу."
+    },
+    "rent": {
+      "en": "Freight and insurance premia may redistribute costs, but no supported attribution of incremental income to a specific actor is available.",
+      "ua": "Фрахтові та страхові премії можуть перерозподіляти витрати, але обґрунтованого розрахунку додаткових доходів конкретного учасника немає."
+    },
+    "adaptation": {
+      "en": "Observed pipeline use and Gulf of Oman transshipment differ from proposed additional Aramco bypass capacity; adaptation does not prove complete restoration.",
+      "ua": "Спостережене використання трубопроводу й перевалки в Оманській затоці відрізняється від планів Aramco щодо додаткової обхідної потужності; адаптація не доводить повного відновлення."
+    }
+  }
 }
