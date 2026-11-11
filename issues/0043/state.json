@@ -1,0 +1,366 @@
+{
+  "issue_id": "WSB-0043",
+  "date": "2026-11-11",
+  "day_type": {
+    "system_activity": "low",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 5,
+    "persistent": 4
+  },
+  "objects": [
+    {
+      "id": "yandex-data-centre-network",
+      "entering_state": "vladimir_site_operations_suspended",
+      "current_state": "vladimir_site_operations_suspended",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-perm-tech-suspensions",
+      "entering_state": "named_firms_suspended_from_perm",
+      "current_state": "named_firms_suspended_from_perm",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "us-gulf-offshore-output",
+      "entering_state": "storm_shutins_continue",
+      "current_state": "storm_shutins_continue",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "hormuz",
+      "entering_state": "persistent_navigation_constraint",
+      "current_state": "persistent_navigation_constraint",
+      "change": "stable",
+      "status": "persistent"
+    },
+    {
+      "id": "shadow-fleet-shipping-services",
+      "entering_state": "existing_restrictions_under_review",
+      "current_state": "existing_restrictions_under_review",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "iran-lpg-blockade-circumvention",
+      "entering_state": "limited_undated_shipments_detected",
+      "current_state": "limited_undated_shipments_detected",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "china-ai-technology-export-regime",
+      "entering_state": "draft_export_control_list_published",
+      "current_state": "draft_export_control_list_published",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "us-russia-graham-act-waiver",
+      "entering_state": "friday_waiver_reported",
+      "current_state": "friday_waiver_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-reopening-negotiation",
+      "entering_state": "conditional_reopening_offer_reiterated",
+      "current_state": "conditional_reopening_offer_reiterated",
+      "change": "stable",
+      "status": "developing"
+    },
+    {
+      "id": "china-export-demand-imbalance",
+      "entering_state": "q3_growth_4_5_export_led",
+      "current_state": "q3_growth_4_5_export_led",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "gulf-shipping-risk-premium",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "saudi-crude-export-recovery",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "tsmc-rare-earth-equipment-substitution",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "india-hpcl-delivered-crude-contracts",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "saudi-energy-attack-claims",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "iranian-seafarer-rescue-sri-lanka",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "indonesia-singapore-gas-supply-adjustment",
+      "entering_state": "reported_observation_not_confirmed_new_system_delta",
+      "current_state": "reported_observation_not_confirmed_new_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-market-security-premium",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "world-bank-commodity-shock-outlook",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-vessel-fire-claim-separation",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-limpet-mine-ship-attack",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-security-claims-weekend-persistence",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "opec-december-2026-production-targets",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "adnoc-energy-buffer-depletion",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "aramco-hormuz-pipeline-expansion-plans",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "irgc-hormuz-mine-seizure-claims",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "uk-critical-minerals-resilience",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "maersk-container-freight-pricing",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "gulf-qatar-ukmto-tanker-incident",
+      "entering_state": "report_dated_not_new_confirmed_system_delta",
+      "current_state": "report_dated_not_new_confirmed_system_delta",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "global-oil-balance",
+      "entering_state": "september_october_surplus_bank_estimates_reported",
+      "current_state": "september_october_surplus_bank_estimates_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "gulf-oil-flow",
+      "entering_state": "october_crude_recovery_product_exports_lag",
+      "current_state": "october_crude_recovery_product_exports_lag",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "refined-products-bottleneck",
+      "entering_state": "gulf_products_lag_crude_export_recovery",
+      "current_state": "gulf_products_lag_crude_export_recovery",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "china-fuel-export-suspension",
+      "entering_state": "november_diesel_exports_constrained_by_domestic_stocks",
+      "current_state": "november_diesel_exports_constrained_by_domestic_stocks",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "ai-gas-turbine-capacity-bottleneck",
+      "entering_state": "turbine_order_backlog_and_secondary_market_reported",
+      "current_state": "turbine_order_backlog_and_secondary_market_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "nextdc-uncontracted-data-centre-pauses",
+      "entering_state": "company_pause_of_uncontracted_projects_announced",
+      "current_state": "company_pause_of_uncontracted_projects_announced",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-navigation-aid-damage-claim",
+      "entering_state": "iranian_official_unverified_damage_claim",
+      "current_state": "iranian_official_unverified_damage_claim",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "china-smart-port-technology-stack",
+      "entering_state": "chinese_port_automation_exports_reported",
+      "current_state": "chinese_port_automation_exports_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "overseas-terminal-operating-systems",
+      "entering_state": "selected_foreign_terminal_software_deployments_reported",
+      "current_state": "selected_foreign_terminal_software_deployments_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "europe-dispatchable-power-flexibility",
+      "entering_state": "weather_correlated_flexibility_shortfall_reported",
+      "current_state": "weather_correlated_flexibility_shortfall_reported",
+      "change": "stable",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-oil-risk-repricing",
+      "entering_state": "oil_risk_premium_unwinding_reported",
+      "current_state": "hormuz_price_risk_rebound_under_attacks",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "black-sea-maritime-security-hub",
+      "entering_state": "not_observed_in_previous_issue",
+      "current_state": "eu_black_sea_hub_funding_pledged_not_operational",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "black-sea-commercial-shipping-threat",
+      "entering_state": "not_observed_in_previous_issue",
+      "current_state": "black_sea_merchant_attacks_reported_attribution_incomplete",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "red-sea-aspides-escort-capacity",
+      "entering_state": "not_observed_in_previous_issue",
+      "current_state": "aspides_fleet_reinforcement_not_committed",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "red-sea-commercial-shipping-risk",
+      "entering_state": "not_observed_in_previous_issue",
+      "current_state": "red_sea_shipping_security_threat_persists",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-mine-insurance-clearance-dependency",
+      "entering_state": "not_observed_in_previous_issue",
+      "current_state": "hormuz_mine_insurance_risks_persist_despite_price_rebound",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "black-sea-maritime-security-hub",
+    "type": "evidence_update",
+    "sequence": [
+      "black-sea-commercial-shipping-threat",
+      "black-sea-maritime-security-hub"
+    ],
+    "edges": [],
+    "assessment": "security_hub_pledge_not_operational_protection"
+  },
+  "notes": [
+    "11 Nov Reuters reports Hormuz risks and oil price rebound, rather than restored safe maritime throughput.",
+    "European Commission 10 Nov briefing: up to EUR 50 million committed for a Black Sea security hub, working group and intended 2027 operation; announcement is not operational capacity.",
+    "Reuters 10 Nov reports attacks on at least nine cargo vessels near Romania and Bulgaria in October; no vessel-level perpetrator established by Romanian investigators.",
+    "Reuters 10 Nov quotes Italian defence minister on no concrete commitments to boost Aspides; Kallas had requested more than 10 warships, not an existing deployed count.",
+    "Oil-market prices, physical transit, merchant-vessel safety, insurance and mine clearance are distinct observations.",
+    "No new physical system transition passes evidence gate at editorial cutoff 11 Nov 2026."
+  ],
+  "chain": [
+    "black-sea-commercial-shipping-threat",
+    "black-sea-maritime-security-hub"
+  ],
+  "noise": [
+    {
+      "id": "funding_pledge_is_not_operational_hub",
+      "result": "not_established"
+    },
+    {
+      "id": "reported_attacks_not_individual_attribution",
+      "result": "not_established"
+    },
+    {
+      "id": "oil_rally_not_safe_hormuz_transit",
+      "result": "not_established"
+    }
+  ]
+}
