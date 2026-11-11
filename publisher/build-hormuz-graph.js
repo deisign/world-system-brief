@@ -56,7 +56,7 @@ const strings={
  ua:{title:'ОРМУЗ · СИСТЕМА ЗАЛЕЖНОСТЕЙ',deck:'Направлена модель доказів, а не симуляція перевезень чи причинний рейтинг.',heading:'Мережа залежностей',warning:'Стрілки позначають різні відношення з джерелами, а не рівнозначні фізичні потоки. План, ризиковий сигнал та підтверджений потік не можна додавати.',edge:'НАПРЯМЛЕНИЙ МЕХАНІЗМ',basis:'ДОКАЗИ',status:'СТАН',sub:'ЗАМІННІСТЬ',registered:'Внесено до WSB',ledger:'Сім вимірів System Ledger',sources:'Джерела та обмеження',nodes:'ЗАРЕЄСТРОВАНІ СУТНОСТІ',back:'КАРТА СИСТЕМИ',latest:'ОСТАННІЙ ВИПУСК',notDelta:'ЦЕЙ ГРАФ НЕ СТВОРЮЄ НОВИХ ФІЗИЧНИХ СИСТЕМНИХ Δ',footer:'Пілот на основі джерел · 11 листопада 2026 · Версія 2.0',dim:['ПОТІК','ЗАЛЕЖНІСТЬ','ВУЗЬКЕ МІСЦЕ','ЗАМІННІСТЬ','ВАЖЕЛІ ВПЛИВУ','РЕНТА','АДАПТАЦІЯ']}
 };
 export function renderHormuzPage({lang,validated}){
- if(!strings[lang])throw Error('Unknown locale');const w=strings[lang],entity=new Map(validated.registry.entities.map(x=>[x.slug,x])),config=validated.config,edges=validated.edges;
+ if(!strings[lang])throw Error('Unknown locale');const config=validated.config,w=config.id==='hormuz'?strings[lang]:{...strings[lang],title:config.id.toUpperCase()+' · '+(lang==='ua'?'СИСТЕМА ЗАЛЕЖНОСТЕЙ':'DEPENDENCY SYSTEM'),footer:'Evidence-backed graph · '+config.as_of},entity=new Map(validated.registry.entities.map(x=>[x.slug,x])),edges=validated.edges;
  const name=id=>entity.get(id)?.labels?.[lang]||id;
  const detail=edges.map(e=>{
   const proof=e.sources.map(s=>'<a href="'+safe(s.url)+'" target="_blank" rel="noopener noreferrer">'+safe(s.name)+' · '+safe(s.id)+'</a>').join(' · ');
@@ -82,7 +82,6 @@ export function publishHormuzPages(root=process.cwd()){
   for(const validated of graphs){
    const file=path.join(root,'dist',lang,'dependencies',validated.config.id,'index.html');
    fs.mkdirSync(path.dirname(file),{recursive:true});
-   if(validated.config.id!=='hormuz')throw Error('No approved dossier renderer for '+validated.config.id);
    fs.writeFileSync(file,renderHormuzPage({lang,validated}));
   }
   const directory=path.join(root,'dist',lang,'dependencies','index.html');
