@@ -1,0 +1,185 @@
+{
+  "schema": "wsb-system-graph-v2-pilot",
+  "id": "hormuz",
+  "as_of": "2026-11-11",
+  "mode": "evidence_graph_not_flow_simulation",
+  "nodes": [
+    "hormuz",
+    "gulf-oil-flow",
+    "east-west-pipeline",
+    "gulf-of-oman-sts",
+    "hormuz-mine-insurance-clearance-dependency",
+    "hormuz-oil-risk-repricing",
+    "global-oil-balance",
+    "aramco-hormuz-pipeline-expansion-plans",
+    "gulf-crude-export-flow"
+  ],
+  "edges": [
+    {
+      "id": "HMX-01",
+      "from": "hormuz",
+      "to": "gulf-oil-flow",
+      "type": "route_exposure",
+      "flow": "energy",
+      "status": "observed_constraint",
+      "substitutability": "partial_observed",
+      "evidence": {
+        "kind": "issue_claim",
+        "issue_id": "WSB-0011",
+        "claim_id": "CLM-261008-03",
+        "source_id": "WSB-SRC-0011-03"
+      },
+      "explanation": {
+        "en": "Gulf crude exports depend partly on hazardous Hormuz transit; the same source reports alternative routes. Neither a total closure nor a fully equivalent bypass is established.",
+        "ua": "Експорт нафти із затоки частково залежить від небезпечного проходу Ормузом; джерело також фіксує обхідні маршрути. Повного перекриття чи рівноцінного обходу не доведено."
+      },
+      "physical_delta": false
+    },
+    {
+      "id": "HMX-02",
+      "from": "east-west-pipeline",
+      "to": "hormuz",
+      "type": "partial_bypass_of",
+      "flow": "energy",
+      "status": "observed_partial",
+      "substitutability": "partial_observed",
+      "evidence": {
+        "kind": "issue_claim",
+        "issue_id": "WSB-0003",
+        "claim_id": "CLM-260930-08",
+        "source_id": "WSB-SRC-0003-05"
+      },
+      "explanation": {
+        "en": "Saudi East–West pipeline routing provides a partial alternative to Hormuz. Reported resumed flows are not evidence that the route can substitute for all Strait shipments.",
+        "ua": "Маршрут нафтопроводу East–West забезпечує часткову альтернативу Ормузу. Відновлені потоки не означають здатності замістити весь прохід протокою."
+      },
+      "physical_delta": false
+    },
+    {
+      "id": "HMX-03",
+      "from": "gulf-of-oman-sts",
+      "to": "east-west-pipeline",
+      "type": "adaptation_after_disruption",
+      "flow": "energy",
+      "status": "reported_observation",
+      "substitutability": "partial_observed",
+      "evidence": {
+        "kind": "retrospective",
+        "relation_id": "RET-20261111-43"
+      },
+      "explanation": {
+        "en": "Ship-to-ship transfers in the Gulf of Oman were an adaptation when the East–West pipeline was damaged. Transfer constraints can themselves become a bottleneck.",
+        "ua": "Перевалка нафти між суднами в Оманській затоці була адаптацією після пошкодження East–West. Пропускна спроможність перевалки теж може стати вузьким місцем."
+      },
+      "physical_delta": false
+    },
+    {
+      "id": "HMX-04",
+      "from": "hormuz-mine-insurance-clearance-dependency",
+      "to": "hormuz",
+      "type": "commercial_reopening_gate",
+      "flow": "energy",
+      "status": "analyst_assessment",
+      "substitutability": "unknown",
+      "evidence": {
+        "kind": "issue_claim",
+        "issue_id": "WSB-0043",
+        "claim_id": "WSB-0043-CLM-04",
+        "source_id": "WSB-0043-SRC-01"
+      },
+      "explanation": {
+        "en": "Mine-clearance needs, insurance terms and shipowner risk acceptance may constrain commercial voyages even if a diplomatic agreement changes the formal status of the passage. No completed clearance is verified.",
+        "ua": "Розмінування, умови страхування й готовність судновласників ризикувати можуть стримувати перевезення навіть після дипломатичної домовленості. Завершеного розмінування не підтверджено."
+      },
+      "physical_delta": false
+    },
+    {
+      "id": "HMX-05",
+      "from": "hormuz-oil-risk-repricing",
+      "to": "global-oil-balance",
+      "type": "market_risk_signal",
+      "flow": "energy",
+      "status": "price_signal",
+      "substitutability": "not_substitution",
+      "evidence": {
+        "kind": "issue_claim",
+        "issue_id": "WSB-0042",
+        "claim_id": "WSB-0042-CLM-04",
+        "source_id": "WSB-0042-SRC-03"
+      },
+      "explanation": {
+        "en": "Daily Brent and WTI repricing reflects market perceptions and cannot be used as a substitute measurement for tonnage, transit counts or physical spare capacity.",
+        "ua": "Переоцінка Brent і WTI відбиває очікування ринку, але не замінює вимірів тоннажу, проходів суден чи резервної фізичної потужності."
+      },
+      "physical_delta": false
+    },
+    {
+      "id": "HMX-06",
+      "from": "aramco-hormuz-pipeline-expansion-plans",
+      "to": "hormuz",
+      "type": "proposed_additional_bypass",
+      "flow": "energy",
+      "status": "proposed_not_commissioned",
+      "substitutability": "proposed",
+      "evidence": {
+        "kind": "issue_claim",
+        "issue_id": "WSB-0037",
+        "claim_id": "WSB-0037-CLM-01",
+        "source_id": "WSB-0037-SRC-01"
+      },
+      "explanation": {
+        "en": "Aramco described work on expanding a crude pipeline bypassing Hormuz. A stated plan is not proof of a commissioned expansion or operational replacement throughput.",
+        "ua": "Aramco повідомила про роботу над розширенням обхідного нафтопроводу. План не є підтвердженням введеної потужності чи фактичного обсягу заміщення."
+      },
+      "physical_delta": false
+    },
+    {
+      "id": "HMX-07",
+      "from": "gulf-crude-export-flow",
+      "to": "hormuz",
+      "type": "reported_crude_corridor",
+      "flow": "energy",
+      "status": "preliminary_report",
+      "substitutability": "unknown",
+      "evidence": {
+        "kind": "retrospective",
+        "relation_id": "RET-20261111-42"
+      },
+      "explanation": {
+        "en": "Preliminary tanker-data estimates record Gulf crude moving through Hormuz. The exact historical total is treated as revisable, not an independently audited capacity figure.",
+        "ua": "Попередні дані руху танкерів фіксують потік нафти із затоки через Ормуз. Історичні підсумки можуть переглядатися, їх не приймаємо за остаточно аудитовану потужність."
+      },
+      "physical_delta": false
+    }
+  ],
+  "dimensions": {
+    "flow": {
+      "en": "Gulf crude through Hormuz, partial Saudi pipeline alternatives and ship-to-ship transfers around Oman; verified route dependence, not a single homogeneous capacity figure.",
+      "ua": "Нафта затоки через Ормуз, часткові саудівські трубопровідні альтернативи й перевалка біля Оману; підтверджена залежність від маршрутів, а не єдина виміряна потужність."
+    },
+    "dependency": {
+      "en": "Physical transit and commercial viability depend on distinct assets: navigable passage, pipeline operation, transshipment, safety and insurer/shipowner acceptance.",
+      "ua": "Фізичний транзит і комерційна придатність залежать від різних ланок: проходу протокою, роботи трубопроводу, перевалки, безпеки й згоди страховиків та судновласників."
+    },
+    "bottleneck": {
+      "en": "Hormuz security risk, constrained alternative capacity and unresolved clearance/insurance conditions are different bottlenecks. They must not be collapsed into a price quotation.",
+      "ua": "Загрози в Ормузі, обмежена місткість обхідних маршрутів і невирішені питання розмінування/страхування — різні вузькі місця. Їх не можна зводити до ціни на нафту."
+    },
+    "substitutability": {
+      "en": "Partial alternatives are evidenced; an equivalent substitute for all Gulf shipping and any replacement horizon are not established. Announced pipeline expansion remains prospective.",
+      "ua": "Часткові альтернативи підтверджені; повного заміщення всіх перевезень затоки та строків заміни не встановлено. Оголошене розширення трубопроводу залишається перспективою."
+    },
+    "leverage": {
+      "en": "Risk to the maritime chokepoint may influence market and routing decisions, but current evidence does not quantify a newly gained coercive advantage.",
+      "ua": "Загроза морському вузькому місцю може впливати на ринок і вибір маршрутів, але джерела не вимірюють нового примусового важеля впливу."
+    },
+    "rent": {
+      "en": "Freight and insurance premia may redistribute costs, but no supported attribution of incremental income to a specific actor is available.",
+      "ua": "Фрахтові та страхові премії можуть перерозподіляти витрати, але обґрунтованого розрахунку додаткових доходів конкретного учасника немає."
+    },
+    "adaptation": {
+      "en": "Observed pipeline use and Gulf of Oman transshipment differ from proposed additional Aramco bypass capacity; adaptation does not prove complete restoration.",
+      "ua": "Спостережене використання трубопроводу й перевалки в Оманській затоці відрізняється від планів Aramco щодо додаткової обхідної потужності; адаптація не доводить повного відновлення."
+    }
+  }
+}

@@ -19,6 +19,7 @@ ROUTES = {
     "entity-hormuz": "/{lang}/entity/hormuz/",
     "entity-turbines": "/{lang}/entity/ai-gas-turbine-capacity-bottleneck/",
     "system-map": "/{lang}/map/",
+    "hormuz-v2": "/{lang}/dependencies/hormuz/",
 }
 WIDTHS = (390, 768, 1440)
 

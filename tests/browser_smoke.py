@@ -81,6 +81,19 @@ class BrowserSmoke(unittest.TestCase):
         finally:
             context.close()
 
+    def test_hormuz_dependency_pilot_bilingual_evidence_and_mobile_scroll(self):
+        for lang in ("en", "ua"):
+            for width in (390, 768, 1440):
+                with self.subTest(lang=lang, width=width), self.page_at(f"/{lang}/dependencies/hormuz/", width) as page:
+                    self.assertEqual(page.locator(".mechanism").count(), 7)
+                    self.assertEqual(page.locator(".dimension").count(), 7)
+                    self.assertEqual(page.locator(".topology svg[role='img']").count(), 1)
+                    self.assertGreater(page.locator(".mechanism .evidence a[href^='https://']").count(), 6)
+                    self.assertTrue(page.locator(".notice").is_visible())
+                    self.assertLessEqual(page.evaluate("document.documentElement.scrollWidth"), width + 1)
+                    self.assertGreater(page.locator(".topology").evaluate("(e)=>e.scrollWidth"), 900)
+                    self.assertTrue(page.locator(f'a[href$="/{lang}/map/"]').count() > 0)
+
     def test_latest_read_issue_is_bilingual_and_rendered_at_all_widths(self):
         brief_root = ROOT / "ua" / "brief"
         dates = sorted(p.name for p in brief_root.iterdir() if p.is_dir() and (p / "index.html").is_file())
