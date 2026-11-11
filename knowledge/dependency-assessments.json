@@ -341,6 +341,63 @@
         "WSB-0042-SRC-01",
         "WSB-0042-SRC-04"
       ]
+    },
+    {
+      "id": "DPA-0043-BLACK-SEA-MARITIME-SECURITY",
+      "entity_slug": "black-sea-maritime-security-hub",
+      "issue_id": "WSB-0043",
+      "date": "2026-11-11",
+      "classification": "knowledge_update",
+      "flow_type": "goods",
+      "flow": {
+        "en": "Black Sea cargo flows include food, energy and other trade from the region; maritime risk and security information can restrict effective commercial passage even when navigation is technically possible.",
+        "ua": "Через Чорне море перевозять продовольство, енергоносії та інші вантажі; морські загрози й інформація про безпеку можуть обмежувати фактичний торговельний прохід навіть за фізично судноплавного фарватеру."
+      },
+      "dependency": {
+        "en": "Safe Black Sea merchant traffic depends on threat monitoring and timely security response. The proposed Bulgarian-Romanian hub is meant to coordinate information but is not yet an operating protection service.",
+        "ua": "Безпека торговельного руху Чорним морем залежить від моніторингу загроз та своєчасної охоронної реакції. Запланований болгарсько-румунський центр має координувати інформацію, але ще не є діючою охоронною службою."
+      },
+      "bottleneck": {
+        "en": "The European Commission announced up to €50 million and a 2027 operational objective, but financing and a working group do not prove deployed surveillance, escort capacity or safer completed voyages.",
+        "ua": "Єврокомісія оголосила до €50 млн і ціль запуску у 2027 році, але фінансування й робоча група не доводять розгорнутого нагляду, ескорту або безпечніших фактичних проходів."
+      },
+      "substitutability": {
+        "status": "unknown",
+        "min_years": null,
+        "max_years": null,
+        "scope": {
+          "en": "Alternative sensors, patrol resources, bilateral coordination and route diversion may help, but the sources do not quantify time or costs of replacement.",
+          "ua": "Альтернативні сенсори, патрульні засоби, двостороння координація та зміна маршрутів можуть допомогти, проте джерела не визначають строків або вартості заміщення."
+        }
+      },
+      "leverage": {
+        "status": "unknown",
+        "text": {
+          "en": "Better shared awareness may improve navigation resilience, but no verified change in coercive leverage or operational risk reduction has yet been measured.",
+          "ua": "Кращий спільний нагляд може підвищити стійкість судноплавства, але підтверджену зміну примусового впливу чи операційного ризику ще не виміряно."
+        }
+      },
+      "rent": {
+        "status": "unknown",
+        "text": {
+          "en": "The distribution of gains among exporters, insurers, port operators and security providers from a future hub remains unmeasured.",
+          "ua": "Розподіл вигод від майбутнього центру між експортерами, страховиками, портовими операторами й охоронними службами не виміряно."
+        }
+      },
+      "adaptation": {
+        "status": "proposed",
+        "text": {
+          "en": "A joint working group, planned hub and up to €50m funding are policy adaptations intended for 2027 operation; they are not commissioned physical protection on November 11.",
+          "ua": "Спільна робоча група, запланований центр і фінансування до €50 млн — політичні заходи з ціллю запуску 2027 року, а не вже введений фізичний захист 11 листопада."
+        }
+      },
+      "claim_ids": [
+        "WSB-0043-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-02",
+        "WSB-0043-SRC-03"
+      ]
     }
   ]
 }
