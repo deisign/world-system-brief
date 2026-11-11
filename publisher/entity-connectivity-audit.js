@@ -1,10 +1,11 @@
+import {resolveRetrospectiveRelations} from './retrospective-relations.js';
 import fs from 'node:fs';
 import path from 'node:path';
 
 const uniq = values=>[...new Set(values)];
 const validUrl = value=>typeof value==='string'&&/^https:\/\//.test(value);
 const admissible=s=>!!s&&validUrl(s.url)&&s.role!=='baseline'&&s.source_type!=='internal';
-export function auditEntityConnectivity({registry,bundles,assessments}){
+export function auditEntityConnectivity({registry,bundles,assessments,retrospective=null}){
  if(!Array.isArray(registry?.entities)||!Array.isArray(bundles)||!Array.isArray(assessments?.records))throw Error('Invalid entity audit inputs');
  const canonical = new Map();
  for(const e of registry.entities){
@@ -60,6 +61,24 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
    for(const slug of [from,to])bySlug.get(slug).explicit_edges.add(key);
   }
  }
+ if(retrospective){
+  const recovered=resolveRetrospectiveRelations(retrospective,bundles,registry);
+  for(const r of recovered.documented){
+   const edge=explicit.get(r.key)||{key:r.key,from:r.from,to:r.to,type:r.type,level:'explicit',basis:[],issues:[],claim_ids:[],source_ids:[],sources:[]};
+   edge.basis.push('retrospective_source_review');edge.issues.push('RETROSPECTIVE '+r.registered_at);
+   edge.claim_ids.push(...r.claim_ids);edge.source_ids.push(...r.source_ids);edge.sources.push(...r.sources);
+   edge.registered_at=r.registered_at;edge.note=r.note;explicit.set(r.key,edge);
+   bySlug.get(r.from).explicit_edges.add(r.key);bySlug.get(r.to).explicit_edges.add(r.key);
+  }
+  for(const r of recovered.comparative){
+   const [from,to]=[r.from,r.to].sort(),key=from+'|context|'+to;
+   const edge=contextual.get(key)||{key,from,to,type:'contextual_association',level:'contextual',basis:[],issues:[],claim_ids:[],source_ids:[],sources:[]};
+   edge.basis.push('retrospective_comparison');edge.issues.push('RETROSPECTIVE '+r.registered_at);
+   edge.claim_ids.push(...r.claim_ids);edge.source_ids.push(...r.source_ids);edge.sources.push(...r.sources);
+   edge.registered_at=r.registered_at;edge.note=r.note;contextual.set(key,edge);
+   bySlug.get(r.from).context_edges.add(key);bySlug.get(r.to).context_edges.add(key);
+  }
+ }
  for(const entry of assessments.records){const slug=resolve(entry.entity_slug,'ledger:'+entry.id);if(slug)bySlug.get(slug).ledger_ids.add(entry.id);}
  const pack=e=>({...e,issues:uniq(e.issues),claim_ids:uniq(e.claim_ids),source_ids:uniq(e.source_ids),sources:uniq(e.sources.map(s=>JSON.stringify(s))).map(s=>JSON.parse(s)),basis:uniq(e.basis||[])});
  const entities=[...bySlug.values()].map(e=>({...e,issues:[...e.issues],issue_refs:uniq(e.issue_refs.map(x=>JSON.stringify(x))).map(x=>JSON.parse(x)),claim_ids:[...e.claim_ids],claim_refs:uniq(e.claim_refs.map(x=>JSON.stringify(x))).map(x=>JSON.parse(x)),source_ids:[...e.source_ids],source_refs:uniq(e.source_refs.map(x=>JSON.stringify(x))).map(x=>JSON.parse(x)),baseline_ids:[...e.baseline_ids],explicit_edges:[...e.explicit_edges],context_edges:[...e.context_edges],ledger_ids:[...e.ledger_ids],study_ids:[...e.study_ids]})).sort((a,b)=>a.slug.localeCompare(b.slug));
@@ -68,10 +87,10 @@ export function auditEntityConnectivity({registry,bundles,assessments}){
 }
 export function runConnectivityAudit(root=process.cwd()){
  const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
- const registry=read('knowledge/entities.json'),assessments=read('knowledge/dependency-assessments.json');
+ const registry=read('knowledge/entities.json'),assessments=read('knowledge/dependency-assessments.json'),retroPath=path.join(root,'knowledge/retrospective-relations.json'),retrospective=fs.existsSync(retroPath)?read('knowledge/retrospective-relations.json'):null;
  const ids=fs.readdirSync(path.join(root,'issues')).filter(x=>/^\d{4}$/.test(x)).sort();
  const bundles=ids.map(id=>{const base='issues/'+id+'/',part=name=>fs.existsSync(path.join(root,base+name+'.json'))?read(base+name+'.json'):{};return {state:part('state'),claims:part('claims'),evidence:part('evidence'),relations:part('relations')};});
- return auditEntityConnectivity({registry,assessments,bundles});
+ return auditEntityConnectivity({registry,assessments,bundles,retrospective});
 }
 if(process.argv[1]&&process.argv[1].endsWith('entity-connectivity-audit.js')){
  const result=runConnectivityAudit();
