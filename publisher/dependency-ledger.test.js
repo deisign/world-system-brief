@@ -8,11 +8,12 @@ const bundle={state:read('issues/0039/state.json'),claims:read('issues/0039/clai
 const nextBundle={state:read('issues/0040/state.json'),claims:read('issues/0040/claims.json'),evidence:read('issues/0040/evidence.json')};
 const currentBundle={state:read('issues/0041/state.json'),claims:read('issues/0041/claims.json'),evidence:read('issues/0041/evidence.json')};
 const newestBundle={state:read('issues/0042/state.json'),claims:read('issues/0042/claims.json'),evidence:read('issues/0042/evidence.json')};
-const bundles=[bundle,nextBundle,currentBundle,newestBundle];
+const todayBundle={state:read('issues/0043/state.json'),claims:read('issues/0043/claims.json'),evidence:read('issues/0043/evidence.json')};
+const bundles=[bundle,nextBundle,currentBundle,newestBundle,todayBundle];
 test('first real assessments bind exactly to original issue, claims and sources',()=>{
  assert.equal(validateDependencyAssessments(config,registry,bundles),true);
- assert.deepEqual(config.records.map(x=>x.entity_slug),['uk-critical-minerals-resilience','maersk-container-freight-pricing','global-oil-balance','refined-products-bottleneck','ai-gas-turbine-capacity-bottleneck','china-smart-port-technology-stack']);
- assert.deepEqual(config.records.map(x=>x.classification),Array(6).fill('knowledge_update'));
+ assert.deepEqual(config.records.map(x=>x.entity_slug),['uk-critical-minerals-resilience','maersk-container-freight-pricing','global-oil-balance','refined-products-bottleneck','ai-gas-turbine-capacity-bottleneck','china-smart-port-technology-stack','black-sea-maritime-security-hub']);
+ assert.deepEqual(config.records.map(x=>x.classification),Array(7).fill('knowledge_update'));
 });
 test('unknown horizon stays null; an estimated horizon must appear in primary evidence',()=>{
  assert.equal(config.records[1].substitutability.status,'unknown');
@@ -124,5 +125,24 @@ test('10 November port dependency is reported knowledge, not global technology c
   assert.match(html,/WSB-0042-SRC-01/);
   assert.match(html,/WSB-0042-SRC-04/);
   assert.match(html,lang==='en'?/UNKNOWN/:/НЕ ВСТАНОВЛЕНО/);
+ }
+});
+
+test('11 November security hub funding is knowledge, not commissioned protection',()=>{
+ const row=config.records.find(r=>r.id==='DPA-0043-BLACK-SEA-MARITIME-SECURITY');
+ assert.ok(row);assert.equal(row.classification,'knowledge_update');
+ assert.equal(row.flow_type,'goods');
+ assert.equal(row.substitutability.status,'unknown');
+ assert.equal(row.leverage.status,'unknown');
+ assert.equal(row.rent.status,'unknown');
+ assert.equal(row.adaptation.status,'proposed');
+ assert.deepEqual(row.claim_ids,['WSB-0043-CLM-01']);
+ assert.deepEqual(row.source_ids,['WSB-0043-SRC-02','WSB-0043-SRC-03']);
+ assert.equal(validateDependencyAssessments(config,registry,bundles),true);
+ for(const lang of ['en','ua']){
+  const html=dependencyLedgerPage({lang,records:config.records,registry,bundles,slug:row.entity_slug});
+  assert.match(html,/2027/);
+  assert.match(html,/WSB-0043-SRC-03/);
+  assert.match(html,lang==='ua'?/НЕ ВСТАНОВЛЕНО/:/UNKNOWN/);
  }
 });
