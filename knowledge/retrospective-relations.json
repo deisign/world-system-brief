@@ -502,8 +502,8 @@
           "id": "RET-SRC-ASML-01",
           "source": "ASML / Lenses and mirrors",
           "url": "https://www.asml.com/en/technology/lithography-principles/lenses-and-mirrors",
-          "publication_date": "2026-11-11",
-          "role": "current_corporate_documentation"
+          "role": "current_corporate_documentation",
+          "checked_at": "2026-11-11"
         }
       ],
       "note": {
