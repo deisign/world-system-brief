@@ -350,5 +350,26 @@ class BrowserSmoke(unittest.TestCase):
                 self.assertEqual(page.locator("#system-visual-svg .visual-context-edge").count(), 0)
 
 
+    def test_retrospective_evidence_links_are_cited_and_not_backdated(self):
+        for lang in ("en", "ua"):
+            with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
+                note = page.locator("#map-retrospective")
+                self.assertEqual(note.count(), 1)
+                self.assertIn("15", note.inner_text())
+                self.assertIn("4", note.inner_text())
+                self.assertGreater(page.locator("#map-edges .map-edge").count(), 32)
+                self.assertGreater(page.locator("#map-edges .map-edge:has-text('RETROSPECTIVE REVIEW')").count() if lang=="en" else page.locator("#map-edges .map-edge:has-text('РЕТРОСПЕКТИВНО ДОДАНО')").count(), 0)
+                page.locator("#connectivity-mode").select_option("all")
+                page.locator("#connectivity-search").fill("zeiss-smt")
+                cards = page.locator("#entity-connections .connectivity-item:visible")
+                self.assertEqual(cards.count(), 1)
+                cards.first.locator("summary").click()
+                self.assertGreater(cards.first.locator(".connectivity-proof a[href*='asml.com']").count(), 0)
+                page.locator("#map-date").select_option("2026-11-10")
+                self.assertEqual(page.locator("#map-edges .map-edge:has-text('ZEISS')").count(), 0)
+                page.locator("#map-date").select_option("2026-11-11")
+                self.assertGreater(page.locator("#map-edges .map-edge:has-text('ZEISS')").count(), 0)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
