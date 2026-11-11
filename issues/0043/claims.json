@@ -1,0 +1,87 @@
+{
+  "issue_id": "WSB-0043",
+  "as_of": "2026-11-11",
+  "claims": [
+    {
+      "id": "WSB-0043-CLM-01",
+      "kind": "reported",
+      "statement": "The European Commission announced funding of up to EUR 50m for a Bulgaria-Romania Black Sea maritime-security hub, aiming for 2027 operation; reported merchant-vessel attacks motivate the plan, but no new operational hub is confirmed.",
+      "observed_at": "2026-11-11",
+      "event_date": "2026-11-10",
+      "entity_ids": [
+        "ENT-000096",
+        "ENT-000097"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-02",
+        "WSB-0043-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0043-CLM-02",
+      "kind": "reported",
+      "statement": "Reuters described at least nine vessels struck near Romania and Bulgaria in October; individual perpetrators remain unverified, and claims by governments about responsibility must not be reported as established fact.",
+      "observed_at": "2026-11-11",
+      "event_date": "2026-11-10",
+      "entity_ids": [
+        "ENT-000097"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0043-CLM-03",
+      "kind": "reported",
+      "statement": "Italy's defence minister reported no concrete additional EU commitments for Aspides after a September appeal; a cited need for over ten warships is a stated requirement, not a deployed count.",
+      "observed_at": "2026-11-11",
+      "event_date": "2026-11-10",
+      "entity_ids": [
+        "ENT-000098",
+        "ENT-000099"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-04"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0043-CLM-04",
+      "kind": "reported",
+      "statement": "At 07:30 GMT on November 11, Brent was $92.01 and WTI $86.20; Reuters reported persistent attacks near Hormuz and LSEG analysis that mine clearance, insurance and shipowners' risk acceptance limit any eventual increase in passage.",
+      "observed_at": "2026-11-11",
+      "event_date": "2026-11-11",
+      "entity_ids": [
+        "ENT-000001",
+        "ENT-000090",
+        "ENT-000100"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0043-CLM-05",
+      "kind": "reported",
+      "statement": "The reported 37 attacks in October are an attributed Washington Institute count; an Iranian claim of tankers hitting mines on November 10 is uncorroborated in this source. The report does not establish a safe and fully reopened Strait.",
+      "observed_at": "2026-11-11",
+      "event_date": "2026-11-11",
+      "entity_ids": [
+        "ENT-000001",
+        "ENT-000100"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}
