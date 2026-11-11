@@ -1,0 +1,70 @@
+{
+  "issue_id": "WSB-0043",
+  "as_of": "2026-11-11",
+  "records": [
+    {
+      "id": "WSB-0043-SRC-01",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high",
+      "source": "Reuters / Jeslyn Lerh / oil rebounds amid Hormuz vessel attacks",
+      "url": "https://www.reuters.com/business/energy/oil-rises-two-month-low-hormuz-shipping-attacks-offset-iran-truce-hopes-2026-11-11/",
+      "publication_date": "2026-11-11",
+      "claim": "At 07:30 GMT Nov 11 Brent $92.01 (+0.6%) and WTI $86.20 (+0.2%), while Reuters cited 37 ships attacked in October from the Washington Institute for Near East Policy and UKMTO reporting of a tanker struck off Oman on Nov 10; LSEG noted clearance, insurance and shipowner risk after any deal.",
+      "observation": "Intraday prices are market signals, 37 attacks is an attributed third-party count, an Iranian naval mine statement remains an allegation. Mine clearance and insurance may limit recovery; no evidence of restored Hormuz passage.",
+      "assessment": "MARKET AND MARITIME RISK — EVIDENCE UPDATE, NO PHYSICAL RESTORATION",
+      "supports": [
+        "hormuz",
+        "hormuz-oil-risk-repricing",
+        "hormuz-mine-insurance-clearance-dependency"
+      ]
+    },
+    {
+      "id": "WSB-0043-SRC-02",
+      "source_type": "newswire",
+      "role": "previous_day_report",
+      "confidence": "high",
+      "source": "Reuters / Ivana Sekularac and Angeliki Koutantou / Black Sea hub pledge",
+      "url": "https://www.reuters.com/world/eus-von-der-leyen-pledges-50-million-speed-up-security-hub-black-sea-2026-11-10/",
+      "publication_date": "2026-11-10",
+      "claim": "European Commission president pledged EUR 50 million to accelerate a planned Romania-Bulgaria Black Sea maritime-security hub following reported October attacks on at least nine merchant vessels. Romania did not attribute individual attacks without forensic evidence.",
+      "observation": "Pledge and planned hub, not a commissioned operational system; nine-vessel count and allegations must remain attributed. The source is dated 10 Nov and carried forward into the 11 Nov system analysis.",
+      "assessment": "POLICY RESPONSE — NO VERIFIED COMMISSIONED PROTECTION",
+      "supports": [
+        "black-sea-maritime-security-hub",
+        "black-sea-commercial-shipping-threat"
+      ]
+    },
+    {
+      "id": "WSB-0043-SRC-03",
+      "source_type": "official_record",
+      "role": "primary_policy_record",
+      "confidence": "high",
+      "source": "European Commission Audiovisual Service / midday briefing",
+      "url": "https://audiovisual.ec.europa.eu/en/media/video/I-297107",
+      "publication_date": "2026-11-10",
+      "claim": "At the 10 November EC briefing, the Commission described an integrated working group and up to EUR 50 million toward the Black Sea Maritime Security Hub, with the objective of becoming operational in 2027.",
+      "observation": "An announced working group and prospective 2027 operation; no evidence of existing integrated security coverage or assured deployment schedule.",
+      "assessment": "OFFICIAL COMMITMENT AND PLANNED CAPACITY, NOT PHYSICAL DELTA",
+      "supports": [
+        "black-sea-maritime-security-hub"
+      ]
+    },
+    {
+      "id": "WSB-0043-SRC-04",
+      "source_type": "newswire",
+      "role": "previous_day_report",
+      "confidence": "high",
+      "source": "Reuters / Angelo Amante / Italy says Aspides reinforcement not committed",
+      "url": "https://www.reuters.com/world/italy-says-eu-nations-failed-commit-red-sea-security-2026-11-10/",
+      "publication_date": "2026-11-10",
+      "claim": "Italy's defence minister Guido Crosetto said EU states had not taken concrete steps to bolster Aspides despite a September appeal; EU foreign policy chief Kaja Kallas had indicated that more than ten warships were required for effectiveness, not that they were deployed.",
+      "observation": "Attributed ministerial assessment of insufficient commitments, not a verified full inventory of escort deployments, and no newly completed ship deployment on Nov 11.",
+      "assessment": "SECURITY CAPACITY GAP — REPORTED, NOT NEW PHYSICAL LOSS",
+      "supports": [
+        "red-sea-aspides-escort-capacity",
+        "red-sea-commercial-shipping-risk"
+      ]
+    }
+  ]
+}

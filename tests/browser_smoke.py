@@ -265,16 +265,16 @@ class BrowserSmoke(unittest.TestCase):
         for lang in ("en", "ua"):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 self.assertEqual(page.locator("#relation-changelog").count(), 1)
-                self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-10")
+                self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-11")
                 current = page.locator("#relation-changelog .relation-change")
-                self.assertEqual(current.count(), 1)
+                self.assertEqual(current.count(), 3)
                 self.assertEqual(current.first.get_attribute("data-change-kind"), "first_recorded")
                 self.assertEqual(page.locator("#relation-changelog [data-change-kind^='confirmed']").count(), 0)
                 page.locator("#map-date").select_option("2026-11-09")
                 self.assertEqual(page.locator("#relation-changelog .relation-change").count(), 0)
                 self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-09")
-                page.locator("#map-date").select_option("2026-11-10")
-                self.assertEqual(page.locator("#relation-changelog .relation-change").count(), 1)
+                page.locator("#map-date").select_option("2026-11-11")
+                self.assertEqual(page.locator("#relation-changelog .relation-change").count(), 3)
                 self.assertEqual(page.locator("#relation-changelog .relation-change").first.get_attribute("data-change-kind"), "first_recorded")
 
 
@@ -282,12 +282,12 @@ class BrowserSmoke(unittest.TestCase):
         for lang in ("en", "ua"):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 entries = page.locator("#entity-connections .connectivity-item")
-                self.assertEqual(entries.count(), 95)
-                self.assertEqual(page.locator("#connectivity-visible").inner_text(), "95")
+                self.assertEqual(entries.count(), 100)
+                self.assertEqual(page.locator("#connectivity-visible").inner_text(), "100")
                 page.locator("#connectivity-mode").select_option("isolated")
                 remaining = page.locator("#entity-connections .connectivity-item:visible")
                 self.assertGreater(remaining.count(), 0)
-                self.assertLess(remaining.count(), 95)
+                self.assertLess(remaining.count(), 100)
                 page.locator("#connectivity-search").fill("europe-dispatchable-power-flexibility")
                 self.assertEqual(page.locator("#entity-connections .connectivity-item:visible").count(), 1)
                 self.assertEqual(page.locator("#entity-connections .connectivity-item:visible").first.get_attribute("data-mode"), "isolated")

@@ -120,6 +120,36 @@
       "leverage_delta": "unknown",
       "rent_delta": "unknown",
       "substitution_horizon": "unknown"
+    },
+    {
+      "id": "DTE-0043-BLACK-SEA-MARITIME-SECURITY",
+      "assessment_id": "DPA-0043-BLACK-SEA-MARITIME-SECURITY",
+      "entity_slug": "black-sea-maritime-security-hub",
+      "issue_id": "WSB-0043",
+      "observed_at": "2026-11-11",
+      "effective_at": null,
+      "from_state": null,
+      "to_state": null,
+      "classification": "knowledge_update",
+      "direction": "unknown",
+      "claim_ids": [
+        "WSB-0043-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0043-SRC-02",
+        "WSB-0043-SRC-03"
+      ],
+      "reason": {
+        "en": "EC and Reuters record a EUR 50m plan and a 2027 target for a joint security hub, reported Nov 10 and analysed on Nov 11; no deployed capacity measured.",
+        "ua": "Єврокомісія та Reuters фіксують план на €50 млн і ціль запуску спільного центру 2027 року, оголошені 10 листопада й проаналізовані 11-го; розгорнуту спроможність не виміряно."
+      },
+      "caveat": {
+        "en": "A policy/funding announcement is not an operating radar network, mine-clearance service or a reduction in attacks; individual attack attribution is incomplete.",
+        "ua": "Оголошення про фінансування — не діюча мережа радарів, служба розмінування чи зменшення атак; атрибуція конкретних інцидентів неповна."
+      },
+      "leverage_delta": "unknown",
+      "rent_delta": "unknown",
+      "substitution_horizon": "unknown"
     }
   ]
 }

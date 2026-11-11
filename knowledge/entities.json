@@ -855,6 +855,51 @@
         "en": "Pacific LNG export optionality",
         "ua": "Можливості маневру експорту ЗПГ через Тихий океан"
       }
+    },
+    {
+      "id": "ENT-000096",
+      "slug": "black-sea-maritime-security-hub",
+      "type": "security_infrastructure",
+      "labels": {
+        "en": "Black Sea Maritime Security Hub",
+        "ua": "Центр морської безпеки Чорного моря"
+      }
+    },
+    {
+      "id": "ENT-000097",
+      "slug": "black-sea-commercial-shipping-threat",
+      "type": "maritime_security_constraint",
+      "labels": {
+        "en": "Black Sea commercial shipping threat",
+        "ua": "Загроза торговельному судноплавству в Чорному морі"
+      }
+    },
+    {
+      "id": "ENT-000098",
+      "slug": "red-sea-aspides-escort-capacity",
+      "type": "security_infrastructure",
+      "labels": {
+        "en": "EU Aspides naval escort capacity",
+        "ua": "Ескортні спроможності місії ЄС Aspides"
+      }
+    },
+    {
+      "id": "ENT-000099",
+      "slug": "red-sea-commercial-shipping-risk",
+      "type": "maritime_security_constraint",
+      "labels": {
+        "en": "Red Sea commercial shipping risk",
+        "ua": "Ризик торговельного судноплавства в Червоному морі"
+      }
+    },
+    {
+      "id": "ENT-000100",
+      "slug": "hormuz-mine-insurance-clearance-dependency",
+      "type": "maritime_security_constraint",
+      "labels": {
+        "en": "Hormuz mine clearance and insurance dependence",
+        "ua": "Залежність проходу Ормузу від розмінування і страхування"
+      }
     }
   ]
 }
