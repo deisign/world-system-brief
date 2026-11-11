@@ -53,7 +53,7 @@ test('bilingual rendered SVG is generated from real directed graph, with accessi
 });
 
 test('graph catalogue discovers the published evidence-backed baseline without new physical claims',()=>{
- assert.deepEqual(listSystemGraphIds(),['hormuz']);
+ assert.deepEqual(listSystemGraphIds(),['eu-grid-financing','hormuz']);
  const direct=loadSystemGraph(process.cwd(),'hormuz');
  assert.deepEqual(direct.edges.map(x=>x.id),loadHormuzGraph().edges.map(x=>x.id));
  assert.throws(()=>loadSystemGraph(process.cwd(),'../hormuz'),/Unknown graph dossier/);
@@ -67,13 +67,31 @@ test('a second ID can share the general validation contract without pretending t
  assert.throws(()=>validateHormuzGraph(a),/Invalid Hormuz pilot metadata/);
 });
 test('bilingual directory only lists validated dossiers and preserves canonical routes',()=>{
- const graphs=[loadHormuzGraph()];
+ const graphs=[loadSystemGraph(process.cwd(),'eu-grid-financing'),loadHormuzGraph()];
  for(const lang of ['en','ua']){
   const page=renderSystemGraphDirectory({lang,graphs});
   assert.match(page,new RegExp('/'+lang+'/dependencies/hormuz/'));
   assert.match(page,new RegExp('/'+lang+'/map/'));
   assert.match(page,/9 /);
   assert.match(page,/7 /);
-  assert.equal((page.match(/<li>/g)||[]).length,1);
+  assert.equal((page.match(/<li>/g)||[]).length,2);
+  assert.match(page,new RegExp('/'+lang+'/dependencies/eu-grid-financing/'));
+ }
+});
+
+test('EU grid second dossier is sourced across capital and energy without asserting built capacity',()=>{
+ const graph=loadSystemGraph(process.cwd(),'eu-grid-financing');
+ assert.equal(graph.config.nodes.length,5);
+ assert.equal(graph.edges.length,4);
+ assert.deepEqual([...new Set(graph.edges.map(e=>e.flow))].sort(),['capital','energy']);
+ assert.ok(graph.edges.every(e=>e.physical_delta===false&&e.sources.length>0));
+ assert.equal(graph.edges.filter(e=>e.status==='proposed_not_commissioned').length,1);
+ assert.equal(graph.edges.filter(e=>e.status==='analyst_assessment').length,1);
+ for(const lang of ['en','ua']){
+  const html=renderHormuzPage({lang,validated:graph});
+  assert.match(html,new RegExp('/'+lang+'/dependencies/eu-grid-financing/'));
+  assert.equal((html.match(/class="mechanism" id="EGF-/g)||[]).length,4);
+  assert.equal((html.match(/id="node-/g)||[]).length,5);
+  assert.match(html,/WSB-SRC-0003-03/);
  }
 });
