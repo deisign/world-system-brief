@@ -1,12 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {resolveRetrospectiveRelations} from './retrospective-relations.js';
+import {validateEvidenceGraph} from './system-graph-core.js';
 
 const dimensions=['flow','dependency','bottleneck','substitutability','leverage','rent','adaptation'];
-const statuses=new Set(['observed_constraint','observed_partial','reported_observation','analyst_assessment','price_signal','proposed_not_commissioned','preliminary_report']);
-const substitutes=new Set(['partial_observed','unknown','not_substitution','proposed']);
 const safe=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const bilingual=x=>x&&['en','ua'].every(k=>typeof x[k]==='string'&&x[k].trim());
 const read=(root,file)=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 
 export function loadHormuzGraph(root=process.cwd()){
@@ -21,40 +19,27 @@ export function loadHormuzGraph(root=process.cwd()){
  return validateHormuzGraph({config,registry,bundles,retro});
 }
 export function validateHormuzGraph({config,registry,bundles,retro}){
- if(config?.schema!=='wsb-system-graph-v2-pilot'||config.id!=='hormuz'||!/^\d{4}-\d{2}-\d{2}$/.test(config.as_of||'')||config.mode!=='evidence_graph_not_flow_simulation')throw Error('Invalid Hormuz pilot metadata');
- if(!Array.isArray(config.nodes)||!Array.isArray(config.edges)||config.nodes.length<2||!config.edges.length)throw Error('Empty dependency topology');
- for(const d of dimensions)if(!bilingual(config.dimensions?.[d]))throw Error('Missing Ledger dimension '+d);
- const registryMap=new Map(registry.entities.map(e=>[e.slug,e])),uniqueNodes=new Set(config.nodes);
- if(config.nodes.length!==uniqueNodes.size||config.nodes.some(id=>!registryMap.has(id)))throw Error('Unregistered or duplicate graph node');
+ if(config?.id!=='hormuz')throw Error('Invalid Hormuz pilot metadata');
  const issues=new Map(bundles.map(b=>[b.state.issue_id,b]));
  const historical=resolveRetrospectiveRelations(retro,bundles,registry);
  const recovered=new Map([...historical.documented,...historical.comparative].map(r=>[r.id,r]));
- const ids=new Set(),results=[];
- for(const edge of config.edges){
-  if(!edge.id||ids.has(edge.id)||!uniqueNodes.has(edge.from)||!uniqueNodes.has(edge.to)||edge.from===edge.to||!edge.type||edge.flow!=='energy'||!statuses.has(edge.status)||!substitutes.has(edge.substitutability)||edge.physical_delta!==false||!bilingual(edge.explanation))throw Error('Invalid dependency edge '+edge.id);
-  ids.add(edge.id);
+ const aliases=new Map(registry.entities.flatMap(e=>[[e.id,e.slug],[e.slug,e.slug]]));
+ return validateEvidenceGraph({config,registry,resolveProof:(edge,asOf)=>{
   const proof=edge.evidence;
-  if(!proof||!['issue_claim','retrospective'].includes(proof.kind))throw Error('Unsupported proof '+edge.id);
-  let sources=[],date=null,claimIds=[];
   if(proof.kind==='issue_claim'){
    const b=issues.get(proof.issue_id);
-   if(!b||b.state.date>config.as_of)throw Error('Unknown or future issue '+edge.id);
+   if(!b||b.state.date>asOf)throw Error('Unknown or future issue '+edge.id);
    const c=(b.claims.claims||[]).find(x=>x.id===proof.claim_id);
-   const s=(b.evidence.records||[]).find(x=>x.id===proof.source_id);
-   if(!c||!s||!c.source_ids?.includes(s.id)||!/^https:\/\//.test(s.url||'')||s.role==='baseline'||s.source_type==='internal'||s.publication_date>config.as_of)throw Error('Unverifiable claim and source '+edge.id);
-   const alias=new Map(registry.entities.flatMap(e=>[[e.id,e.slug],[e.slug,e.slug]]));
-   if(!c.entity_ids?.some(x=>[edge.from,edge.to].includes(alias.get(x))))throw Error('Claim does not mention dependency endpoint '+edge.id);
-   if(!s.supports?.some(x=>[edge.from,edge.to].includes(alias.get(x))))throw Error('Source does not support dependency endpoint '+edge.id);
-   sources=[{id:s.id,url:s.url,name:s.source||s.id,publication_date:s.publication_date}];date=b.state.date;claimIds=[c.id];
-  }else{
-   const r=recovered.get(proof.relation_id);
-   if(!r||r.classification!=='documented'||r.from!==edge.from||r.to!==edge.to||r.registered_at>config.as_of||!r.sources?.length)throw Error('Unverifiable retrospective relation '+edge.id);
-   sources=r.sources.map(s=>({id:s.id,url:s.url,name:s.name||s.id,publication_date:s.evidence_date||null}));
-   date=r.registered_at;claimIds=r.claim_ids;
+   const source=(b.evidence.records||[]).find(x=>x.id===proof.source_id);
+   if(!c||!source||!c.source_ids?.includes(source.id)||!/^https:\/\//.test(source.url||'')||source.role==='baseline'||source.source_type==='internal'||source.publication_date>asOf)throw Error('Unverifiable claim and source '+edge.id);
+   if(!c.entity_ids?.some(x=>[edge.from,edge.to].includes(aliases.get(x))))throw Error('Claim does not mention dependency endpoint '+edge.id);
+   if(!source.supports?.some(x=>[edge.from,edge.to].includes(aliases.get(x))))throw Error('Source does not support dependency endpoint '+edge.id);
+   return {sources:[{id:source.id,url:source.url,name:source.source||source.id,publication_date:source.publication_date}],registered_at:b.state.date,claim_ids:[c.id]};
   }
-  results.push({...edge,registered_at:date,claim_ids:claimIds,sources});
- }
- return {config,registry,edges:results};
+  const rel=recovered.get(proof.relation_id);
+  if(!rel||rel.classification!=='documented'||rel.from!==edge.from||rel.to!==edge.to||rel.registered_at>asOf||!rel.sources?.length)throw Error('Unverifiable retrospective relation '+edge.id);
+  return {sources:rel.sources.map(source=>({id:source.id,url:source.url,name:source.name||source.id,publication_date:source.evidence_date||null})),registered_at:rel.registered_at,claim_ids:rel.claim_ids};
+ }});
 }
 const strings={
  en:{title:'HORMUZ · DEPENDENCY SYSTEM',deck:'A directed evidence model, not a transport simulation or a causal score.',heading:'Mechanism topology',warning:'Arrows describe separately sourced relations, not equivalent physical flows. A plan, a risk signal and a confirmed flow cannot be added together.',edge:'DIRECTIONAL MECHANISM',basis:'EVIDENCE',status:'STATUS',sub:'SUBSTITUTABILITY',registered:'Recorded in WSB',ledger:'Seven-dimension System Ledger',sources:'Sources and limitations',nodes:'REGISTERED ENTITIES',back:'SYSTEM MAP',latest:'LATEST',notDelta:'NO NEW PHYSICAL SYSTEM Δ IS CREATED BY THIS GRAPH',footer:'Source-backed pilot · 11 November 2026 · Version 2.0',dim:['FLOW','DEPENDENCY','BOTTLENECK','SUBSTITUTABILITY','LEVERAGE','RENT','ADAPTATION']},
