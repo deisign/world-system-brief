@@ -900,6 +900,33 @@
         "en": "Hormuz mine clearance and insurance dependence",
         "ua": "Залежність проходу Ормузу від розмінування і страхування"
       }
+    },
+    {
+      "id": "ENT-000101",
+      "slug": "singapore-pipeline-gas-import-dependency",
+      "type": "energy_supply_dependency",
+      "labels": {
+        "en": "Singapore's imported pipeline gas dependency",
+        "ua": "Залежність Сінгапуру від імпортного трубопровідного газу"
+      }
+    },
+    {
+      "id": "ENT-000102",
+      "slug": "us-perm-employer-sponsored-migration",
+      "type": "labour_mobility_instrument",
+      "labels": {
+        "en": "US employer-sponsored skilled migration via PERM",
+        "ua": "Трудова міграція фахівців до США через PERM"
+      }
+    },
+    {
+      "id": "ENT-000103",
+      "slug": "russian-grain-black-sea-export-rerouting",
+      "type": "trade_routing_dependency",
+      "labels": {
+        "en": "Russian grain export rerouting from Black Sea ports",
+        "ua": "Перенаправлення експорту російського зерна з чорноморських портів"
+      }
     }
   ]
 }
