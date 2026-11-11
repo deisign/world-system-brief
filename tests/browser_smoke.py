@@ -81,6 +81,20 @@ class BrowserSmoke(unittest.TestCase):
         finally:
             context.close()
 
+    def test_latest_read_issue_is_bilingual_and_rendered_at_all_widths(self):
+        brief_root = ROOT / "ua" / "brief"
+        dates = sorted(p.name for p in brief_root.iterdir() if p.is_dir() and (p / "index.html").is_file())
+        self.assertTrue(dates)
+        latest = dates[-1]
+        for lang in ("ua", "en"):
+            for width in (390, 768, 1440):
+                with self.subTest(lang=lang, width=width), self.page_at(f"/{lang}/brief/{latest}/", width) as page:
+                    self.assertIn("WSB-", page.title())
+                    self.assertGreater(page.locator("h1").count(), 0)
+                    horizontal = page.evaluate("({scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth})")
+                    self.assertLessEqual(horizontal["scroll"], horizontal["client"] + 1)
+                    self.assertGreater(page.locator(".sources a[href^='https://']").count(), 0)
+
     def test_routes_fonts_and_mobile_layout(self):
         routes = [
             "/ua/", "/ua/brief/2026-11-04/", "/ua/system/2026-11-04/",
