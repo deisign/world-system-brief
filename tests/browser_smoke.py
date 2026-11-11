@@ -81,6 +81,38 @@ class BrowserSmoke(unittest.TestCase):
         finally:
             context.close()
 
+    def test_latest_read_issue_is_bilingual_and_rendered_at_all_widths(self):
+        brief_root = ROOT / "ua" / "brief"
+        dates = sorted(p.name for p in brief_root.iterdir() if p.is_dir() and (p / "index.html").is_file())
+        self.assertTrue(dates)
+        latest = dates[-1]
+        for lang in ("ua", "en"):
+            for width in (390, 768, 1440):
+                with self.subTest(lang=lang, width=width), self.page_at(f"/{lang}/brief/{latest}/", width) as page:
+                    self.assertIn("WSB-", page.title())
+                    self.assertGreater(page.locator("h1").count(), 0)
+                    horizontal = page.evaluate("({scroll:document.documentElement.scrollWidth,client:document.documentElement.clientWidth})")
+                    if horizontal["scroll"] > horizontal["client"] + 1:
+                        offenders = page.evaluate("""() => [...document.querySelectorAll('body *')]
+                            .map(e => ({el:e, r:e.getBoundingClientRect()}))
+                            .filter(x => x.r.width > 0 && x.r.right > innerWidth + 1)
+                            .slice(0, 12)
+                            .map(x => ({tag:x.el.tagName, cls: String(x.el.className).slice(0, 90),
+                              text:x.el.textContent.slice(0, 90), width:Math.round(x.r.width),
+                              right:Math.round(x.r.right), html:x.el.outerHTML.slice(0, 180)}))""")
+                        widths = page.evaluate("""() => [...document.querySelectorAll('html, body, main, article, body *')]
+                          .map(e => ({tag:e.tagName, cls:String(e.className).slice(0,55),
+                            scroll:e.scrollWidth,client:e.clientWidth,offset:e.offsetWidth,
+                            rect:Math.round(e.getBoundingClientRect().width),
+                            overflow:getComputedStyle(e).overflowX,
+                            left:Math.round(e.getBoundingClientRect().left),
+                            right:Math.round(e.getBoundingClientRect().right)}))
+                          .filter(x=>x.scroll>x.client+1)
+                          .sort((a,b)=>(b.scroll-b.client)-(a.scroll-a.client)).slice(0,15)""")
+                        print("LATEST_READ_OVERFLOW", lang, width, offenders, widths, flush=True)
+                    self.assertLessEqual(horizontal["scroll"], horizontal["client"] + 1)
+                    self.assertGreater(page.locator(".sources a[href^='https://']").count(), 0)
+
     def test_routes_fonts_and_mobile_layout(self):
         routes = [
             "/ua/", "/ua/brief/2026-11-04/", "/ua/system/2026-11-04/",

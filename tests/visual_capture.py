@@ -11,7 +11,7 @@ from browser_smoke import PREFIX, ROOT, Server, SiteHandler
 OUT = pathlib.Path("artifacts/visual-qa")
 ROUTES = {
     "home": "/{lang}/",
-    "read": "/{lang}/brief/2026-11-09/",
+    "read": "/{lang}/brief/{latest}/",
     "archive": "/{lang}/archive/",
     "ledger": "/{lang}/ledger/dependencies/",
     "ledger-entity": "/{lang}/ledger/dependencies/ai-gas-turbine-capacity-bottleneck/",
@@ -24,8 +24,13 @@ WIDTHS = (390, 768, 1440)
 
 
 def capture():
-    if not (ROOT / "ua" / "brief" / "2026-11-09" / "index.html").is_file():
-        raise RuntimeError("WSB-0041 prefixed full build is required")
+    brief_root = ROOT / "ua" / "brief"
+    available = sorted(p.name for p in brief_root.iterdir() if p.is_dir() and (p / "index.html").is_file()) if brief_root.is_dir() else []
+    if not available:
+        raise RuntimeError("At least one generated bilingual READ issue is required")
+    latest = available[-1]
+    if not (ROOT / "en" / "brief" / latest / "index.html").is_file():
+        raise RuntimeError("Latest READ issue is missing an English edition: " + latest)
     OUT.mkdir(parents=True, exist_ok=True)
     server = Server(("127.0.0.1", 0), SiteHandler)
     thread = threading.Thread(target=server.serve_forever, daemon=True)
@@ -43,7 +48,7 @@ def capture():
             try:
                 for lang in ("en", "ua"):
                     for name, template in ROUTES.items():
-                        route = template.format(lang=lang)
+                        route = template.format(lang=lang, latest=latest)
                         for width in WIDTHS:
                             context = browser.new_context(viewport={"width": width, "height": 900}, device_scale_factor=1)
                             page = context.new_page()
