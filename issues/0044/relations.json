@@ -1,0 +1,76 @@
+{
+  "issue_id": "WSB-0044",
+  "as_of": "2026-11-12",
+  "relations": [
+    {
+      "id": "WSB-0044-REL-01",
+      "from": "asean-fuel-ticket-reserve",
+      "to": "philippines-emergency-fuel-access",
+      "type": "proposes_cross_border_emergency_fuel_purchase_rights",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0044-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-01"
+      ],
+      "note": "Ticket proposal, not operating stocks or released fuel."
+    },
+    {
+      "id": "WSB-0044-REL-02",
+      "from": "orlen-qatarenergy-lng-contract",
+      "to": "hormuz-lng-flow",
+      "type": "contract_impacted_by_delivery_force_majeure",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0044-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-02"
+      ],
+      "note": "Termination notice dated 10 November; historical legal event, no 12 November physical delta."
+    },
+    {
+      "id": "WSB-0044-REL-03",
+      "from": "us-russia-graham-act-waiver",
+      "to": "russian-diesel-us-market-acceptance",
+      "type": "waiver_does_not_ensure_commercial_acceptance",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0044-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-03"
+      ],
+      "note": "Commercial market access still blocked by legal and bank risk according to reported interviews."
+    },
+    {
+      "id": "WSB-0044-REL-04",
+      "from": "aughinish-alumina-russia-flow",
+      "to": "russian-aluminium-smelting-input",
+      "type": "existing_alumina_input_to",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0044-CLM-04"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-04"
+      ],
+      "note": "Alumina delivery to Russian smelting is separate from contested final military end use."
+    },
+    {
+      "id": "WSB-0044-REL-05",
+      "from": "cnooc-bohai-ultradeep-gas-test",
+      "to": "bohai-prospective-gas-resource",
+      "type": "test_supports_resource_prospect_not_commercial_capacity",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0044-CLM-05"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-05"
+      ],
+      "note": "CNOOC test rate is not operating or pipeline-delivered production."
+    }
+  ]
+}
