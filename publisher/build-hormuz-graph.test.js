@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {loadHormuzGraph,validateHormuzGraph,renderHormuzPage} from './build-hormuz-graph.js';
+import {loadHormuzGraph,loadSystemGraph,listSystemGraphIds,validateHormuzGraph,validateSystemGraph,renderHormuzPage,renderSystemGraphDirectory} from './build-hormuz-graph.js';
 import fs from 'node:fs';
 const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
 const config=read('knowledge/system-graphs/hormuz.json'),registry=read('knowledge/entities.json'),retro=read('knowledge/retrospective-relations.json');
@@ -49,5 +49,50 @@ test('bilingual rendered SVG is generated from real directed graph, with accessi
   assert.match(html,/WSB-SRC-0011-03/);
   assert.match(html,/hormuz-mine-insurance-clearance-dependency/);
   assert.match(html,lang==='en'?/NO NEW PHYSICAL SYSTEM/:/НЕ СТВОРЮЄ НОВИХ ФІЗИЧНИХ/);
+ }
+});
+
+test('graph catalogue discovers the published evidence-backed baseline without new physical claims',()=>{
+ assert.deepEqual(listSystemGraphIds(),['eu-grid-financing','hormuz']);
+ const direct=loadSystemGraph(process.cwd(),'hormuz');
+ assert.deepEqual(direct.edges.map(x=>x.id),loadHormuzGraph().edges.map(x=>x.id));
+ assert.throws(()=>loadSystemGraph(process.cwd(),'../hormuz'),/Unknown graph dossier/);
+ assert.throws(()=>loadSystemGraph(process.cwd(),'absent'),/Unknown graph dossier/);
+});
+test('a second ID can share the general validation contract without pretending to be published',()=>{
+ const a=inputs();a.config.id='hypothetical-route';a.config.schema='wsb-system-graph-v2';
+ const validated=validateSystemGraph(a);
+ assert.equal(validated.config.id,'hypothetical-route');
+ assert.equal(validated.edges.length,7);
+ assert.throws(()=>validateHormuzGraph(a),/Invalid Hormuz pilot metadata/);
+});
+test('bilingual directory only lists validated dossiers and preserves canonical routes',()=>{
+ const graphs=[loadSystemGraph(process.cwd(),'eu-grid-financing'),loadHormuzGraph()];
+ for(const lang of ['en','ua']){
+  const page=renderSystemGraphDirectory({lang,graphs});
+  assert.match(page,new RegExp('/'+lang+'/dependencies/hormuz/'));
+  assert.match(page,new RegExp('/'+lang+'/map/'));
+  assert.match(page,/9 /);
+  assert.match(page,/7 /);
+  assert.equal((page.match(/<li>/g)||[]).length,2);
+  assert.match(page,new RegExp('/'+lang+'/dependencies/eu-grid-financing/'));
+ }
+});
+
+test('EU grid second dossier is sourced across capital and energy without asserting built capacity',()=>{
+ const graph=loadSystemGraph(process.cwd(),'eu-grid-financing');
+ assert.equal(graph.config.nodes.length,5);
+ assert.equal(graph.edges.length,4);
+ assert.deepEqual([...new Set(graph.edges.map(e=>e.flow))].sort(),['capital','energy']);
+ assert.ok(graph.edges.every(e=>e.physical_delta===false&&e.sources.length>0));
+ assert.equal(graph.edges.filter(e=>e.status==='proposed_not_commissioned').length,1);
+ assert.equal(graph.edges.filter(e=>e.status==='analyst_assessment').length,1);
+ for(const lang of ['en','ua']){
+  const html=renderHormuzPage({lang,validated:graph});
+  assert.match(html,new RegExp('/'+(lang==='en'?'ua':'en')+'/dependencies/eu-grid-financing/'));
+  assert.match(html,new RegExp('/'+lang+'/dependencies/'));
+  assert.equal((html.match(/class="mechanism" id="EGF-/g)||[]).length,4);
+  assert.equal((html.match(/id="node-/g)||[]).length,5);
+  assert.match(html,/WSB-SRC-0003-03/);
  }
 });
