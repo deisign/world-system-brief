@@ -1,0 +1,121 @@
+{
+  "schema": "wsb-system-graph-v2",
+  "id": "eu-grid-financing",
+  "as_of": "2026-11-11",
+  "mode": "evidence_graph_not_flow_simulation",
+  "nodes": [
+    "eu-grid-guarantees",
+    "eib-bnp-guarantees",
+    "eu-grid-manufacturers",
+    "capital-unblocks-grid-capacity",
+    "eu-grid-capacity"
+  ],
+  "edges": [
+    {
+      "id": "EGF-01",
+      "from": "eu-grid-guarantees",
+      "to": "eib-bnp-guarantees",
+      "type": "guarantee_instrument",
+      "flow": "capital",
+      "status": "reported_observation",
+      "substitutability": "unknown",
+      "evidence": {
+        "kind": "retrospective",
+        "relation_id": "RET-20261111-34"
+      },
+      "explanation": {
+        "en": "The EIB–BNP Paribas guarantee agreement is the documented financial instrument. Its signature does not establish grid construction.",
+        "ua": "Гарантійна угода ЄІБ та BNP Paribas — підтверджений фінансовий інструмент. Її підписання не означає будівництва електромереж."
+      },
+      "physical_delta": false
+    },
+    {
+      "id": "EGF-02",
+      "from": "eu-grid-guarantees",
+      "to": "eu-grid-manufacturers",
+      "type": "guarantee_support_for_manufacturers",
+      "flow": "capital",
+      "status": "reported_observation",
+      "substitutability": "unknown",
+      "evidence": {
+        "kind": "issue_claim",
+        "issue_id": "WSB-0003",
+        "claim_id": "CLM-260930-04",
+        "source_id": "WSB-SRC-0003-03"
+      },
+      "explanation": {
+        "en": "The agreement is designed to expand financing guarantees available to grid-equipment makers, not to certify that each eligible company already received one.",
+        "ua": "Угода має розширити доступ виробників мережевого обладнання до фінансових гарантій, але не засвідчує їх фактичне отримання кожним виробником."
+      },
+      "physical_delta": false
+    },
+    {
+      "id": "EGF-03",
+      "from": "eu-grid-manufacturers",
+      "to": "capital-unblocks-grid-capacity",
+      "type": "prospective_manufacturing_investment",
+      "flow": "capital",
+      "status": "analyst_assessment",
+      "substitutability": "unknown",
+      "evidence": {
+        "kind": "issue_claim",
+        "issue_id": "WSB-0003",
+        "claim_id": "CLM-260930-05",
+        "source_id": "WSB-SRC-0003-03"
+      },
+      "explanation": {
+        "en": "An editorial assessment connects supported equipment producers with prospective investment capacity; realised investment and output are not measured.",
+        "ua": "Аналітична оцінка пов'язує підтримку виробників з очікуваною інвестиційною спроможністю; фактичні інвестиції та випуск обладнання не виміряно."
+      },
+      "physical_delta": false
+    },
+    {
+      "id": "EGF-04",
+      "from": "capital-unblocks-grid-capacity",
+      "to": "eu-grid-capacity",
+      "type": "investment_target_not_commissioned",
+      "flow": "energy",
+      "status": "proposed_not_commissioned",
+      "substitutability": "proposed",
+      "evidence": {
+        "kind": "retrospective",
+        "relation_id": "RET-20261111-35"
+      },
+      "explanation": {
+        "en": "Projected grid capacity is an intended downstream outcome of financing support, not verified commissioned transmission or distribution infrastructure.",
+        "ua": "Майбутня пропускна спроможність мереж є метою фінансової підтримки, а не підтверджено введеною передавальною чи розподільчою інфраструктурою."
+      },
+      "physical_delta": false
+    }
+  ],
+  "dimensions": {
+    "flow": {
+      "en": "Capital guarantees for grid equipment manufacturing; any subsequent goods and electricity-network capacity flows remain prospective.",
+      "ua": "Гарантії капіталу для виробників мережевого обладнання; подальший товарний потік і пропускна спроможність електромереж наразі лише перспективні."
+    },
+    "dependency": {
+      "en": "Future investment in electrical grids depends in part on manufacturers' access to financing guarantees and their ability to deliver components.",
+      "ua": "Майбутні інвестиції в електромережі частково залежать від доступу виробників до фінансових гарантій і здатності постачати компоненти."
+    },
+    "bottleneck": {
+      "en": "The intervention addresses financial risk-bearing for grid component makers; it does not establish that equipment, labour, permitting or construction constraints have disappeared.",
+      "ua": "Інструмент зменшує фінансові ризики виробників; він не доводить усунення дефіциту обладнання, працівників, дозволів чи будівельних обмежень."
+    },
+    "substitutability": {
+      "en": "No measured substitute for manufacturing capacity or commissioning schedule is established by the guarantee agreement.",
+      "ua": "Угода не встановлює виміряної альтернативи виробничим потужностям або строків введення електромереж."
+    },
+    "leverage": {
+      "en": "Risk-sharing may increase banks' capacity to provide guarantees; the agreement forecasts investment leverage, not verified operational market power.",
+      "ua": "Поділ ризику може збільшити здатність банків видавати гарантії; прогноз інвестиційного мультиплікатора не є доведеним операційним впливом."
+    },
+    "rent": {
+      "en": "Potential benefits to manufacturers, banks or component suppliers cannot be apportioned without pricing, fees and realised investment data.",
+      "ua": "Можливі вигоди виробників, банків чи постачальників не можна розподілити без даних про ціни, комісії та фактично здійснені інвестиції."
+    },
+    "adaptation": {
+      "en": "The observed adaptation is financial risk-sharing through guarantees. No resulting physical grid extension is verified in this dossier.",
+      "ua": "Спостережена адаптація — розподіл фінансових ризиків через гарантії. Фізичного розширення електромереж у цьому досьє не підтверджено."
+    }
+  }
+}
