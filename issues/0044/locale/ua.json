@@ -1,0 +1,64 @@
+{
+  "locale": "ua",
+  "labels": {
+    "asean-fuel-ticket-reserve": "Проєкт спільних паливних резервів ASEAN",
+    "philippines-emergency-fuel-access": "Аварійний доступ Філіппін до резервів пального",
+    "orlen-qatarenergy-lng-contract": "Контракт Orlen–QatarEnergy на LNG",
+    "hormuz-lng-flow": "Поставки LNG через Ормуз",
+    "us-russia-graham-act-waiver": "Виняток США для російського пального",
+    "russian-diesel-us-market-acceptance": "Доступ російського дизеля на ринок США",
+    "aughinish-alumina-russia-flow": "Поставки ірландського глинозему Aughinish",
+    "russian-aluminium-smelting-input": "Глинозем для російських плавильних заводів",
+    "cnooc-bohai-ultradeep-gas-test": "Випробувальна свердловина CNOOC у Бохаї",
+    "bohai-prospective-gas-resource": "Перспективний ресурс газу в Бохаї"
+  },
+  "states": {
+    "not_previously_observed": "Раніше не зареєстровано у WSB",
+    "proposed_joint_fuel_ticket_scheme_from_2027": "Запропоновано паливну систему ticket, не раніше 2027 року",
+    "prospective_access_to_indonesia_thailand_stocks": "Можливі права на екстрену купівлю пального, ще не діють",
+    "termination_notice_issued_2026_11_10_60_day_tail": "Повідомлення від 10 листопада; угода діє ще 60 днів",
+    "shipping_disrupted": "Перевезення залишаються порушеними",
+    "qatar_lng_shipping_constraints_persist": "Обмеження поставок катарського LNG тривають",
+    "friday_waiver_reported": "Тимчасовий виняток був оголошений раніше",
+    "temporary_waiver_not_sufficient_for_import": "Виняток не гарантує здійсненого імпорту",
+    "cargo_unplaced_legal_and_commercial_barriers": "Для танкерного вантажу не підтверджені покупець і розвантаження в США",
+    "historical_shipments_reported_end_use_contested": "Попередні поставки описано; кінцеве використання спірне",
+    "irish_alumina_part_of_russian_input_supply": "Ірландський глинозем надходить у російську промислову переробку",
+    "well_test_reported_not_commercial_production": "CNOOC повідомляє про випробування, не промисловий видобуток",
+    "resource_prospect_not_commissioned_supply": "Перспективний ресурс, без підтверджених промислових поставок"
+  },
+  "assessments": {
+    "contractual_access_not_operational_supply": "Права, винятки й випробування ресурсів самі по собі не створюють доступних поставок."
+  },
+  "noise": {
+    "ticket_not_accessible_inventory": "TICKET — НЕ ВІДПУЩЕНЕ ПАЛЬНЕ",
+    "contract_notice_not_same_day_flow": "ПОВІДОМЛЕННЯ 10 ЛИСТОПАДА ≠ ПЕРЕВЕЗЕННЯ 12-ГО",
+    "waiver_not_sale": "ВИНЯТОК ≠ ПРОДАЖ ЧИ РОЗВАНТАЖЕННЯ",
+    "exploration_test_not_supply": "ВИПРОБУВАЛЬНИЙ ДЕБІТ ≠ ПРОМИСЛОВА ПОСТАВКА"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА ЗМІНА",
+    "map": "МАПА СИСТЕМИ",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "СИСТЕМНИЙ РЕЄСТР",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "АКТИВНІСТЬ СИСТЕМИ",
+    "headline": "ПРАВО НА РЕСУРС — ЩЕ НЕ ЙОГО ПОСТАВКА",
+    "deck": "ASEAN планує транскордонний доступ до резервів пального, Orlen припиняє один катарський LNG-контракт, а російський дизель не має підтвердженого покупця у США. Ірландський глинозем і китайська газова розвідка показують інші межі між ресурсом, правом та результатом.",
+    "mechanism": "Юридичні та фінансові права відрізняються від наявних запасів, прийняття товару покупцем та введеного виробництва.",
+    "chainNote": "ПРАВО ЕКСТРЕНОЇ КУПІВЛІ → ЗАПАСИ ПАЛЬНОГО → ВІДПУСК І ДОСТАВКА",
+    "evidenceNote": "План ASEAN відомий із Reuters із посиланням на Nikkei; листи про наміри 14 листопада і запуск у 2027 році не є доконаними фактами 12 листопада.",
+    "footer": "ПРАВО ≠ ЗАПАСИ · ВИНЯТОК ≠ ПОКУПЕЦЬ · ТЕСТ ≠ ПОСТАВКА"
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "persistent": "ТРИВАЄ",
+    "evidence_update": "ОНОВЛЕННЯ СВІДЧЕНЬ",
+    "developing": "РОЗВИВАЄТЬСЯ"
+  }
+}

@@ -927,6 +927,78 @@
         "en": "Russian grain export rerouting from Black Sea ports",
         "ua": "Перенаправлення експорту російського зерна з чорноморських портів"
       }
+    },
+    {
+      "id": "ENT-000104",
+      "slug": "asean-fuel-ticket-reserve",
+      "type": "policy_option",
+      "labels": {
+        "en": "ASEAN fuel-stock ticket scheme",
+        "ua": "Спільна система паливних резервів ASEAN"
+      }
+    },
+    {
+      "id": "ENT-000105",
+      "slug": "philippines-emergency-fuel-access",
+      "type": "energy_security_option",
+      "labels": {
+        "en": "Philippines emergency fuel access",
+        "ua": "Аварійний доступ Філіппін до пального"
+      }
+    },
+    {
+      "id": "ENT-000106",
+      "slug": "orlen-qatarenergy-lng-contract",
+      "type": "energy_contract",
+      "labels": {
+        "en": "Orlen–QatarEnergy LNG contract termination",
+        "ua": "Припинення LNG-контракту Orlen–QatarEnergy"
+      }
+    },
+    {
+      "id": "ENT-000107",
+      "slug": "russian-diesel-us-market-acceptance",
+      "type": "trade_access_constraint",
+      "labels": {
+        "en": "Russian diesel US-market acceptance barrier",
+        "ua": "Бар'єр доступу російського дизеля на ринок США"
+      }
+    },
+    {
+      "id": "ENT-000108",
+      "slug": "aughinish-alumina-russia-flow",
+      "type": "industrial_material_flow",
+      "labels": {
+        "en": "Aughinish alumina shipments to Russia",
+        "ua": "Постачання глинозему Aughinish до Росії"
+      }
+    },
+    {
+      "id": "ENT-000109",
+      "slug": "russian-aluminium-smelting-input",
+      "type": "industry_supply_chain",
+      "labels": {
+        "en": "Russian aluminium-smelting alumina input",
+        "ua": "Сировина для російського виробництва алюмінію"
+      }
+    },
+    {
+      "id": "ENT-000110",
+      "slug": "cnooc-bohai-ultradeep-gas-test",
+      "type": "exploration_asset",
+      "labels": {
+        "en": "CNOOC Bohai ultra-deep gas test well",
+        "ua": "Надглибока випробувальна газова свердловина CNOOC у Бохаї"
+      }
+    },
+    {
+      "id": "ENT-000111",
+      "slug": "bohai-prospective-gas-resource",
+      "type": "prospective_energy_resource",
+      "labels": {
+        "en": "Bohai prospective deep gas resource",
+        "ua": "Перспективний глибокий газовий ресурс Бохаю"
+      }
     }
   ]
 }

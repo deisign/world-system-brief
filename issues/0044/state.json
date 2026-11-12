@@ -1,0 +1,125 @@
+{
+  "issue_id": "WSB-0044",
+  "date": "2026-11-12",
+  "day_type": {
+    "system_activity": "low",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 3,
+    "persistent": 2
+  },
+  "objects": [
+    {
+      "id": "asean-fuel-ticket-reserve",
+      "entering_state": "not_previously_observed",
+      "current_state": "proposed_joint_fuel_ticket_scheme_from_2027",
+      "change": "evidence_update",
+      "status": "developing"
+    },
+    {
+      "id": "philippines-emergency-fuel-access",
+      "entering_state": "not_previously_observed",
+      "current_state": "prospective_access_to_indonesia_thailand_stocks",
+      "change": "evidence_update",
+      "status": "developing"
+    },
+    {
+      "id": "orlen-qatarenergy-lng-contract",
+      "entering_state": "not_previously_observed",
+      "current_state": "termination_notice_issued_2026_11_10_60_day_tail",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "hormuz-lng-flow",
+      "entering_state": "shipping_disrupted",
+      "current_state": "qatar_lng_shipping_constraints_persist",
+      "change": "evidence_update",
+      "status": "persistent"
+    },
+    {
+      "id": "us-russia-graham-act-waiver",
+      "entering_state": "friday_waiver_reported",
+      "current_state": "temporary_waiver_not_sufficient_for_import",
+      "change": "evidence_update",
+      "status": "persistent"
+    },
+    {
+      "id": "russian-diesel-us-market-acceptance",
+      "entering_state": "not_previously_observed",
+      "current_state": "cargo_unplaced_legal_and_commercial_barriers",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "aughinish-alumina-russia-flow",
+      "entering_state": "not_previously_observed",
+      "current_state": "historical_shipments_reported_end_use_contested",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "russian-aluminium-smelting-input",
+      "entering_state": "not_previously_observed",
+      "current_state": "irish_alumina_part_of_russian_input_supply",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "cnooc-bohai-ultradeep-gas-test",
+      "entering_state": "not_previously_observed",
+      "current_state": "well_test_reported_not_commercial_production",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "bohai-prospective-gas-resource",
+      "entering_state": "not_previously_observed",
+      "current_state": "resource_prospect_not_commissioned_supply",
+      "change": "evidence_update",
+      "status": "developing"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "asean-fuel-ticket-reserve",
+    "type": "evidence_update",
+    "sequence": [
+      "asean-fuel-ticket-reserve",
+      "philippines-emergency-fuel-access"
+    ],
+    "edges": [],
+    "assessment": "contractual_access_not_operational_supply"
+  },
+  "notes": [
+    "Reuters/Nikkei 12 November describes prospective ASEAN fuel ticketing with intended 2027 earliest start; letters of intent not yet signed at cutoff.",
+    "Orlen-QatarEnergy contractual termination is dated 10 November, not a newly occurring 12 November event; agreement remains in force for 60 days after notice.",
+    "11 November reporting on a Russian diesel tanker describes refusal/uncertainty among US importers despite an earlier sanctions waiver; no US discharge is verified.",
+    "12 November AP describes historical Irish alumina shipments to Russia and contested defence-sector end use; AP and officials disagree, and EU sanctions were not introduced today.",
+    "CNOOC's 12 November statement describes a deep-well test result rather than verified commercial gas deliveries.",
+    "No confirmed new large-scale physical flow or commissioned capacity is established at the editorial cutoff."
+  ],
+  "chain": [
+    "asean-fuel-ticket-reserve",
+    "philippines-emergency-fuel-access"
+  ],
+  "noise": [
+    {
+      "id": "ticket_not_accessible_inventory",
+      "result": "not_established"
+    },
+    {
+      "id": "contract_notice_not_same_day_flow",
+      "result": "not_established"
+    },
+    {
+      "id": "waiver_not_sale",
+      "result": "not_established"
+    },
+    {
+      "id": "exploration_test_not_supply",
+      "result": "not_established"
+    }
+  ]
+}

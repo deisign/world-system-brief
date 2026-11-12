@@ -1,0 +1,87 @@
+{
+  "issue_id": "WSB-0044",
+  "as_of": "2026-11-12",
+  "records": [
+    {
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high",
+      "id": "WSB-0044-SRC-01",
+      "source": "Reuters / Nikkei / ASEAN joint refined-product stockpiling proposal",
+      "url": "https://www.reuters.com/business/energy/asean-launch-joint-oil-product-stockpiling-scheme-early-2027-nikkei-reports-2026-11-12/",
+      "publication_date": "2026-11-12",
+      "claim": "Reuters relays Nikkei: an ASEAN joint ticket-based diesel/gasoline stockpiling scheme may start as early as 2027, initially giving the Philippines emergency purchase rights at facilities in Indonesia and Thailand; expressions of intent were expected on 14 November.",
+      "observation": "A proposed contractual access mechanism and future rights to acquire stored fuel, not proven reserve availability or operational distribution on November 12.",
+      "assessment": "PROPOSED POLICY ACCESS — NOT COMMISSIONED RESERVE CAPACITY",
+      "supports": [
+        "asean-fuel-ticket-reserve",
+        "philippines-emergency-fuel-access",
+        "refined-products-bottleneck"
+      ]
+    },
+    {
+      "source_type": "newswire",
+      "role": "previous_day_report",
+      "confidence": "high",
+      "id": "WSB-0044-SRC-02",
+      "source": "Reuters / Orlen terminates one QatarEnergy LNG contract",
+      "url": "https://www.reuters.com/business/energy/polands-orlen-ends-long-term-qatarenergy-lng-contract-over-delivery-failure-2026-11-10/",
+      "publication_date": "2026-11-10",
+      "claim": "Orlen issued a termination notice on 10 November for one 1-million-tonne-per-year LNG contract with QatarEnergy after prolonged force majeure; the contract remains effective 60 days after notice.",
+      "observation": "A real contractual decision on November 10, registered as retrospective evidence on November 12; not a new Nov 12 physical diversion or an immediate end to all Qatari contracts.",
+      "assessment": "DATED CONTRACTUAL TRANSITION — NO NEW 12 NOV PHYSICAL Δ",
+      "supports": [
+        "orlen-qatarenergy-lng-contract",
+        "hormuz-lng-flow"
+      ]
+    },
+    {
+      "source_type": "newswire",
+      "role": "previous_day_report",
+      "confidence": "high",
+      "id": "WSB-0044-SRC-03",
+      "source": "Reuters / US buyers wary of sanctioned Russian diesel cargo",
+      "url": "https://www.reuters.com/legal/government/us-companies-shunning-russian-diesel-tanker-carrying-that-fuel-idles-off-east-2026-11-11/",
+      "publication_date": "2026-11-11",
+      "claim": "Despite a US temporary sanctions waiver, buyers and banks remained wary of Russian diesel. A tanker off the US East Coast had not secured a verified US discharge or buyer.",
+      "observation": "Legal permission is not equivalent to bank finance, buyer acceptance, product compliance or completed delivery; the reporting is dated November 11.",
+      "assessment": "COMMERCIAL ACCESS BOTTLENECK — NO CONFIRMED US IMPORT",
+      "supports": [
+        "us-russia-graham-act-waiver",
+        "russian-diesel-us-market-acceptance"
+      ]
+    },
+    {
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "medium",
+      "id": "WSB-0044-SRC-04",
+      "source": "Associated Press / Sam McNeil and Jill Lawless / Aughinish alumina exports",
+      "url": "https://apnews.com/article/ireland-russia-ukraine-war-alumina-sanctions-75d388cc6e92cc97341c13eb8b0e7ce6",
+      "publication_date": "2026-11-12",
+      "claim": "AP traced ongoing exports of Irish Aughinish alumina to Russia and reported estimates and investigations of downstream aluminium supply, while Irish officials and the refinery dispute or say they cannot establish military end use; no new EU ban is enacted.",
+      "observation": "Existing material supply is documented, military end-use attribution is contested and the policy option is not in force. Activists' March–October volume is an attributed estimate.",
+      "assessment": "EXISTING INDUSTRIAL FLOW — CONTESTED END USE / NO NEW BAN",
+      "supports": [
+        "aughinish-alumina-russia-flow",
+        "russian-aluminium-smelting-input"
+      ]
+    },
+    {
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high",
+      "id": "WSB-0044-SRC-05",
+      "source": "Reuters / CNOOC ultra-deep Bohai well test",
+      "url": "https://www.reuters.com/business/energy/chinas-cnooc-reports-major-ultra-deep-gas-discovery-bohai-sea-2026-11-12/",
+      "publication_date": "2026-11-12",
+      "claim": "CNOOC reported a 5,770-metre deep Bohai exploration well with 120-plus metres of gas-bearing layers and an approximately 800,000-cubic-metre-per-day test rate.",
+      "observation": "A company-reported single-well test rate and prospective geological resource, not a commissioned annual gas supply capability or confirmed commercial delivery.",
+      "assessment": "EXPLORATION EVIDENCE — NOT OPERATING CAPACITY",
+      "supports": [
+        "cnooc-bohai-ultradeep-gas-test",
+        "bohai-prospective-gas-resource"
+      ]
+    }
+  ]
+}

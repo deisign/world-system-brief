@@ -1,0 +1,86 @@
+{
+  "issue_id": "WSB-0044",
+  "as_of": "2026-11-12",
+  "claims": [
+    {
+      "id": "WSB-0044-CLM-01",
+      "kind": "reported",
+      "statement": "ASEAN ticket-based fuel reserve would offer the Philippines emergency rights to buy inventory held in Indonesia and Thailand, possibly from 2027; no letters or operational stocks are verified as of 12 November.",
+      "observed_at": "2026-11-12",
+      "event_date": "2026-11-12",
+      "entity_ids": [
+        "ENT-000104",
+        "ENT-000105"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0044-CLM-02",
+      "kind": "reported",
+      "statement": "On 10 November Orlen issued termination notice for one QatarEnergy long-term LNG SPA after delivery force majeure, with a 60-day continuation. This is historical legal change, not a new 12 November LNG delivery.",
+      "observed_at": "2026-11-12",
+      "event_date": "2026-11-10",
+      "entity_ids": [
+        "ENT-000106",
+        "ENT-000038"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0044-CLM-03",
+      "kind": "reported",
+      "statement": "US waivers for Russian diesel have not produced a confirmed sale and discharge from a tanker holding off the US East Coast; financing and legal/buyer obstacles persist in the November 11 report.",
+      "observed_at": "2026-11-12",
+      "event_date": "2026-11-11",
+      "entity_ids": [
+        "ENT-000056",
+        "ENT-000107"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0044-CLM-04",
+      "kind": "reported",
+      "statement": "AP reports alumina flows from Irish Aughinish to Russian smelters while military end-use remains contested; an activist shipment figure is not an independently audited value and no EU export ban has been enacted today.",
+      "observed_at": "2026-11-12",
+      "event_date": "2026-11-12",
+      "entity_ids": [
+        "ENT-000108",
+        "ENT-000109"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-04"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0044-CLM-05",
+      "kind": "reported",
+      "statement": "CNOOC said its Bohai deep-gas test well flowed around 800,000 cubic metres per day during testing, not confirmed commercial operations or replacement gas supply.",
+      "observed_at": "2026-11-12",
+      "event_date": "2026-11-12",
+      "entity_ids": [
+        "ENT-000110",
+        "ENT-000111"
+      ],
+      "source_ids": [
+        "WSB-0044-SRC-05"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}
