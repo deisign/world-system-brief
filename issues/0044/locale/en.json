@@ -1,0 +1,64 @@
+{
+  "locale": "en",
+  "labels": {
+    "asean-fuel-ticket-reserve": "ASEAN fuel-ticket reserve proposal",
+    "philippines-emergency-fuel-access": "Philippines emergency stock access",
+    "orlen-qatarenergy-lng-contract": "Orlen–QatarEnergy LNG contract",
+    "hormuz-lng-flow": "LNG shipments through Hormuz",
+    "us-russia-graham-act-waiver": "US waiver for Russian fuel",
+    "russian-diesel-us-market-acceptance": "Russian diesel market access in the US",
+    "aughinish-alumina-russia-flow": "Irish Aughinish alumina deliveries",
+    "russian-aluminium-smelting-input": "Alumina for Russian smelters",
+    "cnooc-bohai-ultradeep-gas-test": "CNOOC Bohai test well",
+    "bohai-prospective-gas-resource": "Prospective Bohai gas resource"
+  },
+  "states": {
+    "not_previously_observed": "Not previously registered in WSB",
+    "proposed_joint_fuel_ticket_scheme_from_2027": "Cross-border fuel ticket scheme proposed, earliest 2027",
+    "prospective_access_to_indonesia_thailand_stocks": "Potential emergency fuel purchase rights, not yet operating",
+    "termination_notice_issued_2026_11_10_60_day_tail": "Notice issued 10 November; 60-day contract tail",
+    "shipping_disrupted": "Shipping remains disrupted",
+    "qatar_lng_shipping_constraints_persist": "Qatari LNG shipping limitations persist",
+    "friday_waiver_reported": "Temporary waiver previously reported",
+    "temporary_waiver_not_sufficient_for_import": "Waiver does not ensure completed import",
+    "cargo_unplaced_legal_and_commercial_barriers": "Tanker cargo lacks confirmed US buyer and discharge",
+    "historical_shipments_reported_end_use_contested": "Historical shipments described; end use contested",
+    "irish_alumina_part_of_russian_input_supply": "Irish alumina feeds Russian industrial processing",
+    "well_test_reported_not_commercial_production": "CNOOC well test reported, not commercial output",
+    "resource_prospect_not_commissioned_supply": "Prospective resource; no commissioned gas deliveries"
+  },
+  "assessments": {
+    "contractual_access_not_operational_supply": "Rights, waivers and resource tests do not necessarily create usable delivered supply."
+  },
+  "noise": {
+    "ticket_not_accessible_inventory": "TICKET IS NOT RELEASED INVENTORY",
+    "contract_notice_not_same_day_flow": "10 NOVEMBER NOTICE ≠ 12 NOVEMBER SHIPMENT",
+    "waiver_not_sale": "WAIVER ≠ SALE OR DISCHARGE",
+    "exploration_test_not_supply": "TEST RATE ≠ COMMERCIAL GAS SUPPLY"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "ACCESS ON PAPER IS NOT DELIVERED SUPPLY",
+    "deck": "ASEAN proposes cross-border emergency fuel rights while a Polish LNG buyer terminates one Qatari contract and a US-bound Russian diesel cargo faces commercial refusal. Reports on Irish alumina and a Chinese gas discovery expose further gaps between inputs, permissions and outcomes.",
+    "mechanism": "Legal and financial entitlements are separate from physical stock, buyer acceptance, and commissioned production.",
+    "chainNote": "EMERGENCY PURCHASE OPTION → STORED FUEL → RELEASE AND DELIVERY",
+    "evidenceNote": "The ASEAN plan is based on Reuters citing Nikkei; envisaged 14 November letters of intent and a 2027 start are not completed facts on 12 November.",
+    "footer": "RIGHT ≠ INVENTORY · WAIVER ≠ BUYER · TEST ≠ SUPPLY"
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  }
+}
