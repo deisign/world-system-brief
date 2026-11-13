@@ -1,0 +1,66 @@
+{
+  "locale": "en",
+  "labels": {
+    "global-oil-balance": "Global oil supply/demand balance",
+    "gulf-oil-flow": "Gulf crude export flow",
+    "global-observed-oil-inventories": "Observed global oil inventories",
+    "oil-on-water-inventories": "Oil on water / transit inventories",
+    "oil-on-land-inventories": "On-land oil stocks",
+    "refined-products-bottleneck": "Refined products bottleneck",
+    "global-diesel-product-tightness": "Global diesel scarcity",
+    "nvidia-china": "Nvidia processor exposure in China",
+    "china-restricted-chip-ai-projects": "Chinese restricted-chip AI projects",
+    "china-ai-chip-delivery-uncertainty": "Unverified accelerator deliveries"
+  },
+  "states": {
+    "september_october_surplus_bank_estimates_reported": "Earlier bank estimates of crude surplus",
+    "iea_q4_surplus_projection_after_october_supply_rebound": "IEA forecasts 4Q oil surplus after October recovery",
+    "october_crude_recovery_product_exports_lag": "October crude recovery outpaced products",
+    "iea_october_gulf_exports_elevated_but_at_risk": "IEA reports elevated October Gulf exports, security risk persists",
+    "not_previously_observed": "Not previously separately registered in WSB",
+    "iea_october_52mb_observed_stock_increase": "Observed inventories +52 mb in October",
+    "iea_october_86mb_floating_stock_increase": "Oil on water +86 mb in October",
+    "iea_october_onshore_stocks_still_falling": "Onshore inventories continued declining in October",
+    "gulf_products_lag_crude_export_recovery": "Refined products lag crude recovery",
+    "diesel_product_shortage_persists_despite_crude_surplus": "Diesel shortage persists despite crude rebalancing",
+    "iea_europe_diesel_near_180_dollars_and_77pct_above_prewar": "IEA: European diesel near $180/bbl; 77% above prewar",
+    "historically_observed": "Previously tracked China/Nvidia exposure",
+    "reuters_identifies_china_projects_reliant_on_restricted_nvidia_chips": "Reuters finds China AI projects designed for restricted processors",
+    "reported_23bn_yuan_mixed_stage_project_pipeline": "Over 23 billion yuan across planned, contracted, existing sites",
+    "chip_delivery_unverified_for_some_planned_projects": "Chip arrival unverified at some planned sites"
+  },
+  "assessments": {
+    "floating_crude_inventory_not_usable_refined_supply": "A global crude inventory increase can coexist with scarce diesel and declining onshore stocks."
+  },
+  "noise": {
+    "stock_on_water_not_refined_supply": "OIL ON WATER ≠ DIESEL AVAILABLE",
+    "quarterly_forecast_not_measured_daily_balance": "4Q FORECAST ≠ TODAY'S PHYSICAL Δ",
+    "project_value_not_chip_purchase": "PROJECT VALUE ≠ CHIP SPENDING",
+    "procurement_plan_not_delivery": "PROCUREMENT PLAN ≠ DELIVERED PROCESSORS"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "OIL RETURNS. THE BOTTLENECK DOES NOT.",
+    "deck": "The IEA measures rising October crude supply and floating stocks, yet on-land inventories shrink and diesel stays scarce. A Reuters survey of China's AI infrastructure reveals the same analytical trap: planned projects are not delivered processors.",
+    "mechanism": "Aggregate supply and investment totals obscure where usable inventories and actual components are located.",
+    "chainNote": "GULF CRUDE EXPORTS → OIL ON WATER → GLOBAL INVENTORIES; DIESEL STILL TIGHT",
+    "evidenceNote": "The IEA's November 13 report measures October changes and forecasts fourth-quarter balances. No 13 November increase in safe physical throughput is established.",
+    "footer": "CRUDE ≠ DIESEL · FLOATING ≠ AVAILABLE · PROJECT ≠ HARDWARE"
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  }
+}
