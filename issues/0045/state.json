@@ -1,0 +1,128 @@
+{
+  "issue_id": "WSB-0045",
+  "date": "2026-11-13",
+  "day_type": {
+    "system_activity": "low",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 2,
+    "persistent": 2
+  },
+  "objects": [
+    {
+      "id": "global-oil-balance",
+      "entering_state": "september_october_surplus_bank_estimates_reported",
+      "current_state": "iea_q4_surplus_projection_after_october_supply_rebound",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "gulf-oil-flow",
+      "entering_state": "october_crude_recovery_product_exports_lag",
+      "current_state": "iea_october_gulf_exports_elevated_but_at_risk",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "global-observed-oil-inventories",
+      "entering_state": "not_previously_observed",
+      "current_state": "iea_october_52mb_observed_stock_increase",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "oil-on-water-inventories",
+      "entering_state": "not_previously_observed",
+      "current_state": "iea_october_86mb_floating_stock_increase",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "oil-on-land-inventories",
+      "entering_state": "not_previously_observed",
+      "current_state": "iea_october_onshore_stocks_still_falling",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "refined-products-bottleneck",
+      "entering_state": "gulf_products_lag_crude_export_recovery",
+      "current_state": "diesel_product_shortage_persists_despite_crude_surplus",
+      "change": "evidence_update",
+      "status": "persistent"
+    },
+    {
+      "id": "global-diesel-product-tightness",
+      "entering_state": "not_previously_observed",
+      "current_state": "iea_europe_diesel_near_180_dollars_and_77pct_above_prewar",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "nvidia-china",
+      "entering_state": "historically_observed",
+      "current_state": "reuters_identifies_china_projects_reliant_on_restricted_nvidia_chips",
+      "change": "evidence_update",
+      "status": "persistent"
+    },
+    {
+      "id": "china-restricted-chip-ai-projects",
+      "entering_state": "not_previously_observed",
+      "current_state": "reported_23bn_yuan_mixed_stage_project_pipeline",
+      "change": "evidence_update",
+      "status": "developing"
+    },
+    {
+      "id": "china-ai-chip-delivery-uncertainty",
+      "entering_state": "not_previously_observed",
+      "current_state": "chip_delivery_unverified_for_some_planned_projects",
+      "change": "evidence_update",
+      "status": "developing"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "oil-on-water-inventories",
+    "type": "evidence_update",
+    "sequence": [
+      "gulf-oil-flow",
+      "oil-on-water-inventories",
+      "global-observed-oil-inventories"
+    ],
+    "edges": [],
+    "assessment": "floating_crude_inventory_not_usable_refined_supply"
+  },
+  "notes": [
+    "IEA Oil Market Report was published on 13 November; October supply and inventory measurements are not same-day physical increments.",
+    "IEA observes global supply +2.3 mb/d in October to 105.4 mb/d; stocks +52 mb with oil on water +86 mb and land inventories still declining.",
+    "IEA forecast of a fourth-quarter surplus is an outlook, not a measured 13 November balance.",
+    "IEA says diesel remains especially tight despite crude supply recovery; on-water inventories do not equate to refined products delivered to consumers.",
+    "Reuters 13 November review includes proposed, contracted and operating Chinese AI facilities in its more-than-23-billion-yuan estimate; the total is not processor expenditure alone.",
+    "Reports on hardware delivery uncertainty do not establish illegal transfers, procurement completion, or causal connections to Nvidia leadership allegations.",
+    "No new 13 November commissioned physical capacity or newly verified system-level physical transition is registered."
+  ],
+  "chain": [
+    "gulf-oil-flow",
+    "oil-on-water-inventories",
+    "global-observed-oil-inventories"
+  ],
+  "noise": [
+    {
+      "id": "stock_on_water_not_refined_supply",
+      "result": "not_established"
+    },
+    {
+      "id": "quarterly_forecast_not_measured_daily_balance",
+      "result": "not_established"
+    },
+    {
+      "id": "project_value_not_chip_purchase",
+      "result": "not_established"
+    },
+    {
+      "id": "procurement_plan_not_delivery",
+      "result": "not_established"
+    }
+  ]
+}
