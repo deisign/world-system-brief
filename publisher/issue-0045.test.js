@@ -21,7 +21,7 @@ test('publication date is never October inventory event date',()=>{
  }
  assert.equal(evidence.records.find(x=>x.id==='WSB-0045-SRC-01').publication_date,'2026-11-13');
 });
-test('floating stock and planned computing projects do not become today's commissioned capacity',()=>{
+test('floating stock and planned computing projects are not commissioned capacity today',()=>{
  assert.equal(state.summary.confirmed_delta,0);
  assert.ok(state.noise.some(x=>x.id==='stock_on_water_not_refined_supply'));
  assert.ok(state.noise.some(x=>x.id==='project_value_not_chip_purchase'));
