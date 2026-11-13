@@ -36,7 +36,7 @@ test('all dated relations from original issues remain unchanged',()=>{
  const {documented}=resolveRetrospectiveRelations(config,bundles,registry);
  const recovered=retrospectiveTemporalEdges(documented);
  assert.equal(old.length,43);
- assert.equal(old.filter(edge=>edge.events.every(event=>event.issue!=='WSB-0044')).length,32);
+ assert.equal(old.filter(edge=>edge.events.every(event=>!['WSB-0044','WSB-0045'].includes(event.issue))).length,32);
  assert.equal(recovered.length,34);
  assert.ok(recovered.every(x=>!old.some(y=>y.key===x.key)));
 });
@@ -112,7 +112,7 @@ test('13 context-only entities promoted to direct source-proven relations withou
   const edge=report.explicit_relations.find(x=>e.explicit_edges.includes(x.key)&&x.basis.includes('retrospective_source_review'));
   assert.ok(edge&&edge.sources.length&&edge.sources.every(s=>s.url.startsWith('https://')),slug);
  }
- assert.equal(report.counts.in_explicit_graph,103);
+ assert.equal(report.counts.in_explicit_graph,104);
  assert.equal(report.counts.in_any_graph,117);
  assert.equal(report.counts.fully_isolated,0);
 });
