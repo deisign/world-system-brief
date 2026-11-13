@@ -1,0 +1,66 @@
+{
+  "locale": "ua",
+  "labels": {
+    "global-oil-balance": "Глобальний баланс попиту й пропозиції нафти",
+    "gulf-oil-flow": "Експорт сирої нафти із Затоки",
+    "global-observed-oil-inventories": "Спостережувані світові запаси нафти",
+    "oil-on-water-inventories": "Нафта на воді / у транзиті",
+    "oil-on-land-inventories": "Наземні запаси нафти",
+    "refined-products-bottleneck": "Вузьке місце постачання нафтопродуктів",
+    "global-diesel-product-tightness": "Дефіцит дизельного пального у світі",
+    "nvidia-china": "Залежність Китаю від процесорів Nvidia",
+    "china-restricted-chip-ai-projects": "Китайські AI-проєкти з обмеженими чипами",
+    "china-ai-chip-delivery-uncertainty": "Непідтверджені поставки прискорювачів"
+  },
+  "states": {
+    "september_october_surplus_bank_estimates_reported": "Попередні банківські оцінки профіциту нафти",
+    "iea_q4_surplus_projection_after_october_supply_rebound": "МЕА прогнозує профіцит у IV кв. після відновлення у жовтні",
+    "october_crude_recovery_product_exports_lag": "Відновлення сирої нафти у жовтні випереджало нафтопродукти",
+    "iea_october_gulf_exports_elevated_but_at_risk": "МЕА фіксує високий експорт у жовтні, безпекові ризики тривають",
+    "not_previously_observed": "Раніше не виділено в реєстрі WSB",
+    "iea_october_52mb_observed_stock_increase": "Спостережувані запаси +52 млн барелів у жовтні",
+    "iea_october_86mb_floating_stock_increase": "Нафта на воді +86 млн барелів у жовтні",
+    "iea_october_onshore_stocks_still_falling": "Наземні запаси у жовтні далі знижувалися",
+    "gulf_products_lag_crude_export_recovery": "Нафтопродукти відстають від відновлення сирої нафти",
+    "diesel_product_shortage_persists_despite_crude_surplus": "Дефіцит дизеля триває попри відновлення балансу нафти",
+    "iea_europe_diesel_near_180_dollars_and_77pct_above_prewar": "МЕА: дизель у Європі близько $180/бар.; на 77% вище довоєнного",
+    "historically_observed": "Раніше відстежувана залежність Китай/Nvidia",
+    "reuters_identifies_china_projects_reliant_on_restricted_nvidia_chips": "Reuters виявило AI-проєкти Китаю під обмежені процесори",
+    "reported_23bn_yuan_mixed_stage_project_pipeline": "Понад 23 млрд юанів у планах, контрактах та чинних об’єктах",
+    "chip_delivery_unverified_for_some_planned_projects": "Надходження чипів на окремі заплановані об’єкти не перевірено"
+  },
+  "assessments": {
+    "floating_crude_inventory_not_usable_refined_supply": "Зростання світових запасів сирої нафти може поєднуватися з дефіцитом дизеля та зниженням наземних запасів."
+  },
+  "noise": {
+    "stock_on_water_not_refined_supply": "НАФТА НА ВОДІ ≠ ДОСТУПНИЙ ДИЗЕЛЬ",
+    "quarterly_forecast_not_measured_daily_balance": "ПРОГНОЗ IV КВАРТАЛУ ≠ ФІЗИЧНА ЗМІНА СЬОГОДНІ",
+    "project_value_not_chip_purchase": "ВАРТІСТЬ ПРОЄКТУ ≠ ВИТРАТИ НА ЧИПИ",
+    "procurement_plan_not_delivery": "ПЛАН ЗАКУПІВЛІ ≠ ПОСТАВЛЕНІ ПРОЦЕСОРИ"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА ЗМІНА",
+    "map": "МАПА СИСТЕМИ",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "СИСТЕМНИЙ РЕЄСТР",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "АКТИВНІСТЬ СИСТЕМИ",
+    "headline": "НАФТА ПОВЕРТАЄТЬСЯ. ВУЗЬКЕ МІСЦЕ ЗАЛИШАЄТЬСЯ.",
+    "deck": "МЕА зафіксувало зростання пропозиції нафти й запасів у морі в жовтні, але наземні запаси скорочуються, а дизель залишається дефіцитним. Огляд китайської AI-інфраструктури Reuters демонструє ту саму пастку: заплановані проєкти — не поставлені процесори.",
+    "mechanism": "Сукупні обсяги пропозиції та інвестицій приховують, де саме перебувають доступні запаси й реальні компоненти.",
+    "chainNote": "ЕКСПОРТ НАФТИ ІЗ ЗАТОКИ → НАФТА В МОРІ → СВІТОВІ ЗАПАСИ; ДИЗЕЛЬ ДЕФІЦИТНИЙ",
+    "evidenceNote": "Звіт МЕА від 13 листопада вимірює жовтневі зміни та прогнозує баланс IV кварталу. Нового приросту безпечного фізичного потоку 13 листопада не встановлено.",
+    "footer": "СИРА НАФТА ≠ ДИЗЕЛЬ · ТРАНЗИТ ≠ ДОСТУПНІСТЬ · ПРОЄКТ ≠ ОБЛАДНАННЯ"
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "persistent": "ТРИВАЄ",
+    "evidence_update": "ОНОВЛЕННЯ СВІДЧЕНЬ",
+    "developing": "РОЗВИВАЄТЬСЯ"
+  }
+}

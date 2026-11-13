@@ -310,9 +310,9 @@ class BrowserSmoke(unittest.TestCase):
         for lang in ("en", "ua"):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 self.assertEqual(page.locator("#relation-changelog").count(), 1)
-                self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-12")
+                self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-13")
                 current = page.locator("#relation-changelog .relation-change")
-                self.assertEqual(current.count(), 5)
+                self.assertEqual(current.count(), 6)
                 self.assertEqual(current.first.get_attribute("data-change-kind"), "first_recorded")
                 self.assertEqual(page.locator("#relation-changelog [data-change-kind^='confirmed']").count(), 0)
                 page.locator("#map-date").select_option("2026-11-09")
@@ -327,8 +327,8 @@ class BrowserSmoke(unittest.TestCase):
         for lang in ("en", "ua"):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 entries = page.locator("#entity-connections .connectivity-item")
-                self.assertEqual(entries.count(), 111)
-                self.assertEqual(page.locator("#connectivity-visible").inner_text(), "111")
+                self.assertEqual(entries.count(), 117)
+                self.assertEqual(page.locator("#connectivity-visible").inner_text(), "117")
                 page.locator("#connectivity-mode").select_option("isolated")
                 self.assertEqual(page.locator("#entity-connections .connectivity-item:visible").count(), 0)
                 self.assertEqual(page.locator("#connectivity-visible").inner_text(), "0")

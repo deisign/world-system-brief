@@ -1,0 +1,90 @@
+{
+  "issue_id": "WSB-0045",
+  "as_of": "2026-11-13",
+  "relations": [
+    {
+      "id": "WSB-0045-REL-01",
+      "from": "gulf-oil-flow",
+      "to": "oil-on-water-inventories",
+      "type": "reported_export_flow_contributes_to_floating_inventory",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0045-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-01"
+      ],
+      "note": "October Gulf crude export recovery and global oil-on-water increase are IEA observations, not a measured exclusive causal attribution."
+    },
+    {
+      "id": "WSB-0045-REL-02",
+      "from": "oil-on-water-inventories",
+      "to": "global-observed-oil-inventories",
+      "type": "reported_component_of_october_stock_change",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0045-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-01"
+      ],
+      "note": "86 mb floating increase is a component in the observed October global stock change; onshore change offsets it."
+    },
+    {
+      "id": "WSB-0045-REL-03",
+      "from": "oil-on-land-inventories",
+      "to": "global-observed-oil-inventories",
+      "type": "reported_offset_in_october_stock_accounting",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0045-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-01"
+      ],
+      "note": "Land stocks continued declining, limiting interpretation of aggregate 52 mb observed inventory build."
+    },
+    {
+      "id": "WSB-0045-REL-04",
+      "from": "refined-products-bottleneck",
+      "to": "global-diesel-product-tightness",
+      "type": "reported_diesel_component_of_refined_product_constraint",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0045-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-01"
+      ],
+      "note": "Diesel product scarcity is separate from global crude balance and not mathematically inferred from it."
+    },
+    {
+      "id": "WSB-0045-REL-05",
+      "from": "nvidia-china",
+      "to": "china-restricted-chip-ai-projects",
+      "type": "reported_design_dependence_on_restricted_accelerators",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0045-CLM-04"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-03"
+      ],
+      "note": "Mixed-stage project values do not indicate all chips were purchased."
+    },
+    {
+      "id": "WSB-0045-REL-06",
+      "from": "china-restricted-chip-ai-projects",
+      "to": "china-ai-chip-delivery-uncertainty",
+      "type": "reported_missing_delivery_verification_for_some_projects",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0045-CLM-05"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-03"
+      ],
+      "note": "Cannot infer unlawful transfer or that every planned facility is operational."
+    }
+  ]
+}

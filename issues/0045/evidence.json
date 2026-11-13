@@ -1,0 +1,62 @@
+{
+  "issue_id": "WSB-0045",
+  "as_of": "2026-11-13",
+  "records": [
+    {
+      "id": "WSB-0045-SRC-01",
+      "source_type": "official_record",
+      "role": "primary_policy_record",
+      "confidence": "high",
+      "source": "International Energy Agency / Oil Market Report November 2026",
+      "url": "https://www.iea.org/reports/oil-market-report-november-2026",
+      "publication_date": "2026-11-13",
+      "claim": "IEA reports October oil supply of 105.4 mb/d (+2.3 mb/d month on month), observed inventories +52 mb, oil on water +86 mb, on-land inventories still falling, and persistent refined diesel tightness. Q4 surplus is projected, not a physical delta on publication day.",
+      "observation": "Measured October volumes, observed inventories and 4Q forecast are separate time bases and categories; 52 mb observed global stocks is not 52 mb of available diesel or usable onshore inventory.",
+      "assessment": "OCTOBER MEASUREMENT / QUARTERLY OUTLOOK NOT 13 NOV THROUGHPUT",
+      "supports": [
+        "global-oil-balance",
+        "gulf-oil-flow",
+        "global-observed-oil-inventories",
+        "oil-on-water-inventories",
+        "oil-on-land-inventories",
+        "refined-products-bottleneck",
+        "global-diesel-product-tightness"
+      ]
+    },
+    {
+      "id": "WSB-0045-SRC-02",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high",
+      "source": "Reuters / Alex Lawler / IEA oil surplus analysis",
+      "url": "https://www.reuters.com/business/energy/world-oil-market-is-returning-surplus-gulf-exports-recover-iea-says-2026-11-13/",
+      "publication_date": "2026-11-13",
+      "claim": "Reuters summarises the IEA 13 November report: supply-demand surplus expected in the fourth quarter as Gulf shipments recover, with attacks remaining a persistent route risk and diesel stocks not normalized.",
+      "observation": "IEA's market-wide balance is a forecast distinct from safety and product availability; any cited price is an intraday signal.",
+      "assessment": "BALANCE FORECAST NOT PROOF OF NORMAL SHIPPING",
+      "supports": [
+        "global-oil-balance",
+        "gulf-oil-flow",
+        "refined-products-bottleneck",
+        "global-diesel-product-tightness"
+      ]
+    },
+    {
+      "id": "WSB-0045-SRC-03",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high",
+      "source": "Reuters / Eduardo Baptista / Chinese Nvidia-reliant AI infrastructure",
+      "url": "https://www.reuters.com/world/china/huang-exit-us-scrutiny-imperil-3-billion-chinese-ai-projects-reliant-nvidia-2026-11-13/",
+      "publication_date": "2026-11-13",
+      "claim": "Reuters reviewed more than 150 Chinese procurement and investment records and identified AI infrastructure projects reported at more than 23 billion yuan ($3.2 billion), spanning proposed, contracted and operating sites dependent on restricted Nvidia accelerators. The figure is not chip-only purchasing; some chip arrivals are unverified.",
+      "observation": "Procurement plans, signed contracts, functioning sites and processor delivery are different evidence stages. Reuters explicitly has no public finding linking the named projects to Nvidia leadership allegations or proving illegal diversion.",
+      "assessment": "INVESTMENT PIPELINE IS NOT DELIVERED CHIPS",
+      "supports": [
+        "nvidia-china",
+        "china-restricted-chip-ai-projects",
+        "china-ai-chip-delivery-uncertainty"
+      ]
+    }
+  ]
+}

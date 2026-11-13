@@ -1,0 +1,91 @@
+{
+  "issue_id": "WSB-0045",
+  "as_of": "2026-11-13",
+  "claims": [
+    {
+      "id": "WSB-0045-CLM-01",
+      "kind": "reported",
+      "statement": "IEA's 13 November publication reports October world oil supply rising 2.3 mb/d to 105.4 mb/d and observed global oil inventories increasing by 52 mb; the movement is dated October, not a new 13 November physical delta.",
+      "observed_at": "2026-11-13",
+      "event_date": "2026-10-31",
+      "entity_ids": [
+        "ENT-000050",
+        "ENT-000043",
+        "ENT-000112"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-01",
+        "WSB-0045-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0045-CLM-02",
+      "kind": "reported",
+      "statement": "IEA reports oil on water rising 86 mb in October while on-land inventories continue falling; the floating portion is not evidence of diesel available to end users.",
+      "observed_at": "2026-11-13",
+      "event_date": "2026-10-31",
+      "entity_ids": [
+        "ENT-000112",
+        "ENT-000113",
+        "ENT-000114"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0045-CLM-03",
+      "kind": "reported",
+      "statement": "IEA expects a fourth-quarter supply surplus but states diesel product supply remains especially tight; crude balances must not be equated to refinery product availability.",
+      "observed_at": "2026-11-13",
+      "event_date": "2026-11-13",
+      "entity_ids": [
+        "ENT-000050",
+        "ENT-000035",
+        "ENT-000115"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-01",
+        "WSB-0045-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0045-CLM-04",
+      "kind": "reported",
+      "statement": "Reuters finds over 23 billion yuan in Chinese AI infrastructure projects linked to restricted Nvidia accelerators, including construction and power costs and different project stages; the amount is not chip purchases alone.",
+      "observed_at": "2026-11-13",
+      "event_date": "2026-11-13",
+      "entity_ids": [
+        "ENT-000093",
+        "ENT-000116"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0045-CLM-05",
+      "kind": "reported",
+      "statement": "Reuters could not verify delivery of restricted accelerators to some listed projects; potential redesigns and delays are risks, not verified shipment outcomes or proof of unlawful diversions.",
+      "observed_at": "2026-11-13",
+      "event_date": "2026-11-13",
+      "entity_ids": [
+        "ENT-000116",
+        "ENT-000117"
+      ],
+      "source_ids": [
+        "WSB-0045-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}

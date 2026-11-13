@@ -999,6 +999,60 @@
         "en": "Bohai prospective deep gas resource",
         "ua": "Перспективний глибокий газовий ресурс Бохаю"
       }
+    },
+    {
+      "id": "ENT-000112",
+      "slug": "global-observed-oil-inventories",
+      "type": "oil_inventory",
+      "labels": {
+        "en": "Observed global oil inventories",
+        "ua": "Спостережувані світові запаси нафти"
+      }
+    },
+    {
+      "id": "ENT-000113",
+      "slug": "oil-on-water-inventories",
+      "type": "floating_inventory",
+      "labels": {
+        "en": "Oil in transit and on water",
+        "ua": "Нафта в морському транзиті"
+      }
+    },
+    {
+      "id": "ENT-000114",
+      "slug": "oil-on-land-inventories",
+      "type": "land_inventory",
+      "labels": {
+        "en": "On-land oil inventories",
+        "ua": "Наземні запаси нафти"
+      }
+    },
+    {
+      "id": "ENT-000115",
+      "slug": "global-diesel-product-tightness",
+      "type": "refined_products_constraint",
+      "labels": {
+        "en": "Global diesel supply tightness",
+        "ua": "Дефіцит дизельного пального у світі"
+      }
+    },
+    {
+      "id": "ENT-000116",
+      "slug": "china-restricted-chip-ai-projects",
+      "type": "technology_infrastructure",
+      "labels": {
+        "en": "Chinese AI projects designed around restricted Nvidia chips",
+        "ua": "Китайські AI-проєкти з підсанкційними чипами Nvidia"
+      }
+    },
+    {
+      "id": "ENT-000117",
+      "slug": "china-ai-chip-delivery-uncertainty",
+      "type": "technology_access_constraint",
+      "labels": {
+        "en": "Uncertain delivery of restricted AI processors",
+        "ua": "Невизначеність поставок обмежених AI-процесорів"
+      }
     }
   ]
 }
