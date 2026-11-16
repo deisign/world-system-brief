@@ -1,0 +1,57 @@
+{
+  "issue_id": "WSB-0046",
+  "as_of": "2026-11-14",
+  "claims": [
+    {
+      "id": "WSB-0046-CLM-01",
+      "kind": "reported",
+      "statement": "US administration extended a 90-day waiver on 13 November, not 14 November; applications for eligible foreign-flag coastwise ships still require individual review.",
+      "observed_at": "2026-11-14",
+      "event_date": "2026-11-13",
+      "entity_ids": [
+        "ENT-000118",
+        "ENT-000119"
+      ],
+      "source_ids": [
+        "WSB-0046-SRC-01",
+        "WSB-0046-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0046-CLM-02",
+      "kind": "reported",
+      "statement": "White House's 90-million-barrel estimate is cumulative since March, not 14 November throughput or a verified extra delivery due to the extension.",
+      "observed_at": "2026-11-14",
+      "event_date": "2026-11-13",
+      "entity_ids": [
+        "ENT-000118",
+        "ENT-000120"
+      ],
+      "source_ids": [
+        "WSB-0046-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0046-CLM-03",
+      "kind": "reported",
+      "statement": "Potential access to foreign-flag tankers may ease US domestic distribution, but vessel authorisation, freight and terminal conditions still constrain any diesel-price effect.",
+      "observed_at": "2026-11-14",
+      "event_date": "2026-11-14",
+      "entity_ids": [
+        "ENT-000119",
+        "ENT-000120",
+        "ENT-000115"
+      ],
+      "source_ids": [
+        "WSB-0046-SRC-01",
+        "WSB-0046-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}
