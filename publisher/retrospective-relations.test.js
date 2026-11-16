@@ -112,7 +112,7 @@ test('13 context-only entities promoted to direct source-proven relations withou
   const edge=report.explicit_relations.find(x=>e.explicit_edges.includes(x.key)&&x.basis.includes('retrospective_source_review'));
   assert.ok(edge&&edge.sources.length&&edge.sources.every(s=>s.url.startsWith('https://')),slug);
  }
- assert.ok(report.counts.in_explicit_graph>=104&&report.counts.in_explicit_graph<=127);
+ assert.equal(report.counts.in_explicit_graph,114);
  assert.equal(report.counts.in_any_graph,127);
  assert.equal(report.counts.fully_isolated,0);
 });
