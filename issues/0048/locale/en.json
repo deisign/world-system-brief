@@ -1,0 +1,59 @@
+{
+  "locale": "en",
+  "labels": {
+    "us-jones-act-energy-waiver": "US Jones Act fuel-shipping waiver",
+    "us-coastwise-vessel-eligibility": "Foreign-flag vessel eligibility for US coastal trade",
+    "hormuz-nov16-unverified-tanker-claims": "Unverified Hormuz tanker mine claims (16 November)",
+    "hormuz-market-security-premium": "Hormuz navigation risk premium",
+    "china-october-refinery-throughput": "China October 2026 refinery throughput",
+    "iea-emergency-diesel-schedule": "IEA emergency diesel reserve release schedule",
+    "global-oil-balance": "Global oil balance"
+  },
+  "states": {
+    "nov13_extension_announced_effective_nov16": "nov13 extension announced effective nov16",
+    "policy_extension_effective_nov16": "policy extension effective nov16",
+    "foreign_flag_access_extended_with_individual_approval": "foreign flag access extended with individual approval",
+    "conditional_voyage_approval_remains": "conditional voyage approval remains",
+    "not_previously_observed": "not previously observed",
+    "irgc_mine_incidents_unverified_by_reuters": "irgc mine incidents unverified by reuters",
+    "shipping_risk_reported": "shipping risk reported",
+    "shipping_risk_persists_despite_oil_surplus_signal": "shipping risk persists despite oil surplus signal",
+    "october_throughput_decline_dated_oct31": "october throughput decline dated oct31",
+    "future_release_schedule_not_delivered": "future release schedule not delivered",
+    "iea_q4_surplus_projection_after_october_supply_rebound": "iea q4 surplus projection after october supply rebound",
+    "nov16_market_prices_reflect_forecast_uncertainty": "nov16 market prices reflect forecast uncertainty"
+  },
+  "assessments": {
+    "effective_policy_option_not_verified_delivery": "US shipping-law extension takes effect under individual approvals; Iranian tanker claims remain unverified despite oil surplus forecasts. Planned diesel reserves are not delivered."
+  },
+  "noise": {
+    "claim_not_verified_tanker_hit": "CLAIM NOT VERIFIED TANKER HIT",
+    "diesel_schedule_not_delivery": "DIESEL SCHEDULE NOT DELIVERY",
+    "price_not_passage": "PRICE NOT PASSAGE"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "THE WAIVER IS LIVE. HORMUZ IS NOT SAFE.",
+    "deck": "US shipping-law extension takes effect under individual approvals; Iranian tanker claims remain unverified despite oil surplus forecasts. Planned diesel reserves are not delivered.",
+    "mechanism": "US shipping-law extension takes effect under individual approvals; Iranian tanker claims remain unverified despite oil surplus forecasts. Planned diesel reserves are not delivered.",
+    "chainNote": "us-jones-act-energy-waiver → us-coastwise-vessel-eligibility → us-domestic-fuel-coastwise-flow",
+    "evidenceNote": "Dates of announcement, publication and actual operating change are separate.",
+    "footer": "WAIVER ≠ VESSEL · CLAIM ≠ STRIKE · FORECAST ≠ DELIVERY"
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  }
+}
