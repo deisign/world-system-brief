@@ -1,0 +1,101 @@
+{
+  "issue_id": "WSB-0048",
+  "date": "2026-11-16",
+  "day_type": {
+    "system_activity": "low",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 1,
+    "persistent": 2
+  },
+  "objects": [
+    {
+      "id": "us-jones-act-energy-waiver",
+      "entering_state": "nov13_extension_announced_effective_nov16",
+      "current_state": "policy_extension_effective_nov16",
+      "status": "evidence_update",
+      "change": "evidence_update"
+    },
+    {
+      "id": "us-coastwise-vessel-eligibility",
+      "entering_state": "foreign_flag_access_extended_with_individual_approval",
+      "current_state": "conditional_voyage_approval_remains",
+      "status": "persistent",
+      "change": "evidence_update"
+    },
+    {
+      "id": "hormuz-nov16-unverified-tanker-claims",
+      "entering_state": "not_previously_observed",
+      "current_state": "irgc_mine_incidents_unverified_by_reuters",
+      "status": "evidence_update",
+      "change": "evidence_update"
+    },
+    {
+      "id": "hormuz-market-security-premium",
+      "entering_state": "shipping_risk_reported",
+      "current_state": "shipping_risk_persists_despite_oil_surplus_signal",
+      "status": "persistent",
+      "change": "evidence_update"
+    },
+    {
+      "id": "china-october-refinery-throughput",
+      "entering_state": "not_previously_observed",
+      "current_state": "october_throughput_decline_dated_oct31",
+      "status": "evidence_update",
+      "change": "evidence_update"
+    },
+    {
+      "id": "iea-emergency-diesel-schedule",
+      "entering_state": "not_previously_observed",
+      "current_state": "future_release_schedule_not_delivered",
+      "status": "developing",
+      "change": "evidence_update"
+    },
+    {
+      "id": "global-oil-balance",
+      "entering_state": "iea_q4_surplus_projection_after_october_supply_rebound",
+      "current_state": "nov16_market_prices_reflect_forecast_uncertainty",
+      "status": "evidence_update",
+      "change": "evidence_update"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "us-jones-act-energy-waiver",
+    "type": "evidence_update",
+    "sequence": [
+      "us-jones-act-energy-waiver",
+      "us-coastwise-vessel-eligibility",
+      "us-domestic-fuel-coastwise-flow"
+    ],
+    "edges": [],
+    "assessment": "effective_policy_option_not_verified_delivery"
+  },
+  "notes": [
+    "Nov16 renewal becomes effective after Nov13 announcement, individual vessel permission still required.",
+    "Reuters Nov16 price is a timestamped market signal, not documented safe passage.",
+    "IRGC tanker/mine claims are attributed and unverified by Reuters; no physical delta claimed.",
+    "Refinery throughput figures are October measurements reported today.",
+    "IEA planned diesel releases are not the same as physical diesel deliveries by editorial cutoff."
+  ],
+  "chain": [
+    "us-jones-act-energy-waiver",
+    "us-coastwise-vessel-eligibility",
+    "us-domestic-fuel-coastwise-flow"
+  ],
+  "noise": [
+    {
+      "id": "claim_not_verified_tanker_hit",
+      "result": "not_established"
+    },
+    {
+      "id": "diesel_schedule_not_delivery",
+      "result": "not_established"
+    },
+    {
+      "id": "price_not_passage",
+      "result": "not_established"
+    }
+  ]
+}
