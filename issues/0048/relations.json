@@ -1,0 +1,76 @@
+{
+  "issue_id": "WSB-0048",
+  "as_of": "2026-11-16",
+  "relations": [
+    {
+      "id": "WSB-0048-REL-01",
+      "from": "us-jones-act-energy-waiver",
+      "to": "us-coastwise-vessel-eligibility",
+      "type": "nov16_renewal_effective_with_voyage_review",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0048-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-02"
+      ],
+      "note": "Legal access rule takes effect, not a verified ship's completed voyage."
+    },
+    {
+      "id": "WSB-0048-REL-02",
+      "from": "hormuz-nov16-unverified-tanker-claims",
+      "to": "hormuz-market-security-premium",
+      "type": "unverified_claims_as_risk_context_not_physical_delta",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0048-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-01"
+      ],
+      "note": "Source records claims as unverified and reports market conditions separately; no proven causality or mine strike."
+    },
+    {
+      "id": "WSB-0048-REL-03",
+      "from": "china-october-refinery-throughput",
+      "to": "global-diesel-product-tightness",
+      "type": "refining_capacity_context_not_measured_diesel_delta",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0048-CLM-04"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-01"
+      ],
+      "note": "October Chinese refinery statistics are context for global product tightness, not a measured direct causal contribution."
+    },
+    {
+      "id": "WSB-0048-REL-04",
+      "from": "iea-emergency-diesel-schedule",
+      "to": "global-diesel-product-tightness",
+      "type": "planned_reserve_release_addresses_shortage",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0048-CLM-05"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-03"
+      ],
+      "note": "Future reserved volume planned, not delivered on Nov16."
+    },
+    {
+      "id": "WSB-0048-REL-05",
+      "from": "global-oil-balance",
+      "to": "hormuz-market-security-premium",
+      "type": "oil_surplus_forecast_coexists_with_shipping_risk",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0048-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-01"
+      ],
+      "note": "Contextual comparison, not proven price causality or safe transit."
+    }
+  ]
+}
