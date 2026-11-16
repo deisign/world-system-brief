@@ -1,0 +1,62 @@
+{
+  "issue_id": "WSB-0047",
+  "as_of": "2026-11-15",
+  "relations": [
+    {
+      "id": "WSB-0047-REL-01",
+      "from": "egypt-mina-west-gas-field",
+      "to": "egypt-west-delta-deep-marine-network",
+      "type": "commissioned_tieback_using_existing_network",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0047-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0047-SRC-01"
+      ],
+      "note": "Shell confirmed production startup; 160 mmcf/day is an estimate, not verified actual output."
+    },
+    {
+      "id": "WSB-0047-REL-02",
+      "from": "egypt-west-delta-deep-marine-network",
+      "to": "egypt-domestic-gas-supply",
+      "type": "new_field_connected_to_domestic_supply",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0047-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0047-SRC-01"
+      ],
+      "note": "New domestic gas supply connected, but no independently measured output rate."
+    },
+    {
+      "id": "WSB-0047-REL-03",
+      "from": "red-sea-bab-el-mandeb-security",
+      "to": "red-sea-commercial-shipping-risk",
+      "type": "reported_retreat_increases_route_security_exposure",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0047-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0047-SRC-02"
+      ],
+      "note": "Reported security conditions, not quantified interrupted trade volume."
+    },
+    {
+      "id": "WSB-0047-REL-04",
+      "from": "red-sea-bab-el-mandeb-security",
+      "to": "east-west-pipeline",
+      "type": "regional_security_risk_context_not_pipeline_outage",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0047-CLM-04"
+      ],
+      "source_ids": [
+        "WSB-0047-SRC-02"
+      ],
+      "note": "Contextual security risk only; no new physical pipeline-outage claim."
+    }
+  ]
+}
