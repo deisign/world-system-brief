@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
     name: Full build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout exact commit
         uses: actions/checkout@v4
@@ -79,7 +79,7 @@ jobs:
     name: Publish validated WSB to GitHub Pages
     needs: build
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       pages: write
