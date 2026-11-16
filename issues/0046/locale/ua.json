@@ -7,21 +7,21 @@
     "global-diesel-product-tightness": "Дефіцит дизельного пального у світі"
   },
   "states": {
-    "previous_waiver_expiring_nov15": "previous waiver expiring nov15",
-    "nov13_extension_announced_effective_nov16": "nov13 extension announced effective nov16",
-    "case_by_case_permission_existing": "case by case permission existing",
-    "foreign_flag_access_extended_with_individual_approval": "foreign flag access extended with individual approval",
-    "waiver_cumulative_historic_shipments": "waiver cumulative historic shipments",
-    "no_confirmed_nov14_increment": "no confirmed nov14 increment",
-    "iea_diesel_market_tight": "iea diesel market tight",
-    "transport_option_not_refining_solution": "transport option not refining solution"
+    "previous_waiver_expiring_nov15": "Попередній виняток діє до 15 листопада",
+    "nov13_extension_announced_effective_nov16": "Продовження оголошене 13-го, чинне з 16 листопада",
+    "case_by_case_permission_existing": "Діє індивідуальне погодження рейсів",
+    "foreign_flag_access_extended_with_individual_approval": "Доступ іноземних суден продовжено з окремим дозволом",
+    "waiver_cumulative_historic_shipments": "Накопичені історичні перевезення за попередніми винятками",
+    "no_confirmed_nov14_increment": "Нових перевезених обсягів за 14 листопада не підтверджено",
+    "iea_diesel_market_tight": "МЕА фіксує дефіцит дизеля",
+    "transport_option_not_refining_solution": "Додаткові судна не вирішують проблему переробки"
   },
   "assessments": {
     "conditional_transport_access_not_commissioned_throughput": "США продовжують умовний доступ іноземних суден до внутрішніх перевезень пального, але кожен рейс потребує дозволу. Нових виміряних поставок 14 листопада немає."
   },
   "noise": {
-    "waiver_not_voyage": "WAIVER NOT VOYAGE",
-    "cumulative_not_daily": "CUMULATIVE NOT DAILY"
+    "waiver_not_voyage": "ВИНЯТОК ≠ ВИКОНАНИЙ РЕЙС",
+    "cumulative_not_daily": "НАКОПИЧЕНИЙ ОБСЯГ ≠ ДОБОВІ ПОСТАВКИ"
   },
   "copy": {
     "systemDelta": "СИСТЕМНА ЗМІНА",
