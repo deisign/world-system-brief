@@ -1,0 +1,41 @@
+{
+  "issue_id": "WSB-0046",
+  "as_of": "2026-11-14",
+  "records": [
+    {
+      "id": "WSB-0046-SRC-01",
+      "source": "Reuters / Timothy Gardner, Arathy Somasekhar, Jarrett Renshaw / US extends Jones Act waiver",
+      "url": "https://www.reuters.com/world/us/us-extends-shipping-law-waiver-90-days-allow-freer-movement-oil-commodities-2026-11-13/",
+      "publication_date": "2026-11-13",
+      "claim": "White House official confirms 90-day extension on 13 November, with case-by-case voyage approval retained; White House attributes 90 million barrels of previously transported US domestic petroleum to waivers since March. No 14 November voyage proven.",
+      "supports": [
+        "us-jones-act-energy-waiver",
+        "us-coastwise-vessel-eligibility",
+        "us-domestic-fuel-coastwise-flow",
+        "global-diesel-product-tightness"
+      ],
+      "source_type": "newswire",
+      "role": "previous_day_report",
+      "confidence": "high",
+      "assessment": "POLICY ANNOUNCED 13 NOV — NEW EFFECTIVE WINDOW 16 NOV",
+      "observation": "Policy update predates 14 November; historical petroleum totals are attribution by White House, not same-day flow."
+    },
+    {
+      "id": "WSB-0046-SRC-02",
+      "source": "FreightWaves / Jones Act waiver voyage approval constraints",
+      "url": "https://www.freightwaves.com/news/white-house-to-extend-jones-act-waiver-as-deadline-nears-sources-say",
+      "publication_date": "2026-11-13",
+      "claim": "Case-by-case approval, national-security rationale, vessel eligibility and domestic-vessel availability condition persist; lower marine transport cost does not guarantee retail fuel price decline.",
+      "supports": [
+        "us-jones-act-energy-waiver",
+        "us-coastwise-vessel-eligibility",
+        "us-domestic-fuel-coastwise-flow"
+      ],
+      "source_type": "industry_reporting",
+      "role": "previous_day_report",
+      "confidence": "medium",
+      "assessment": "VOYAGE PERMIT BOTTLENECK",
+      "observation": "Policy implementation depends on individual voyage review and shipowner willingness."
+    }
+  ]
+}
