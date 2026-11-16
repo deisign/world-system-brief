@@ -1,0 +1,60 @@
+{
+  "issue_id": "WSB-0048",
+  "as_of": "2026-11-16",
+  "records": [
+    {
+      "id": "WSB-0048-SRC-01",
+      "source": "Reuters / Stephanie Kelly, Helen Clark, Trixie Yap / oil and Hormuz risk",
+      "url": "https://www.reuters.com/business/energy/oil-prices-fall-expectations-coming-supply-surplus-2026-11-16/",
+      "publication_date": "2026-11-16",
+      "claim": "Reuters Nov16 reports Brent $95.32 and WTI $88.29 at 11:14 GMT; IEA forecast Q4 supply 105 mb/d, 1.7 mb/d above demand. October Chinese refinery throughput fell 2% m/m and 8.1% y/y. Iran IRGC mine/tanker allegations could not be independently verified.",
+      "observation": "Spot price and forecast do not establish a confirmed new passage capacity; mine claims explicitly unverified. October refinery data are historical measurements published Nov16.",
+      "assessment": "MARKET SIGNAL AND PROJECTION DISTINCT FROM VERIFIED FLOW",
+      "supports": [
+        "global-oil-balance",
+        "gulf-oil-flow",
+        "hormuz",
+        "hormuz-nov16-unverified-tanker-claims",
+        "china-october-refinery-throughput",
+        "hormuz-market-security-premium"
+      ],
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0048-SRC-02",
+      "source": "PortNews / US CBP Jones Act waiver conditions effective Nov16",
+      "url": "https://en.portnews.ru/news/399625/",
+      "publication_date": "2026-11-16",
+      "claim": "PortNews cites US Customs and Border Protection notice: third 90-day Jones Act extension effective 16 November; foreign-flag cargo must be eligible and voyages reviewed individually. Eligible cargo load deadline 14 February 2027.",
+      "observation": "Policy becomes effective Nov16; not proof of approval of a particular shipment or retail price decline.",
+      "assessment": "NEW POLICY EFFECTIVENESS NOT NEW COMMISSIONED SHIPPING",
+      "supports": [
+        "us-jones-act-energy-waiver",
+        "us-coastwise-vessel-eligibility",
+        "us-domestic-fuel-coastwise-flow"
+      ],
+      "source_type": "industry_reporting",
+      "role": "dated_report",
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0048-SRC-03",
+      "source": "Reuters / IEA oil report and emergency releases",
+      "url": "https://www.iea.org/reports/oil-market-report-november-2026",
+      "publication_date": "2026-11-13",
+      "claim": "IEA report dated Nov13 projects quarterly oil surplus, identifies persistent diesel shortage and scheduled emergency releases; Reuters Nov16 specifies 71 million barrels pledged by end February, including 15 million diesel.",
+      "observation": "IEA projected and planned stocks distinct from actually released or delivered reserve fuel.",
+      "assessment": "DEFERRED RELEASE NOT 16 NOV DELIVERY",
+      "supports": [
+        "iea-emergency-diesel-schedule",
+        "global-diesel-product-tightness",
+        "global-oil-balance"
+      ],
+      "source_type": "official_record",
+      "role": "previous_day_report",
+      "confidence": "high"
+    }
+  ]
+}
