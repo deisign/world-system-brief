@@ -1,0 +1,87 @@
+{
+  "issue_id": "WSB-0047",
+  "date": "2026-11-15",
+  "day_type": {
+    "system_activity": "medium",
+    "news_pressure": "medium"
+  },
+  "summary": {
+    "confirmed_delta": 1,
+    "developing": 1,
+    "persistent": 1
+  },
+  "objects": [
+    {
+      "id": "egypt-mina-west-gas-field",
+      "entering_state": "discovered_2023_under_development",
+      "current_state": "shell_reports_production_started_by_nov15",
+      "status": "confirmed_delta",
+      "change": "evidence_update"
+    },
+    {
+      "id": "egypt-west-delta-deep-marine-network",
+      "entering_state": "existing_gas_infrastructure",
+      "current_state": "connected_to_mina_west",
+      "status": "evidence_update",
+      "change": "evidence_update"
+    },
+    {
+      "id": "egypt-domestic-gas-supply",
+      "entering_state": "august_output_declining",
+      "current_state": "new_mina_west_source_not_quantified",
+      "status": "evidence_update",
+      "change": "evidence_update"
+    },
+    {
+      "id": "red-sea-bab-el-mandeb-security",
+      "entering_state": "contested_houthi_control",
+      "current_state": "saudi_backed_force_retreat_reported_nov15",
+      "status": "developing",
+      "change": "evidence_update"
+    },
+    {
+      "id": "red-sea-commercial-shipping-risk",
+      "entering_state": "previous_escort_risk",
+      "current_state": "persistent_security_exposure_no_measured_trade_loss",
+      "status": "persistent",
+      "change": "evidence_update"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "egypt-mina-west-gas-field",
+    "type": "confirmed_delta",
+    "sequence": [
+      "egypt-mina-west-gas-field",
+      "egypt-west-delta-deep-marine-network",
+      "egypt-domestic-gas-supply"
+    ],
+    "edges": [],
+    "assessment": "confirmed_field_startup_not_nameplate_output"
+  },
+  "notes": [
+    "Reported Shell physical production startup by 15 November; exact first-flow date and metered daily output unspecified.",
+    "Potential capacity 160 million cubic feet per day is an operator estimate, not confirmed daily production.",
+    "Tie-back connects into existing West Delta Deep Marine infrastructure: the field is new, the transport network is not.",
+    "Yemeni security movement is independently reported, but no measured commercial throughput delta through Bab el-Mandeb.",
+    "Attributed Houthi claims cannot prove East-West pipeline shutdown on this publication date."
+  ],
+  "chain": [
+    "egypt-mina-west-gas-field",
+    "egypt-west-delta-deep-marine-network",
+    "egypt-domestic-gas-supply"
+  ],
+  "noise": [
+    {
+      "id": "nameplate_not_production",
+      "result": "not_established"
+    },
+    {
+      "id": "retreat_not_shipping_volume",
+      "result": "not_established"
+    },
+    {
+      "id": "claim_not_pipeline_outage",
+      "result": "not_established"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "locale": "en",
+  "labels": {
+    "egypt-mina-west-gas-field": "Egypt Mina West gas field",
+    "egypt-west-delta-deep-marine-network": "Egypt West Delta Deep Marine gas network",
+    "egypt-domestic-gas-supply": "Egypt domestic gas supply",
+    "red-sea-bab-el-mandeb-security": "Bab el-Mandeb maritime security",
+    "red-sea-commercial-shipping-risk": "Red Sea commercial shipping risk"
+  },
+  "states": {
+    "discovered_2023_under_development": "discovered 2023 under development",
+    "shell_reports_production_started_by_nov15": "shell reports production started by nov15",
+    "existing_gas_infrastructure": "existing gas infrastructure",
+    "connected_to_mina_west": "connected to mina west",
+    "august_output_declining": "august output declining",
+    "new_mina_west_source_not_quantified": "new mina west source not quantified",
+    "contested_houthi_control": "contested houthi control",
+    "saudi_backed_force_retreat_reported_nov15": "saudi backed force retreat reported nov15",
+    "previous_escort_risk": "previous escort risk",
+    "persistent_security_exposure_no_measured_trade_loss": "persistent security exposure no measured trade loss"
+  },
+  "assessments": {
+    "confirmed_field_startup_not_nameplate_output": "Shell reports Mina West production has started via existing Egyptian infrastructure. The reported 160 million cubic feet per day is possible capacity, not measured output; Red Sea risks remain separate."
+  },
+  "noise": {
+    "nameplate_not_production": "NAMEPLATE NOT PRODUCTION",
+    "retreat_not_shipping_volume": "RETREAT NOT SHIPPING VOLUME",
+    "claim_not_pipeline_outage": "CLAIM NOT PIPELINE OUTAGE"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "A NEW GAS FIELD, AN OLD NETWORK",
+    "deck": "Shell reports Mina West production has started via existing Egyptian infrastructure. The reported 160 million cubic feet per day is possible capacity, not measured output; Red Sea risks remain separate.",
+    "mechanism": "Shell reports Mina West production has started via existing Egyptian infrastructure. The reported 160 million cubic feet per day is possible capacity, not measured output; Red Sea risks remain separate.",
+    "chainNote": "egypt-mina-west-gas-field → egypt-west-delta-deep-marine-network → egypt-domestic-gas-supply",
+    "evidenceNote": "Dates of announcement, publication and actual operating change are separate.",
+    "footer": "STARTUP ≠ NAMEPLATE RATE · SECURITY ≠ THROUGHPUT"
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  }
+}

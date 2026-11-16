@@ -1,0 +1,51 @@
+{
+  "locale": "en",
+  "labels": {
+    "us-jones-act-energy-waiver": "US Jones Act fuel-shipping waiver",
+    "us-coastwise-vessel-eligibility": "Foreign-flag vessel eligibility for US coastal trade",
+    "us-domestic-fuel-coastwise-flow": "US domestic fuel shipping between ports",
+    "global-diesel-product-tightness": "Global diesel supply tightness"
+  },
+  "states": {
+    "previous_waiver_expiring_nov15": "previous waiver expiring nov15",
+    "nov13_extension_announced_effective_nov16": "nov13 extension announced effective nov16",
+    "case_by_case_permission_existing": "case by case permission existing",
+    "foreign_flag_access_extended_with_individual_approval": "foreign flag access extended with individual approval",
+    "waiver_cumulative_historic_shipments": "waiver cumulative historic shipments",
+    "no_confirmed_nov14_increment": "no confirmed nov14 increment",
+    "iea_diesel_market_tight": "iea diesel market tight",
+    "transport_option_not_refining_solution": "transport option not refining solution"
+  },
+  "assessments": {
+    "conditional_transport_access_not_commissioned_throughput": "US extends conditional foreign-flag access for fuel transport, with individual voyage approval and no newly measured November 14 throughput."
+  },
+  "noise": {
+    "waiver_not_voyage": "WAIVER NOT VOYAGE",
+    "cumulative_not_daily": "CUMULATIVE NOT DAILY"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "SHIPPING LAW IS NOT SHIPPING CAPACITY",
+    "deck": "US extends conditional foreign-flag access for fuel transport, with individual voyage approval and no newly measured November 14 throughput.",
+    "mechanism": "US extends conditional foreign-flag access for fuel transport, with individual voyage approval and no newly measured November 14 throughput.",
+    "chainNote": "us-jones-act-energy-waiver → us-coastwise-vessel-eligibility → us-domestic-fuel-coastwise-flow",
+    "evidenceNote": "Dates of announcement, publication and actual operating change are separate.",
+    "footer": "PERMISSION ≠ VOYAGE · HISTORY ≠ DAILY FLOW"
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "issue_id": "WSB-0048",
+  "as_of": "2026-11-16",
+  "claims": [
+    {
+      "id": "WSB-0048-CLM-01",
+      "kind": "reported",
+      "statement": "The US Jones Act waiver renewal first announced 13 November became effective 16 November, preserving case-by-case voyage approval and not automatically authorising every foreign vessel.",
+      "observed_at": "2026-11-16",
+      "event_date": "2026-11-16",
+      "entity_ids": [
+        "ENT-000118",
+        "ENT-000119",
+        "ENT-000120"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0048-CLM-02",
+      "kind": "reported",
+      "statement": "Reuters reported Brent $95.32 and WTI $88.29 at 11:14 GMT on 16 November while IEA expected a Q4 global surplus of 1.7 million bpd; neither price nor forecast confirms safe tanker transit.",
+      "observed_at": "2026-11-16",
+      "event_date": "2026-11-16",
+      "entity_ids": [
+        "ENT-000050",
+        "ENT-000043",
+        "ENT-000001"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0048-CLM-03",
+      "kind": "reported",
+      "statement": "Iranian Revolutionary Guards claimed tankers hit mines and caught fire on 15-16 November, but Reuters explicitly could not independently verify these statements.",
+      "observed_at": "2026-11-16",
+      "event_date": "2026-11-16",
+      "entity_ids": [
+        "ENT-000125",
+        "ENT-000001"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0048-CLM-04",
+      "kind": "reported",
+      "statement": "China's refinery throughput in October 2026 reportedly declined 2% month-on-month and 8.1% year-on-year; it is not a newly observed physical refinery shutdown on 16 November.",
+      "observed_at": "2026-11-16",
+      "event_date": "2026-10-31",
+      "entity_ids": [
+        "ENT-000126"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0048-CLM-05",
+      "kind": "reported",
+      "statement": "IEA's future emergency stock release schedule, including diesel volumes as described by Reuters, is not the same as delivered diesel or a completed release on 16 November.",
+      "observed_at": "2026-11-16",
+      "event_date": "2026-11-16",
+      "entity_ids": [
+        "ENT-000127",
+        "ENT-000115"
+      ],
+      "source_ids": [
+        "WSB-0048-SRC-01",
+        "WSB-0048-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}

@@ -1053,6 +1053,96 @@
         "en": "Uncertain delivery of restricted AI processors",
         "ua": "Невизначеність поставок обмежених AI-процесорів"
       }
+    },
+    {
+      "id": "ENT-000118",
+      "slug": "us-jones-act-energy-waiver",
+      "type": "maritime_policy",
+      "labels": {
+        "en": "US Jones Act fuel-shipping waiver",
+        "ua": "Виняток із закону Джонса для перевезення пального"
+      }
+    },
+    {
+      "id": "ENT-000119",
+      "slug": "us-coastwise-vessel-eligibility",
+      "type": "shipping_access",
+      "labels": {
+        "en": "Foreign-flag vessel eligibility for US coastal trade",
+        "ua": "Право іноземних суден на каботажні рейси у США"
+      }
+    },
+    {
+      "id": "ENT-000120",
+      "slug": "us-domestic-fuel-coastwise-flow",
+      "type": "fuel_flow",
+      "labels": {
+        "en": "US domestic fuel shipping between ports",
+        "ua": "Каботажні перевезення пального між портами США"
+      }
+    },
+    {
+      "id": "ENT-000121",
+      "slug": "egypt-mina-west-gas-field",
+      "type": "energy_infrastructure",
+      "labels": {
+        "en": "Egypt Mina West gas field",
+        "ua": "Газове родовище Міна-Вест у Єгипті"
+      }
+    },
+    {
+      "id": "ENT-000122",
+      "slug": "egypt-west-delta-deep-marine-network",
+      "type": "energy_infrastructure",
+      "labels": {
+        "en": "Egypt West Delta Deep Marine gas network",
+        "ua": "Єгипетська газова інфраструктура West Delta Deep Marine"
+      }
+    },
+    {
+      "id": "ENT-000123",
+      "slug": "egypt-domestic-gas-supply",
+      "type": "energy_supply",
+      "labels": {
+        "en": "Egypt domestic gas supply",
+        "ua": "Внутрішнє газопостачання Єгипту"
+      }
+    },
+    {
+      "id": "ENT-000124",
+      "slug": "red-sea-bab-el-mandeb-security",
+      "type": "maritime_security_constraint",
+      "labels": {
+        "en": "Bab el-Mandeb maritime security",
+        "ua": "Морська безпека Баб-ель-Мандебу"
+      }
+    },
+    {
+      "id": "ENT-000125",
+      "slug": "hormuz-nov16-unverified-tanker-claims",
+      "type": "maritime_security_claim",
+      "labels": {
+        "en": "Unverified Hormuz tanker mine claims (16 November)",
+        "ua": "Непідтверджені заяви про міни й танкери в Ормузі 16 листопада"
+      }
+    },
+    {
+      "id": "ENT-000126",
+      "slug": "china-october-refinery-throughput",
+      "type": "refinery_flow",
+      "labels": {
+        "en": "China October 2026 refinery throughput",
+        "ua": "Переробка нафти у Китаї в жовтні 2026 року"
+      }
+    },
+    {
+      "id": "ENT-000127",
+      "slug": "iea-emergency-diesel-schedule",
+      "type": "energy_policy",
+      "labels": {
+        "en": "IEA emergency diesel reserve release schedule",
+        "ua": "Графік вивільнення аварійних запасів дизеля МЕА"
+      }
     }
   ]
 }

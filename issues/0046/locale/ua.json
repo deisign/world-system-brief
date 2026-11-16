@@ -1,0 +1,51 @@
+{
+  "locale": "ua",
+  "labels": {
+    "us-jones-act-energy-waiver": "Виняток із закону Джонса для перевезення пального",
+    "us-coastwise-vessel-eligibility": "Право іноземних суден на каботажні рейси у США",
+    "us-domestic-fuel-coastwise-flow": "Каботажні перевезення пального між портами США",
+    "global-diesel-product-tightness": "Дефіцит дизельного пального у світі"
+  },
+  "states": {
+    "previous_waiver_expiring_nov15": "Попередній виняток діє до 15 листопада",
+    "nov13_extension_announced_effective_nov16": "Продовження оголошене 13-го, чинне з 16 листопада",
+    "case_by_case_permission_existing": "Діє індивідуальне погодження рейсів",
+    "foreign_flag_access_extended_with_individual_approval": "Доступ іноземних суден продовжено з окремим дозволом",
+    "waiver_cumulative_historic_shipments": "Накопичені історичні перевезення за попередніми винятками",
+    "no_confirmed_nov14_increment": "Нових перевезених обсягів за 14 листопада не підтверджено",
+    "iea_diesel_market_tight": "МЕА фіксує дефіцит дизеля",
+    "transport_option_not_refining_solution": "Додаткові судна не вирішують проблему переробки"
+  },
+  "assessments": {
+    "conditional_transport_access_not_commissioned_throughput": "США продовжують умовний доступ іноземних суден до внутрішніх перевезень пального, але кожен рейс потребує дозволу. Нових виміряних поставок 14 листопада немає."
+  },
+  "noise": {
+    "waiver_not_voyage": "ВИНЯТОК ≠ ВИКОНАНИЙ РЕЙС",
+    "cumulative_not_daily": "НАКОПИЧЕНИЙ ОБСЯГ ≠ ДОБОВІ ПОСТАВКИ"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА ЗМІНА",
+    "map": "МАПА СИСТЕМИ",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "АКТИВНІСТЬ СИСТЕМИ",
+    "headline": "ЗАКОН ПРО ПЕРЕВЕЗЕННЯ — НЕ ПРОПУСКНА СПРОМОЖНІСТЬ",
+    "deck": "США продовжують умовний доступ іноземних суден до внутрішніх перевезень пального, але кожен рейс потребує дозволу. Нових виміряних поставок 14 листопада немає.",
+    "mechanism": "США продовжують умовний доступ іноземних суден до внутрішніх перевезень пального, але кожен рейс потребує дозволу. Нових виміряних поставок 14 листопада немає.",
+    "chainNote": "us-jones-act-energy-waiver → us-coastwise-vessel-eligibility → us-domestic-fuel-coastwise-flow",
+    "evidenceNote": "Дати оголошення, публікації й фактичних змін відокремлено.",
+    "footer": "ДОЗВІЛ ≠ РЕЙС · ІСТОРІЯ ≠ ДОБОВИЙ ПОТІК"
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "persistent": "ТРИВАЄ",
+    "evidence_update": "ОНОВЛЕННЯ СВІДЧЕНЬ",
+    "developing": "РОЗВИВАЄТЬСЯ"
+  }
+}

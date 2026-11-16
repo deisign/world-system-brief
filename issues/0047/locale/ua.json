@@ -1,0 +1,55 @@
+{
+  "locale": "ua",
+  "labels": {
+    "egypt-mina-west-gas-field": "Газове родовище Міна-Вест у Єгипті",
+    "egypt-west-delta-deep-marine-network": "Єгипетська газова інфраструктура West Delta Deep Marine",
+    "egypt-domestic-gas-supply": "Внутрішнє газопостачання Єгипту",
+    "red-sea-bab-el-mandeb-security": "Морська безпека Баб-ель-Мандебу",
+    "red-sea-commercial-shipping-risk": "Ризик торговельного судноплавства в Червоному морі"
+  },
+  "states": {
+    "discovered_2023_under_development": "Родовище відкрите 2023 року, тривало облаштування",
+    "shell_reports_production_started_by_nov15": "Shell підтвердила початок видобутку станом на 15 листопада",
+    "existing_gas_infrastructure": "Наявна газова мережа",
+    "connected_to_mina_west": "Підключена до родовища Mina West",
+    "august_output_declining": "Видобуток газу в Єгипті скорочувався",
+    "new_mina_west_source_not_quantified": "Новий виробничий потік без підтвердженого дебіту",
+    "contested_houthi_control": "Суперечки за контроль прибережної території",
+    "saudi_backed_force_retreat_reported_nov15": "15 листопада повідомлено про відступ союзних Саудівській Аравії сил",
+    "previous_escort_risk": "Ризик проходу й ескорту вже існував",
+    "persistent_security_exposure_no_measured_trade_loss": "Загроза триває, зниження торговельного потоку не виміряно"
+  },
+  "assessments": {
+    "confirmed_field_startup_not_nameplate_output": "Shell повідомила про початок видобутку на Mina West через наявну інфраструктуру Єгипту. 160 млн куб. футів на добу — оцінка потужності, не виміряний видобуток; ризики Червоного моря обліковуються окремо."
+  },
+  "noise": {
+    "nameplate_not_production": "ПРОЄКТНА ПОТУЖНІСТЬ ≠ ФАКТИЧНИЙ ВИДОБУТОК",
+    "retreat_not_shipping_volume": "ВІДСТУП ВІЙСЬК ≠ ОБСЯГ ПЕРЕВЕЗЕНЬ",
+    "claim_not_pipeline_outage": "ЗАЯВА ПРО УДАР ≠ ДОВЕДЕНА ЗУПИНКА"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА ЗМІНА",
+    "map": "МАПА СИСТЕМИ",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "АКТИВНІСТЬ СИСТЕМИ",
+    "headline": "НОВЕ ГАЗОВЕ РОДОВИЩЕ, СТАРА МЕРЕЖА",
+    "deck": "Shell повідомила про початок видобутку на Mina West через наявну інфраструктуру Єгипту. 160 млн куб. футів на добу — оцінка потужності, не виміряний видобуток; ризики Червоного моря обліковуються окремо.",
+    "mechanism": "Shell повідомила про початок видобутку на Mina West через наявну інфраструктуру Єгипту. 160 млн куб. футів на добу — оцінка потужності, не виміряний видобуток; ризики Червоного моря обліковуються окремо.",
+    "chainNote": "egypt-mina-west-gas-field → egypt-west-delta-deep-marine-network → egypt-domestic-gas-supply",
+    "evidenceNote": "Дати оголошення, публікації й фактичних змін відокремлено.",
+    "footer": "ЗАПУСК ≠ ПРОЄКТНА ПОТУЖНІСТЬ · БЕЗПЕКА ≠ ПОТІК"
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "persistent": "ТРИВАЄ",
+    "evidence_update": "ОНОВЛЕННЯ СВІДЧЕНЬ",
+    "developing": "РОЗВИВАЄТЬСЯ"
+  }
+}

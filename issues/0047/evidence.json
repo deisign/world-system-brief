@@ -1,0 +1,40 @@
+{
+  "issue_id": "WSB-0047",
+  "as_of": "2026-11-15",
+  "records": [
+    {
+      "id": "WSB-0047-SRC-01",
+      "source": "Reuters / Mohamed Ezz / Shell starts Egypt Mina West gas production",
+      "url": "https://www.reuters.com/business/energy/shell-starts-gas-production-egypts-mina-west-field-2026-11-15/",
+      "publication_date": "2026-11-15",
+      "claim": "Shell says Mina West commenced gas production, connected to existing West Delta Deep Marine infrastructure. The company estimates potential capacity at 160 million cubic feet per day. Exact initial output not supplied.",
+      "observation": "Physical production startup confirmed by operator on reporting date, actual commencement time and measured daily rate not supplied.",
+      "assessment": "REPORTED PHYSICAL COMMISSIONING BY 15 NOV; NAMEPLATE NOT ACTUAL PRODUCTION",
+      "supports": [
+        "egypt-mina-west-gas-field",
+        "egypt-west-delta-deep-marine-network",
+        "egypt-domestic-gas-supply"
+      ],
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high"
+    },
+    {
+      "id": "WSB-0047-SRC-02",
+      "source": "Reuters / Houthi territorial gains and Saudi-backed retreat at Bab el-Mandeb",
+      "url": "https://www.reuters.com/world/middle-east/anti-houthi-forces-retreat-yemen-iran-strikes-bahrain-2026-11-15/",
+      "publication_date": "2026-11-15",
+      "claim": "Saudi-backed Yemeni government forces reportedly withdrew from the Bab el-Mandeb area to reinforce Aden, changing local security exposure. Claims of strikes on Saudi energy installations remain attributed and are not independent pipeline outage confirmation.",
+      "observation": "Change in military disposition not a verified new quantified commercial vessel-flow interruption.",
+      "assessment": "CHANGED SECURITY EXPOSURE — NO MEASURED SHIPPING Δ",
+      "supports": [
+        "red-sea-bab-el-mandeb-security",
+        "red-sea-commercial-shipping-risk",
+        "east-west-pipeline"
+      ],
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high"
+    }
+  ]
+}

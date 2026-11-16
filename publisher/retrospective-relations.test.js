@@ -35,17 +35,17 @@ test('all dated relations from original issues remain unchanged',()=>{
  const old=buildTemporalRelations(bundles,registry);
  const {documented}=resolveRetrospectiveRelations(config,bundles,registry);
  const recovered=retrospectiveTemporalEdges(documented);
- assert.equal(old.length,43);
- assert.equal(old.filter(edge=>edge.events.every(event=>!['WSB-0044','WSB-0045'].includes(event.issue))).length,32);
+ assert.equal(old.length,55);
+ assert.equal(old.filter(edge=>edge.events.every(event=>!['WSB-0044','WSB-0045','WSB-0046','WSB-0047','WSB-0048'].includes(event.issue))).length,32);
  assert.equal(recovered.length,34);
  assert.ok(recovered.every(x=>!old.some(y=>y.key===x.key)));
 });
 test('audit counts distinct retrospective levels without changing primary history',()=>{
  const report=runConnectivityAudit();
- assert.equal(report.counts.registry,117);
+ assert.equal(report.counts.registry,127);
  assert.equal(report.counts.anomalies,0);
- assert.equal(report.counts.explicit_relations,77);
- assert.equal(report.counts.in_any_graph,117);
+ assert.equal(report.counts.explicit_relations,89);
+ assert.equal(report.counts.in_any_graph,127);
  assert.equal(report.counts.fully_isolated,0);
  for(const slug of ['zeiss-smt','asml','ai-gas-turbine-capacity-bottleneck','uk-critical-minerals-resilience']){
   const entity=report.entities.find(x=>x.slug===slug);
@@ -112,8 +112,8 @@ test('13 context-only entities promoted to direct source-proven relations withou
   const edge=report.explicit_relations.find(x=>e.explicit_edges.includes(x.key)&&x.basis.includes('retrospective_source_review'));
   assert.ok(edge&&edge.sources.length&&edge.sources.every(s=>s.url.startsWith('https://')),slug);
  }
- assert.equal(report.counts.in_explicit_graph,104);
- assert.equal(report.counts.in_any_graph,117);
+ assert.equal(report.counts.in_explicit_graph,114);
+ assert.equal(report.counts.in_any_graph,127);
  assert.equal(report.counts.fully_isolated,0);
 });
 test('source-upgraded rows retain uncertainty and original material-delta dates',()=>{
