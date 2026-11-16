@@ -1,0 +1,59 @@
+{
+  "locale": "ua",
+  "labels": {
+    "us-jones-act-energy-waiver": "Виняток із закону Джонса для перевезення пального",
+    "us-coastwise-vessel-eligibility": "Право іноземних суден на каботажні рейси у США",
+    "hormuz-nov16-unverified-tanker-claims": "Непідтверджені заяви про міни й танкери в Ормузі 16 листопада",
+    "hormuz-market-security-premium": "Премія за ризик судноплавства в Ормузі",
+    "china-october-refinery-throughput": "Переробка нафти у Китаї в жовтні 2026 року",
+    "iea-emergency-diesel-schedule": "Графік вивільнення аварійних запасів дизеля МЕА",
+    "global-oil-balance": "Глобальний нафтовий баланс"
+  },
+  "states": {
+    "nov13_extension_announced_effective_nov16": "nov13 extension announced effective nov16",
+    "policy_extension_effective_nov16": "policy extension effective nov16",
+    "foreign_flag_access_extended_with_individual_approval": "foreign flag access extended with individual approval",
+    "conditional_voyage_approval_remains": "conditional voyage approval remains",
+    "not_previously_observed": "not previously observed",
+    "irgc_mine_incidents_unverified_by_reuters": "irgc mine incidents unverified by reuters",
+    "shipping_risk_reported": "shipping risk reported",
+    "shipping_risk_persists_despite_oil_surplus_signal": "shipping risk persists despite oil surplus signal",
+    "october_throughput_decline_dated_oct31": "october throughput decline dated oct31",
+    "future_release_schedule_not_delivered": "future release schedule not delivered",
+    "iea_q4_surplus_projection_after_october_supply_rebound": "iea q4 surplus projection after october supply rebound",
+    "nov16_market_prices_reflect_forecast_uncertainty": "nov16 market prices reflect forecast uncertainty"
+  },
+  "assessments": {
+    "effective_policy_option_not_verified_delivery": "Американський виняток для перевезень набрав чинності за індивідуальними дозволами; заяви про танкери в Ормузі залишаються непідтвердженими попри прогнози нафтового профіциту. Заплановані дизельні резерви — не поставки."
+  },
+  "noise": {
+    "claim_not_verified_tanker_hit": "CLAIM NOT VERIFIED TANKER HIT",
+    "diesel_schedule_not_delivery": "DIESEL SCHEDULE NOT DELIVERY",
+    "price_not_passage": "PRICE NOT PASSAGE"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА ЗМІНА",
+    "map": "МАПА СИСТЕМИ",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "АКТИВНІСТЬ СИСТЕМИ",
+    "headline": "ВИНЯТОК НАБУВ ЧИННОСТІ. ОРМУЗ НЕ СТАВ БЕЗПЕЧНИМ.",
+    "deck": "Американський виняток для перевезень набрав чинності за індивідуальними дозволами; заяви про танкери в Ормузі залишаються непідтвердженими попри прогнози нафтового профіциту. Заплановані дизельні резерви — не поставки.",
+    "mechanism": "Американський виняток для перевезень набрав чинності за індивідуальними дозволами; заяви про танкери в Ормузі залишаються непідтвердженими попри прогнози нафтового профіциту. Заплановані дизельні резерви — не поставки.",
+    "chainNote": "us-jones-act-energy-waiver → us-coastwise-vessel-eligibility → us-domestic-fuel-coastwise-flow",
+    "evidenceNote": "Дати оголошення, публікації й фактичних змін відокремлено.",
+    "footer": "ВИНЯТОК ≠ СУДНО · ЗАЯВА ≠ УРАЖЕННЯ · ПРОГНОЗ ≠ ПОСТАВКА"
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "persistent": "ТРИВАЄ",
+    "evidence_update": "ОНОВЛЕННЯ СВІДЧЕНЬ",
+    "developing": "РОЗВИВАЄТЬСЯ"
+  }
+}
