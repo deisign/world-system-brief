@@ -8,24 +8,24 @@
     "red-sea-commercial-shipping-risk": "Ризик торговельного судноплавства в Червоному морі"
   },
   "states": {
-    "discovered_2023_under_development": "discovered 2023 under development",
-    "shell_reports_production_started_by_nov15": "shell reports production started by nov15",
-    "existing_gas_infrastructure": "existing gas infrastructure",
-    "connected_to_mina_west": "connected to mina west",
-    "august_output_declining": "august output declining",
-    "new_mina_west_source_not_quantified": "new mina west source not quantified",
-    "contested_houthi_control": "contested houthi control",
-    "saudi_backed_force_retreat_reported_nov15": "saudi backed force retreat reported nov15",
-    "previous_escort_risk": "previous escort risk",
-    "persistent_security_exposure_no_measured_trade_loss": "persistent security exposure no measured trade loss"
+    "discovered_2023_under_development": "Родовище відкрите 2023 року, тривало облаштування",
+    "shell_reports_production_started_by_nov15": "Shell підтвердила початок видобутку станом на 15 листопада",
+    "existing_gas_infrastructure": "Наявна газова мережа",
+    "connected_to_mina_west": "Підключена до родовища Mina West",
+    "august_output_declining": "Видобуток газу в Єгипті скорочувався",
+    "new_mina_west_source_not_quantified": "Новий виробничий потік без підтвердженого дебіту",
+    "contested_houthi_control": "Суперечки за контроль прибережної території",
+    "saudi_backed_force_retreat_reported_nov15": "15 листопада повідомлено про відступ союзних Саудівській Аравії сил",
+    "previous_escort_risk": "Ризик проходу й ескорту вже існував",
+    "persistent_security_exposure_no_measured_trade_loss": "Загроза триває, зниження торговельного потоку не виміряно"
   },
   "assessments": {
     "confirmed_field_startup_not_nameplate_output": "Shell повідомила про початок видобутку на Mina West через наявну інфраструктуру Єгипту. 160 млн куб. футів на добу — оцінка потужності, не виміряний видобуток; ризики Червоного моря обліковуються окремо."
   },
   "noise": {
-    "nameplate_not_production": "NAMEPLATE NOT PRODUCTION",
-    "retreat_not_shipping_volume": "RETREAT NOT SHIPPING VOLUME",
-    "claim_not_pipeline_outage": "CLAIM NOT PIPELINE OUTAGE"
+    "nameplate_not_production": "ПРОЄКТНА ПОТУЖНІСТЬ ≠ ФАКТИЧНИЙ ВИДОБУТОК",
+    "retreat_not_shipping_volume": "ВІДСТУП ВІЙСЬК ≠ ОБСЯГ ПЕРЕВЕЗЕНЬ",
+    "claim_not_pipeline_outage": "ЗАЯВА ПРО УДАР ≠ ДОВЕДЕНА ЗУПИНКА"
   },
   "copy": {
     "systemDelta": "СИСТЕМНА ЗМІНА",
