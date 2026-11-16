@@ -1,0 +1,70 @@
+{
+  "issue_id": "WSB-0047",
+  "as_of": "2026-11-15",
+  "claims": [
+    {
+      "id": "WSB-0047-CLM-01",
+      "kind": "reported",
+      "statement": "Shell reports Mina West in Egypt has begun actual natural gas production and has been tied into existing West Delta Deep Marine infrastructure. Operator estimate of 160 million cubic feet per day is possible capacity, not metered ongoing output.",
+      "observed_at": "2026-11-15",
+      "event_date": "2026-11-15",
+      "entity_ids": [
+        "ENT-000121",
+        "ENT-000122",
+        "ENT-000123"
+      ],
+      "source_ids": [
+        "WSB-0047-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "confirmed_delta"
+    },
+    {
+      "id": "WSB-0047-CLM-02",
+      "kind": "reported",
+      "statement": "The Shell startup is verified by the company no later than 15 November, but the source does not specify the exact first-flow calendar date; WSB records confirmation_date rather than inventing an exact startup timestamp.",
+      "observed_at": "2026-11-15",
+      "event_date": "2026-11-15",
+      "entity_ids": [
+        "ENT-000121"
+      ],
+      "source_ids": [
+        "WSB-0047-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0047-CLM-03",
+      "kind": "reported",
+      "statement": "Reuters reports Saudi-backed Yemeni government forces left the Bab el-Mandeb area to reinforce Aden; security risks for Red Sea maritime passage remain, but exact commercial vessel throughput loss on 15 November is not measured.",
+      "observed_at": "2026-11-15",
+      "event_date": "2026-11-15",
+      "entity_ids": [
+        "ENT-000124",
+        "ENT-000099"
+      ],
+      "source_ids": [
+        "WSB-0047-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0047-CLM-04",
+      "kind": "reported",
+      "statement": "Claims of strikes on Saudi East-West facilities are attributed to combatants; Reuters report is not evidence of a new independently verified 15 November outage.",
+      "observed_at": "2026-11-15",
+      "event_date": "2026-11-15",
+      "entity_ids": [
+        "ENT-000002",
+        "ENT-000124"
+      ],
+      "source_ids": [
+        "WSB-0047-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}
