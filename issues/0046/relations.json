@@ -1,0 +1,48 @@
+{
+  "issue_id": "WSB-0046",
+  "as_of": "2026-11-14",
+  "relations": [
+    {
+      "id": "WSB-0046-REL-01",
+      "from": "us-jones-act-energy-waiver",
+      "to": "us-coastwise-vessel-eligibility",
+      "type": "extends_case_by_case_foreign_vessel_option",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0046-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0046-SRC-01"
+      ],
+      "note": "Conditional voyage rights do not establish a new 14 November completed physical shipment."
+    },
+    {
+      "id": "WSB-0046-REL-02",
+      "from": "us-coastwise-vessel-eligibility",
+      "to": "us-domestic-fuel-coastwise-flow",
+      "type": "creates_conditional_domestic_transport_option",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0046-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0046-SRC-02"
+      ],
+      "note": "Conditional voyage rights do not establish a new 14 November completed physical shipment."
+    },
+    {
+      "id": "WSB-0046-REL-03",
+      "from": "us-domestic-fuel-coastwise-flow",
+      "to": "global-diesel-product-tightness",
+      "type": "distribution_option_not_proof_of_price_relief",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0046-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0046-SRC-01"
+      ],
+      "note": "Conditional voyage rights do not establish a new 14 November completed physical shipment."
+    }
+  ]
+}
