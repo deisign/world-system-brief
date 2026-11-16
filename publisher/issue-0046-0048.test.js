@@ -43,3 +43,11 @@ test('WSB backfill has day-specific physical/policy separation and date integrit
  assert.ok(b.notes.some(s=>s.includes('exact first-flow')));
  assert.ok(c.notes.some(s=>s.includes('unverified')));
 });
+
+test('release CI pins a Playwright-supported Ubuntu runner and keeps browser tests as deployment gates',()=>{
+ const workflow=fs.readFileSync('.github/workflows/validate-release.yml','utf8');
+ assert.equal((workflow.match(/runs-on: ubuntu-24\.04/g)||[]).length,2);
+ assert.match(workflow,/python -m playwright install --with-deps chromium/);
+ assert.match(workflow,/run: python tests\/browser_smoke.py/);
+ assert.match(workflow,/run: python tests\/visual_capture.py/);
+});
