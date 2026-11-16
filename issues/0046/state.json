@@ -1,0 +1,76 @@
+{
+  "issue_id": "WSB-0046",
+  "date": "2026-11-14",
+  "day_type": {
+    "system_activity": "low",
+    "news_pressure": "low"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 0,
+    "persistent": 2
+  },
+  "objects": [
+    {
+      "id": "us-jones-act-energy-waiver",
+      "entering_state": "previous_waiver_expiring_nov15",
+      "current_state": "nov13_extension_announced_effective_nov16",
+      "status": "evidence_update",
+      "change": "evidence_update"
+    },
+    {
+      "id": "us-coastwise-vessel-eligibility",
+      "entering_state": "case_by_case_permission_existing",
+      "current_state": "foreign_flag_access_extended_with_individual_approval",
+      "status": "persistent",
+      "change": "evidence_update"
+    },
+    {
+      "id": "us-domestic-fuel-coastwise-flow",
+      "entering_state": "waiver_cumulative_historic_shipments",
+      "current_state": "no_confirmed_nov14_increment",
+      "status": "evidence_update",
+      "change": "evidence_update"
+    },
+    {
+      "id": "global-diesel-product-tightness",
+      "entering_state": "iea_diesel_market_tight",
+      "current_state": "transport_option_not_refining_solution",
+      "status": "persistent",
+      "change": "evidence_update"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "us-jones-act-energy-waiver",
+    "type": "evidence_update",
+    "sequence": [
+      "us-jones-act-energy-waiver",
+      "us-coastwise-vessel-eligibility",
+      "us-domestic-fuel-coastwise-flow"
+    ],
+    "edges": [],
+    "assessment": "conditional_transport_access_not_commissioned_throughput"
+  },
+  "notes": [
+    "Backfill issue covering 14 November; no newly dated physical-system transition is verified.",
+    "The 90-day renewal was publicly announced Friday 13 November; the extended authorisation takes effect 16 November.",
+    "The reported 90 million barrels is a White House cumulative historical claim since March, not 14 November output.",
+    "Only individual voyages remain authorised after review; this is not a blanket grant to all foreign-flag ships.",
+    "There is no verified 14 November shipment added as physical delta."
+  ],
+  "chain": [
+    "us-jones-act-energy-waiver",
+    "us-coastwise-vessel-eligibility",
+    "us-domestic-fuel-coastwise-flow"
+  ],
+  "noise": [
+    {
+      "id": "waiver_not_voyage",
+      "result": "not_established"
+    },
+    {
+      "id": "cumulative_not_daily",
+      "result": "not_established"
+    }
+  ]
+}
