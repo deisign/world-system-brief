@@ -1,0 +1,62 @@
+{
+  "issue_id": "WSB-0049",
+  "as_of": "2026-11-17",
+  "relations": [
+    {
+      "id": "WSB-0049-REL-01",
+      "from": "ukraine-energy-infrastructure-damage-october",
+      "to": "ukraine-rolling-electricity-cuts",
+      "type": "october_damage_forced_electricity_interruptions",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0049-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0049-SRC-02"
+      ],
+      "note": "UN reports physical disruptions during October; no new Nov17 grid capacity delta."
+    },
+    {
+      "id": "WSB-0049-REL-02",
+      "from": "ukraine-energy-infrastructure-damage-october",
+      "to": "ukraine-october-civilian-impact",
+      "type": "same_month_reported_infrastructure_and_civilian_consequences",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0049-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0049-SRC-01"
+      ],
+      "note": "Co-occurring documented October harms; cannot attribute all fatalities specifically to infrastructure strikes."
+    },
+    {
+      "id": "WSB-0049-REL-03",
+      "from": "india-middle-east-lpg-dependency",
+      "to": "india-us-lpg-2027-tender",
+      "type": "historical_concentration_motivates_reported_diversification",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0049-CLM-04"
+      ],
+      "source_ids": [
+        "WSB-0049-SRC-03"
+      ],
+      "note": "Reported procurement strategy, not physical shipment or newly commissioned supply."
+    },
+    {
+      "id": "WSB-0049-REL-04",
+      "from": "india-us-lpg-2027-tender",
+      "to": "hormuz-lng-flow",
+      "type": "energy_supply_route_context_not_identical_lpg_and_lng",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0049-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0049-SRC-03"
+      ],
+      "note": "LPG contract is distinct from LNG transit; context only, never a physical LPG-through-Hormuz flow assertion."
+    }
+  ]
+}
