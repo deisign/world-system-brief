@@ -1,0 +1,70 @@
+{
+  "issue_id": "WSB-0049",
+  "as_of": "2026-11-17",
+  "claims": [
+    {
+      "id": "WSB-0049-CLM-01",
+      "kind": "reported",
+      "statement": "UN on Nov 17 reported October 2026 civilian deaths 372 and injuries 1,981, 95% above the equivalent October 2025 count of killed and injured; events occurred during October.",
+      "observed_at": "2026-11-17",
+      "event_date": "2026-10-31",
+      "entity_ids": [
+        "ENT-000128"
+      ],
+      "source_ids": [
+        "WSB-0049-SRC-01",
+        "WSB-0049-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0049-CLM-02",
+      "kind": "reported",
+      "statement": "UN says October attacks damaged Ukrainian electricity and heating infrastructure, causing electricity interruptions and, in some cities, water-supply disruptions and rolling power cuts; this is historic October physical damage, not new Nov17 throughput.",
+      "observed_at": "2026-11-17",
+      "event_date": "2026-10-31",
+      "entity_ids": [
+        "ENT-000129",
+        "ENT-000130"
+      ],
+      "source_ids": [
+        "WSB-0049-SRC-01",
+        "WSB-0049-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0049-CLM-03",
+      "kind": "reported",
+      "statement": "Reuters on Nov17 reports Indian state buyers awarded an approximately 2.75-million-tonne US LPG sourcing tender for deliveries in 2027, not cargoes delivered on Nov17.",
+      "observed_at": "2026-11-17",
+      "event_date": "2026-11-17",
+      "entity_ids": [
+        "ENT-000131"
+      ],
+      "source_ids": [
+        "WSB-0049-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0049-CLM-04",
+      "kind": "reported",
+      "statement": "Reuters says India obtained roughly 90% of its 2025 LPG imports from Middle Eastern suppliers; prospective US LPG tender seeks to diversify this pre-existing source concentration.",
+      "observed_at": "2026-11-17",
+      "event_date": "2025-12-31",
+      "entity_ids": [
+        "ENT-000132",
+        "ENT-000131"
+      ],
+      "source_ids": [
+        "WSB-0049-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}

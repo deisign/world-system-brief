@@ -310,7 +310,7 @@ class BrowserSmoke(unittest.TestCase):
         for lang in ("en", "ua"):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 self.assertEqual(page.locator("#relation-changelog").count(), 1)
-                self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-16")
+                self.assertEqual(page.locator("#map-asof").inner_text(), "2026-11-18")
                 current = page.locator("#relation-changelog .relation-change")
                 self.assertEqual(current.count(), 5)
                 self.assertEqual(current.first.get_attribute("data-change-kind"), "first_recorded")
@@ -327,8 +327,8 @@ class BrowserSmoke(unittest.TestCase):
         for lang in ("en", "ua"):
             with self.subTest(lang=lang), self.page_at(f"/{lang}/map/", 390) as page:
                 entries = page.locator("#entity-connections .connectivity-item")
-                self.assertEqual(entries.count(), 127)
-                self.assertEqual(page.locator("#connectivity-visible").inner_text(), "127")
+                self.assertEqual(entries.count(), 137)
+                self.assertEqual(page.locator("#connectivity-visible").inner_text(), "137")
                 page.locator("#connectivity-mode").select_option("isolated")
                 self.assertEqual(page.locator("#entity-connections .connectivity-item:visible").count(), 0)
                 self.assertEqual(page.locator("#connectivity-visible").inner_text(), "0")

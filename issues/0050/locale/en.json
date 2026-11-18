@@ -1,0 +1,55 @@
+{
+  "locale": "en",
+  "labels": {
+    "china-gas-venture-global-lng-contract": "China Gas–Venture Global 20-year LNG supply agreement",
+    "china-gas-long-term-lng-portfolio": "China Gas long-term contracted LNG portfolio",
+    "adnoc-hormuz-lpg-vessel-attack": "ADNOC LPG vessel attack reported for 17 November",
+    "us-api-weekly-oil-inventory": "API-reported weekly US crude inventories",
+    "us-gulf-crude-arbitrage": "US Gulf crude export arbitrage constraints",
+    "hormuz-market-security-premium": "Hormuz navigation risk premium"
+  },
+  "states": {
+    "not_previously_observed": "Not previously tracked separately",
+    "september_2026_half_million_tpy_deal": "September contract: 0.5 million tonnes/year",
+    "nov18_replaced_by_one_million_tpy_agreement": "November 18: 1 million tonnes/year from 2030 earliest",
+    "china_gas_four_million_tpy_contract_portfolio": "China Gas reports 4 million tonnes/year of contracted LNG",
+    "nov17_attack_confirmed_on_nov18": "Nov 17 vessel attack confirmed Nov 18, 11 injured and one missing",
+    "api_week_ending_nov13_5_28mb_crude_build": "API reports +5.28m barrels US crude in week ending Nov 13",
+    "nov18_reported_wti_export_arbitrage_constraints": "Reported US Gulf export-arbitrage constraints",
+    "shipping_risk_persists_despite_oil_surplus_signal": "Maritime security concerns despite oil surplus forecasts",
+    "confirmed_nov17_attack_reinforces_route_risk": "Confirmed Nov 17 attack confirms continuing physical route risk"
+  },
+  "assessments": {
+    "contracted_future_supply_not_present_physical_delivery": "Contract capacity from 2030, an attack from November 17, and last week's stock estimates have different physical and temporal meaning."
+  },
+  "noise": {
+    "contract_not_2030_delivery": "SIGNED CONTRACT ≠ DELIVERED LNG",
+    "confirmed_attack_not_nov18_date": "CONFIRMED NOV 18 ≠ ATTACKED NOV 18",
+    "api_private_estimate_not_eia": "API ESTIMATE ≠ OFFICIAL EIA DATA"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "A TWENTY-YEAR LNG CONTRACT. A ONE-DAY SHIPPING CASUALTY.",
+    "deck": "China Gas increases future US LNG supply rights, while ADNOC confirms a Hormuz vessel attack dated November 17. API inventory data refer to last week, not today's supplies.",
+    "mechanism": "Contract capacity from 2030, an attack from November 17, and last week's stock estimates have different physical and temporal meaning.",
+    "chainNote": "FUTURE LNG CONTRACT → LONG-TERM PROCUREMENT PORTFOLIO",
+    "evidenceNote": "Publication, event and execution dates are recorded separately.",
+    "footer": "2030 CONTRACT ≠ 2026 GAS · NOV 17 ATTACK ≠ NOV 18 INCIDENT"
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  }
+}

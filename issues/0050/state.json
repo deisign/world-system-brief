@@ -1,0 +1,92 @@
+{
+  "issue_id": "WSB-0050",
+  "date": "2026-11-18",
+  "day_type": {
+    "system_activity": "medium",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 1,
+    "persistent": 2
+  },
+  "objects": [
+    {
+      "id": "china-gas-venture-global-lng-contract",
+      "entering_state": "september_2026_half_million_tpy_deal",
+      "current_state": "nov18_replaced_by_one_million_tpy_agreement",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "china-gas-long-term-lng-portfolio",
+      "entering_state": "not_previously_observed",
+      "current_state": "china_gas_four_million_tpy_contract_portfolio",
+      "change": "evidence_update",
+      "status": "developing"
+    },
+    {
+      "id": "adnoc-hormuz-lpg-vessel-attack",
+      "entering_state": "not_previously_observed",
+      "current_state": "nov17_attack_confirmed_on_nov18",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "us-api-weekly-oil-inventory",
+      "entering_state": "not_previously_observed",
+      "current_state": "api_week_ending_nov13_5_28mb_crude_build",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "us-gulf-crude-arbitrage",
+      "entering_state": "not_previously_observed",
+      "current_state": "nov18_reported_wti_export_arbitrage_constraints",
+      "change": "evidence_update",
+      "status": "persistent"
+    },
+    {
+      "id": "hormuz-market-security-premium",
+      "entering_state": "shipping_risk_persists_despite_oil_surplus_signal",
+      "current_state": "confirmed_nov17_attack_reinforces_route_risk",
+      "change": "evidence_update",
+      "status": "persistent"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "china-gas-venture-global-lng-contract",
+    "type": "evidence_update",
+    "sequence": [
+      "china-gas-venture-global-lng-contract",
+      "china-gas-long-term-lng-portfolio"
+    ],
+    "edges": [],
+    "assessment": "contracted_future_supply_not_present_physical_delivery"
+  },
+  "chain": [
+    "china-gas-venture-global-lng-contract",
+    "china-gas-long-term-lng-portfolio"
+  ],
+  "notes": [
+    "18 November editorial cutoff follows China Gas company-reported November18 contract replacement; earliest physical start 2030.",
+    "Confirmed ADNOC L&S vessel assault occurred November17 and was reported on November18, not a newly dated November18 attack.",
+    "Reuters cannot corroborate all Iranian tanker claims; no unsupported cargo-volume subtraction.",
+    "API market-source inventory stock estimate refers to week ending Nov13, not physical build on Nov18.",
+    "Contractual, maritime, and inventory networks are distinct; only explicitly sourced relationships are registered."
+  ],
+  "noise": [
+    {
+      "id": "contract_not_2030_delivery",
+      "result": "not_established"
+    },
+    {
+      "id": "confirmed_attack_not_nov18_date",
+      "result": "not_established"
+    },
+    {
+      "id": "api_private_estimate_not_eia",
+      "result": "not_established"
+    }
+  ]
+}

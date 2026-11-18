@@ -1143,6 +1143,96 @@
         "en": "IEA emergency diesel reserve release schedule",
         "ua": "Графік вивільнення аварійних запасів дизеля МЕА"
       }
+    },
+    {
+      "id": "ENT-000128",
+      "slug": "ukraine-october-civilian-impact",
+      "type": "humanitarian_impact",
+      "labels": {
+        "en": "October 2026 civilian casualties in Ukraine",
+        "ua": "Втрати серед цивільного населення України у жовтні 2026 року"
+      }
+    },
+    {
+      "id": "ENT-000129",
+      "slug": "ukraine-energy-infrastructure-damage-october",
+      "type": "infrastructure_damage",
+      "labels": {
+        "en": "October damage to Ukrainian electricity and heating systems",
+        "ua": "Жовтневі пошкодження електро- й теплоенергетики України"
+      }
+    },
+    {
+      "id": "ENT-000130",
+      "slug": "ukraine-rolling-electricity-cuts",
+      "type": "electricity_access",
+      "labels": {
+        "en": "Ukraine rolling electricity outages",
+        "ua": "Графіки відключень електроенергії в Україні"
+      }
+    },
+    {
+      "id": "ENT-000131",
+      "slug": "india-us-lpg-2027-tender",
+      "type": "energy_contract",
+      "labels": {
+        "en": "Indian buyers' 2027 US LPG tender awards",
+        "ua": "Контракти індійських покупців на американський LPG у 2027 році"
+      }
+    },
+    {
+      "id": "ENT-000132",
+      "slug": "india-middle-east-lpg-dependency",
+      "type": "energy_import_dependency",
+      "labels": {
+        "en": "Indian LPG dependency on Middle East supply",
+        "ua": "Залежність індійського імпорту LPG від Близького Сходу"
+      }
+    },
+    {
+      "id": "ENT-000133",
+      "slug": "adnoc-hormuz-lpg-vessel-attack",
+      "type": "maritime_security_event",
+      "labels": {
+        "en": "ADNOC LPG vessel attack reported for 17 November",
+        "ua": "Напад на судно ADNOC з LPG 17 листопада"
+      }
+    },
+    {
+      "id": "ENT-000134",
+      "slug": "china-gas-venture-global-lng-contract",
+      "type": "energy_contract",
+      "labels": {
+        "en": "China Gas–Venture Global 20-year LNG supply agreement",
+        "ua": "Двадцятирічна угода China Gas–Venture Global щодо LNG"
+      }
+    },
+    {
+      "id": "ENT-000135",
+      "slug": "china-gas-long-term-lng-portfolio",
+      "type": "energy_procurement",
+      "labels": {
+        "en": "China Gas long-term contracted LNG portfolio",
+        "ua": "Довгостроковий портфель LNG-контрактів China Gas"
+      }
+    },
+    {
+      "id": "ENT-000136",
+      "slug": "us-api-weekly-oil-inventory",
+      "type": "oil_inventory",
+      "labels": {
+        "en": "API-reported weekly US crude inventories",
+        "ua": "Тижневі запаси нафти США за оцінкою API"
+      }
+    },
+    {
+      "id": "ENT-000137",
+      "slug": "us-gulf-crude-arbitrage",
+      "type": "crude_trade_constraint",
+      "labels": {
+        "en": "US Gulf crude export arbitrage constraints",
+        "ua": "Обмеження арбітражу експорту нафти з узбережжя Мексиканської затоки США"
+      }
     }
   ]
 }

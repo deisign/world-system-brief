@@ -1,0 +1,85 @@
+{
+  "issue_id": "WSB-0050",
+  "as_of": "2026-11-18",
+  "claims": [
+    {
+      "id": "WSB-0050-CLM-01",
+      "kind": "reported",
+      "statement": "On Nov18 China Gas said it replaced September 500000 t/y agreement with a 20-year 1 million t/y Venture Global LNG deal; earliest delivery 2030, not today.",
+      "observed_at": "2026-11-18",
+      "event_date": "2026-11-18",
+      "entity_ids": [
+        "ENT-000134"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0050-CLM-02",
+      "kind": "reported",
+      "statement": "China Gas reports the new agreement lifts its long-term LNG contracted portfolio to 4 million tons/year; a portfolio is not physical delivery.",
+      "observed_at": "2026-11-18",
+      "event_date": "2026-11-18",
+      "entity_ids": [
+        "ENT-000134",
+        "ENT-000135"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-01"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0050-CLM-03",
+      "kind": "reported",
+      "statement": "ADNOC L&S confirmed on Nov18 that its vessel was attacked in Hormuz on Nov17 with one crew member missing and eleven injured; other Iranian broader tanker-burning claims are unverified.",
+      "observed_at": "2026-11-18",
+      "event_date": "2026-11-17",
+      "entity_ids": [
+        "ENT-000133",
+        "ENT-000001"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-02"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0050-CLM-04",
+      "kind": "reported",
+      "statement": "API data reported Nov18 for the week ending Nov13 show US crude stocks up 5.28 million barrels, gasoline up 5.12m, and distillates up 0.351m; these are privately reported weekly figures.",
+      "observed_at": "2026-11-18",
+      "event_date": "2026-11-13",
+      "entity_ids": [
+        "ENT-000136",
+        "ENT-000050"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    },
+    {
+      "id": "WSB-0050-CLM-05",
+      "kind": "reported",
+      "statement": "Reuters attributed weaker WTI relative to Brent to constrained arbitrage to Asia and northwest Europe alongside US Gulf crude stock builds; this does not imply all maritime passage is open.",
+      "observed_at": "2026-11-18",
+      "event_date": "2026-11-18",
+      "entity_ids": [
+        "ENT-000137",
+        "ENT-000070"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-03"
+      ],
+      "confidence": "high",
+      "status": "evidence_update"
+    }
+  ]
+}

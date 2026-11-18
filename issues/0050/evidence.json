@@ -1,0 +1,57 @@
+{
+  "issue_id": "WSB-0050",
+  "as_of": "2026-11-18",
+  "records": [
+    {
+      "id": "WSB-0050-SRC-01",
+      "source": "Reuters / Sam Li / China Gas Venture Global increased LNG contract",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high",
+      "url": "https://www.reuters.com/business/energy/china-gas-doubles-volume-20-yr-lng-deal-with-venture-global-2026-11-18/",
+      "publication_date": "2026-11-18",
+      "claim": "China Gas announced on Nov18 a 20-year LNG agreement replacing September 500000 tons per year with 1 million tons per year. Delivery possible as early as 2030, with total Chinese buyer long-term LNG portfolio 4 million tons/year.",
+      "observation": "Commercial contractual expansion on Nov18; not commissioned current gas delivery.",
+      "assessment": "DATED EVIDENCE — DO NOT INFER UNOBSERVED PHYSICAL THROUGHPUT",
+      "supports": [
+        "china-gas-venture-global-lng-contract",
+        "china-gas-long-term-lng-portfolio"
+      ]
+    },
+    {
+      "id": "WSB-0050-SRC-02",
+      "source": "Reuters / ADNOC L&S Hormuz ship attack company confirmation",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high",
+      "url": "https://www.reuters.com/world/middle-east/uaes-adnoc-ls-says-one-crew-member-missing-after-attack-its-vessel-hormuz-2026-11-18/",
+      "publication_date": "2026-11-18",
+      "claim": "On Nov18 ADNOC L&S reported a Nov17 Hormuz vessel attack, one missing crew member, eleven injured, other crew evacuated. Reuters separate Iranian claims of additional vessels burning were not independently verified.",
+      "observation": "Physical incident Nov17 confirmed Nov18; no assertion of lost oil/LPG tonnage or company-named vessel identity.",
+      "assessment": "DATED EVIDENCE — DO NOT INFER UNOBSERVED PHYSICAL THROUGHPUT",
+      "supports": [
+        "adnoc-hormuz-lpg-vessel-attack",
+        "hormuz",
+        "hormuz-market-security-premium"
+      ]
+    },
+    {
+      "id": "WSB-0050-SRC-03",
+      "source": "Reuters / Jeslyn Lerh / US API oil stocks and Hormuz maritime risk",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high",
+      "url": "https://www.reuters.com/business/energy/oil-prices-fall-higher-us-crude-stocks-temper-supply-risks-2026-11-18/",
+      "publication_date": "2026-11-18",
+      "claim": "Market sources citing API reported a Nov13 weekly US crude stock build of 5.28 million barrels, gasoline 5.12m, distillate 0.351m. Brent and WTI fell at 0745 GMT Nov18 as maritime disruption persisted.",
+      "observation": "Private industry stock estimate for week ending Nov13; not an official EIA figure or Nov18 physical increment.",
+      "assessment": "DATED EVIDENCE — DO NOT INFER UNOBSERVED PHYSICAL THROUGHPUT",
+      "supports": [
+        "us-api-weekly-oil-inventory",
+        "us-gulf-crude-arbitrage",
+        "global-oil-balance",
+        "hormuz-market-security-premium"
+      ]
+    }
+  ]
+}
