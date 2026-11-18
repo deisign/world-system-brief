@@ -1,0 +1,56 @@
+{
+  "issue_id": "WSB-0049",
+  "as_of": "2026-11-17",
+  "records": [
+    {
+      "id": "WSB-0049-SRC-01",
+      "source": "UN Human Rights Monitoring Mission in Ukraine / November 17 statement",
+      "source_type": "official_record",
+      "role": "dated_report",
+      "confidence": "high",
+      "url": "https://ukraine.ohchr.org/en/In-Ukraine-Civilians-Die-at-Alarming-Rates-Amid-Intensifying-Attacks-UN-Human-Rights-Officials-Say",
+      "publication_date": "2026-11-17",
+      "claim": "UN mission on November 17 reiterates October 372 killed and 1,981 injured; October coordinated strikes damaged Ukrainian electricity and heat networks and disrupted power and sometimes water. November 2 Komyshuvakha death count is a separate dated event.",
+      "observation": "October violence and infrastructure consequences, not new November 17 damage.",
+      "assessment": "DATED EVIDENCE — DO NOT INFER UNOBSERVED PHYSICAL THROUGHPUT",
+      "supports": [
+        "ukraine-october-civilian-impact",
+        "ukraine-energy-infrastructure-damage-october",
+        "ukraine-rolling-electricity-cuts"
+      ]
+    },
+    {
+      "id": "WSB-0049-SRC-02",
+      "source": "UN HRMMU / Protection of Civilians October 2026 (report dated Nov 16)",
+      "source_type": "official_record",
+      "role": "previous_day_report",
+      "confidence": "high",
+      "url": "https://ukraine.ohchr.org/en/Protection-of-Civilians-in-Armed-Conflict-October-2026",
+      "publication_date": "2026-11-16",
+      "claim": "UN monthly report gives October 2026 civilian casualties and increased attacks on electricity/heating infrastructure resulting in power interruptions and planned outages.",
+      "observation": "Report published November 16, follow-up press statement November 17, events in October.",
+      "assessment": "DATED EVIDENCE — DO NOT INFER UNOBSERVED PHYSICAL THROUGHPUT",
+      "supports": [
+        "ukraine-october-civilian-impact",
+        "ukraine-energy-infrastructure-damage-october",
+        "ukraine-rolling-electricity-cuts"
+      ]
+    },
+    {
+      "id": "WSB-0049-SRC-03",
+      "source": "Reuters / Nidhi Verma / India awards 2027 US LPG tenders",
+      "source_type": "newswire",
+      "role": "dated_report",
+      "confidence": "high",
+      "url": "https://www.reuters.com/business/energy/indian-companies-buy-us-lpg-2027-aramco-chevron-vitol-totsa-2026-11-17/",
+      "publication_date": "2026-11-17",
+      "claim": "Reuters on Nov 17 reports Indian state firms awarded tender for about 2.75 million tons of US LPG in 2027, split across Saudi Aramco, Chevron, Totsa and Vitol; awards not executed shipment, market sources not issuer notice.",
+      "observation": "Prospective 2027 delivery commitment; India imported 90% of LPG from Middle East in 2025, historical sourcing basis.",
+      "assessment": "DATED EVIDENCE — DO NOT INFER UNOBSERVED PHYSICAL THROUGHPUT",
+      "supports": [
+        "india-us-lpg-2027-tender",
+        "india-middle-east-lpg-dependency"
+      ]
+    }
+  ]
+}
