@@ -1,0 +1,80 @@
+{
+  "issue_id": "WSB-0049",
+  "date": "2026-11-17",
+  "day_type": {
+    "system_activity": "medium",
+    "news_pressure": "high"
+  },
+  "summary": {
+    "confirmed_delta": 0,
+    "developing": 1,
+    "persistent": 2
+  },
+  "objects": [
+    {
+      "id": "ukraine-october-civilian-impact",
+      "entering_state": "not_previously_observed",
+      "current_state": "un_october_civilian_damage_released_in_november",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "ukraine-energy-infrastructure-damage-october",
+      "entering_state": "not_previously_observed",
+      "current_state": "october_electric_heat_damage_un_verified",
+      "change": "evidence_update",
+      "status": "evidence_update"
+    },
+    {
+      "id": "ukraine-rolling-electricity-cuts",
+      "entering_state": "not_previously_observed",
+      "current_state": "rolling_outages_after_october_attacks",
+      "change": "evidence_update",
+      "status": "persistent"
+    },
+    {
+      "id": "india-middle-east-lpg-dependency",
+      "entering_state": "not_previously_observed",
+      "current_state": "india_2025_me_lpg_import_concentration",
+      "change": "evidence_update",
+      "status": "persistent"
+    },
+    {
+      "id": "india-us-lpg-2027-tender",
+      "entering_state": "not_previously_observed",
+      "current_state": "nov17_contract_awards_future_2027_delivery",
+      "change": "evidence_update",
+      "status": "developing"
+    }
+  ],
+  "dominant_mechanism": {
+    "id": "ukraine-energy-infrastructure-damage-october",
+    "type": "evidence_update",
+    "sequence": [
+      "ukraine-energy-infrastructure-damage-october",
+      "ukraine-rolling-electricity-cuts"
+    ],
+    "edges": [],
+    "assessment": "dated_damage_and_contractual_access_not_current_capacity"
+  },
+  "chain": [
+    "ukraine-energy-infrastructure-damage-october",
+    "ukraine-rolling-electricity-cuts"
+  ],
+  "notes": [
+    "UN primary detailed report dated Nov16 with follow-up statement Nov17, physical damage and casualties dated October.",
+    "Indian US LPG 2027 sourcing award is a reported new commercial arrangement, not Nov17 physical freight.",
+    "UN casualty counts do not establish that all casualties were caused by energy-system strikes.",
+    "The India LPG contract and UN Ukraine infrastructure evidence are separate topical networks; no inferred causal edge."
+  ],
+  "noise": [
+    {
+      "id": "october_damage_not_nov17_attack",
+      "result": "not_established"
+    },
+    {
+      "id": "contract_award_not_lpg_delivery",
+      "result": "not_established"
+    }
+  ]
+}
