@@ -1,0 +1,50 @@
+{
+  "locale": "en",
+  "labels": {
+    "ukraine-october-civilian-impact": "October 2026 civilian casualties in Ukraine",
+    "ukraine-energy-infrastructure-damage-october": "October damage to Ukrainian electricity and heating systems",
+    "ukraine-rolling-electricity-cuts": "Ukraine rolling electricity outages",
+    "india-middle-east-lpg-dependency": "Indian LPG dependency on Middle East supply",
+    "india-us-lpg-2027-tender": "Indian buyers' 2027 US LPG tender awards"
+  },
+  "states": {
+    "not_previously_observed": "Not previously tracked separately",
+    "un_october_civilian_damage_released_in_november": "October civilian casualties documented by UN in November",
+    "october_electric_heat_damage_un_verified": "UN reports October damage to power and heating networks",
+    "rolling_outages_after_october_attacks": "Rolling outages followed October infrastructure attacks",
+    "india_2025_me_lpg_import_concentration": "About 90% of India's LPG imports originated in the Middle East in 2025",
+    "nov17_contract_awards_future_2027_delivery": "2027 US LPG contracts awarded, not yet delivered"
+  },
+  "assessments": {
+    "dated_damage_and_contractual_access_not_current_capacity": "UN-verified historical grid damage and forward LPG contracts are different stages of evidence, not new 17 November throughput."
+  },
+  "noise": {
+    "october_damage_not_nov17_attack": "OCTOBER DAMAGE ≠ NOVEMBER ATTACK",
+    "contract_award_not_lpg_delivery": "CONTRACT AWARD ≠ LPG DELIVERY"
+  },
+  "copy": {
+    "systemDelta": "SYSTEM DELTA",
+    "map": "SYSTEM MAP",
+    "chain": "CHAIN OF THE DAY",
+    "noise": "NOISE CHECK",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "EVIDENCE",
+    "entering": "ENTERING STATE",
+    "current": "CURRENT STATE",
+    "status": "STATUS",
+    "issue": "ISSUE",
+    "activity": "SYSTEM ACTIVITY",
+    "headline": "THE DAMAGE PRECEDES THE REPORT. CONTRACTS PRECEDE THE CARGO.",
+    "deck": "UN reporting dates October attacks on Ukrainian energy infrastructure; Indian buyers secure future US LPG deliveries. Neither a November press release nor a tender is a November physical flow.",
+    "mechanism": "UN-verified historical grid damage and forward LPG contracts are different stages of evidence, not new 17 November throughput.",
+    "chainNote": "OCTOBER GRID DAMAGE → POWER INTERRUPTIONS",
+    "evidenceNote": "Publication, event and execution dates are recorded separately.",
+    "footer": "EVIDENCE DATE ≠ EVENT DATE · CONTRACT ≠ CARGO"
+  },
+  "statuses": {
+    "confirmed_delta": "CONFIRMED Δ",
+    "persistent": "PERSISTENT",
+    "evidence_update": "EVIDENCE UPDATE",
+    "developing": "DEVELOPING"
+  }
+}
