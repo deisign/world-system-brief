@@ -1,0 +1,55 @@
+{
+  "locale": "ua",
+  "labels": {
+    "china-gas-venture-global-lng-contract": "Двадцятирічна угода China Gas–Venture Global щодо LNG",
+    "china-gas-long-term-lng-portfolio": "Довгостроковий портфель LNG-контрактів China Gas",
+    "adnoc-hormuz-lpg-vessel-attack": "Напад на судно ADNOC з LPG 17 листопада",
+    "us-api-weekly-oil-inventory": "Тижневі запаси нафти США за оцінкою API",
+    "us-gulf-crude-arbitrage": "Обмеження арбітражу експорту нафти з узбережжя Мексиканської затоки США",
+    "hormuz-market-security-premium": "Премія за ризик судноплавства в Ормузі"
+  },
+  "states": {
+    "not_previously_observed": "Раніше окремо не відстежували",
+    "september_2026_half_million_tpy_deal": "Вереснева угода: 0,5 млн тонн на рік",
+    "nov18_replaced_by_one_million_tpy_agreement": "18 листопада: 1 млн тонн на рік, не раніше 2030 року",
+    "china_gas_four_million_tpy_contract_portfolio": "China Gas повідомляє про 4 млн тонн LNG на рік за контрактами",
+    "nov17_attack_confirmed_on_nov18": "Напад 17 листопада підтверджено 18-го: 11 поранених і один зниклий",
+    "api_week_ending_nov13_5_28mb_crude_build": "API повідомляє про +5,28 млн барелів нафти в США за тиждень до 13 листопада",
+    "nov18_reported_wti_export_arbitrage_constraints": "Повідомлено про обмеження експортного арбітражу нафти США",
+    "shipping_risk_persists_despite_oil_surplus_signal": "Ризики судноплавства тривають попри прогнози профіциту нафти",
+    "confirmed_nov17_attack_reinforces_route_risk": "Підтверджений напад 17-го засвідчує фізичні ризики маршруту"
+  },
+  "assessments": {
+    "contracted_future_supply_not_present_physical_delivery": "Контрактні обсяги не раніше 2030 року, напад 17 листопада та минулотижневі оцінки запасів мають різний фізичний і часовий зміст."
+  },
+  "noise": {
+    "contract_not_2030_delivery": "ПІДПИСАНИЙ КОНТРАКТ ≠ ДОСТАВЛЕНИЙ LNG",
+    "confirmed_attack_not_nov18_date": "ПІДТВЕРДЖЕНО 18-ГО ≠ АТАКОВАНО 18-ГО",
+    "api_private_estimate_not_eia": "ОЦІНКА API ≠ ОФІЦІЙНА СТАТИСТИКА EIA"
+  },
+  "copy": {
+    "systemDelta": "СИСТЕМНА ЗМІНА",
+    "map": "МАПА СИСТЕМИ",
+    "chain": "ЛАНЦЮГ ДНЯ",
+    "noise": "ПЕРЕВІРКА ШУМУ",
+    "ledger": "SYSTEM LEDGER",
+    "evidence": "ДЖЕРЕЛА",
+    "entering": "ПОЧАТКОВИЙ СТАН",
+    "current": "ПОТОЧНИЙ СТАН",
+    "status": "СТАТУС",
+    "issue": "ВИПУСК",
+    "activity": "АКТИВНІСТЬ СИСТЕМИ",
+    "headline": "ДВАДЦЯТИРІЧНИЙ LNG-КОНТРАКТ. ОДИН ДЕНЬ МОРСЬКОГО РИЗИКУ.",
+    "deck": "China Gas збільшує майбутні контрактні поставки LNG зі США, а ADNOC підтверджує напад на судно в Ормузі 17 листопада. Дані API стосуються минулого тижня, а не сьогоднішніх поставок.",
+    "mechanism": "Контрактні обсяги не раніше 2030 року, напад 17 листопада та минулотижневі оцінки запасів мають різний фізичний і часовий зміст.",
+    "chainNote": "МАЙБУТНІЙ LNG-КОНТРАКТ → ПОРТФЕЛЬ ДОВГОСТРОКОВИХ ЗАКУПІВЕЛЬ",
+    "evidenceNote": "Дата публікації, події та фактичного виконання фіксуються окремо.",
+    "footer": "КОНТРАКТ 2030 ≠ ГАЗ 2026 · АТАКА 17-ГО ≠ ПОДІЯ 18-ГО"
+  },
+  "statuses": {
+    "confirmed_delta": "ПІДТВЕРДЖЕНА Δ",
+    "persistent": "ТРИВАЄ",
+    "evidence_update": "ОНОВЛЕННЯ СВІДЧЕНЬ",
+    "developing": "РОЗВИВАЄТЬСЯ"
+  }
+}
