@@ -43,20 +43,6 @@
         "WSB-0049-SRC-03"
       ],
       "note": "Reported procurement strategy, not physical shipment or newly commissioned supply."
-    },
-    {
-      "id": "WSB-0049-REL-04",
-      "from": "india-us-lpg-2027-tender",
-      "to": "hormuz-lng-flow",
-      "type": "energy_supply_route_context_not_identical_lpg_and_lng",
-      "state": "active",
-      "claim_ids": [
-        "WSB-0049-CLM-03"
-      ],
-      "source_ids": [
-        "WSB-0049-SRC-03"
-      ],
-      "note": "LPG contract is distinct from LNG transit; context only, never a physical LPG-through-Hormuz flow assertion."
     }
   ]
 }
