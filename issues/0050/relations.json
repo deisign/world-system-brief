@@ -1,0 +1,76 @@
+{
+  "issue_id": "WSB-0050",
+  "as_of": "2026-11-18",
+  "relations": [
+    {
+      "id": "WSB-0050-REL-01",
+      "from": "china-gas-venture-global-lng-contract",
+      "to": "china-gas-long-term-lng-portfolio",
+      "type": "nov18_increment_to_china_gas_long_term_contracts",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0050-CLM-02"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-01"
+      ],
+      "note": "Contract value not current LNG volumes; deliveries anticipated from 2030."
+    },
+    {
+      "id": "WSB-0050-REL-02",
+      "from": "china-gas-venture-global-lng-contract",
+      "to": "hormuz-lng-flow",
+      "type": "prospective_us_supply_diversification_vs_hormuz_exposure",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0050-CLM-01"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-01"
+      ],
+      "note": "Alternative supply option; no proven substitution of 2026 Hormuz cargo."
+    },
+    {
+      "id": "WSB-0050-REL-03",
+      "from": "adnoc-hormuz-lpg-vessel-attack",
+      "to": "hormuz-market-security-premium",
+      "type": "nov17_confirmed_ship_attack_as_shipping_security_exposure",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0050-CLM-03"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-02"
+      ],
+      "note": "Incident occurred Nov17, confirmed Nov18; magnitude of premium and cargo losses unmeasured."
+    },
+    {
+      "id": "WSB-0050-REL-04",
+      "from": "us-api-weekly-oil-inventory",
+      "to": "global-oil-balance",
+      "type": "week_ending_nov13_us_inventory_component",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0050-CLM-04"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-03"
+      ],
+      "note": "API reported weekly US stock change, not global contemporaneous balance or government verified value."
+    },
+    {
+      "id": "WSB-0050-REL-05",
+      "from": "us-gulf-crude-arbitrage",
+      "to": "us-api-weekly-oil-inventory",
+      "type": "reported_arbitrage_constraints_coexist_with_gulf_stocks",
+      "state": "active",
+      "claim_ids": [
+        "WSB-0050-CLM-05"
+      ],
+      "source_ids": [
+        "WSB-0050-SRC-03"
+      ],
+      "note": "Reported association not quantified causal attribution."
+    }
+  ]
+}
